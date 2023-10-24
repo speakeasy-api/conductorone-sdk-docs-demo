@@ -1,0 +1,54 @@
+```typescript C1ApiPolicyV1PoliciesCreate.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+import { CreatePolicyRequestPolicyType } from "conductorone-sdk-typescript/dist/sdk/models/shared";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.policies.create({
+    policySteps: {
+      "key": {
+        steps: [
+          {
+            accept: {},
+            approval: {
+              appGroupApproval: {},
+              appOwnerApproval: {},
+              entitlementOwnerApproval: {},
+              expressionApproval: {},
+              managerApproval: {},
+              selfApproval: {},
+              userApproval: {},
+            },
+            provision: {
+              provisionPolicy: {
+                connectorProvision: {},
+                delegatedProvision: {},
+                manualProvision: {
+                  userIds: [
+                    "string",
+                  ],
+                },
+              },
+              provisionTarget: {},
+            },
+            reject: {},
+          },
+        ],
+      },
+    },
+    postActions: [
+      {},
+    ],
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

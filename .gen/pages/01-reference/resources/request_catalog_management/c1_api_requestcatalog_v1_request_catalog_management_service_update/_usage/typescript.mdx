@@ -1,0 +1,49 @@
+```typescript C1ApiRequestcatalogV1RequestCatalogManagementServiceUpdate.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.requestCatalogManagement.update({
+    requestCatalogManagementServiceUpdateRequestInput: {
+      requestCatalog: {
+        accessEntitlements: [
+          {
+            provisionPolicy: {
+              connectorProvision: {},
+              delegatedProvision: {},
+              manualProvision: {
+                userIds: [
+                  "string",
+                ],
+              },
+            },
+            complianceFrameworkValueIds: [
+              "string",
+            ],
+            durationUnset: {},
+          },
+        ],
+        appIds: [
+          "string",
+        ],
+      },
+      requestCatalogExpandMask: {
+        paths: [
+          "string",
+        ],
+      },
+    },
+    id: "<ID>",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

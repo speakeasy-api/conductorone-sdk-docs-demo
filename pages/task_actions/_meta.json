@@ -1,0 +1,18 @@
+{
+  "c1_api_task_v1_task_actions_service_approve": {
+    "title": "C1 Api Task V1 Task Actions Service Approve",
+    "href": "/resources/task_actions/c1_api_task_v1_task_actions_service_approve"
+  },
+  "c1_api_task_v1_task_actions_service_comment": {
+    "title": "C1 Api Task V1 Task Actions Service Comment",
+    "href": "/resources/task_actions/c1_api_task_v1_task_actions_service_comment"
+  },
+  "c1_api_task_v1_task_actions_service_deny": {
+    "title": "C1 Api Task V1 Task Actions Service Deny",
+    "href": "/resources/task_actions/c1_api_task_v1_task_actions_service_deny"
+  },
+  "c1_api_task_v1_task_actions_service_escalate_to_emergency_access": {
+    "title": "C1 Api Task V1 Task Actions Service Escalate To Emergency Access",
+    "href": "/resources/task_actions/c1_api_task_v1_task_actions_service_escalate_to_emergency_access"
+  }
+}

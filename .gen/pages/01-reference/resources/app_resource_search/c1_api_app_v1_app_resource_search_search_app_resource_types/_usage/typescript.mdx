@@ -1,0 +1,34 @@
+```typescript C1ApiAppV1AppResourceSearchSearchAppResourceTypes.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.appResourceSearch.searchAppResourceTypes({
+    appIds: [
+      "string",
+    ],
+    excludeResourceTypeIds: [
+      "string",
+    ],
+    excludeResourceTypeTraitIds: [
+      "string",
+    ],
+    resourceTypeIds: [
+      "string",
+    ],
+    resourceTypeTraitIds: [
+      "string",
+    ],
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

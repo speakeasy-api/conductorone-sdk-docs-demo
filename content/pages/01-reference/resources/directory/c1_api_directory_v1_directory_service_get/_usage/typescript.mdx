@@ -1,0 +1,20 @@
+```typescript C1ApiDirectoryV1DirectoryServiceGet.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.directory.get({
+    appId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

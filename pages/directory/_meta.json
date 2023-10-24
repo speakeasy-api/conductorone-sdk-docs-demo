@@ -1,0 +1,18 @@
+{
+  "c1_api_directory_v1_directory_service_create": {
+    "title": "C1 Api Directory V1 Directory Service Create",
+    "href": "/resources/directory/c1_api_directory_v1_directory_service_create"
+  },
+  "c1_api_directory_v1_directory_service_delete": {
+    "title": "C1 Api Directory V1 Directory Service Delete",
+    "href": "/resources/directory/c1_api_directory_v1_directory_service_delete"
+  },
+  "c1_api_directory_v1_directory_service_get": {
+    "title": "C1 Api Directory V1 Directory Service Get",
+    "href": "/resources/directory/c1_api_directory_v1_directory_service_get"
+  },
+  "c1_api_directory_v1_directory_service_list": {
+    "title": "C1 Api Directory V1 Directory Service List",
+    "href": "/resources/directory/c1_api_directory_v1_directory_service_list"
+  }
+}

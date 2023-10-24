@@ -1,0 +1,20 @@
+## C1 Api App V1 App Search Search
+
+Search apps based on filters specified in the request body.
+
+{/* rendered from operation template */}
+
+import {LanguageOperation} from "/content/languages";
+import {LanguageSwitch} from "/content/languages";
+import TypescriptParameters from "./_parameters/typescript.mdx";
+import TypescriptResponse from "./_response/typescript.mdx";
+import TypescriptUsage from "./_usage/typescript.mdx";
+
+export const Operation = () => {
+    const typescript = <LanguageOperation parameters={<TypescriptParameters/>} response={<TypescriptResponse/>} usage={<TypescriptUsage/>}/>
+    return <LanguageSwitch langToContent={{typescript}}/>
+}
+
+<Operation />
+
+{/* end rendered section */}

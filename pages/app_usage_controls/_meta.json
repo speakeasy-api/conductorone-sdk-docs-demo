@@ -1,0 +1,10 @@
+{
+  "c1_api_app_v1_app_usage_controls_service_get": {
+    "title": "C1 Api App V1 App Usage Controls Service Get",
+    "href": "/resources/app_usage_controls/c1_api_app_v1_app_usage_controls_service_get"
+  },
+  "c1_api_app_v1_app_usage_controls_service_update": {
+    "title": "C1 Api App V1 App Usage Controls Service Update",
+    "href": "/resources/app_usage_controls/c1_api_app_v1_app_usage_controls_service_update"
+  }
+}

@@ -1,0 +1,18 @@
+```typescript C1ApiAuthV1AuthIntrospect.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.auth.introspect();
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

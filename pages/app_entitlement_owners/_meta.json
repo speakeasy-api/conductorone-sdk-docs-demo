@@ -1,0 +1,18 @@
+{
+  "c1_api_app_v1_app_entitlement_owners_add": {
+    "title": "C1 Api App V1 App Entitlement Owners Add",
+    "href": "/resources/app_entitlement_owners/c1_api_app_v1_app_entitlement_owners_add"
+  },
+  "c1_api_app_v1_app_entitlement_owners_list": {
+    "title": "C1 Api App V1 App Entitlement Owners List",
+    "href": "/resources/app_entitlement_owners/c1_api_app_v1_app_entitlement_owners_list"
+  },
+  "c1_api_app_v1_app_entitlement_owners_remove": {
+    "title": "C1 Api App V1 App Entitlement Owners Remove",
+    "href": "/resources/app_entitlement_owners/c1_api_app_v1_app_entitlement_owners_remove"
+  },
+  "c1_api_app_v1_app_entitlement_owners_set": {
+    "title": "C1 Api App V1 App Entitlement Owners Set",
+    "href": "/resources/app_entitlement_owners/c1_api_app_v1_app_entitlement_owners_set"
+  }
+}

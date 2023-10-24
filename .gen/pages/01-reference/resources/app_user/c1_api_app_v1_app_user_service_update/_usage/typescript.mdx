@@ -1,0 +1,32 @@
+```typescript C1ApiAppV1AppUserServiceUpdate.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+import { AppUserAppUserType } from "conductorone-sdk-typescript/dist/sdk/models/shared";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.appUser.update({
+    appUserServiceUpdateRequestInput: {
+      appUser: {
+        appUserStatus: {},
+      },
+      appUserExpandMask: {
+        paths: [
+          "string",
+        ],
+      },
+    },
+    appUserAppId: "string",
+    appUserId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

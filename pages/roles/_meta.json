@@ -1,0 +1,14 @@
+{
+  "c1_api_iam_v1_roles_get": {
+    "title": "C1 Api Iam V1 Roles Get",
+    "href": "/resources/roles/c1_api_iam_v1_roles_get"
+  },
+  "c1_api_iam_v1_roles_list": {
+    "title": "C1 Api Iam V1 Roles List",
+    "href": "/resources/roles/c1_api_iam_v1_roles_list"
+  },
+  "c1_api_iam_v1_roles_update": {
+    "title": "C1 Api Iam V1 Roles Update",
+    "href": "/resources/roles/c1_api_iam_v1_roles_update"
+  }
+}

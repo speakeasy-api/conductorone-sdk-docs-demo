@@ -1,0 +1,25 @@
+```typescript C1ApiIamV1PersonalClientServiceCreate.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.personalClient.create({
+    allowSourceCidr: [
+      "string",
+    ],
+    scopedRoles: [
+      "string",
+    ],
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

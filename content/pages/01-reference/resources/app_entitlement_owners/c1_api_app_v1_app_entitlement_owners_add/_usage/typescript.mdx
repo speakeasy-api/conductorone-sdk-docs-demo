@@ -1,0 +1,22 @@
+```typescript C1ApiAppV1AppEntitlementOwnersAdd.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.appEntitlementOwners.add({
+    addAppEntitlementOwnerRequest: {},
+    appId: "string",
+    entitlementId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

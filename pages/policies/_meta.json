@@ -1,0 +1,22 @@
+{
+  "c1_api_policy_v1_policies_create": {
+    "title": "C1 Api Policy V1 Policies Create",
+    "href": "/resources/policies/c1_api_policy_v1_policies_create"
+  },
+  "c1_api_policy_v1_policies_delete": {
+    "title": "C1 Api Policy V1 Policies Delete",
+    "href": "/resources/policies/c1_api_policy_v1_policies_delete"
+  },
+  "c1_api_policy_v1_policies_get": {
+    "title": "C1 Api Policy V1 Policies Get",
+    "href": "/resources/policies/c1_api_policy_v1_policies_get"
+  },
+  "c1_api_policy_v1_policies_list": {
+    "title": "C1 Api Policy V1 Policies List",
+    "href": "/resources/policies/c1_api_policy_v1_policies_list"
+  },
+  "c1_api_policy_v1_policies_update": {
+    "title": "C1 Api Policy V1 Policies Update",
+    "href": "/resources/policies/c1_api_policy_v1_policies_update"
+  }
+}

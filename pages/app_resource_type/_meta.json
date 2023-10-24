@@ -1,0 +1,10 @@
+{
+  "c1_api_app_v1_app_resource_type_service_get": {
+    "title": "C1 Api App V1 App Resource Type Service Get",
+    "href": "/resources/app_resource_type/c1_api_app_v1_app_resource_type_service_get"
+  },
+  "c1_api_app_v1_app_resource_type_service_list": {
+    "title": "C1 Api App V1 App Resource Type Service List",
+    "href": "/resources/app_resource_type/c1_api_app_v1_app_resource_type_service_list"
+  }
+}

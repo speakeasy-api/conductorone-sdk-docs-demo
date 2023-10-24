@@ -1,0 +1,22 @@
+```typescript C1ApiAppV1ConnectorServiceRotateCredential.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.connector.rotateCredential({
+    connectorServiceRotateCredentialRequest: {},
+    appId: "string",
+    connectorId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

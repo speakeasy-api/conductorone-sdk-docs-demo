@@ -1,0 +1,138 @@
+{
+  "-- guides": {
+    "title": "Guides",
+    "type": "separator"
+  },
+  "installation": {
+    "title": "Installation",
+    "href": "/installation"
+  },
+  "-- resources": {
+    "title": "Resources",
+    "type": "separator"
+  },
+  "app_entitlement_owners": {
+    "title": "App Entitlement Owners",
+    "href": "/resources/app_entitlement_owners"
+  },
+  "app_entitlement_search": {
+    "title": "App Entitlement Search",
+    "href": "/resources/app_entitlement_search"
+  },
+  "app_entitlement_user_binding": {
+    "title": "App Entitlement User Binding",
+    "href": "/resources/app_entitlement_user_binding"
+  },
+  "app_entitlements": {
+    "title": "App Entitlements",
+    "href": "/resources/app_entitlements"
+  },
+  "app_owners": {
+    "title": "App Owners",
+    "href": "/resources/app_owners"
+  },
+  "app_report": {
+    "title": "App Report",
+    "href": "/resources/app_report"
+  },
+  "app_report_action": {
+    "title": "App Report Action",
+    "href": "/resources/app_report_action"
+  },
+  "app_resource": {
+    "title": "App Resource",
+    "href": "/resources/app_resource"
+  },
+  "app_resource_owners": {
+    "title": "App Resource Owners",
+    "href": "/resources/app_resource_owners"
+  },
+  "app_resource_search": {
+    "title": "App Resource Search",
+    "href": "/resources/app_resource_search"
+  },
+  "app_resource_type": {
+    "title": "App Resource Type",
+    "href": "/resources/app_resource_type"
+  },
+  "app_search": {
+    "title": "App Search",
+    "href": "/resources/app_search"
+  },
+  "app_usage_controls": {
+    "title": "App Usage Controls",
+    "href": "/resources/app_usage_controls"
+  },
+  "app_user": {
+    "title": "App User",
+    "href": "/resources/app_user"
+  },
+  "apps": {
+    "title": "Apps",
+    "href": "/resources/apps"
+  },
+  "attribute_search": {
+    "title": "Attribute Search",
+    "href": "/resources/attribute_search"
+  },
+  "attributes": {
+    "title": "Attributes",
+    "href": "/resources/attributes"
+  },
+  "auth": {
+    "title": "Auth",
+    "href": "/resources/auth"
+  },
+  "connector": {
+    "title": "Connector",
+    "href": "/resources/connector"
+  },
+  "directory": {
+    "title": "Directory",
+    "href": "/resources/directory"
+  },
+  "personal_client": {
+    "title": "Personal Client",
+    "href": "/resources/personal_client"
+  },
+  "policies": {
+    "title": "Policies",
+    "href": "/resources/policies"
+  },
+  "policy_search": {
+    "title": "Policy Search",
+    "href": "/resources/policy_search"
+  },
+  "request_catalog_management": {
+    "title": "Request Catalog Management",
+    "href": "/resources/request_catalog_management"
+  },
+  "request_catalog_search": {
+    "title": "Request Catalog Search",
+    "href": "/resources/request_catalog_search"
+  },
+  "roles": {
+    "title": "Roles",
+    "href": "/resources/roles"
+  },
+  "task": {
+    "title": "Task",
+    "href": "/resources/task"
+  },
+  "task_actions": {
+    "title": "Task Actions",
+    "href": "/resources/task_actions"
+  },
+  "task_search": {
+    "title": "Task Search",
+    "href": "/resources/task_search"
+  },
+  "user": {
+    "title": "User",
+    "href": "/resources/user"
+  },
+  "user_search": {
+    "title": "User Search",
+    "href": "/resources/user_search"
+  }
+}

@@ -1,0 +1,27 @@
+```typescript C1ApiTaskV1TaskActionsServiceComment.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.taskActions.comment({
+    taskActionsServiceCommentRequest: {
+      taskExpandMask: {
+        paths: [
+          "string",
+        ],
+      },
+    },
+    taskId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

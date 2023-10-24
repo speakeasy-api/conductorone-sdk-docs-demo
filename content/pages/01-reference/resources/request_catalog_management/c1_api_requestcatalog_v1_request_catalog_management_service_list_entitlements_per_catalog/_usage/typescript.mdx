@@ -1,0 +1,20 @@
+```typescript C1ApiRequestcatalogV1RequestCatalogManagementServiceListEntitlementsPerCatalog.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.requestCatalogManagement.listEntitlementsPerCatalog({
+    catalogId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
