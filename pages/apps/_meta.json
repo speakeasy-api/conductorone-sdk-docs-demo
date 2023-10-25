@@ -1,22 +1,22 @@
 {
   "c1_api_app_v1_apps_create": {
-    "title": "C1 Api App V1 Apps Create",
+    "title": "resources/apps/C1 Api App V1 Apps Create",
     "href": "/resources/apps/c1_api_app_v1_apps_create"
   },
   "c1_api_app_v1_apps_delete": {
-    "title": "C1 Api App V1 Apps Delete",
+    "title": "resources/apps/C1 Api App V1 Apps Delete",
     "href": "/resources/apps/c1_api_app_v1_apps_delete"
   },
   "c1_api_app_v1_apps_get": {
-    "title": "C1 Api App V1 Apps Get",
+    "title": "resources/apps/C1 Api App V1 Apps Get",
     "href": "/resources/apps/c1_api_app_v1_apps_get"
   },
   "c1_api_app_v1_apps_list": {
-    "title": "C1 Api App V1 Apps List",
+    "title": "resources/apps/C1 Api App V1 Apps List",
     "href": "/resources/apps/c1_api_app_v1_apps_list"
   },
   "c1_api_app_v1_apps_update": {
-    "title": "C1 Api App V1 Apps Update",
+    "title": "resources/apps/C1 Api App V1 Apps Update",
     "href": "/resources/apps/c1_api_app_v1_apps_update"
   }
 }

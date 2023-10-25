@@ -1,26 +1,26 @@
 {
   "c1_api_app_v1_app_entitlements_get": {
-    "title": "C1 Api App V1 App Entitlements Get",
+    "title": "resources/app_entitlements/C1 Api App V1 App Entitlements Get",
     "href": "/resources/app_entitlements/c1_api_app_v1_app_entitlements_get"
   },
   "c1_api_app_v1_app_entitlements_list": {
-    "title": "C1 Api App V1 App Entitlements List",
+    "title": "resources/app_entitlements/C1 Api App V1 App Entitlements List",
     "href": "/resources/app_entitlements/c1_api_app_v1_app_entitlements_list"
   },
   "c1_api_app_v1_app_entitlements_list_for_app_resource": {
-    "title": "C1 Api App V1 App Entitlements List For App Resource",
+    "title": "resources/app_entitlements/C1 Api App V1 App Entitlements List For App Resource",
     "href": "/resources/app_entitlements/c1_api_app_v1_app_entitlements_list_for_app_resource"
   },
   "c1_api_app_v1_app_entitlements_list_for_app_user": {
-    "title": "C1 Api App V1 App Entitlements List For App User",
+    "title": "resources/app_entitlements/C1 Api App V1 App Entitlements List For App User",
     "href": "/resources/app_entitlements/c1_api_app_v1_app_entitlements_list_for_app_user"
   },
   "c1_api_app_v1_app_entitlements_list_users": {
-    "title": "C1 Api App V1 App Entitlements List Users",
+    "title": "resources/app_entitlements/C1 Api App V1 App Entitlements List Users",
     "href": "/resources/app_entitlements/c1_api_app_v1_app_entitlements_list_users"
   },
   "c1_api_app_v1_app_entitlements_update": {
-    "title": "C1 Api App V1 App Entitlements Update",
+    "title": "resources/app_entitlements/C1 Api App V1 App Entitlements Update",
     "href": "/resources/app_entitlements/c1_api_app_v1_app_entitlements_update"
   }
 }

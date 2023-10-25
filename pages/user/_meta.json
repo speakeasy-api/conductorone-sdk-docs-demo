@@ -1,10 +1,10 @@
 {
   "c1_api_user_v1_user_service_get": {
-    "title": "C1 Api User V1 User Service Get",
+    "title": "resources/user/C1 Api User V1 User Service Get",
     "href": "/resources/user/c1_api_user_v1_user_service_get"
   },
   "c1_api_user_v1_user_service_list": {
-    "title": "C1 Api User V1 User Service List",
+    "title": "resources/user/C1 Api User V1 User Service List",
     "href": "/resources/user/c1_api_user_v1_user_service_list"
   }
 }

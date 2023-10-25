@@ -1,46 +1,46 @@
 {
   "c1_api_requestcatalog_v1_request_catalog_management_service_add_access_entitlements": {
-    "title": "C1 Api Requestcatalog V1 Request Catalog Management Service Add Access Entitlements",
+    "title": "resources/request_catalog_management/C1 Api Requestcatalog V1 Request Catalog Management Service Add Access Entitlements",
     "href": "/resources/request_catalog_management/c1_api_requestcatalog_v1_request_catalog_management_service_add_access_entitlements"
   },
   "c1_api_requestcatalog_v1_request_catalog_management_service_add_app_entitlements": {
-    "title": "C1 Api Requestcatalog V1 Request Catalog Management Service Add App Entitlements",
+    "title": "resources/request_catalog_management/C1 Api Requestcatalog V1 Request Catalog Management Service Add App Entitlements",
     "href": "/resources/request_catalog_management/c1_api_requestcatalog_v1_request_catalog_management_service_add_app_entitlements"
   },
   "c1_api_requestcatalog_v1_request_catalog_management_service_create": {
-    "title": "C1 Api Requestcatalog V1 Request Catalog Management Service Create",
+    "title": "resources/request_catalog_management/C1 Api Requestcatalog V1 Request Catalog Management Service Create",
     "href": "/resources/request_catalog_management/c1_api_requestcatalog_v1_request_catalog_management_service_create"
   },
   "c1_api_requestcatalog_v1_request_catalog_management_service_delete": {
-    "title": "C1 Api Requestcatalog V1 Request Catalog Management Service Delete",
+    "title": "resources/request_catalog_management/C1 Api Requestcatalog V1 Request Catalog Management Service Delete",
     "href": "/resources/request_catalog_management/c1_api_requestcatalog_v1_request_catalog_management_service_delete"
   },
   "c1_api_requestcatalog_v1_request_catalog_management_service_get": {
-    "title": "C1 Api Requestcatalog V1 Request Catalog Management Service Get",
+    "title": "resources/request_catalog_management/C1 Api Requestcatalog V1 Request Catalog Management Service Get",
     "href": "/resources/request_catalog_management/c1_api_requestcatalog_v1_request_catalog_management_service_get"
   },
   "c1_api_requestcatalog_v1_request_catalog_management_service_list": {
-    "title": "C1 Api Requestcatalog V1 Request Catalog Management Service List",
+    "title": "resources/request_catalog_management/C1 Api Requestcatalog V1 Request Catalog Management Service List",
     "href": "/resources/request_catalog_management/c1_api_requestcatalog_v1_request_catalog_management_service_list"
   },
   "c1_api_requestcatalog_v1_request_catalog_management_service_list_entitlements_for_access": {
-    "title": "C1 Api Requestcatalog V1 Request Catalog Management Service List Entitlements For Access",
+    "title": "resources/request_catalog_management/C1 Api Requestcatalog V1 Request Catalog Management Service List Entitlements For Access",
     "href": "/resources/request_catalog_management/c1_api_requestcatalog_v1_request_catalog_management_service_list_entitlements_for_access"
   },
   "c1_api_requestcatalog_v1_request_catalog_management_service_list_entitlements_per_catalog": {
-    "title": "C1 Api Requestcatalog V1 Request Catalog Management Service List Entitlements Per Catalog",
+    "title": "resources/request_catalog_management/C1 Api Requestcatalog V1 Request Catalog Management Service List Entitlements Per Catalog",
     "href": "/resources/request_catalog_management/c1_api_requestcatalog_v1_request_catalog_management_service_list_entitlements_per_catalog"
   },
   "c1_api_requestcatalog_v1_request_catalog_management_service_remove_access_entitlements": {
-    "title": "C1 Api Requestcatalog V1 Request Catalog Management Service Remove Access Entitlements",
+    "title": "resources/request_catalog_management/C1 Api Requestcatalog V1 Request Catalog Management Service Remove Access Entitlements",
     "href": "/resources/request_catalog_management/c1_api_requestcatalog_v1_request_catalog_management_service_remove_access_entitlements"
   },
   "c1_api_requestcatalog_v1_request_catalog_management_service_remove_app_entitlements": {
-    "title": "C1 Api Requestcatalog V1 Request Catalog Management Service Remove App Entitlements",
+    "title": "resources/request_catalog_management/C1 Api Requestcatalog V1 Request Catalog Management Service Remove App Entitlements",
     "href": "/resources/request_catalog_management/c1_api_requestcatalog_v1_request_catalog_management_service_remove_app_entitlements"
   },
   "c1_api_requestcatalog_v1_request_catalog_management_service_update": {
-    "title": "C1 Api Requestcatalog V1 Request Catalog Management Service Update",
+    "title": "resources/request_catalog_management/C1 Api Requestcatalog V1 Request Catalog Management Service Update",
     "href": "/resources/request_catalog_management/c1_api_requestcatalog_v1_request_catalog_management_service_update"
   }
 }

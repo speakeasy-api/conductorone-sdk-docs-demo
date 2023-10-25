@@ -1,14 +1,14 @@
 {
   "c1_api_task_v1_task_service_create_grant_task": {
-    "title": "C1 Api Task V1 Task Service Create Grant Task",
+    "title": "resources/task/C1 Api Task V1 Task Service Create Grant Task",
     "href": "/resources/task/c1_api_task_v1_task_service_create_grant_task"
   },
   "c1_api_task_v1_task_service_create_revoke_task": {
-    "title": "C1 Api Task V1 Task Service Create Revoke Task",
+    "title": "resources/task/C1 Api Task V1 Task Service Create Revoke Task",
     "href": "/resources/task/c1_api_task_v1_task_service_create_revoke_task"
   },
   "c1_api_task_v1_task_service_get": {
-    "title": "C1 Api Task V1 Task Service Get",
+    "title": "resources/task/C1 Api Task V1 Task Service Get",
     "href": "/resources/task/c1_api_task_v1_task_service_get"
   }
 }
