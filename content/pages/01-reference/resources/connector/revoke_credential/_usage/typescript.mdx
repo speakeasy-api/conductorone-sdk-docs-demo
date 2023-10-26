@@ -1,0 +1,23 @@
+```typescript RevokeCredential.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.connector.revokeCredential({
+    connectorServiceRevokeCredentialRequest: {},
+    appId: "string",
+    connectorId: "string",
+    id: "<ID>",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

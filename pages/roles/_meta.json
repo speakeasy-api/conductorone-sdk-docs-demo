@@ -1,14 +1,14 @@
 {
-  "c1_api_iam_v1_roles_get": {
-    "title": "resources/roles/C1 Api Iam V1 Roles Get",
-    "href": "/resources/roles/c1_api_iam_v1_roles_get"
+  "get": {
+    "title": "resources/roles/Get",
+    "href": "/resources/roles/get"
   },
-  "c1_api_iam_v1_roles_list": {
-    "title": "resources/roles/C1 Api Iam V1 Roles List",
-    "href": "/resources/roles/c1_api_iam_v1_roles_list"
+  "list": {
+    "title": "resources/roles/List",
+    "href": "/resources/roles/list"
   },
-  "c1_api_iam_v1_roles_update": {
-    "title": "resources/roles/C1 Api Iam V1 Roles Update",
-    "href": "/resources/roles/c1_api_iam_v1_roles_update"
+  "update": {
+    "title": "resources/roles/Update",
+    "href": "/resources/roles/update"
   }
 }

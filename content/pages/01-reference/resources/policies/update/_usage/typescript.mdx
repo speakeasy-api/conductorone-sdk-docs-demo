@@ -1,0 +1,62 @@
+```typescript Update.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+import { PolicyPolicyType } from "conductorone-sdk-typescript/dist/sdk/models/shared";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.policies.update({
+    updatePolicyRequestInput: {
+      policy: {
+        policySteps: {
+          "key": {
+            steps: [
+              {
+                accept: {},
+                approval: {
+                  appGroupApproval: {},
+                  appOwnerApproval: {},
+                  entitlementOwnerApproval: {},
+                  expressionApproval: {},
+                  managerApproval: {},
+                  selfApproval: {},
+                  userApproval: {},
+                },
+                provision: {
+                  provisionPolicy: {
+                    connectorProvision: {},
+                    delegatedProvision: {},
+                    manualProvision: {
+                      userIds: [
+                        "string",
+                      ],
+                    },
+                  },
+                  provisionTarget: {},
+                },
+                reject: {},
+              },
+            ],
+          },
+        },
+        postActions: [
+          {},
+        ],
+        rules: [
+          {},
+        ],
+      },
+    },
+    id: "<ID>",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

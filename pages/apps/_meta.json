@@ -1,22 +1,22 @@
 {
-  "c1_api_app_v1_apps_create": {
-    "title": "resources/apps/C1 Api App V1 Apps Create",
-    "href": "/resources/apps/c1_api_app_v1_apps_create"
+  "create": {
+    "title": "resources/apps/Create",
+    "href": "/resources/apps/create"
   },
-  "c1_api_app_v1_apps_delete": {
-    "title": "resources/apps/C1 Api App V1 Apps Delete",
-    "href": "/resources/apps/c1_api_app_v1_apps_delete"
+  "delete": {
+    "title": "resources/apps/Delete",
+    "href": "/resources/apps/delete"
   },
-  "c1_api_app_v1_apps_get": {
-    "title": "resources/apps/C1 Api App V1 Apps Get",
-    "href": "/resources/apps/c1_api_app_v1_apps_get"
+  "get": {
+    "title": "resources/apps/Get",
+    "href": "/resources/apps/get"
   },
-  "c1_api_app_v1_apps_list": {
-    "title": "resources/apps/C1 Api App V1 Apps List",
-    "href": "/resources/apps/c1_api_app_v1_apps_list"
+  "list": {
+    "title": "resources/apps/List",
+    "href": "/resources/apps/list"
   },
-  "c1_api_app_v1_apps_update": {
-    "title": "resources/apps/C1 Api App V1 Apps Update",
-    "href": "/resources/apps/c1_api_app_v1_apps_update"
+  "update": {
+    "title": "resources/apps/Update",
+    "href": "/resources/apps/update"
   }
 }

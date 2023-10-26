@@ -1,0 +1,25 @@
+```typescript RemoveAccessEntitlements.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.requestCatalogManagement.removeAccessEntitlements({
+    requestCatalogManagementServiceRemoveAccessEntitlementsRequest: {
+      accessEntitlements: [
+        {},
+      ],
+    },
+    catalogId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

@@ -1,14 +1,14 @@
 {
-  "c1_api_app_v1_app_owners_add": {
-    "title": "resources/app_owners/C1 Api App V1 App Owners Add",
-    "href": "/resources/app_owners/c1_api_app_v1_app_owners_add"
+  "add": {
+    "title": "resources/app_owners/Add",
+    "href": "/resources/app_owners/add"
   },
-  "c1_api_app_v1_app_owners_list": {
-    "title": "resources/app_owners/C1 Api App V1 App Owners List",
-    "href": "/resources/app_owners/c1_api_app_v1_app_owners_list"
+  "list": {
+    "title": "resources/app_owners/List",
+    "href": "/resources/app_owners/list"
   },
-  "c1_api_app_v1_app_owners_remove": {
-    "title": "resources/app_owners/C1 Api App V1 App Owners Remove",
-    "href": "/resources/app_owners/c1_api_app_v1_app_owners_remove"
+  "remove": {
+    "title": "resources/app_owners/Remove",
+    "href": "/resources/app_owners/remove"
   }
 }

@@ -1,42 +1,42 @@
 {
-  "c1_api_app_v1_connector_service_create": {
-    "title": "resources/connector/C1 Api App V1 Connector Service Create",
-    "href": "/resources/connector/c1_api_app_v1_connector_service_create"
+  "create": {
+    "title": "resources/connector/Create",
+    "href": "/resources/connector/create"
   },
-  "c1_api_app_v1_connector_service_create_delegated": {
-    "title": "resources/connector/C1 Api App V1 Connector Service Create Delegated",
-    "href": "/resources/connector/c1_api_app_v1_connector_service_create_delegated"
+  "create_delegated": {
+    "title": "resources/connector/Create Delegated",
+    "href": "/resources/connector/create_delegated"
   },
-  "c1_api_app_v1_connector_service_delete": {
-    "title": "resources/connector/C1 Api App V1 Connector Service Delete",
-    "href": "/resources/connector/c1_api_app_v1_connector_service_delete"
+  "delete": {
+    "title": "resources/connector/Delete",
+    "href": "/resources/connector/delete"
   },
-  "c1_api_app_v1_connector_service_get": {
-    "title": "resources/connector/C1 Api App V1 Connector Service Get",
-    "href": "/resources/connector/c1_api_app_v1_connector_service_get"
+  "get": {
+    "title": "resources/connector/Get",
+    "href": "/resources/connector/get"
   },
-  "c1_api_app_v1_connector_service_get_credentials": {
-    "title": "resources/connector/C1 Api App V1 Connector Service Get Credentials",
-    "href": "/resources/connector/c1_api_app_v1_connector_service_get_credentials"
+  "get_credentials": {
+    "title": "resources/connector/Get Credentials",
+    "href": "/resources/connector/get_credentials"
   },
-  "c1_api_app_v1_connector_service_list": {
-    "title": "resources/connector/C1 Api App V1 Connector Service List",
-    "href": "/resources/connector/c1_api_app_v1_connector_service_list"
+  "list": {
+    "title": "resources/connector/List",
+    "href": "/resources/connector/list"
   },
-  "c1_api_app_v1_connector_service_revoke_credential": {
-    "title": "resources/connector/C1 Api App V1 Connector Service Revoke Credential",
-    "href": "/resources/connector/c1_api_app_v1_connector_service_revoke_credential"
+  "revoke_credential": {
+    "title": "resources/connector/Revoke Credential",
+    "href": "/resources/connector/revoke_credential"
   },
-  "c1_api_app_v1_connector_service_rotate_credential": {
-    "title": "resources/connector/C1 Api App V1 Connector Service Rotate Credential",
-    "href": "/resources/connector/c1_api_app_v1_connector_service_rotate_credential"
+  "rotate_credential": {
+    "title": "resources/connector/Rotate Credential",
+    "href": "/resources/connector/rotate_credential"
   },
-  "c1_api_app_v1_connector_service_update": {
-    "title": "resources/connector/C1 Api App V1 Connector Service Update",
-    "href": "/resources/connector/c1_api_app_v1_connector_service_update"
+  "update": {
+    "title": "resources/connector/Update",
+    "href": "/resources/connector/update"
   },
-  "c1_api_app_v1_connector_service_update_delegated": {
-    "title": "resources/connector/C1 Api App V1 Connector Service Update Delegated",
-    "href": "/resources/connector/c1_api_app_v1_connector_service_update_delegated"
+  "update_delegated": {
+    "title": "resources/connector/Update Delegated",
+    "href": "/resources/connector/update_delegated"
   }
 }

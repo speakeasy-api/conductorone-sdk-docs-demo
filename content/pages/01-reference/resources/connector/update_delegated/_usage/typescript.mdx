@@ -1,0 +1,39 @@
+```typescript UpdateDelegated.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+import { ConnectorStatusStatus } from "conductorone-sdk-typescript/dist/sdk/models/shared";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.connector.updateDelegated({
+    connectorServiceUpdateDelegatedRequestInput: {
+      connector: {
+        connectorStatus: {},
+        oAuth2AuthorizedAs: {},
+        config: {
+          "key": "string",
+        },
+        userIds: [
+          "string",
+        ],
+      },
+      connectorExpandMask: {
+        paths: [
+          "string",
+        ],
+      },
+    },
+    connectorAppId: "string",
+    connectorId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

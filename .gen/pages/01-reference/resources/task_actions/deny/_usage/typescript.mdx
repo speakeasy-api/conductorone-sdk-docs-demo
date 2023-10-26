@@ -1,0 +1,27 @@
+```typescript Deny.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.taskActions.deny({
+    taskActionsServiceDenyRequest: {
+      taskExpandMask: {
+        paths: [
+          "string",
+        ],
+      },
+    },
+    taskId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

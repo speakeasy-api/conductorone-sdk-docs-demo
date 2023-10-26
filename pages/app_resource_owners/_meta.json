@@ -1,6 +1,6 @@
 {
-  "c1_api_app_v1_app_resource_owners_list": {
-    "title": "resources/app_resource_owners/C1 Api App V1 App Resource Owners List",
-    "href": "/resources/app_resource_owners/c1_api_app_v1_app_resource_owners_list"
+  "list": {
+    "title": "resources/app_resource_owners/List",
+    "href": "/resources/app_resource_owners/list"
   }
 }

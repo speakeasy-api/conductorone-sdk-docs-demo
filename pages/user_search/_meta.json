@@ -1,6 +1,6 @@
 {
-  "c1_api_user_v1_user_search_search": {
-    "title": "resources/user_search/C1 Api User V1 User Search Search",
-    "href": "/resources/user_search/c1_api_user_v1_user_search_search"
+  "search": {
+    "title": "resources/user_search/Search",
+    "href": "/resources/user_search/search"
   }
 }

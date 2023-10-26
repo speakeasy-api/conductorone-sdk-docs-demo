@@ -1,22 +1,22 @@
 {
-  "c1_api_policy_v1_policies_create": {
-    "title": "resources/policies/C1 Api Policy V1 Policies Create",
-    "href": "/resources/policies/c1_api_policy_v1_policies_create"
+  "create": {
+    "title": "resources/policies/Create",
+    "href": "/resources/policies/create"
   },
-  "c1_api_policy_v1_policies_delete": {
-    "title": "resources/policies/C1 Api Policy V1 Policies Delete",
-    "href": "/resources/policies/c1_api_policy_v1_policies_delete"
+  "delete": {
+    "title": "resources/policies/Delete",
+    "href": "/resources/policies/delete"
   },
-  "c1_api_policy_v1_policies_get": {
-    "title": "resources/policies/C1 Api Policy V1 Policies Get",
-    "href": "/resources/policies/c1_api_policy_v1_policies_get"
+  "get": {
+    "title": "resources/policies/Get",
+    "href": "/resources/policies/get"
   },
-  "c1_api_policy_v1_policies_list": {
-    "title": "resources/policies/C1 Api Policy V1 Policies List",
-    "href": "/resources/policies/c1_api_policy_v1_policies_list"
+  "list": {
+    "title": "resources/policies/List",
+    "href": "/resources/policies/list"
   },
-  "c1_api_policy_v1_policies_update": {
-    "title": "resources/policies/C1 Api Policy V1 Policies Update",
-    "href": "/resources/policies/c1_api_policy_v1_policies_update"
+  "update": {
+    "title": "resources/policies/Update",
+    "href": "/resources/policies/update"
   }
 }

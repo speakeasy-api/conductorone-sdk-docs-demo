@@ -1,6 +1,6 @@
 {
-  "c1_api_policy_v1_policy_search_search": {
-    "title": "resources/policy_search/C1 Api Policy V1 Policy Search Search",
-    "href": "/resources/policy_search/c1_api_policy_v1_policy_search_search"
+  "search": {
+    "title": "resources/policy_search/Search",
+    "href": "/resources/policy_search/search"
   }
 }

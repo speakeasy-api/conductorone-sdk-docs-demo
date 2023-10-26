@@ -1,6 +1,6 @@
 {
-  "c1_api_requestcatalog_v1_request_catalog_search_service_search_entitlements": {
-    "title": "resources/request_catalog_search/C1 Api Requestcatalog V1 Request Catalog Search Service Search Entitlements",
-    "href": "/resources/request_catalog_search/c1_api_requestcatalog_v1_request_catalog_search_service_search_entitlements"
+  "search_entitlements": {
+    "title": "resources/request_catalog_search/Search Entitlements",
+    "href": "/resources/request_catalog_search/search_entitlements"
   }
 }

@@ -1,26 +1,26 @@
 {
-  "c1_api_app_v1_app_entitlements_get": {
-    "title": "resources/app_entitlements/C1 Api App V1 App Entitlements Get",
-    "href": "/resources/app_entitlements/c1_api_app_v1_app_entitlements_get"
+  "get": {
+    "title": "resources/app_entitlements/Get",
+    "href": "/resources/app_entitlements/get"
   },
-  "c1_api_app_v1_app_entitlements_list": {
-    "title": "resources/app_entitlements/C1 Api App V1 App Entitlements List",
-    "href": "/resources/app_entitlements/c1_api_app_v1_app_entitlements_list"
+  "list": {
+    "title": "resources/app_entitlements/List",
+    "href": "/resources/app_entitlements/list"
   },
-  "c1_api_app_v1_app_entitlements_list_for_app_resource": {
-    "title": "resources/app_entitlements/C1 Api App V1 App Entitlements List For App Resource",
-    "href": "/resources/app_entitlements/c1_api_app_v1_app_entitlements_list_for_app_resource"
+  "list_for_app_resource": {
+    "title": "resources/app_entitlements/List For App Resource",
+    "href": "/resources/app_entitlements/list_for_app_resource"
   },
-  "c1_api_app_v1_app_entitlements_list_for_app_user": {
-    "title": "resources/app_entitlements/C1 Api App V1 App Entitlements List For App User",
-    "href": "/resources/app_entitlements/c1_api_app_v1_app_entitlements_list_for_app_user"
+  "list_for_app_user": {
+    "title": "resources/app_entitlements/List For App User",
+    "href": "/resources/app_entitlements/list_for_app_user"
   },
-  "c1_api_app_v1_app_entitlements_list_users": {
-    "title": "resources/app_entitlements/C1 Api App V1 App Entitlements List Users",
-    "href": "/resources/app_entitlements/c1_api_app_v1_app_entitlements_list_users"
+  "list_users": {
+    "title": "resources/app_entitlements/List Users",
+    "href": "/resources/app_entitlements/list_users"
   },
-  "c1_api_app_v1_app_entitlements_update": {
-    "title": "resources/app_entitlements/C1 Api App V1 App Entitlements Update",
-    "href": "/resources/app_entitlements/c1_api_app_v1_app_entitlements_update"
+  "update": {
+    "title": "resources/app_entitlements/Update",
+    "href": "/resources/app_entitlements/update"
   }
 }

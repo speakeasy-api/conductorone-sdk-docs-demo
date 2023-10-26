@@ -1,6 +1,6 @@
 {
-  "c1_api_attribute_v1_attribute_search_search_attribute_values": {
-    "title": "resources/attribute_search/C1 Api Attribute V1 Attribute Search Search Attribute Values",
-    "href": "/resources/attribute_search/c1_api_attribute_v1_attribute_search_search_attribute_values"
+  "search_attribute_values": {
+    "title": "resources/attribute_search/Search Attribute Values",
+    "href": "/resources/attribute_search/search_attribute_values"
   }
 }

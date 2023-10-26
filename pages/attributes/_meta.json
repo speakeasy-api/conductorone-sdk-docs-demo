@@ -1,22 +1,22 @@
 {
-  "c1_api_attribute_v1_attributes_create_attribute_value": {
-    "title": "resources/attributes/C1 Api Attribute V1 Attributes Create Attribute Value",
-    "href": "/resources/attributes/c1_api_attribute_v1_attributes_create_attribute_value"
+  "create_attribute_value": {
+    "title": "resources/attributes/Create Attribute Value",
+    "href": "/resources/attributes/create_attribute_value"
   },
-  "c1_api_attribute_v1_attributes_delete_attribute_value": {
-    "title": "resources/attributes/C1 Api Attribute V1 Attributes Delete Attribute Value",
-    "href": "/resources/attributes/c1_api_attribute_v1_attributes_delete_attribute_value"
+  "delete_attribute_value": {
+    "title": "resources/attributes/Delete Attribute Value",
+    "href": "/resources/attributes/delete_attribute_value"
   },
-  "c1_api_attribute_v1_attributes_get_attribute_value": {
-    "title": "resources/attributes/C1 Api Attribute V1 Attributes Get Attribute Value",
-    "href": "/resources/attributes/c1_api_attribute_v1_attributes_get_attribute_value"
+  "get_attribute_value": {
+    "title": "resources/attributes/Get Attribute Value",
+    "href": "/resources/attributes/get_attribute_value"
   },
-  "c1_api_attribute_v1_attributes_list_attribute_types": {
-    "title": "resources/attributes/C1 Api Attribute V1 Attributes List Attribute Types",
-    "href": "/resources/attributes/c1_api_attribute_v1_attributes_list_attribute_types"
+  "list_attribute_types": {
+    "title": "resources/attributes/List Attribute Types",
+    "href": "/resources/attributes/list_attribute_types"
   },
-  "c1_api_attribute_v1_attributes_list_attribute_values": {
-    "title": "resources/attributes/C1 Api Attribute V1 Attributes List Attribute Values",
-    "href": "/resources/attributes/c1_api_attribute_v1_attributes_list_attribute_values"
+  "list_attribute_values": {
+    "title": "resources/attributes/List Attribute Values",
+    "href": "/resources/attributes/list_attribute_values"
   }
 }

@@ -1,0 +1,45 @@
+```typescript Search.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.appEntitlementSearch.search({
+    appEntitlementExpandMask: {
+      paths: [
+        "string",
+      ],
+    },
+    appIds: [
+      "string",
+    ],
+    appUserIds: [
+      "string",
+    ],
+    complianceFrameworkIds: [
+      "string",
+    ],
+    excludeAppIds: [
+      "string",
+    ],
+    excludeAppUserIds: [
+      "string",
+    ],
+    resourceTypeIds: [
+      "string",
+    ],
+    riskLevelIds: [
+      "string",
+    ],
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

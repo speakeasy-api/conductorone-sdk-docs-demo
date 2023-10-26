@@ -1,10 +1,10 @@
 {
-  "c1_api_app_v1_app_resource_service_get": {
-    "title": "resources/app_resource/C1 Api App V1 App Resource Service Get",
-    "href": "/resources/app_resource/c1_api_app_v1_app_resource_service_get"
+  "get": {
+    "title": "resources/app_resource/Get",
+    "href": "/resources/app_resource/get"
   },
-  "c1_api_app_v1_app_resource_service_list": {
-    "title": "resources/app_resource/C1 Api App V1 App Resource Service List",
-    "href": "/resources/app_resource/c1_api_app_v1_app_resource_service_list"
+  "list": {
+    "title": "resources/app_resource/List",
+    "href": "/resources/app_resource/list"
   }
 }

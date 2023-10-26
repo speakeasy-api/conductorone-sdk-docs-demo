@@ -1,6 +1,6 @@
 {
-  "c1_api_auth_v1_auth_introspect": {
-    "title": "resources/auth/C1 Api Auth V1 Auth Introspect",
-    "href": "/resources/auth/c1_api_auth_v1_auth_introspect"
+  "introspect": {
+    "title": "resources/auth/Introspect",
+    "href": "/resources/auth/introspect"
   }
 }
