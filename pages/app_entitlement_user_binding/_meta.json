@@ -1,6 +1,5 @@
 {
   "list_app_users_for_identity_with_grant": {
-    "title": "resources/app_entitlement_user_binding/List App Users For Identity With Grant",
-    "href": "/resources/app_entitlement_user_binding/list_app_users_for_identity_with_grant"
+    "title": "List App Users For Identity With Grant"
   }
 }

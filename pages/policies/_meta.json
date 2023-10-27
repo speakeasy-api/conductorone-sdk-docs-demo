@@ -1,22 +1,17 @@
 {
   "create": {
-    "title": "resources/policies/Create",
-    "href": "/resources/policies/create"
+    "title": "Create"
   },
   "delete": {
-    "title": "resources/policies/Delete",
-    "href": "/resources/policies/delete"
+    "title": "Delete"
   },
   "get": {
-    "title": "resources/policies/Get",
-    "href": "/resources/policies/get"
+    "title": "Get"
   },
   "list": {
-    "title": "resources/policies/List",
-    "href": "/resources/policies/list"
+    "title": "List"
   },
   "update": {
-    "title": "resources/policies/Update",
-    "href": "/resources/policies/update"
+    "title": "Update"
   }
 }

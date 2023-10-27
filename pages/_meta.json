@@ -4,135 +4,103 @@
     "type": "separator"
   },
   "installation": {
-    "title": "Installation",
-    "href": "/installation"
+    "title": "Installation"
   },
   "-- resources": {
     "title": "Resources",
     "type": "separator"
   },
   "app_entitlement_owners": {
-    "title": "resources/App Entitlement Owners",
-    "href": "/resources/app_entitlement_owners"
+    "title": "App Entitlement Owners"
   },
   "app_entitlement_search": {
-    "title": "resources/App Entitlement Search",
-    "href": "/resources/app_entitlement_search"
+    "title": "App Entitlement Search"
   },
   "app_entitlement_user_binding": {
-    "title": "resources/App Entitlement User Binding",
-    "href": "/resources/app_entitlement_user_binding"
+    "title": "App Entitlement User Binding"
   },
   "app_entitlements": {
-    "title": "resources/App Entitlements",
-    "href": "/resources/app_entitlements"
+    "title": "App Entitlements"
   },
   "app_owners": {
-    "title": "resources/App Owners",
-    "href": "/resources/app_owners"
+    "title": "App Owners"
   },
   "app_report": {
-    "title": "resources/App Report",
-    "href": "/resources/app_report"
+    "title": "App Report"
   },
   "app_report_action": {
-    "title": "resources/App Report Action",
-    "href": "/resources/app_report_action"
+    "title": "App Report Action"
   },
   "app_resource": {
-    "title": "resources/App Resource",
-    "href": "/resources/app_resource"
+    "title": "App Resource"
   },
   "app_resource_owners": {
-    "title": "resources/App Resource Owners",
-    "href": "/resources/app_resource_owners"
+    "title": "App Resource Owners"
   },
   "app_resource_search": {
-    "title": "resources/App Resource Search",
-    "href": "/resources/app_resource_search"
+    "title": "App Resource Search"
   },
   "app_resource_type": {
-    "title": "resources/App Resource Type",
-    "href": "/resources/app_resource_type"
+    "title": "App Resource Type"
   },
   "app_search": {
-    "title": "resources/App Search",
-    "href": "/resources/app_search"
+    "title": "App Search"
   },
   "app_usage_controls": {
-    "title": "resources/App Usage Controls",
-    "href": "/resources/app_usage_controls"
+    "title": "App Usage Controls"
   },
   "app_user": {
-    "title": "resources/App User",
-    "href": "/resources/app_user"
+    "title": "App User"
   },
   "apps": {
-    "title": "resources/Apps",
-    "href": "/resources/apps"
+    "title": "Apps"
   },
   "attribute_search": {
-    "title": "resources/Attribute Search",
-    "href": "/resources/attribute_search"
+    "title": "Attribute Search"
   },
   "attributes": {
-    "title": "resources/Attributes",
-    "href": "/resources/attributes"
+    "title": "Attributes"
   },
   "auth": {
-    "title": "resources/Auth",
-    "href": "/resources/auth"
+    "title": "Auth"
   },
   "connector": {
-    "title": "resources/Connector",
-    "href": "/resources/connector"
+    "title": "Connector"
   },
   "directory": {
-    "title": "resources/Directory",
-    "href": "/resources/directory"
+    "title": "Directory"
   },
   "personal_client": {
-    "title": "resources/Personal Client",
-    "href": "/resources/personal_client"
+    "title": "Personal Client"
   },
   "policies": {
-    "title": "resources/Policies",
-    "href": "/resources/policies"
+    "title": "Policies"
   },
   "policy_search": {
-    "title": "resources/Policy Search",
-    "href": "/resources/policy_search"
+    "title": "Policy Search"
   },
   "request_catalog_management": {
-    "title": "resources/Request Catalog Management",
-    "href": "/resources/request_catalog_management"
+    "title": "Request Catalog Management"
   },
   "request_catalog_search": {
-    "title": "resources/Request Catalog Search",
-    "href": "/resources/request_catalog_search"
+    "title": "Request Catalog Search"
   },
   "roles": {
-    "title": "resources/Roles",
-    "href": "/resources/roles"
+    "title": "Roles"
   },
   "task": {
-    "title": "resources/Task",
-    "href": "/resources/task"
+    "title": "Task"
   },
   "task_actions": {
-    "title": "resources/Task Actions",
-    "href": "/resources/task_actions"
+    "title": "Task Actions"
   },
   "task_search": {
-    "title": "resources/Task Search",
-    "href": "/resources/task_search"
+    "title": "Task Search"
   },
   "user": {
-    "title": "resources/User",
-    "href": "/resources/user"
+    "title": "User"
   },
   "user_search": {
-    "title": "resources/User Search",
-    "href": "/resources/user_search"
+    "title": "User Search"
   }
 }

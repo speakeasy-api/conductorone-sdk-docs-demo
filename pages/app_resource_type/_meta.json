@@ -1,10 +1,8 @@
 {
   "get": {
-    "title": "resources/app_resource_type/Get",
-    "href": "/resources/app_resource_type/get"
+    "title": "Get"
   },
   "list": {
-    "title": "resources/app_resource_type/List",
-    "href": "/resources/app_resource_type/list"
+    "title": "List"
   }
 }

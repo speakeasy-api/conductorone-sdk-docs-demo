@@ -1,42 +1,32 @@
 {
   "create": {
-    "title": "resources/connector/Create",
-    "href": "/resources/connector/create"
+    "title": "Create"
   },
   "create_delegated": {
-    "title": "resources/connector/Create Delegated",
-    "href": "/resources/connector/create_delegated"
+    "title": "Create Delegated"
   },
   "delete": {
-    "title": "resources/connector/Delete",
-    "href": "/resources/connector/delete"
+    "title": "Delete"
   },
   "get": {
-    "title": "resources/connector/Get",
-    "href": "/resources/connector/get"
+    "title": "Get"
   },
   "get_credentials": {
-    "title": "resources/connector/Get Credentials",
-    "href": "/resources/connector/get_credentials"
+    "title": "Get Credentials"
   },
   "list": {
-    "title": "resources/connector/List",
-    "href": "/resources/connector/list"
+    "title": "List"
   },
   "revoke_credential": {
-    "title": "resources/connector/Revoke Credential",
-    "href": "/resources/connector/revoke_credential"
+    "title": "Revoke Credential"
   },
   "rotate_credential": {
-    "title": "resources/connector/Rotate Credential",
-    "href": "/resources/connector/rotate_credential"
+    "title": "Rotate Credential"
   },
   "update": {
-    "title": "resources/connector/Update",
-    "href": "/resources/connector/update"
+    "title": "Update"
   },
   "update_delegated": {
-    "title": "resources/connector/Update Delegated",
-    "href": "/resources/connector/update_delegated"
+    "title": "Update Delegated"
   }
 }

@@ -1,26 +1,20 @@
 {
   "get": {
-    "title": "resources/app_entitlements/Get",
-    "href": "/resources/app_entitlements/get"
+    "title": "Get"
   },
   "list": {
-    "title": "resources/app_entitlements/List",
-    "href": "/resources/app_entitlements/list"
+    "title": "List"
   },
   "list_for_app_resource": {
-    "title": "resources/app_entitlements/List For App Resource",
-    "href": "/resources/app_entitlements/list_for_app_resource"
+    "title": "List For App Resource"
   },
   "list_for_app_user": {
-    "title": "resources/app_entitlements/List For App User",
-    "href": "/resources/app_entitlements/list_for_app_user"
+    "title": "List For App User"
   },
   "list_users": {
-    "title": "resources/app_entitlements/List Users",
-    "href": "/resources/app_entitlements/list_users"
+    "title": "List Users"
   },
   "update": {
-    "title": "resources/app_entitlements/Update",
-    "href": "/resources/app_entitlements/update"
+    "title": "Update"
   }
 }

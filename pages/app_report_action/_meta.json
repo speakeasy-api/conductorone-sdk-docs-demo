@@ -1,6 +1,5 @@
 {
   "generate_report": {
-    "title": "resources/app_report_action/Generate Report",
-    "href": "/resources/app_report_action/generate_report"
+    "title": "Generate Report"
   }
 }

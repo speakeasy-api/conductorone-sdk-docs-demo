@@ -1,14 +1,11 @@
 {
   "create_grant_task": {
-    "title": "resources/task/Create Grant Task",
-    "href": "/resources/task/create_grant_task"
+    "title": "Create Grant Task"
   },
   "create_revoke_task": {
-    "title": "resources/task/Create Revoke Task",
-    "href": "/resources/task/create_revoke_task"
+    "title": "Create Revoke Task"
   },
   "get": {
-    "title": "resources/task/Get",
-    "href": "/resources/task/get"
+    "title": "Get"
   }
 }

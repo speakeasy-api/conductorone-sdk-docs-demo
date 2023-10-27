@@ -1,18 +1,14 @@
 {
   "approve": {
-    "title": "resources/task_actions/Approve",
-    "href": "/resources/task_actions/approve"
+    "title": "Approve"
   },
   "comment": {
-    "title": "resources/task_actions/Comment",
-    "href": "/resources/task_actions/comment"
+    "title": "Comment"
   },
   "deny": {
-    "title": "resources/task_actions/Deny",
-    "href": "/resources/task_actions/deny"
+    "title": "Deny"
   },
   "escalate_to_emergency_access": {
-    "title": "resources/task_actions/Escalate To Emergency Access",
-    "href": "/resources/task_actions/escalate_to_emergency_access"
+    "title": "Escalate To Emergency Access"
   }
 }

@@ -1,22 +1,17 @@
 {
   "create": {
-    "title": "resources/apps/Create",
-    "href": "/resources/apps/create"
+    "title": "Create"
   },
   "delete": {
-    "title": "resources/apps/Delete",
-    "href": "/resources/apps/delete"
+    "title": "Delete"
   },
   "get": {
-    "title": "resources/apps/Get",
-    "href": "/resources/apps/get"
+    "title": "Get"
   },
   "list": {
-    "title": "resources/apps/List",
-    "href": "/resources/apps/list"
+    "title": "List"
   },
   "update": {
-    "title": "resources/apps/Update",
-    "href": "/resources/apps/update"
+    "title": "Update"
   }
 }

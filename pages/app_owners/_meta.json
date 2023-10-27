@@ -1,14 +1,11 @@
 {
   "add": {
-    "title": "resources/app_owners/Add",
-    "href": "/resources/app_owners/add"
+    "title": "Add"
   },
   "list": {
-    "title": "resources/app_owners/List",
-    "href": "/resources/app_owners/list"
+    "title": "List"
   },
   "remove": {
-    "title": "resources/app_owners/Remove",
-    "href": "/resources/app_owners/remove"
+    "title": "Remove"
   }
 }

@@ -1,22 +1,17 @@
 {
   "create_attribute_value": {
-    "title": "resources/attributes/Create Attribute Value",
-    "href": "/resources/attributes/create_attribute_value"
+    "title": "Create Attribute Value"
   },
   "delete_attribute_value": {
-    "title": "resources/attributes/Delete Attribute Value",
-    "href": "/resources/attributes/delete_attribute_value"
+    "title": "Delete Attribute Value"
   },
   "get_attribute_value": {
-    "title": "resources/attributes/Get Attribute Value",
-    "href": "/resources/attributes/get_attribute_value"
+    "title": "Get Attribute Value"
   },
   "list_attribute_types": {
-    "title": "resources/attributes/List Attribute Types",
-    "href": "/resources/attributes/list_attribute_types"
+    "title": "List Attribute Types"
   },
   "list_attribute_values": {
-    "title": "resources/attributes/List Attribute Values",
-    "href": "/resources/attributes/list_attribute_values"
+    "title": "List Attribute Values"
   }
 }

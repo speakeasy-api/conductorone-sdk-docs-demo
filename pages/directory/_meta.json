@@ -1,18 +1,14 @@
 {
   "create": {
-    "title": "resources/directory/Create",
-    "href": "/resources/directory/create"
+    "title": "Create"
   },
   "delete": {
-    "title": "resources/directory/Delete",
-    "href": "/resources/directory/delete"
+    "title": "Delete"
   },
   "get": {
-    "title": "resources/directory/Get",
-    "href": "/resources/directory/get"
+    "title": "Get"
   },
   "list": {
-    "title": "resources/directory/List",
-    "href": "/resources/directory/list"
+    "title": "List"
   }
 }

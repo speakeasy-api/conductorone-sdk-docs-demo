@@ -1,10 +1,8 @@
 {
   "get": {
-    "title": "resources/app_usage_controls/Get",
-    "href": "/resources/app_usage_controls/get"
+    "title": "Get"
   },
   "update": {
-    "title": "resources/app_usage_controls/Update",
-    "href": "/resources/app_usage_controls/update"
+    "title": "Update"
   }
 }

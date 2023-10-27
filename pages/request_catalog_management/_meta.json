@@ -1,46 +1,35 @@
 {
   "add_access_entitlements": {
-    "title": "resources/request_catalog_management/Add Access Entitlements",
-    "href": "/resources/request_catalog_management/add_access_entitlements"
+    "title": "Add Access Entitlements"
   },
   "add_app_entitlements": {
-    "title": "resources/request_catalog_management/Add App Entitlements",
-    "href": "/resources/request_catalog_management/add_app_entitlements"
+    "title": "Add App Entitlements"
   },
   "create": {
-    "title": "resources/request_catalog_management/Create",
-    "href": "/resources/request_catalog_management/create"
+    "title": "Create"
   },
   "delete": {
-    "title": "resources/request_catalog_management/Delete",
-    "href": "/resources/request_catalog_management/delete"
+    "title": "Delete"
   },
   "get": {
-    "title": "resources/request_catalog_management/Get",
-    "href": "/resources/request_catalog_management/get"
+    "title": "Get"
   },
   "list": {
-    "title": "resources/request_catalog_management/List",
-    "href": "/resources/request_catalog_management/list"
+    "title": "List"
   },
   "list_entitlements_for_access": {
-    "title": "resources/request_catalog_management/List Entitlements For Access",
-    "href": "/resources/request_catalog_management/list_entitlements_for_access"
+    "title": "List Entitlements For Access"
   },
   "list_entitlements_per_catalog": {
-    "title": "resources/request_catalog_management/List Entitlements Per Catalog",
-    "href": "/resources/request_catalog_management/list_entitlements_per_catalog"
+    "title": "List Entitlements Per Catalog"
   },
   "remove_access_entitlements": {
-    "title": "resources/request_catalog_management/Remove Access Entitlements",
-    "href": "/resources/request_catalog_management/remove_access_entitlements"
+    "title": "Remove Access Entitlements"
   },
   "remove_app_entitlements": {
-    "title": "resources/request_catalog_management/Remove App Entitlements",
-    "href": "/resources/request_catalog_management/remove_app_entitlements"
+    "title": "Remove App Entitlements"
   },
   "update": {
-    "title": "resources/request_catalog_management/Update",
-    "href": "/resources/request_catalog_management/update"
+    "title": "Update"
   }
 }

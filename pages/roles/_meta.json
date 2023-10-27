@@ -1,14 +1,11 @@
 {
   "get": {
-    "title": "resources/roles/Get",
-    "href": "/resources/roles/get"
+    "title": "Get"
   },
   "list": {
-    "title": "resources/roles/List",
-    "href": "/resources/roles/list"
+    "title": "List"
   },
   "update": {
-    "title": "resources/roles/Update",
-    "href": "/resources/roles/update"
+    "title": "Update"
   }
 }

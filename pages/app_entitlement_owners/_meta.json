@@ -1,18 +1,14 @@
 {
   "add": {
-    "title": "resources/app_entitlement_owners/Add",
-    "href": "/resources/app_entitlement_owners/add"
+    "title": "Add"
   },
   "list": {
-    "title": "resources/app_entitlement_owners/List",
-    "href": "/resources/app_entitlement_owners/list"
+    "title": "List"
   },
   "remove": {
-    "title": "resources/app_entitlement_owners/Remove",
-    "href": "/resources/app_entitlement_owners/remove"
+    "title": "Remove"
   },
   "set": {
-    "title": "resources/app_entitlement_owners/Set",
-    "href": "/resources/app_entitlement_owners/set"
+    "title": "Set"
   }
 }
