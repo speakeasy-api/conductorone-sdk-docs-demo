@@ -1,7 +1,7 @@
 {
-  "name": "<no value>",
+  "name": "conductor-one",
   "version": "",
-  "description": "Nextra docs template",
+  "description": "ConductorOne SDK DOcs",
   "private": true,
   "scripts": {
     "watch": "while sleep 5; do make; done",

@@ -23,7 +23,7 @@ const Logo: FC = () => {
         srcSet={docsTheme.logoDark}
         media='(prefers-color-scheme: dark)'
       />
-      <Image src={docsTheme.logoLight} alt='Logo' width={125} height={50} />
+      <Image src={docsTheme.logoLight} alt='Logo' width={150} height={50} />
     </picture>
   );
 
