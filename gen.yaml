@@ -27,6 +27,7 @@ python:
   installationURL: conductorone-sdk-python
   maxMethodParams: 0
   packageName: conductorone-sdk-python
+  published: true
   sdkClassName: conductorone-sdk-python
 typescript:
   version: 1.1.0
