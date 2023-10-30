@@ -1,0 +1,36 @@
+```python Create.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import operations, shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APIAppV1ConnectorServiceCreateRequest(
+    connector_service_create_request=shared.ConnectorServiceCreateRequest(
+        connector_expand_mask=shared.ConnectorExpandMask(
+            paths=[
+                'string',
+            ],
+        ),
+        config=shared.ConnectorServiceCreateRequestConfig(
+            additional_properties={
+                "key": 'string',
+            },
+        ),
+        user_ids=[
+            'string',
+        ],
+    ),
+    app_id='string',
+)
+
+res = s.connector.create(req)
+
+if res.connector_service_create_response is not None:
+    # handle response
+    pass
+```

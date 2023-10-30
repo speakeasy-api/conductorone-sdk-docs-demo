@@ -1,0 +1,18 @@
+```python Introspect.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.auth.introspect()
+
+if res.introspect_response is not None:
+    # handle response
+    pass
+```

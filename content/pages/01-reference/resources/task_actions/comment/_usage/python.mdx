@@ -1,0 +1,28 @@
+```python Comment.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import operations, shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APITaskV1TaskActionsServiceCommentRequest(
+    task_actions_service_comment_request=shared.TaskActionsServiceCommentRequest(
+        task_expand_mask=shared.TaskExpandMask(
+            paths=[
+                'string',
+            ],
+        ),
+    ),
+    task_id='string',
+)
+
+res = s.task_actions.comment(req)
+
+if res.task_actions_service_comment_response is not None:
+    # handle response
+    pass
+```

@@ -1,0 +1,42 @@
+```python UpdateDelegated.py
+import conductorone_sdk_typescript
+import dateutil.parser
+from conductorone_sdk_typescript.models import operations, shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APIAppV1ConnectorServiceUpdateDelegatedRequest(
+    connector_service_update_delegated_request_input=shared.ConnectorServiceUpdateDelegatedRequestInput(
+        connector=shared.ConnectorInput(
+            connector_status=shared.ConnectorStatus(),
+            o_auth2_authorized_as=shared.OAuth2AuthorizedAsInput(),
+            config=shared.ConnectorConfig(
+                additional_properties={
+                    "key": 'string',
+                },
+            ),
+            user_ids=[
+                'string',
+            ],
+        ),
+        connector_expand_mask=shared.ConnectorExpandMask(
+            paths=[
+                'string',
+            ],
+        ),
+    ),
+    connector_app_id='string',
+    connector_id='string',
+)
+
+res = s.connector.update_delegated(req)
+
+if res.connector_service_update_response is not None:
+    # handle response
+    pass
+```

@@ -1,0 +1,21 @@
+```python Get.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import operations, shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APIPolicyV1PoliciesGetRequest(
+    id='<ID>',
+)
+
+res = s.policies.get(req)
+
+if res.get_policy_response is not None:
+    # handle response
+    pass
+```

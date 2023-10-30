@@ -1,0 +1,23 @@
+```python RotateCredential.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import operations, shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APIAppV1ConnectorServiceRotateCredentialRequest(
+    connector_service_rotate_credential_request=shared.ConnectorServiceRotateCredentialRequest(),
+    app_id='string',
+    connector_id='string',
+)
+
+res = s.connector.rotate_credential(req)
+
+if res.connector_service_rotate_credential_response is not None:
+    # handle response
+    pass
+```

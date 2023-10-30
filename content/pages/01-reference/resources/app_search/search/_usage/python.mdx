@@ -1,0 +1,26 @@
+```python Search.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = shared.SearchAppsRequest(
+    app_ids=[
+        'string',
+    ],
+    exclude_app_ids=[
+        'string',
+    ],
+)
+
+res = s.app_search.search(req)
+
+if res.search_apps_response is not None:
+    # handle response
+    pass
+```

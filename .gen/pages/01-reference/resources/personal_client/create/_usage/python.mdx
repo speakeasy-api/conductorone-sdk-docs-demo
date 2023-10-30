@@ -1,0 +1,26 @@
+```python Create.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = shared.PersonalClientServiceCreateRequest(
+    allow_source_cidr=[
+        'string',
+    ],
+    scoped_roles=[
+        'string',
+    ],
+)
+
+res = s.personal_client.create(req)
+
+if res.personal_client_service_create_response is not None:
+    # handle response
+    pass
+```

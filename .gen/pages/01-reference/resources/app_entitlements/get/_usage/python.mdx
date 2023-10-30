@@ -1,0 +1,22 @@
+```python Get.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import operations, shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APIAppV1AppEntitlementsGetRequest(
+    app_id='string',
+    id='<ID>',
+)
+
+res = s.app_entitlements.get(req)
+
+if res.get_app_entitlement_response is not None:
+    # handle response
+    pass
+```

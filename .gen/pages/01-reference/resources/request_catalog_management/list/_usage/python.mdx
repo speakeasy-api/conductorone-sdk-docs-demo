@@ -1,0 +1,18 @@
+```python List.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.request_catalog_management.list()
+
+if res.request_catalog_management_service_list_response is not None:
+    # handle response
+    pass
+```

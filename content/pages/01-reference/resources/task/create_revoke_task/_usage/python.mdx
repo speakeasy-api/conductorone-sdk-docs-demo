@@ -1,0 +1,27 @@
+```python CreateRevokeTask.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = shared.TaskServiceCreateRevokeRequest(
+    task_expand_mask=shared.TaskExpandMask(
+        paths=[
+            'string',
+        ],
+    ),
+    app_entitlement_id='string',
+    app_id='string',
+)
+
+res = s.task.create_revoke_task(req)
+
+if res.task_service_create_revoke_response is not None:
+    # handle response
+    pass
+```

@@ -1,0 +1,24 @@
+```python Update.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import operations, shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APIAppV1AppUsageControlsServiceUpdateRequest(
+    update_app_usage_controls_request=shared.UpdateAppUsageControlsRequest(
+        app_usage_controls=shared.AppUsageControls(),
+    ),
+    app_id='string',
+)
+
+res = s.app_usage_controls.update(req)
+
+if res.update_app_usage_controls_response is not None:
+    # handle response
+    pass
+```

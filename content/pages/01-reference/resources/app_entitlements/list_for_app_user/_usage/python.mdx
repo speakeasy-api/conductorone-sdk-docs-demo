@@ -1,0 +1,22 @@
+```python ListForAppUser.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import operations, shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APIAppV1AppEntitlementsListForAppUserRequest(
+    app_id='string',
+    app_user_id='string',
+)
+
+res = s.app_entitlements.list_for_app_user(req)
+
+if res.list_app_entitlements_response is not None:
+    # handle response
+    pass
+```

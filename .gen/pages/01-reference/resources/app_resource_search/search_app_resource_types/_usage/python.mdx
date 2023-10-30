@@ -1,0 +1,35 @@
+```python SearchAppResourceTypes.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = shared.SearchAppResourceTypesRequest(
+    app_ids=[
+        'string',
+    ],
+    exclude_resource_type_ids=[
+        'string',
+    ],
+    exclude_resource_type_trait_ids=[
+        'string',
+    ],
+    resource_type_ids=[
+        'string',
+    ],
+    resource_type_trait_ids=[
+        'string',
+    ],
+)
+
+res = s.app_resource_search.search_app_resource_types(req)
+
+if res.search_app_resource_types_response is not None:
+    # handle response
+    pass
+```

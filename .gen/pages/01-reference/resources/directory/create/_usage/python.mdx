@@ -1,0 +1,25 @@
+```python Create.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = shared.DirectoryServiceCreateRequest(
+    directory_expand_mask=shared.DirectoryExpandMask(
+        paths=[
+            'string',
+        ],
+    ),
+)
+
+res = s.directory.create(req)
+
+if res.directory_service_create_response is not None:
+    # handle response
+    pass
+```

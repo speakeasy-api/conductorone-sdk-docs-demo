@@ -1,0 +1,28 @@
+```python EscalateToEmergencyAccess.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import operations, shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APITaskV1TaskActionsServiceEscalateToEmergencyAccessRequest(
+    task_actions_service_escalate_to_emergency_access_request=shared.TaskActionsServiceEscalateToEmergencyAccessRequest(
+        task_expand_mask=shared.TaskExpandMask(
+            paths=[
+                'string',
+            ],
+        ),
+    ),
+    task_id='string',
+)
+
+res = s.task_actions.escalate_to_emergency_access(req)
+
+if res.task_service_action_response is not None:
+    # handle response
+    pass
+```

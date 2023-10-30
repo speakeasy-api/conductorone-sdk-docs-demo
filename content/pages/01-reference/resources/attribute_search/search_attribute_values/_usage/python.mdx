@@ -1,0 +1,29 @@
+```python SearchAttributeValues.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = shared.SearchAttributeValuesRequest(
+    attribute_type_ids=[
+        'string',
+    ],
+    exclude_ids=[
+        'string',
+    ],
+    ids=[
+        'string',
+    ],
+)
+
+res = s.attribute_search.search_attribute_values(req)
+
+if res.search_attribute_values_response is not None:
+    # handle response
+    pass
+```

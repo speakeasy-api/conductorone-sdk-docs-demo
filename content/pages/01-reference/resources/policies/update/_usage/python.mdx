@@ -1,0 +1,62 @@
+```python Update.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import operations, shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APIPolicyV1PoliciesUpdateRequest(
+    update_policy_request_input=shared.UpdatePolicyRequestInput(
+        policy=shared.PolicyInput(
+            policy_steps={
+                "key": shared.PolicyStepsInput(
+                    steps=[
+                        shared.PolicyStepInput(
+                            accept=shared.Accept(),
+                            approval=shared.ApprovalInput(
+                                app_group_approval=shared.AppGroupApprovalInput(),
+                                app_owner_approval=shared.AppOwnerApprovalInput(),
+                                entitlement_owner_approval=shared.EntitlementOwnerApprovalInput(),
+                                expression_approval=shared.ExpressionApprovalInput(),
+                                manager_approval=shared.ManagerApprovalInput(),
+                                self_approval=shared.SelfApprovalInput(),
+                                user_approval=shared.UserApprovalInput(),
+                            ),
+                            provision=shared.Provision(
+                                provision_policy=shared.ProvisionPolicy(
+                                    connector_provision=shared.ConnectorProvision(),
+                                    delegated_provision=shared.DelegatedProvision(),
+                                    manual_provision=shared.ManualProvision(
+                                        user_ids=[
+                                            'string',
+                                        ],
+                                    ),
+                                ),
+                                provision_target=shared.ProvisionTarget(),
+                            ),
+                            reject=shared.Reject(),
+                        ),
+                    ],
+                ),
+            },
+            post_actions=[
+                shared.PolicyPostActions(),
+            ],
+            rules=[
+                shared.Rule(),
+            ],
+        ),
+    ),
+    id='<ID>',
+)
+
+res = s.policies.update(req)
+
+if res.update_policy_response is not None:
+    # handle response
+    pass
+```
