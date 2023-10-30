@@ -10,7 +10,7 @@
   "logoDark": "/logo-dark.svg",
 
   "__logo_link_description__": "The link to go to when clicking the logo",
-  "logoLink": "https://www.speakeasyapi.dev/",
+  "logoLink": "https://www.conductorone.com/",
 
   "__favicon_description__": "The favicon to display. You can use a relative path or a URL. If you use a relative path, make sure the file is in the public folder.",
   "favicon": "/favicon.png",
