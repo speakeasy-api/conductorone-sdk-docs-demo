@@ -1,9 +1,14 @@
-```python Get.py
-import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import operations, shared
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Get.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=shared.Security(
+    security=components.Security(
         bearer_auth="",
         oauth="",
     ),
@@ -18,4 +23,27 @@ res = s.roles.get(req)
 if res.get_roles_response is not None:
     # handle response
     pass
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "Role": {
+      "createdAt": "2021-07-20T14:16:08.515Z",
+      "deletedAt": "2022-03-12T14:43:45.672Z",
+      "displayName": "string",
+      "id": "string",
+      "name": "string",
+      "permissions": [
+        "string"
+      ],
+      "serviceRoles": [
+        "string"
+      ],
+      "systemBuiltin": false,
+      "updatedAt": "2022-10-05T05:33:35.567Z"
+    }
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

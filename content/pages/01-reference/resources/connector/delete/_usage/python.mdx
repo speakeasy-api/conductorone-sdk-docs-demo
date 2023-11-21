@@ -1,16 +1,21 @@
-```python Delete.py
-import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import operations, shared
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Delete.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=shared.Security(
+    security=components.Security(
         bearer_auth="",
         oauth="",
     ),
 )
 
 req = operations.C1APIAppV1ConnectorServiceDeleteRequest(
-    connector_service_delete_request=shared.ConnectorServiceDeleteRequest(),
+    connector_service_delete_request=components.ConnectorServiceDeleteRequest(),
     app_id='string',
     id='<ID>',
 )
@@ -20,4 +25,11 @@ res = s.connector.delete(req)
 if res.connector_service_delete_response is not None:
     # handle response
     pass
-```
+  ```
+  ---
+
+  ```json Example Response
+  {}
+  ```
+  </CH.Code>
+</WithStatusBar>

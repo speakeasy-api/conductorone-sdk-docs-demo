@@ -1,9 +1,14 @@
-```python ListAttributeValues.py
-import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import operations, shared
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python ListAttributeValues.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=shared.Security(
+    security=components.Security(
         bearer_auth="",
         oauth="",
     ),
@@ -18,4 +23,23 @@ res = s.attributes.list_attribute_values(req)
 if res.list_attribute_values_response is not None:
     # handle response
     pass
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "list": [
+      {
+        "attributeTypeId": "string",
+        "createdAt": "2022-07-13T00:55:42.564Z",
+        "deletedAt": "2023-12-06T13:16:53.279Z",
+        "id": "string",
+        "updatedAt": "2021-03-03T00:10:55.667Z",
+        "value": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

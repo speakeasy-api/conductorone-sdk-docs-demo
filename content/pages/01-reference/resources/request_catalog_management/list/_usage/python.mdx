@@ -1,9 +1,14 @@
-```python List.py
-import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import shared
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python List.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=shared.Security(
+    security=components.Security(
         bearer_auth="",
         oauth="",
     ),
@@ -15,4 +20,80 @@ res = s.request_catalog_management.list()
 if res.request_catalog_management_service_list_response is not None:
     # handle response
     pass
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ],
+    "list": [
+      {
+        "RequestCatalog": {
+          "accessEntitlements": [
+            {
+              "ProvisionPolicy": {
+                "ConnectorProvision": {},
+                "DelegatedProvision": {
+                    "appId": "string",
+                    "entitlementId": "string"
+                  },
+                "ManualProvision": {
+                    "instructions": "string",
+                    "userIds": [
+                      "string"
+                    ]
+                  }
+              },
+              "alias": "string",
+              "appId": "string",
+              "appResourceId": "string",
+              "appResourceTypeId": "string",
+              "certifyPolicyId": "string",
+              "complianceFrameworkValueIds": [
+                "string"
+              ],
+              "createdAt": "2021-05-11T00:09:51.593Z",
+              "deletedAt": "2023-01-25T02:00:57.510Z",
+              "description": "string",
+              "displayName": "string",
+              "durationGrant": "string",
+              "durationUnset": {},
+              "emergencyGrantEnabled": false,
+              "emergencyGrantPolicyId": "string",
+              "grantCount": "string",
+              "grantPolicyId": "string",
+              "id": "string",
+              "revokePolicyId": "string",
+              "riskLevelValueId": "string",
+              "slug": "string",
+              "systemBuiltin": false,
+              "updatedAt": "2021-12-15T04:35:52.059Z"
+            }
+          ],
+          "appIds": [
+            "string"
+          ],
+          "createdAt": "2023-08-23T02:54:23.300Z",
+          "createdByUserId": "string",
+          "deletedAt": "2022-03-30T14:49:52.804Z",
+          "description": "string",
+          "displayName": "string",
+          "id": "string",
+          "published": false,
+          "updatedAt": "2023-10-03T11:13:41.618Z",
+          "visibleToEveryone": false
+        },
+        "accessEntitlementsPath": "string",
+        "appPaths": "string",
+        "createdByUserPath": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

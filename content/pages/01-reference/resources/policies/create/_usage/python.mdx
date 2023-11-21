@@ -1,48 +1,53 @@
-```python Create.py
-import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import shared
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Create.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=shared.Security(
+    security=components.Security(
         bearer_auth="",
         oauth="",
     ),
 )
 
-req = shared.CreatePolicyRequestInput(
+req = components.CreatePolicyRequest(
     policy_steps={
-        "key": shared.PolicyStepsInput(
+        "key": components.PolicyStepsInput(
             steps=[
-                shared.PolicyStepInput(
-                    accept=shared.Accept(),
-                    approval=shared.ApprovalInput(
-                        app_group_approval=shared.AppGroupApprovalInput(),
-                        app_owner_approval=shared.AppOwnerApprovalInput(),
-                        entitlement_owner_approval=shared.EntitlementOwnerApprovalInput(),
-                        expression_approval=shared.ExpressionApprovalInput(),
-                        manager_approval=shared.ManagerApprovalInput(),
-                        self_approval=shared.SelfApprovalInput(),
-                        user_approval=shared.UserApprovalInput(),
+                components.PolicyStepInput(
+                    accept=components.Accept(),
+                    approval=components.ApprovalInput(
+                        app_group_approval=components.AppGroupApprovalInput(),
+                        app_owner_approval=components.AppOwnerApprovalInput(),
+                        entitlement_owner_approval=components.EntitlementOwnerApprovalInput(),
+                        expression_approval=components.ExpressionApprovalInput(),
+                        manager_approval=components.ManagerApprovalInput(),
+                        self_approval=components.SelfApprovalInput(),
+                        user_approval=components.UserApprovalInput(),
                     ),
-                    provision=shared.Provision(
-                        provision_policy=shared.ProvisionPolicy(
-                            connector_provision=shared.ConnectorProvision(),
-                            delegated_provision=shared.DelegatedProvision(),
-                            manual_provision=shared.ManualProvision(
+                    provision=components.Provision(
+                        provision_policy=components.ProvisionPolicy(
+                            connector_provision=components.ConnectorProvision(),
+                            delegated_provision=components.DelegatedProvision(),
+                            manual_provision=components.ManualProvision(
                                 user_ids=[
                                     'string',
                                 ],
                             ),
                         ),
-                        provision_target=shared.ProvisionTarget(),
+                        provision_target=components.ProvisionTarget(),
                     ),
-                    reject=shared.Reject(),
+                    reject=components.Reject(),
                 ),
             ],
         ),
     },
     post_actions=[
-        shared.PolicyPostActions(),
+        components.PolicyPostActions(),
     ],
 )
 
@@ -51,4 +56,34 @@ res = s.policies.create(req)
 if res.create_policy_response is not None:
     # handle response
     pass
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "Policy": {
+      "createdAt": "2021-06-10T08:29:22.339Z",
+      "deletedAt": "2023-01-13T05:01:07.151Z",
+      "description": "string",
+      "displayName": "string",
+      "id": "string",
+      "policySteps": {},
+      "postActions": [
+          {
+            "certifyRemediateImmediately": false
+          }
+        ],
+      "reassignTasksToDelegates": false,
+      "rules": [
+          {
+            "condition": "string",
+            "policyKey": "string"
+          }
+        ],
+      "systemBuiltin": false,
+      "updatedAt": "2021-10-23T15:48:33.898Z"
+    }
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

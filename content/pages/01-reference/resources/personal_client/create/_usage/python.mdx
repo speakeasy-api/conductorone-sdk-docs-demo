@@ -1,15 +1,20 @@
-```python Create.py
-import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import shared
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Create.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=shared.Security(
+    security=components.Security(
         bearer_auth="",
         oauth="",
     ),
 )
 
-req = shared.PersonalClientServiceCreateRequest(
+req = components.PersonalClientServiceCreateRequest(
     allow_source_cidr=[
         'string',
     ],
@@ -23,4 +28,30 @@ res = s.personal_client.create(req)
 if res.personal_client_service_create_response is not None:
     # handle response
     pass
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "PersonalClient": {
+      "allowSourceCidr": [
+        "string"
+      ],
+      "clientId": "string",
+      "createdAt": "2022-12-10T15:44:10.903Z",
+      "deletedAt": "2023-02-24T09:04:43.534Z",
+      "displayName": "string",
+      "expiresTime": "2023-07-11T07:37:38.246Z",
+      "id": "string",
+      "lastUsedAt": "2021-11-13T21:35:31.455Z",
+      "scopedRoles": [
+        "string"
+      ],
+      "updatedAt": "2021-10-17T21:06:31.385Z",
+      "userId": "string"
+    },
+    "clientSecret": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

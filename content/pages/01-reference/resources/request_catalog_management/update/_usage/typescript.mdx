@@ -1,5 +1,10 @@
-```typescript Update.ts
-import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript Update.ts
+  import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
 
 (async() => {
   const sdk = new ConductoroneSDKTypescript({
@@ -10,7 +15,7 @@ import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
   });
 
   const res = await sdk.requestCatalogManagement.update({
-    requestCatalogManagementServiceUpdateRequestInput: {
+    requestCatalogManagementServiceUpdateRequest: {
       requestCatalog: {
         accessEntitlements: [
           {
@@ -42,9 +47,79 @@ import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
     id: "<ID>",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
 })();
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "RequestCatalogView": {
+      "RequestCatalog": {
+        "accessEntitlements": [
+          {
+            "ProvisionPolicy": {
+              "ConnectorProvision": {},
+              "DelegatedProvision": {
+                  "appId": "string",
+                  "entitlementId": "string"
+                },
+              "ManualProvision": {
+                  "instructions": "string",
+                  "userIds": [
+                    "string"
+                  ]
+                }
+            },
+            "alias": "string",
+            "appId": "string",
+            "appResourceId": "string",
+            "appResourceTypeId": "string",
+            "certifyPolicyId": "string",
+            "complianceFrameworkValueIds": [
+              "string"
+            ],
+            "createdAt": "2021-10-18T14:26:08.974Z",
+            "deletedAt": "2022-07-12T07:42:15.458Z",
+            "description": "string",
+            "displayName": "string",
+            "durationGrant": "string",
+            "durationUnset": {},
+            "emergencyGrantEnabled": false,
+            "emergencyGrantPolicyId": "string",
+            "grantCount": "string",
+            "grantPolicyId": "string",
+            "id": "string",
+            "revokePolicyId": "string",
+            "riskLevelValueId": "string",
+            "slug": "string",
+            "systemBuiltin": false,
+            "updatedAt": "2022-07-27T22:57:31.791Z"
+          }
+        ],
+        "appIds": [
+          "string"
+        ],
+        "createdAt": "2023-10-01T19:28:45.476Z",
+        "createdByUserId": "string",
+        "deletedAt": "2021-04-13T20:45:23.390Z",
+        "description": "string",
+        "displayName": "string",
+        "id": "string",
+        "published": false,
+        "updatedAt": "2023-10-06T16:01:19.356Z",
+        "visibleToEveryone": false
+      },
+      "accessEntitlementsPath": "string",
+      "appPaths": "string",
+      "createdByUserPath": "string"
+    },
+    "expanded": [
+      {}
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

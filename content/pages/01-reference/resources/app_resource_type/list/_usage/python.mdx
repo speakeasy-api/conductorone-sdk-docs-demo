@@ -1,9 +1,14 @@
-```python List.py
-import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import operations, shared
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python List.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=shared.Security(
+    security=components.Security(
         bearer_auth="",
         oauth="",
     ),
@@ -18,4 +23,31 @@ res = s.app_resource_type.list(req)
 if res.app_resource_type_service_list_response is not None:
     # handle response
     pass
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ],
+    "list": [
+      {
+        "AppResourceType": {
+          "appId": "string",
+          "createdAt": "2021-10-05T08:30:11.817Z",
+          "deletedAt": "2022-03-30T17:36:23.375Z",
+          "displayName": "string",
+          "id": "string",
+          "updatedAt": "2022-05-26T14:38:49.594Z"
+        },
+        "appPath": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

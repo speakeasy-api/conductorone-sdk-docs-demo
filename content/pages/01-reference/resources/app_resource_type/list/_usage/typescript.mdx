@@ -1,5 +1,10 @@
-```typescript List.ts
-import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript List.ts
+  import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
 
 (async() => {
   const sdk = new ConductoroneSDKTypescript({
@@ -13,9 +18,33 @@ import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
     appId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
 })();
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "expanded": [
+      {}
+    ],
+    "list": [
+      {
+        "AppResourceType": {
+          "appId": "string",
+          "createdAt": "2021-10-05T08:30:11.817Z",
+          "deletedAt": "2022-03-30T17:36:23.375Z",
+          "displayName": "string",
+          "id": "string",
+          "updatedAt": "2022-05-26T14:38:49.594Z"
+        },
+        "appPath": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

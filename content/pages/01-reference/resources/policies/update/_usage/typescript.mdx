@@ -1,6 +1,11 @@
-```typescript Update.ts
-import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
-import { PolicyPolicyType } from "conductorone-sdk-typescript/dist/sdk/models/shared";
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript Update.ts
+  import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+import { PolicyPolicyType } from "conductorone-sdk-typescript/dist/models/components";
 
 (async() => {
   const sdk = new ConductoroneSDKTypescript({
@@ -11,7 +16,7 @@ import { PolicyPolicyType } from "conductorone-sdk-typescript/dist/sdk/models/sh
   });
 
   const res = await sdk.policies.update({
-    updatePolicyRequestInput: {
+    updatePolicyRequest: {
       policy: {
         policySteps: {
           "key": {
@@ -55,9 +60,38 @@ import { PolicyPolicyType } from "conductorone-sdk-typescript/dist/sdk/models/sh
     id: "<ID>",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
 })();
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "Policy": {
+      "createdAt": "2022-03-10T17:27:45.907Z",
+      "deletedAt": "2022-10-11T06:51:42.578Z",
+      "description": "string",
+      "displayName": "string",
+      "id": "string",
+      "policySteps": {},
+      "postActions": [
+          {
+            "certifyRemediateImmediately": false
+          }
+        ],
+      "reassignTasksToDelegates": false,
+      "rules": [
+          {
+            "condition": "string",
+            "policyKey": "string"
+          }
+        ],
+      "systemBuiltin": false,
+      "updatedAt": "2022-09-19T14:46:47.897Z"
+    }
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

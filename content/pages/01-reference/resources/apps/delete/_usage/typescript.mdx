@@ -1,5 +1,10 @@
-```typescript Delete.ts
-import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript Delete.ts
+  import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
 
 (async() => {
   const sdk = new ConductoroneSDKTypescript({
@@ -14,9 +19,15 @@ import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
     id: "<ID>",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
 })();
-```
+  ```
+  ---
+
+  ```json Example Response
+  {}
+  ```
+  </CH.Code>
+</WithStatusBar>

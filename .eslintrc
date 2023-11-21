@@ -33,7 +33,6 @@
     }
   },
   "parserOptions": {
-    "project": "./tsconfig.json",
     "tsconfigRootDir": "./",
     "sourceType": "module",
     "ecmaVersion": 2019
@@ -104,10 +103,5 @@
     "no-case-declarations": "off",
     "react-hooks/exhaustive-deps": "off"
   },
-  "ignorePatterns": [
-    "node_modules",
-    "out",
-    ".next",
-    "next.config.js"
-  ]
+  "ignorePatterns": ["node_modules", "out", ".next", "next.config.js"]
 }

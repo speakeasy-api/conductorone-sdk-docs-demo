@@ -1,16 +1,21 @@
-```python Create.py
-import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import shared
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Create.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=shared.Security(
+    security=components.Security(
         bearer_auth="",
         oauth="",
     ),
 )
 
-req = shared.RequestCatalogManagementServiceCreateRequest(
-    request_catalog_expand_mask=shared.RequestCatalogExpandMask(
+req = components.RequestCatalogManagementServiceCreateRequest(
+    request_catalog_expand_mask=components.RequestCatalogExpandMask(
         paths=[
             'string',
         ],
@@ -22,4 +27,77 @@ res = s.request_catalog_management.create(req)
 if res.request_catalog_management_service_get_response is not None:
     # handle response
     pass
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "RequestCatalogView": {
+      "RequestCatalog": {
+        "accessEntitlements": [
+          {
+            "ProvisionPolicy": {
+              "ConnectorProvision": {},
+              "DelegatedProvision": {
+                  "appId": "string",
+                  "entitlementId": "string"
+                },
+              "ManualProvision": {
+                  "instructions": "string",
+                  "userIds": [
+                    "string"
+                  ]
+                }
+            },
+            "alias": "string",
+            "appId": "string",
+            "appResourceId": "string",
+            "appResourceTypeId": "string",
+            "certifyPolicyId": "string",
+            "complianceFrameworkValueIds": [
+              "string"
+            ],
+            "createdAt": "2022-10-25T07:20:24.768Z",
+            "deletedAt": "2022-05-10T00:27:50.909Z",
+            "description": "string",
+            "displayName": "string",
+            "durationGrant": "string",
+            "durationUnset": {},
+            "emergencyGrantEnabled": false,
+            "emergencyGrantPolicyId": "string",
+            "grantCount": "string",
+            "grantPolicyId": "string",
+            "id": "string",
+            "revokePolicyId": "string",
+            "riskLevelValueId": "string",
+            "slug": "string",
+            "systemBuiltin": false,
+            "updatedAt": "2023-03-21T11:50:48.904Z"
+          }
+        ],
+        "appIds": [
+          "string"
+        ],
+        "createdAt": "2021-01-22T21:16:33.704Z",
+        "createdByUserId": "string",
+        "deletedAt": "2021-02-12T21:51:18.338Z",
+        "description": "string",
+        "displayName": "string",
+        "id": "string",
+        "published": false,
+        "updatedAt": "2022-04-29T16:09:46.858Z",
+        "visibleToEveryone": false
+      },
+      "accessEntitlementsPath": "string",
+      "appPaths": "string",
+      "createdByUserPath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

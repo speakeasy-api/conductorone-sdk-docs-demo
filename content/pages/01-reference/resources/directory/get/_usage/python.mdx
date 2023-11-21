@@ -1,9 +1,14 @@
-```python Get.py
-import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import operations, shared
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Get.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=shared.Security(
+    security=components.Security(
         bearer_auth="",
         oauth="",
     ),
@@ -18,4 +23,26 @@ res = s.directory.get(req)
 if res.directory_service_get_response is not None:
     # handle response
     pass
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "DirectoryView": {
+      "Directory": {
+        "appId": "string",
+        "createdAt": "2021-11-01T02:26:37.906Z",
+        "deletedAt": "2021-12-15T19:59:31.689Z",
+        "updatedAt": "2021-01-11T05:53:38.838Z"
+      },
+      "appPath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

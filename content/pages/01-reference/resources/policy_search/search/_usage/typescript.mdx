@@ -1,6 +1,11 @@
-```typescript Search.ts
-import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
-import { SearchPoliciesRequestPolicyTypes } from "conductorone-sdk-typescript/dist/sdk/models/shared";
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript Search.ts
+  import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+import { PolicyTypes } from "conductorone-sdk-typescript/dist/models/components";
 
 (async() => {
   const sdk = new ConductoroneSDKTypescript({
@@ -12,16 +17,48 @@ import { SearchPoliciesRequestPolicyTypes } from "conductorone-sdk-typescript/di
 
   const res = await sdk.policySearch.search({
     policyTypes: [
-      SearchPoliciesRequestPolicyTypes.PolicyTypeCertify,
+      PolicyTypes.PolicyTypeCertify,
     ],
     refs: [
       {},
     ],
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
 })();
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "list": [
+      {
+        "createdAt": "2023-06-11T02:36:24.123Z",
+        "deletedAt": "2022-03-27T22:37:59.978Z",
+        "description": "string",
+        "displayName": "string",
+        "id": "string",
+        "policySteps": {},
+        "postActions": [
+            {
+              "certifyRemediateImmediately": false
+            }
+          ],
+        "reassignTasksToDelegates": false,
+        "rules": [
+            {
+              "condition": "string",
+              "policyKey": "string"
+            }
+          ],
+        "systemBuiltin": false,
+        "updatedAt": "2023-01-10T14:32:20.216Z"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

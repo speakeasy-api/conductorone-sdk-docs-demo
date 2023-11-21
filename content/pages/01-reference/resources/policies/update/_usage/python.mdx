@@ -1,53 +1,58 @@
-```python Update.py
-import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import operations, shared
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Update.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=shared.Security(
+    security=components.Security(
         bearer_auth="",
         oauth="",
     ),
 )
 
 req = operations.C1APIPolicyV1PoliciesUpdateRequest(
-    update_policy_request_input=shared.UpdatePolicyRequestInput(
-        policy=shared.PolicyInput(
+    update_policy_request=components.UpdatePolicyRequest(
+        policy=components.PolicyInput(
             policy_steps={
-                "key": shared.PolicyStepsInput(
+                "key": components.PolicyStepsInput(
                     steps=[
-                        shared.PolicyStepInput(
-                            accept=shared.Accept(),
-                            approval=shared.ApprovalInput(
-                                app_group_approval=shared.AppGroupApprovalInput(),
-                                app_owner_approval=shared.AppOwnerApprovalInput(),
-                                entitlement_owner_approval=shared.EntitlementOwnerApprovalInput(),
-                                expression_approval=shared.ExpressionApprovalInput(),
-                                manager_approval=shared.ManagerApprovalInput(),
-                                self_approval=shared.SelfApprovalInput(),
-                                user_approval=shared.UserApprovalInput(),
+                        components.PolicyStepInput(
+                            accept=components.Accept(),
+                            approval=components.ApprovalInput(
+                                app_group_approval=components.AppGroupApprovalInput(),
+                                app_owner_approval=components.AppOwnerApprovalInput(),
+                                entitlement_owner_approval=components.EntitlementOwnerApprovalInput(),
+                                expression_approval=components.ExpressionApprovalInput(),
+                                manager_approval=components.ManagerApprovalInput(),
+                                self_approval=components.SelfApprovalInput(),
+                                user_approval=components.UserApprovalInput(),
                             ),
-                            provision=shared.Provision(
-                                provision_policy=shared.ProvisionPolicy(
-                                    connector_provision=shared.ConnectorProvision(),
-                                    delegated_provision=shared.DelegatedProvision(),
-                                    manual_provision=shared.ManualProvision(
+                            provision=components.Provision(
+                                provision_policy=components.ProvisionPolicy(
+                                    connector_provision=components.ConnectorProvision(),
+                                    delegated_provision=components.DelegatedProvision(),
+                                    manual_provision=components.ManualProvision(
                                         user_ids=[
                                             'string',
                                         ],
                                     ),
                                 ),
-                                provision_target=shared.ProvisionTarget(),
+                                provision_target=components.ProvisionTarget(),
                             ),
-                            reject=shared.Reject(),
+                            reject=components.Reject(),
                         ),
                     ],
                 ),
             },
             post_actions=[
-                shared.PolicyPostActions(),
+                components.PolicyPostActions(),
             ],
             rules=[
-                shared.Rule(),
+                components.Rule(),
             ],
         ),
     ),
@@ -59,4 +64,34 @@ res = s.policies.update(req)
 if res.update_policy_response is not None:
     # handle response
     pass
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "Policy": {
+      "createdAt": "2022-03-10T17:27:45.907Z",
+      "deletedAt": "2022-10-11T06:51:42.578Z",
+      "description": "string",
+      "displayName": "string",
+      "id": "string",
+      "policySteps": {},
+      "postActions": [
+          {
+            "certifyRemediateImmediately": false
+          }
+        ],
+      "reassignTasksToDelegates": false,
+      "rules": [
+          {
+            "condition": "string",
+            "policyKey": "string"
+          }
+        ],
+      "systemBuiltin": false,
+      "updatedAt": "2022-09-19T14:46:47.897Z"
+    }
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

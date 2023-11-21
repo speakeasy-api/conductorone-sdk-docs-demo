@@ -1,6 +1,11 @@
-```typescript SearchEntitlements.ts
-import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
-import { RequestCatalogSearchServiceSearchEntitlementsRequestGrantedStatus } from "conductorone-sdk-typescript/dist/sdk/models/shared";
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript SearchEntitlements.ts
+  import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+import { GrantedStatus } from "conductorone-sdk-typescript/dist/models/components";
 
 (async() => {
   const sdk = new ConductoroneSDKTypescript({
@@ -18,9 +23,78 @@ import { RequestCatalogSearchServiceSearchEntitlementsRequestGrantedStatus } fro
     },
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
 })();
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "expanded": [
+      {}
+    ],
+    "list": [
+      {
+        "AppEntitlementView": {
+          "AppEntitlement": {
+            "ProvisionPolicy": {
+              "ConnectorProvision": {},
+              "DelegatedProvision": {
+                  "appId": "string",
+                  "entitlementId": "string"
+                },
+              "ManualProvision": {
+                  "instructions": "string",
+                  "userIds": [
+                    "string"
+                  ]
+                }
+            },
+            "alias": "string",
+            "appId": "string",
+            "appResourceId": "string",
+            "appResourceTypeId": "string",
+            "certifyPolicyId": "string",
+            "complianceFrameworkValueIds": [
+              "string"
+            ],
+            "createdAt": "2023-08-23T19:23:31.625Z",
+            "deletedAt": "2021-10-01T12:38:45.990Z",
+            "description": "string",
+            "displayName": "string",
+            "durationGrant": "string",
+            "durationUnset": {},
+            "emergencyGrantEnabled": false,
+            "emergencyGrantPolicyId": "string",
+            "grantCount": "string",
+            "grantPolicyId": "string",
+            "id": "string",
+            "revokePolicyId": "string",
+            "riskLevelValueId": "string",
+            "slug": "string",
+            "systemBuiltin": false,
+            "updatedAt": "2022-09-29T11:51:04.242Z"
+          },
+          "appPath": "string",
+          "appResourcePath": "string",
+          "appResourceTypePath": "string"
+        },
+        "appEntitlementUserBindings": [
+          {
+            "appEntitlementId": "string",
+            "appId": "string",
+            "appUserId": "string",
+            "createdAt": "2021-12-09T23:22:39.966Z",
+            "deletedAt": "2023-08-24T12:00:18.897Z",
+            "deprovisionAt": "2023-11-24T03:08:17.612Z"
+          }
+        ]
+      }
+    ],
+    "nextPageToken": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

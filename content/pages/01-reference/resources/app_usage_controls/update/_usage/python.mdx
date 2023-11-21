@@ -1,17 +1,22 @@
-```python Update.py
-import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import operations, shared
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Update.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=shared.Security(
+    security=components.Security(
         bearer_auth="",
         oauth="",
     ),
 )
 
 req = operations.C1APIAppV1AppUsageControlsServiceUpdateRequest(
-    update_app_usage_controls_request=shared.UpdateAppUsageControlsRequest(
-        app_usage_controls=shared.AppUsageControls(),
+    update_app_usage_controls_request=components.UpdateAppUsageControlsRequest(
+        app_usage_controls=components.AppUsageControls(),
     ),
     app_id='string',
 )
@@ -21,4 +26,19 @@ res = s.app_usage_controls.update(req)
 if res.update_app_usage_controls_response is not None:
     # handle response
     pass
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "AppUsageControls": {
+      "appId": "string",
+      "notify": false,
+      "notifyAfterDays": 3687.25,
+      "revoke": false,
+      "revokeAfterDays": 6625.27
+    }
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

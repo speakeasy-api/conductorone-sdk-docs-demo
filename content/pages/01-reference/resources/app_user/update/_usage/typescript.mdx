@@ -1,6 +1,11 @@
-```typescript Update.ts
-import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
-import { AppUserAppUserType } from "conductorone-sdk-typescript/dist/sdk/models/shared";
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript Update.ts
+  import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+import { AppUserType } from "conductorone-sdk-typescript/dist/models/components";
 
 (async() => {
   const sdk = new ConductoroneSDKTypescript({
@@ -11,7 +16,7 @@ import { AppUserAppUserType } from "conductorone-sdk-typescript/dist/sdk/models/
   });
 
   const res = await sdk.appUser.update({
-    appUserServiceUpdateRequestInput: {
+    appUserServiceUpdateRequest: {
       appUser: {
         appUserStatus: {},
       },
@@ -25,9 +30,45 @@ import { AppUserAppUserType } from "conductorone-sdk-typescript/dist/sdk/models/
     appUserId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
 })();
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "AppUserView": {
+      "AppUser": {
+        "AppUserStatus": {
+          "details": "string"
+        },
+        "appId": "string",
+        "createdAt": "2021-04-17T07:49:17.061Z",
+        "deletedAt": "2022-11-14T00:23:43.191Z",
+        "displayName": "string",
+        "email": "string",
+        "emails": [
+          "string"
+        ],
+        "id": "string",
+        "identityUserId": "string",
+        "profile": {},
+        "updatedAt": "2023-07-07T13:11:31.731Z",
+        "username": "string",
+        "usernames": [
+            "string"
+          ]
+      },
+      "appPath": "string",
+      "identityUserPath": "string",
+      "lastUsagePath": "string"
+    },
+    "expanded": [
+      {}
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

@@ -1,15 +1,20 @@
-```python Search.py
-import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import shared
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Search.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=shared.Security(
+    security=components.Security(
         bearer_auth="",
         oauth="",
     ),
 )
 
-req = shared.SearchAppsRequest(
+req = components.SearchAppsRequest(
     app_ids=[
         'string',
     ],
@@ -23,4 +28,34 @@ res = s.app_search.search(req)
 if res.search_apps_response is not None:
     # handle response
     pass
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "list": [
+      {
+        "appAccountId": "string",
+        "appAccountName": "string",
+        "certifyPolicyId": "string",
+        "createdAt": "2023-11-10T06:14:38.267Z",
+        "deletedAt": "2023-01-15T15:51:37.640Z",
+        "description": "string",
+        "displayName": "string",
+        "fieldMask": "string",
+        "grantPolicyId": "string",
+        "iconUrl": "string",
+        "id": "string",
+        "logoUri": "string",
+        "monthlyCostUsd": 4471.25,
+        "parentAppId": "string",
+        "revokePolicyId": "string",
+        "updatedAt": "2022-05-07T20:54:59.021Z",
+        "userCount": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

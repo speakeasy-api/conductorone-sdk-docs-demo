@@ -1,16 +1,21 @@
-```python Add.py
-import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import operations, shared
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Add.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=shared.Security(
+    security=components.Security(
         bearer_auth="",
         oauth="",
     ),
 )
 
 req = operations.C1APIAppV1AppOwnersAddRequest(
-    add_app_owner_request=shared.AddAppOwnerRequest(),
+    add_app_owner_request=components.AddAppOwnerRequest(),
     app_id='string',
     user_id='string',
 )
@@ -20,4 +25,11 @@ res = s.app_owners.add(req)
 if res.add_app_owner_response is not None:
     # handle response
     pass
-```
+  ```
+  ---
+
+  ```json Example Response
+  {}
+  ```
+  </CH.Code>
+</WithStatusBar>
