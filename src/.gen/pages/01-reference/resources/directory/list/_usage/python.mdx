@@ -1,0 +1,49 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python List.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APIDirectoryV1DirectoryServiceListRequest()
+
+res = s.directory.list(req)
+
+if res.directory_service_list_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ],
+    "list": [
+      {
+        "Directory": {
+          "appId": "string",
+          "createdAt": "2023-01-01T19:32:40.876Z",
+          "deletedAt": "2023-07-12T08:44:59.425Z",
+          "updatedAt": "2021-05-25T07:38:52.128Z"
+        },
+        "appPath": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

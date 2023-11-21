@@ -1,0 +1,73 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python List.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APIAppV1ConnectorServiceListRequest(
+    app_id='string',
+)
+
+res = s.connector.list(req)
+
+if res.connector_service_list_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ],
+    "list": [
+      {
+        "Connector": {
+          "ConnectorStatus": {
+            "completedAt": "2022-07-24T22:08:53.474Z",
+            "lastError": "string",
+            "startedAt": "2023-05-05T16:18:24.250Z",
+            "updatedAt": "2021-05-10T12:15:06.683Z"
+          },
+          "OAuth2AuthorizedAs": {
+            "authEmail": "string",
+            "authorizedAt": "2023-03-01T02:13:33.902Z"
+          },
+          "appId": "string",
+          "catalogId": "string",
+          "config": {
+            "@type": "string"
+          },
+          "createdAt": "2022-12-02T17:07:27.576Z",
+          "deletedAt": "2022-09-30T07:28:48.410Z",
+          "description": "string",
+          "displayName": "string",
+          "downloadUrl": "string",
+          "id": "string",
+          "updatedAt": "2021-06-06T23:19:27.634Z",
+          "userIds": [
+            "string"
+          ]
+        },
+        "appPath": "string",
+        "usersPath": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

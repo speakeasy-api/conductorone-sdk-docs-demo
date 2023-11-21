@@ -1,0 +1,49 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python RotateCredential.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APIAppV1ConnectorServiceRotateCredentialRequest(
+    connector_service_rotate_credential_request=components.ConnectorServiceRotateCredentialRequest(),
+    app_id='string',
+    connector_id='string',
+)
+
+res = s.connector.rotate_credential(req)
+
+if res.connector_service_rotate_credential_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "ConnectorCredential": {
+      "appId": "string",
+      "clientId": "string",
+      "connectorId": "string",
+      "createdAt": "2022-08-12T10:10:06.377Z",
+      "deletedAt": "2023-11-01T09:53:57.053Z",
+      "displayName": "string",
+      "expiresTime": "2023-04-11T16:25:06.618Z",
+      "id": "string",
+      "lastUsedAt": "2022-07-26T10:10:26.632Z",
+      "updatedAt": "2021-04-26T23:15:06.828Z"
+    },
+    "clientSecret": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

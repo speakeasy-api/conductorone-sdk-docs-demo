@@ -1,0 +1,89 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript Create.ts
+  import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+import { PolicyType } from "conductorone-sdk-typescript/dist/models/components";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.policies.create({
+    policySteps: {
+      "key": {
+        steps: [
+          {
+            accept: {},
+            approval: {
+              appGroupApproval: {},
+              appOwnerApproval: {},
+              entitlementOwnerApproval: {},
+              expressionApproval: {},
+              managerApproval: {},
+              selfApproval: {},
+              userApproval: {},
+            },
+            provision: {
+              provisionPolicy: {
+                connectorProvision: {},
+                delegatedProvision: {},
+                manualProvision: {
+                  userIds: [
+                    "string",
+                  ],
+                },
+              },
+              provisionTarget: {},
+            },
+            reject: {},
+          },
+        ],
+      },
+    },
+    postActions: [
+      {},
+    ],
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "Policy": {
+      "createdAt": "2021-06-10T08:29:22.339Z",
+      "deletedAt": "2023-01-13T05:01:07.151Z",
+      "description": "string",
+      "displayName": "string",
+      "id": "string",
+      "policySteps": {},
+      "postActions": [
+          {
+            "certifyRemediateImmediately": false
+          }
+        ],
+      "reassignTasksToDelegates": false,
+      "rules": [
+          {
+            "condition": "string",
+            "policyKey": "string"
+          }
+        ],
+      "systemBuiltin": false,
+      "updatedAt": "2021-10-23T15:48:33.898Z"
+    }
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

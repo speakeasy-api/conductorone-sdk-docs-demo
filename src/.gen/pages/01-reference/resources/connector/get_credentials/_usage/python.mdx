@@ -1,0 +1,48 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python GetCredentials.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APIAppV1ConnectorServiceGetCredentialsRequest(
+    app_id='string',
+    connector_id='string',
+    id='<ID>',
+)
+
+res = s.connector.get_credentials(req)
+
+if res.connector_service_get_credentials_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "ConnectorCredential": {
+      "appId": "string",
+      "clientId": "string",
+      "connectorId": "string",
+      "createdAt": "2023-12-08T14:05:24.185Z",
+      "deletedAt": "2022-06-03T14:25:09.450Z",
+      "displayName": "string",
+      "expiresTime": "2023-05-26T01:53:13.408Z",
+      "id": "string",
+      "lastUsedAt": "2023-05-27T23:56:04.473Z",
+      "updatedAt": "2022-05-21T07:40:39.556Z"
+    }
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

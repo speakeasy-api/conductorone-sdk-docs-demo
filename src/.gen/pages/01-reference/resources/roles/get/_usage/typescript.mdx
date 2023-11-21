@@ -1,0 +1,48 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript Get.ts
+  import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.roles.get({
+    roleId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "Role": {
+      "createdAt": "2021-07-20T14:16:08.515Z",
+      "deletedAt": "2022-03-12T14:43:45.672Z",
+      "displayName": "string",
+      "id": "string",
+      "name": "string",
+      "permissions": [
+        "string"
+      ],
+      "serviceRoles": [
+        "string"
+      ],
+      "systemBuiltin": false,
+      "updatedAt": "2022-10-05T05:33:35.567Z"
+    }
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

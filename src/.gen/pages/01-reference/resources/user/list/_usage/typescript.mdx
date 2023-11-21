@@ -1,0 +1,127 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript List.ts
+  import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.user.list({});
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "expanded": [
+      {}
+    ],
+    "list": [
+      {
+        "User": {
+          "createdAt": "2021-10-24T00:13:02.300Z",
+          "delegatedUserId": "string",
+          "deletedAt": "2021-10-08T11:20:53.664Z",
+          "department": "string",
+          "departmentSources": [
+            {
+              "appId": "string",
+              "appUserId": "string",
+              "appUserProfileAttributeKey": "string",
+              "userAttributeMappingId": "string",
+              "value": "string"
+            }
+          ],
+          "directoryIds": [
+            "string"
+          ],
+          "directoryStatusSources": [
+            {
+              "appId": "string",
+              "appUserId": "string",
+              "appUserProfileAttributeKey": "string",
+              "userAttributeMappingId": "string",
+              "value": "string"
+            }
+          ],
+          "displayName": "string",
+          "email": "string",
+          "emails": [
+            "string"
+          ],
+          "employmentStatus": "string",
+          "employmentStatusSources": [
+            {
+              "appId": "string",
+              "appUserId": "string",
+              "appUserProfileAttributeKey": "string",
+              "userAttributeMappingId": "string",
+              "value": "string"
+            }
+          ],
+          "employmentType": "string",
+          "employmentTypeSources": [
+            {
+              "appId": "string",
+              "appUserId": "string",
+              "appUserProfileAttributeKey": "string",
+              "userAttributeMappingId": "string",
+              "value": "string"
+            }
+          ],
+          "id": "string",
+          "jobTitle": "string",
+          "jobTitleSources": [
+            {
+              "appId": "string",
+              "appUserId": "string",
+              "appUserProfileAttributeKey": "string",
+              "userAttributeMappingId": "string",
+              "value": "string"
+            }
+          ],
+          "managerIds": [
+            "string"
+          ],
+          "managerSources": [
+            {
+              "appId": "string",
+              "appUserId": "string",
+              "appUserProfileAttributeKey": "string",
+              "userAttributeMappingId": "string",
+              "value": "string"
+            }
+          ],
+          "profile": {},
+          "roleIds": [
+              "string"
+            ],
+          "updatedAt": "2021-03-02T15:14:13.370Z",
+          "username": "string",
+          "usernames": [
+              "string"
+            ]
+        },
+        "delegatedUserPath": "string",
+        "directoriesPath": "string",
+        "managersPath": "string",
+        "rolesPath": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

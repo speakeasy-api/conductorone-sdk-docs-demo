@@ -1,0 +1,96 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript Get.ts
+  import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.requestCatalogManagement.get({
+    id: "<ID>",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "RequestCatalogView": {
+      "RequestCatalog": {
+        "accessEntitlements": [
+          {
+            "ProvisionPolicy": {
+              "ConnectorProvision": {},
+              "DelegatedProvision": {
+                  "appId": "string",
+                  "entitlementId": "string"
+                },
+              "ManualProvision": {
+                  "instructions": "string",
+                  "userIds": [
+                    "string"
+                  ]
+                }
+            },
+            "alias": "string",
+            "appId": "string",
+            "appResourceId": "string",
+            "appResourceTypeId": "string",
+            "certifyPolicyId": "string",
+            "complianceFrameworkValueIds": [
+              "string"
+            ],
+            "createdAt": "2021-11-06T16:10:00.821Z",
+            "deletedAt": "2023-12-09T15:32:21.398Z",
+            "description": "string",
+            "displayName": "string",
+            "durationGrant": "string",
+            "durationUnset": {},
+            "emergencyGrantEnabled": false,
+            "emergencyGrantPolicyId": "string",
+            "grantCount": "string",
+            "grantPolicyId": "string",
+            "id": "string",
+            "revokePolicyId": "string",
+            "riskLevelValueId": "string",
+            "slug": "string",
+            "systemBuiltin": false,
+            "updatedAt": "2021-05-12T14:45:56.582Z"
+          }
+        ],
+        "appIds": [
+          "string"
+        ],
+        "createdAt": "2022-01-29T14:12:02.321Z",
+        "createdByUserId": "string",
+        "deletedAt": "2021-11-21T06:33:51.975Z",
+        "description": "string",
+        "displayName": "string",
+        "id": "string",
+        "published": false,
+        "updatedAt": "2022-06-11T13:52:55.676Z",
+        "visibleToEveryone": false
+      },
+      "accessEntitlementsPath": "string",
+      "appPaths": "string",
+      "createdByUserPath": "string"
+    },
+    "expanded": [
+      {}
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

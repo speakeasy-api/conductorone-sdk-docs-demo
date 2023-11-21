@@ -1,0 +1,109 @@
+{
+  "-- guides": {
+    "title": "Guides",
+    "type": "separator"
+  },
+  "client_sdks": {
+    "title": "Client SDKs"
+  },
+  "installation": {
+    "title": "Installation"
+  },
+  "-- resources": {
+    "title": "Resources",
+    "type": "separator"
+  },
+  "apps": {
+    "title": "Apps"
+  },
+  "connector": {
+    "title": "Connector"
+  },
+  "app_entitlements": {
+    "title": "App Entitlements"
+  },
+  "app_entitlement_user_binding": {
+    "title": "App Entitlement User Binding"
+  },
+  "app_entitlement_owners": {
+    "title": "App Entitlement Owners"
+  },
+  "app_owners": {
+    "title": "App Owners"
+  },
+  "app_report": {
+    "title": "App Report"
+  },
+  "app_report_action": {
+    "title": "App Report Action"
+  },
+  "app_resource_type": {
+    "title": "App Resource Type"
+  },
+  "app_resource": {
+    "title": "App Resource"
+  },
+  "app_resource_owners": {
+    "title": "App Resource Owners"
+  },
+  "app_usage_controls": {
+    "title": "App Usage Controls"
+  },
+  "app_user": {
+    "title": "App User"
+  },
+  "attributes": {
+    "title": "Attributes"
+  },
+  "auth": {
+    "title": "Auth"
+  },
+  "request_catalog_management": {
+    "title": "Request Catalog Management"
+  },
+  "directory": {
+    "title": "Directory"
+  },
+  "personal_client": {
+    "title": "Personal Client"
+  },
+  "roles": {
+    "title": "Roles"
+  },
+  "policies": {
+    "title": "Policies"
+  },
+  "app_resource_search": {
+    "title": "App Resource Search"
+  },
+  "app_search": {
+    "title": "App Search"
+  },
+  "attribute_search": {
+    "title": "Attribute Search"
+  },
+  "app_entitlement_search": {
+    "title": "App Entitlement Search"
+  },
+  "policy_search": {
+    "title": "Policy Search"
+  },
+  "request_catalog_search": {
+    "title": "Request Catalog Search"
+  },
+  "task_search": {
+    "title": "Task Search"
+  },
+  "user_search": {
+    "title": "User Search"
+  },
+  "task": {
+    "title": "Task"
+  },
+  "task_actions": {
+    "title": "Task Actions"
+  },
+  "user": {
+    "title": "User"
+  }
+}

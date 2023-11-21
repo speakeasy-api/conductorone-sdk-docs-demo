@@ -1,0 +1,54 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python List.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APIAppV1AppsListRequest()
+
+res = s.apps.list(req)
+
+if res.list_apps_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "list": [
+      {
+        "appAccountId": "string",
+        "appAccountName": "string",
+        "certifyPolicyId": "string",
+        "createdAt": "2022-04-09T21:38:53.014Z",
+        "deletedAt": "2022-11-14T19:15:14.189Z",
+        "description": "string",
+        "displayName": "string",
+        "fieldMask": "string",
+        "grantPolicyId": "string",
+        "iconUrl": "string",
+        "id": "string",
+        "logoUri": "string",
+        "monthlyCostUsd": 6458.94,
+        "parentAppId": "string",
+        "revokePolicyId": "string",
+        "updatedAt": "2022-02-25T21:33:04.651Z",
+        "userCount": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

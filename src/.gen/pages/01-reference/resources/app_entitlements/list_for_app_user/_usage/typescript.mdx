@@ -1,0 +1,84 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript ListForAppUser.ts
+  import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.appEntitlements.listForAppUser({
+    appId: "string",
+    appUserId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "expanded": [
+      {}
+    ],
+    "list": [
+      {
+        "AppEntitlement": {
+          "ProvisionPolicy": {
+            "ConnectorProvision": {},
+            "DelegatedProvision": {
+                "appId": "string",
+                "entitlementId": "string"
+              },
+            "ManualProvision": {
+                "instructions": "string",
+                "userIds": [
+                  "string"
+                ]
+              }
+          },
+          "alias": "string",
+          "appId": "string",
+          "appResourceId": "string",
+          "appResourceTypeId": "string",
+          "certifyPolicyId": "string",
+          "complianceFrameworkValueIds": [
+            "string"
+          ],
+          "createdAt": "2023-09-16T01:43:14.288Z",
+          "deletedAt": "2023-02-03T21:44:52.137Z",
+          "description": "string",
+          "displayName": "string",
+          "durationGrant": "string",
+          "durationUnset": {},
+          "emergencyGrantEnabled": false,
+          "emergencyGrantPolicyId": "string",
+          "grantCount": "string",
+          "grantPolicyId": "string",
+          "id": "string",
+          "revokePolicyId": "string",
+          "riskLevelValueId": "string",
+          "slug": "string",
+          "systemBuiltin": false,
+          "updatedAt": "2021-04-19T17:05:15.498Z"
+        },
+        "appPath": "string",
+        "appResourcePath": "string",
+        "appResourceTypePath": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

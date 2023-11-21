@@ -1,0 +1,35 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Add.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APIAppV1AppEntitlementOwnersAddRequest(
+    add_app_entitlement_owner_request=components.AddAppEntitlementOwnerRequest(),
+    app_id='string',
+    entitlement_id='string',
+)
+
+res = s.app_entitlement_owners.add(req)
+
+if res.add_app_entitlement_owner_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {}
+  ```
+  </CH.Code>
+</WithStatusBar>

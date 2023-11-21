@@ -1,0 +1,57 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Get.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APIAppV1AppResourceServiceGetRequest(
+    app_id='string',
+    app_resource_type_id='string',
+    id='<ID>',
+)
+
+res = s.app_resource.get(req)
+
+if res.app_resource_service_get_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "AppResourceView": {
+      "AppResource": {
+        "appId": "string",
+        "appResourceTypeId": "string",
+        "createdAt": "2022-06-04T19:03:01.565Z",
+        "customDescription": "string",
+        "deletedAt": "2021-09-25T15:30:16.034Z",
+        "description": "string",
+        "displayName": "string",
+        "grantCount": "string",
+        "id": "string",
+        "updatedAt": "2022-11-14T17:50:44.109Z"
+      },
+      "appPath": "string",
+      "resourceTypePath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

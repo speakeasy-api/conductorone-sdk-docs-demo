@@ -1,0 +1,85 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript ListForAppResource.ts
+  import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.appEntitlements.listForAppResource({
+    appId: "string",
+    appResourceId: "string",
+    appResourceTypeId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "expanded": [
+      {}
+    ],
+    "list": [
+      {
+        "AppEntitlement": {
+          "ProvisionPolicy": {
+            "ConnectorProvision": {},
+            "DelegatedProvision": {
+                "appId": "string",
+                "entitlementId": "string"
+              },
+            "ManualProvision": {
+                "instructions": "string",
+                "userIds": [
+                  "string"
+                ]
+              }
+          },
+          "alias": "string",
+          "appId": "string",
+          "appResourceId": "string",
+          "appResourceTypeId": "string",
+          "certifyPolicyId": "string",
+          "complianceFrameworkValueIds": [
+            "string"
+          ],
+          "createdAt": "2022-01-29T15:52:03.598Z",
+          "deletedAt": "2022-11-03T07:18:27.998Z",
+          "description": "string",
+          "displayName": "string",
+          "durationGrant": "string",
+          "durationUnset": {},
+          "emergencyGrantEnabled": false,
+          "emergencyGrantPolicyId": "string",
+          "grantCount": "string",
+          "grantPolicyId": "string",
+          "id": "string",
+          "revokePolicyId": "string",
+          "riskLevelValueId": "string",
+          "slug": "string",
+          "systemBuiltin": false,
+          "updatedAt": "2022-04-24T13:11:58.978Z"
+        },
+        "appPath": "string",
+        "appResourcePath": "string",
+        "appResourceTypePath": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

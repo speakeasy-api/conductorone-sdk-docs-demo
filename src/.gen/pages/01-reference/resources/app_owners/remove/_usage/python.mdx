@@ -1,0 +1,35 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Remove.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APIAppV1AppOwnersRemoveRequest(
+    remove_app_owner_request=components.RemoveAppOwnerRequest(),
+    app_id='string',
+    user_id='string',
+)
+
+res = s.app_owners.remove(req)
+
+if res.remove_app_owner_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {}
+  ```
+  </CH.Code>
+</WithStatusBar>

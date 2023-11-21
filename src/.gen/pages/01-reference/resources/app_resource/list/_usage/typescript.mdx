@@ -1,0 +1,56 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript List.ts
+  import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.appResource.list({
+    appId: "string",
+    appResourceTypeId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "expanded": [
+      {}
+    ],
+    "list": [
+      {
+        "AppResource": {
+          "appId": "string",
+          "appResourceTypeId": "string",
+          "createdAt": "2021-06-24T01:43:14.638Z",
+          "customDescription": "string",
+          "deletedAt": "2022-01-06T02:50:24.677Z",
+          "description": "string",
+          "displayName": "string",
+          "grantCount": "string",
+          "id": "string",
+          "updatedAt": "2021-05-01T20:39:31.166Z"
+        },
+        "appPath": "string",
+        "resourceTypePath": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

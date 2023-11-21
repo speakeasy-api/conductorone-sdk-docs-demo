@@ -1,0 +1,17 @@
+{
+  "create_attribute_value": {
+    "title": "Create Attribute Value"
+  },
+  "delete_attribute_value": {
+    "title": "Delete Attribute Value"
+  },
+  "get_attribute_value": {
+    "title": "Get Attribute Value"
+  },
+  "list_attribute_types": {
+    "title": "List Attribute Types"
+  },
+  "list_attribute_values": {
+    "title": "List Attribute Values"
+  }
+}

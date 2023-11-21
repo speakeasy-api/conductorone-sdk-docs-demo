@@ -1,0 +1,128 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```python Update.py
+  import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APIRequestcatalogV1RequestCatalogManagementServiceUpdateRequest(
+    request_catalog_management_service_update_request=components.RequestCatalogManagementServiceUpdateRequest(
+        request_catalog=components.RequestCatalogInput(
+            access_entitlements=[
+                components.AppEntitlementInput(
+                    provision_policy=components.ProvisionPolicy(
+                        connector_provision=components.ConnectorProvision(),
+                        delegated_provision=components.DelegatedProvision(),
+                        manual_provision=components.ManualProvision(
+                            user_ids=[
+                                'string',
+                            ],
+                        ),
+                    ),
+                    compliance_framework_value_ids=[
+                        'string',
+                    ],
+                    duration_unset=components.DurationUnset(),
+                ),
+            ],
+            app_ids=[
+                'string',
+            ],
+        ),
+        request_catalog_expand_mask=components.RequestCatalogExpandMask(
+            paths=[
+                'string',
+            ],
+        ),
+    ),
+    id='<ID>',
+)
+
+res = s.request_catalog_management.update(req)
+
+if res.request_catalog_management_service_get_response is not None:
+    # handle response
+    pass
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "RequestCatalogView": {
+      "RequestCatalog": {
+        "accessEntitlements": [
+          {
+            "ProvisionPolicy": {
+              "ConnectorProvision": {},
+              "DelegatedProvision": {
+                  "appId": "string",
+                  "entitlementId": "string"
+                },
+              "ManualProvision": {
+                  "instructions": "string",
+                  "userIds": [
+                    "string"
+                  ]
+                }
+            },
+            "alias": "string",
+            "appId": "string",
+            "appResourceId": "string",
+            "appResourceTypeId": "string",
+            "certifyPolicyId": "string",
+            "complianceFrameworkValueIds": [
+              "string"
+            ],
+            "createdAt": "2021-10-18T14:26:08.974Z",
+            "deletedAt": "2022-07-12T07:42:15.458Z",
+            "description": "string",
+            "displayName": "string",
+            "durationGrant": "string",
+            "durationUnset": {},
+            "emergencyGrantEnabled": false,
+            "emergencyGrantPolicyId": "string",
+            "grantCount": "string",
+            "grantPolicyId": "string",
+            "id": "string",
+            "revokePolicyId": "string",
+            "riskLevelValueId": "string",
+            "slug": "string",
+            "systemBuiltin": false,
+            "updatedAt": "2022-07-27T22:57:31.791Z"
+          }
+        ],
+        "appIds": [
+          "string"
+        ],
+        "createdAt": "2023-10-01T19:28:45.476Z",
+        "createdByUserId": "string",
+        "deletedAt": "2021-04-13T20:45:23.390Z",
+        "description": "string",
+        "displayName": "string",
+        "id": "string",
+        "published": false,
+        "updatedAt": "2023-10-06T16:01:19.356Z",
+        "visibleToEveryone": false
+      },
+      "accessEntitlementsPath": "string",
+      "appPaths": "string",
+      "createdByUserPath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

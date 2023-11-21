@@ -1,0 +1,17 @@
+{
+  "create": {
+    "title": "Create"
+  },
+  "delete": {
+    "title": "Delete"
+  },
+  "get": {
+    "title": "Get"
+  },
+  "list": {
+    "title": "List"
+  },
+  "update": {
+    "title": "Update"
+  }
+}

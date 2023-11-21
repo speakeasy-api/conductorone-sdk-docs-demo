@@ -1,0 +1,45 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript ListAppUsersForIdentityWithGrant.ts
+  import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.appEntitlementUserBinding.listAppUsersForIdentityWithGrant({
+    appEntitlementId: "string",
+    appId: "string",
+    identityUserId: "string",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "bindings": [
+      {
+        "appEntitlementId": "string",
+        "appId": "string",
+        "appUserId": "string",
+        "createdAt": "2021-12-12T09:27:25.304Z",
+        "deletedAt": "2022-10-28T13:47:23.716Z",
+        "deprovisionAt": "2022-02-03T06:19:08.851Z"
+      }
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

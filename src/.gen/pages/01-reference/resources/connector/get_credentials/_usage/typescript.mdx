@@ -1,0 +1,47 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript GetCredentials.ts
+  import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+(async() => {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.connector.getCredentials({
+    appId: "string",
+    connectorId: "string",
+    id: "<ID>",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "ConnectorCredential": {
+      "appId": "string",
+      "clientId": "string",
+      "connectorId": "string",
+      "createdAt": "2023-12-08T14:05:24.185Z",
+      "deletedAt": "2022-06-03T14:25:09.450Z",
+      "displayName": "string",
+      "expiresTime": "2023-05-26T01:53:13.408Z",
+      "id": "string",
+      "lastUsedAt": "2023-05-27T23:56:04.473Z",
+      "updatedAt": "2022-05-21T07:40:39.556Z"
+    }
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>
