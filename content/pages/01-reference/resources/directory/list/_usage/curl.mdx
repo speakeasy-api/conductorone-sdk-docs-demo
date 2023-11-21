@@ -1,0 +1,35 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```bash Example Request
+  curl https://example.conductor.one/api/v1/directories?page_size=46.95&page_token=string \
+--header 'Accept: application/json' \
+--header 'Authorization: '
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ],
+    "list": [
+      {
+        "Directory": {
+          "appId": "string",
+          "createdAt": "2021-06-10T08:29:22.339Z",
+          "deletedAt": "2023-01-13T05:01:07.151Z",
+          "updatedAt": "2022-09-16T17:34:18.001Z"
+        },
+        "appPath": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

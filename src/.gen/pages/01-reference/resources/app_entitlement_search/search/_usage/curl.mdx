@@ -1,0 +1,102 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```bash Example Request
+  curl https://example.conductor.one/api/v1/search/entitlements \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'Authorization: '
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "Facets": {
+      "count": "string",
+      "facets": [
+        {
+          "FacetRangeItem": {
+            "ranges": [
+              {
+                "count": "string",
+                "displayName": "string",
+                "from": "string",
+                "iconUrl": "string",
+                "to": "string"
+              }
+            ]
+          },
+          "FacetValueItem": {
+            "values": [
+              {
+                "count": "string",
+                "displayName": "string",
+                "iconUrl": "string",
+                "value": "string"
+              }
+            ]
+          },
+          "displayName": "string",
+          "iconUrl": "string",
+          "param": "string"
+        }
+      ]
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ],
+    "list": [
+      {
+        "AppEntitlement": {
+          "ProvisionPolicy": {
+            "ConnectorProvision": {},
+            "DelegatedProvision": {
+                "appId": "string",
+                "entitlementId": "string"
+              },
+            "ManualProvision": {
+                "instructions": "string",
+                "userIds": [
+                  "string"
+                ]
+              }
+          },
+          "alias": "string",
+          "appId": "string",
+          "appResourceId": "string",
+          "appResourceTypeId": "string",
+          "certifyPolicyId": "string",
+          "complianceFrameworkValueIds": [
+            "string"
+          ],
+          "createdAt": "2023-11-13T21:52:40.991Z",
+          "deletedAt": "2021-09-10T10:24:28.252Z",
+          "description": "string",
+          "displayName": "string",
+          "durationGrant": "string",
+          "durationUnset": {},
+          "emergencyGrantEnabled": false,
+          "emergencyGrantPolicyId": "string",
+          "grantCount": "string",
+          "grantPolicyId": "string",
+          "id": "string",
+          "revokePolicyId": "string",
+          "riskLevelValueId": "string",
+          "slug": "string",
+          "systemBuiltin": false,
+          "updatedAt": "2022-12-07T04:03:44.513Z"
+        },
+        "appPath": "string",
+        "appResourcePath": "string",
+        "appResourceTypePath": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

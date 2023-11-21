@@ -1,0 +1,83 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```bash Example Request
+  curl https://example.conductor.one/api/v1/search/request_catalog/entitlements \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'Authorization: '
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ],
+    "list": [
+      {
+        "AppEntitlementView": {
+          "AppEntitlement": {
+            "ProvisionPolicy": {
+              "ConnectorProvision": {},
+              "DelegatedProvision": {
+                  "appId": "string",
+                  "entitlementId": "string"
+                },
+              "ManualProvision": {
+                  "instructions": "string",
+                  "userIds": [
+                    "string"
+                  ]
+                }
+            },
+            "alias": "string",
+            "appId": "string",
+            "appResourceId": "string",
+            "appResourceTypeId": "string",
+            "certifyPolicyId": "string",
+            "complianceFrameworkValueIds": [
+              "string"
+            ],
+            "createdAt": "2022-06-04T23:31:06.479Z",
+            "deletedAt": "2021-01-22T00:23:50.324Z",
+            "description": "string",
+            "displayName": "string",
+            "durationGrant": "string",
+            "durationUnset": {},
+            "emergencyGrantEnabled": false,
+            "emergencyGrantPolicyId": "string",
+            "grantCount": "string",
+            "grantPolicyId": "string",
+            "id": "string",
+            "revokePolicyId": "string",
+            "riskLevelValueId": "string",
+            "slug": "string",
+            "systemBuiltin": false,
+            "updatedAt": "2022-05-30T19:04:26.081Z"
+          },
+          "appPath": "string",
+          "appResourcePath": "string",
+          "appResourceTypePath": "string"
+        },
+        "appEntitlementUserBindings": [
+          {
+            "appEntitlementId": "string",
+            "appId": "string",
+            "appUserId": "string",
+            "createdAt": "2021-11-27T05:23:10.214Z",
+            "deletedAt": "2023-02-24T02:26:19.468Z",
+            "deprovisionAt": "2022-12-24T21:21:38.119Z"
+          }
+        ]
+      }
+    ],
+    "nextPageToken": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

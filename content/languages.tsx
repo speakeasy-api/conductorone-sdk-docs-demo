@@ -15,7 +15,7 @@ import {
 import { LanguageContext } from '@/src/utils/contexts/languageContext';
 import { LinkableContext } from '@/src/utils/contexts/linkableContext';
 
-export const Languages = ['typescript', 'python'];
+export const Languages = ['typescript', 'python', 'curl'];
 export type Language = (typeof Languages)[number];
 
 export const LanguageProvider = (props: { children: ReactNode }) => {

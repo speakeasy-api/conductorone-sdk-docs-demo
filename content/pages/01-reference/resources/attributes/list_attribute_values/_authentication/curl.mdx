@@ -1,0 +1,18 @@
+import Collapsible from "/src/components/Collapsible";
+import Labels from "/src/lib/labels";
+
+<Collapsible openLabel={Labels.showAuthMethods} closeLabel={Labels.hideAuthMethods}>
+##### HTTP Bearer _— in HTTP header_
+  
+Set your bearer token in a `Authorization` HTTP header.
+
+Example: `Authorization: `
+  
+---
+##### OAuth2 token _— in HTTP header_
+  
+Set your OAuth2 token in a `Authorization` HTTP header.
+
+Example: `Authorization: `
+  
+</Collapsible>
