@@ -6,7 +6,7 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   ```typescript Approve.ts
   import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
 
-(async() => {
+async function run() {
   const sdk = new ConductoroneSDKTypescript({
     security: {
       bearerAuth: "",
@@ -29,7 +29,9 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
   ```
   ---
 

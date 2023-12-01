@@ -7,7 +7,7 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
 import { PolicyPolicyType } from "conductorone-sdk-typescript/dist/models/components";
 
-(async() => {
+async function run() {
   const sdk = new ConductoroneSDKTypescript({
     security: {
       bearerAuth: "",
@@ -63,7 +63,9 @@ import { PolicyPolicyType } from "conductorone-sdk-typescript/dist/models/compon
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
   ```
   ---
 
