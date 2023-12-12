@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 62ce67261ac2cb50833d44d274d1cd96
   docVersion: 0.1.0-alpha
-  speakeasyVersion: 1.125.1
-  generationVersion: 2.210.3
+  speakeasyVersion: 1.126.0
+  generationVersion: 2.213.3
 generation:
   comments: {}
   sdkClassName: conductorone-sdk-typescript
@@ -13,14 +13,14 @@ generation:
 features:
   docs:
     additionalProperties: 0.1.1
-    core: 1.15.1
-    globalSecurity: 0.1.0
+    core: 1.16.1
+    globalSecurity: 0.1.1
     globalServerURLs: 0.1.1
     groups: 0.1.1
     inputOutputModels: 0.2.0
     nameOverrides: 0.1.0
 docs:
-  version: 0.5.0
+  version: 0.6.0
   imports:
     option: openapi
     paths:
@@ -70,3 +70,4 @@ typescript:
   maxMethodParams: 0
   outputModelSuffix: output
   packageName: conductorone-sdk-typescript
+  templateVersion: v2

@@ -10,8 +10,8 @@ import { PolicyTypes } from "conductorone-sdk-typescript/dist/models/components"
 async function run() {
   const sdk = new ConductoroneSDKTypescript({
     security: {
-      bearerAuth: "",
-      oauth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+      oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
