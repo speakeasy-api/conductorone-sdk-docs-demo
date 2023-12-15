@@ -1,0 +1,50 @@
+
+<CH.Code>
+```typescript Get.ts
+import { SDK } from "openapi";
+import { C1ApiAppV1AppsGetRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const id: string = "string";
+
+  const res = await sdk.apps.get(id);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "App": {
+      "appAccountId": "string",
+      "appAccountName": "string",
+      "certifyPolicyId": "string",
+      "createdAt": "2022-04-09T21:38:53.014Z",
+      "deletedAt": "2022-11-14T19:15:14.189Z",
+      "description": "string",
+      "displayName": "string",
+      "fieldMask": "string",
+      "grantPolicyId": "string",
+      "iconUrl": "string",
+      "id": "string",
+      "logoUri": "string",
+      "monthlyCostUsd": 6458.94,
+      "parentAppId": "string",
+      "revokePolicyId": "string",
+      "updatedAt": "2022-02-25T21:33:04.651Z",
+      "userCount": "string"
+    }
+  }
+```
+</CH.Code>

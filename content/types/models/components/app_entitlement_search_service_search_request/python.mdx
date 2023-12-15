@@ -2,12 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `app_entitlement_expand_mask` *{`Optional[components.AppEntitlementExpandMask]`}*
-The app entitlement expand mask allows the user to get additional information when getting responses containing app entitlement views.
-<Collapsible content={() => import('/content/types/models/components/app_entitlement_expand_mask/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `access_review_id` *{`Optional[str]`}*
 Search for app entitlements that are being reviewed as part of this access review campaign.
 
@@ -34,6 +28,12 @@ Exclude app entitlements from the results that are in these app IDs.
 ---
 ##### `exclude_app_user_ids` *{`List[*str*]`}*
 Exclude app entitlements from the results that these app users have granted.
+
+---
+##### `app_entitlement_expand_mask` *{`Optional[components.AppEntitlementExpandMask]`}*
+The app entitlement expand mask allows the user to get additional information when getting responses containing app entitlement views.
+<Collapsible content={() => import('/content/types/models/components/app_entitlement_expand_mask/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
 ##### `include_deleted` *{`Optional[bool]`}*

@@ -1,0 +1,70 @@
+
+<CH.Code>
+```typescript ListUsers.ts
+import { SDK } from "openapi";
+import { C1ApiAppV1AppEntitlementsListUsersRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+const appEntitlementId: string = "string";
+const pageSize: number = 8442.66;
+const pageToken: string = "string";
+
+  const res = await sdk.appEntitlements.listUsers(appId, appEntitlementId, pageSize, pageToken);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "expanded": [
+      {}
+    ],
+    "list": [
+      {
+        "appEntitlementUserBindingCreatedAt": "2023-09-16T08:17:16.181Z",
+        "appEntitlementUserBindingDeprovisionAt": "2023-01-17T14:14:14.739Z",
+        "AppUserView": {
+          "appPath": "string",
+          "AppUser": {
+            "appId": "string",
+            "createdAt": "2022-01-29T15:52:03.598Z",
+            "deletedAt": "2022-11-03T07:18:27.998Z",
+            "displayName": "string",
+            "email": "string",
+            "emails": [
+              "string"
+            ],
+            "id": "string",
+            "identityUserId": "string",
+            "profile": {},
+            "AppUserStatus": {
+                "details": "string"
+              },
+            "updatedAt": "2023-09-16T01:43:14.288Z",
+            "username": "string",
+            "usernames": [
+                "string"
+              ]
+          },
+          "identityUserPath": "string",
+          "lastUsagePath": "string"
+        }
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

@@ -1,0 +1,111 @@
+
+<CH.Code>
+```typescript Update.ts
+import { SDK } from "openapi";
+import {
+  AppEntitlementExpandMask,
+  AppEntitlementInput,
+  ConnectorProvision,
+  DelegatedProvision,
+  DurationUnset,
+  ManualProvision,
+  ProvisionPolicy,
+  UpdateAppEntitlementRequest,
+} from "openapi/dist/models/components";
+import { C1ApiAppV1AppEntitlementsUpdateRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+const id: string = "string";
+const updateAppEntitlementRequest: UpdateAppEntitlementRequest = {
+  appEntitlement: {
+    complianceFrameworkValueIds: [
+      "string",
+    ],
+    durationUnset: {},
+    provisionPolicy: {
+      connectorProvision: {},
+      delegatedProvision: {},
+      manualProvision: {
+        userIds: [
+          "string",
+        ],
+      },
+    },
+  },
+  appEntitlementExpandMask: {
+    paths: [
+      "string",
+    ],
+  },
+};
+
+  const res = await sdk.appEntitlements.update(appId, id, updateAppEntitlementRequest);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "AppEntitlementView": {
+      "AppEntitlement": {
+        "alias": "string",
+        "appId": "string",
+        "appResourceId": "string",
+        "appResourceTypeId": "string",
+        "certifyPolicyId": "string",
+        "complianceFrameworkValueIds": [
+          "string"
+        ],
+        "createdAt": "2023-11-28T22:34:56.363Z",
+        "deletedAt": "2023-01-01T02:37:45.021Z",
+        "description": "string",
+        "displayName": "string",
+        "durationGrant": "string",
+        "durationUnset": {},
+        "emergencyGrantEnabled": false,
+        "emergencyGrantPolicyId": "string",
+        "grantCount": "string",
+        "grantPolicyId": "string",
+        "id": "string",
+        "ProvisionPolicy": {
+            "ConnectorProvision": {},
+            "DelegatedProvision": {
+                "appId": "string",
+                "entitlementId": "string"
+              },
+            "ManualProvision": {
+                "instructions": "string",
+                "userIds": [
+                  "string"
+                ]
+              }
+          },
+        "revokePolicyId": "string",
+        "riskLevelValueId": "string",
+        "slug": "string",
+        "systemBuiltin": false,
+        "updatedAt": "2022-12-17T04:31:12.166Z"
+      },
+      "appPath": "string",
+      "appResourcePath": "string",
+      "appResourceTypePath": "string"
+    },
+    "expanded": [
+      {}
+    ]
+  }
+```
+</CH.Code>

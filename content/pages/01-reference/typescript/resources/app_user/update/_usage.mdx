@@ -1,0 +1,78 @@
+
+<CH.Code>
+```typescript Update.ts
+import { SDK } from "openapi";
+import {
+  AppUserExpandMask,
+  AppUserInput,
+  AppUserServiceUpdateRequest,
+  AppUserStatusInput,
+  AppUserType,
+} from "openapi/dist/models/components";
+import { C1ApiAppV1AppUserServiceUpdateRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appUserAppId: string = "string";
+const appUserId: string = "string";
+const appUserServiceUpdateRequest: AppUserServiceUpdateRequest = {
+  appUser: {
+    appUserStatus: {},
+  },
+  appUserExpandMask: {
+    paths: [
+      "string",
+    ],
+  },
+};
+
+  const res = await sdk.appUser.update(appUserAppId, appUserId, appUserServiceUpdateRequest);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "AppUserView": {
+      "appPath": "string",
+      "AppUser": {
+        "appId": "string",
+        "createdAt": "2021-01-15T20:39:45.894Z",
+        "deletedAt": "2021-04-17T07:49:17.061Z",
+        "displayName": "string",
+        "email": "string",
+        "emails": [
+          "string"
+        ],
+        "id": "string",
+        "identityUserId": "string",
+        "profile": {},
+        "AppUserStatus": {
+            "details": "string"
+          },
+        "updatedAt": "2023-07-07T13:11:31.731Z",
+        "username": "string",
+        "usernames": [
+            "string"
+          ]
+      },
+      "identityUserPath": "string",
+      "lastUsagePath": "string"
+    },
+    "expanded": [
+      {}
+    ]
+  }
+```
+</CH.Code>

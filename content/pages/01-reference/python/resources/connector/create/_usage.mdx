@@ -1,0 +1,77 @@
+
+<CH.Code>
+```python Create.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.connector.create(app_id='string', connector_service_create_request=components.ConnectorServiceCreateRequest(
+    config=components.ConnectorServiceCreateRequestConfig(
+        additional_properties={
+            'key': 'string',
+        },
+    ),
+    connector_expand_mask=components.ConnectorExpandMask(
+        paths=[
+            'string',
+        ],
+    ),
+    user_ids=[
+        'string',
+    ],
+))
+
+if res.connector_service_create_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "ConnectorView": {
+      "appPath": "string",
+      "Connector": {
+        "appId": "string",
+        "catalogId": "string",
+        "config": {
+          "@type": "string"
+        },
+        "createdAt": "2022-03-31T01:18:56.925Z",
+        "deletedAt": "2022-06-03T14:13:08.794Z",
+        "description": "string",
+        "displayName": "string",
+        "downloadUrl": "string",
+        "id": "string",
+        "OAuth2AuthorizedAs": {
+          "authEmail": "string",
+          "authorizedAt": "2021-10-17T16:31:17.284Z"
+        },
+        "ConnectorStatus": {
+          "completedAt": "2021-07-24T00:48:50.452Z",
+          "lastError": "string",
+          "startedAt": "2023-04-28T18:51:40.613Z",
+          "updatedAt": "2022-05-15T11:37:50.984Z"
+        },
+        "updatedAt": "2021-08-26T02:56:36.147Z",
+        "userIds": [
+          "string"
+        ]
+      },
+      "usersPath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+```
+</CH.Code>

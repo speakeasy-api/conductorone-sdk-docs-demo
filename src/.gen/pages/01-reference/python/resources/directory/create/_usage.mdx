@@ -1,0 +1,48 @@
+
+<CH.Code>
+```python Create.py
+import sdk
+from sdk.models import components
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = components.DirectoryServiceCreateRequest(
+    directory_expand_mask=components.DirectoryExpandMask(
+        paths=[
+            'string',
+        ],
+    ),
+)
+
+res = s.directory.create(req)
+
+if res.directory_service_create_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "DirectoryView": {
+      "appPath": "string",
+      "Directory": {
+        "appId": "string",
+        "createdAt": "2021-11-01T02:26:37.906Z",
+        "deletedAt": "2021-12-15T19:59:31.689Z",
+        "updatedAt": "2021-01-11T05:53:38.838Z"
+      }
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+```
+</CH.Code>

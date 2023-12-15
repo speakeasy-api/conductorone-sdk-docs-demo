@@ -1,0 +1,37 @@
+
+<CH.Code>
+```typescript CreateAttributeValue.ts
+import { SDK } from "openapi";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.attributes.createAttributeValue({});
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "AttributeValue": {
+      "attributeTypeId": "string",
+      "createdAt": "2023-01-08T15:46:30.375Z",
+      "deletedAt": "2021-04-16T05:27:57.533Z",
+      "id": "string",
+      "updatedAt": "2023-12-01T06:42:52.461Z",
+      "value": "string"
+    }
+  }
+```
+</CH.Code>

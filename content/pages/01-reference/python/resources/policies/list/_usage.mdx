@@ -1,0 +1,52 @@
+
+<CH.Code>
+```python List.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.policies.list(page_size=9636.63, page_token='string')
+
+if res.list_policy_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "createdAt": "2021-06-10T08:29:22.339Z",
+        "deletedAt": "2023-01-13T05:01:07.151Z",
+        "description": "string",
+        "displayName": "string",
+        "id": "string",
+        "policySteps": {},
+        "postActions": [
+            {
+              "certifyRemediateImmediately": false
+            }
+          ],
+        "reassignTasksToDelegates": false,
+        "rules": [
+            {
+              "condition": "string",
+              "policyKey": "string"
+            }
+          ],
+        "systemBuiltin": false,
+        "updatedAt": "2021-10-23T15:48:33.898Z"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

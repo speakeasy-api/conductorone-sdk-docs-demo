@@ -1,0 +1,85 @@
+
+<CH.Code>
+```python Create.py
+import sdk
+from sdk.models import components
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = components.CreatePolicyRequest(
+    policy_steps={
+        'key': components.PolicyStepsInput(
+            steps=[
+                components.PolicyStepInput(
+                    accept=components.Accept(),
+                    approval=components.ApprovalInput(
+                        app_owner_approval=components.AppOwnerApprovalInput(),
+                        entitlement_owner_approval=components.EntitlementOwnerApprovalInput(),
+                        expression_approval=components.ExpressionApprovalInput(),
+                        app_group_approval=components.AppGroupApprovalInput(),
+                        manager_approval=components.ManagerApprovalInput(),
+                        self_approval=components.SelfApprovalInput(),
+                        user_approval=components.UserApprovalInput(),
+                    ),
+                    provision=components.Provision(
+                        provision_policy=components.ProvisionPolicy(
+                            connector_provision=components.ConnectorProvision(),
+                            delegated_provision=components.DelegatedProvision(),
+                            manual_provision=components.ManualProvision(
+                                user_ids=[
+                                    'string',
+                                ],
+                            ),
+                        ),
+                        provision_target=components.ProvisionTarget(),
+                    ),
+                    reject=components.Reject(),
+                ),
+            ],
+        ),
+    },
+    post_actions=[
+        components.PolicyPostActions(),
+    ],
+)
+
+res = s.policies.create(req)
+
+if res.create_policy_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "Policy": {
+      "createdAt": "2023-02-10T14:12:56.662Z",
+      "deletedAt": "2023-03-17T00:53:55.886Z",
+      "description": "string",
+      "displayName": "string",
+      "id": "string",
+      "policySteps": {},
+      "postActions": [
+          {
+            "certifyRemediateImmediately": false
+          }
+        ],
+      "reassignTasksToDelegates": false,
+      "rules": [
+          {
+            "condition": "string",
+            "policyKey": "string"
+          }
+        ],
+      "systemBuiltin": false,
+      "updatedAt": "2023-11-20T14:18:53.858Z"
+    }
+  }
+```
+</CH.Code>

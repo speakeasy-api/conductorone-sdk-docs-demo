@@ -1,0 +1,87 @@
+
+<CH.Code>
+```typescript Create.ts
+import { SDK } from "openapi";
+import { CreatePolicyRequestPolicyType } from "openapi/dist/models/components";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.policies.create({
+    policySteps: {
+      "key": {
+        steps: [
+          {
+            accept: {},
+            approval: {
+              appOwnerApproval: {},
+              entitlementOwnerApproval: {},
+              expressionApproval: {},
+              appGroupApproval: {},
+              managerApproval: {},
+              selfApproval: {},
+              userApproval: {},
+            },
+            provision: {
+              provisionPolicy: {
+                connectorProvision: {},
+                delegatedProvision: {},
+                manualProvision: {
+                  userIds: [
+                    "string",
+                  ],
+                },
+              },
+              provisionTarget: {},
+            },
+            reject: {},
+          },
+        ],
+      },
+    },
+    postActions: [
+      {},
+    ],
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "Policy": {
+      "createdAt": "2023-02-10T14:12:56.662Z",
+      "deletedAt": "2023-03-17T00:53:55.886Z",
+      "description": "string",
+      "displayName": "string",
+      "id": "string",
+      "policySteps": {},
+      "postActions": [
+          {
+            "certifyRemediateImmediately": false
+          }
+        ],
+      "reassignTasksToDelegates": false,
+      "rules": [
+          {
+            "condition": "string",
+            "policyKey": "string"
+          }
+        ],
+      "systemBuiltin": false,
+      "updatedAt": "2023-11-20T14:18:53.858Z"
+    }
+  }
+```
+</CH.Code>

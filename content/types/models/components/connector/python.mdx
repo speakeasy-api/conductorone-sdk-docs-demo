@@ -2,18 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `connector_status` *{`Optional[components.ConnectorStatus]`}*
-The status field on the connector is used to track the status of the connectors sync, and when syncing last started, completed, or caused the connector to update.
-<Collapsible content={() => import('/content/types/models/components/connector_status/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `o_auth2_authorized_as` *{`Optional[components.OAuth2AuthorizedAs]`}*
-OAuth2AuthorizedAs tracks the user that OAuthed with the connector.
-<Collapsible content={() => import('/content/types/models/components/o_auth2_authorized_as/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `app_id` *{`Optional[str]`}*
 The id of the app the connector is associated with.
 
@@ -48,6 +36,18 @@ The downloadUrl for a spreadsheet if the connector was created from uploading a 
 ---
 ##### `id` *{`Optional[str]`}*
 The id of the connector.
+
+---
+##### `o_auth2_authorized_as` *{`Optional[components.OAuth2AuthorizedAs]`}*
+OAuth2AuthorizedAs tracks the user that OAuthed with the connector.
+<Collapsible content={() => import('/content/types/models/components/o_auth2_authorized_as/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `connector_status` *{`Optional[components.ConnectorStatus]`}*
+The status field on the connector is used to track the status of the connectors sync, and when syncing last started, completed, or caused the connector to update.
+<Collapsible content={() => import('/content/types/models/components/connector_status/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
 ##### `updated_at` [*{ `date` }*](https://docs.python.org/3/library/datetime.html#date-objects)

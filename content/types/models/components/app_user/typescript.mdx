@@ -2,12 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `appUserStatus?`: *{`components.AppUserStatus`}*
-The satus of the applicaiton user.
-<Collapsible content={() => import('/content/types/models/components/app_user_status/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `appId?`: *{`string`}*
 The ID of the application.
 
@@ -45,6 +39,12 @@ The conductor one user ID of the account owner.
 
 ---
 ##### `profile?`: *{`Record<string, *any*>`}*
+
+---
+##### `appUserStatus?`: *{`components.AppUserStatus`}*
+The satus of the applicaiton user.
+<Collapsible content={() => import('/content/types/models/components/app_user_status/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
 ##### `updatedAt?`: [*{ `Date` }*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)

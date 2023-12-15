@@ -1,0 +1,47 @@
+
+<CH.Code>
+```typescript List.ts
+import { SDK } from "openapi";
+import { C1ApiDirectoryV1DirectoryServiceListRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const pageSize: number = 8917.73;
+const pageToken: string = "string";
+
+  const res = await sdk.directory.list(pageSize, pageToken);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "expanded": [
+      {}
+    ],
+    "list": [
+      {
+        "appPath": "string",
+        "Directory": {
+          "appId": "string",
+          "createdAt": "2022-09-23T15:52:26.015Z",
+          "deletedAt": "2021-04-02T00:11:46.135Z",
+          "updatedAt": "2023-10-15T13:54:14.685Z"
+        }
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

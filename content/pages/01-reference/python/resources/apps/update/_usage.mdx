@@ -1,0 +1,48 @@
+
+<CH.Code>
+```python Update.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.apps.update(id='string', update_app_request=components.UpdateAppRequest(
+    app=components.AppInput(),
+))
+
+if res.update_app_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "App": {
+      "appAccountId": "string",
+      "appAccountName": "string",
+      "certifyPolicyId": "string",
+      "createdAt": "2022-04-25T03:47:30.761Z",
+      "deletedAt": "2021-11-22T19:12:33.934Z",
+      "description": "string",
+      "displayName": "string",
+      "fieldMask": "string",
+      "grantPolicyId": "string",
+      "iconUrl": "string",
+      "id": "string",
+      "logoUri": "string",
+      "monthlyCostUsd": 8917.73,
+      "parentAppId": "string",
+      "revokePolicyId": "string",
+      "updatedAt": "2021-03-04T02:25:01.207Z",
+      "userCount": "string"
+    }
+  }
+```
+</CH.Code>

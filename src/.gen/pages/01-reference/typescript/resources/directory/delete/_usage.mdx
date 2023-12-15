@@ -1,0 +1,32 @@
+
+<CH.Code>
+```typescript Delete.ts
+import { SDK } from "openapi";
+import { DirectoryServiceDeleteRequest } from "openapi/dist/models/components";
+import { C1ApiDirectoryV1DirectoryServiceDeleteRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+const directoryServiceDeleteRequest: DirectoryServiceDeleteRequest = {};
+
+  const res = await sdk.directory.delete(appId, directoryServiceDeleteRequest);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

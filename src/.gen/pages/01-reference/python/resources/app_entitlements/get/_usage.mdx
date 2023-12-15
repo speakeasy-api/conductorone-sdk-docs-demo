@@ -1,0 +1,76 @@
+
+<CH.Code>
+```python Get.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.app_entitlements.get(app_id='string', id='string')
+
+if res.get_app_entitlement_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "AppEntitlementView": {
+      "AppEntitlement": {
+        "alias": "string",
+        "appId": "string",
+        "appResourceId": "string",
+        "appResourceTypeId": "string",
+        "certifyPolicyId": "string",
+        "complianceFrameworkValueIds": [
+          "string"
+        ],
+        "createdAt": "2023-02-03T21:44:52.137Z",
+        "deletedAt": "2021-04-19T17:05:15.498Z",
+        "description": "string",
+        "displayName": "string",
+        "durationGrant": "string",
+        "durationUnset": {},
+        "emergencyGrantEnabled": false,
+        "emergencyGrantPolicyId": "string",
+        "grantCount": "string",
+        "grantPolicyId": "string",
+        "id": "string",
+        "ProvisionPolicy": {
+            "ConnectorProvision": {},
+            "DelegatedProvision": {
+                "appId": "string",
+                "entitlementId": "string"
+              },
+            "ManualProvision": {
+                "instructions": "string",
+                "userIds": [
+                  "string"
+                ]
+              }
+          },
+        "revokePolicyId": "string",
+        "riskLevelValueId": "string",
+        "slug": "string",
+        "systemBuiltin": false,
+        "updatedAt": "2021-03-07T22:43:30.934Z"
+      },
+      "appPath": "string",
+      "appResourcePath": "string",
+      "appResourceTypePath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+```
+</CH.Code>

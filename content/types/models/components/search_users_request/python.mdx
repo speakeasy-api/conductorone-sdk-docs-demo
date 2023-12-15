@@ -2,19 +2,19 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `user_expand_mask` *{`Optional[components.UserExpandMask]`}*
-The user expand mask is used to indicate which related objects should be expanded in the response.
- The supported paths are 'role_ids', 'manager_ids', 'delegated_user_id', 'directory_ids', and '\*'.
-<Collapsible content={() => import('/content/types/models/components/user_expand_mask/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `email` *{`Optional[str]`}*
 Search for users based on their email (exact match).
 
 ---
 ##### `exclude_ids` *{`List[*str*]`}*
 An array of users IDs to exclude from the results.
+
+---
+##### `user_expand_mask` *{`Optional[components.UserExpandMask]`}*
+The user expand mask is used to indicate which related objects should be expanded in the response.
+ The supported paths are 'role_ids', 'manager_ids', 'delegated_user_id', 'directory_ids', and '\*'.
+<Collapsible content={() => import('/content/types/models/components/user_expand_mask/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
 ##### `ids` *{`List[*str*]`}*

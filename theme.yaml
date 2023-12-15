@@ -31,3 +31,13 @@ fonts:
   code:
     name: IBM Plex Mono
     url: https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap
+
+navLinks:
+  custom:
+    title: Custom Link
+    href: https://www.conductorone.com/
+    new_window: true
+
+redirects:
+  - from: "/*/apps/create"
+    to: "/typescript/apps/create"

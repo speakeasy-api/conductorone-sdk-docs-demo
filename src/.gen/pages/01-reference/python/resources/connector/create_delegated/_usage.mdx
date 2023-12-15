@@ -1,0 +1,72 @@
+
+<CH.Code>
+```python CreateDelegated.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.connector.create_delegated(app_id='string', connector_service_create_delegated_request=components.ConnectorServiceCreateDelegatedRequest(
+    connector_expand_mask=components.ConnectorExpandMask(
+        paths=[
+            'string',
+        ],
+    ),
+    user_ids=[
+        'string',
+    ],
+))
+
+if res.connector_service_create_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "ConnectorView": {
+      "appPath": "string",
+      "Connector": {
+        "appId": "string",
+        "catalogId": "string",
+        "config": {
+          "@type": "string"
+        },
+        "createdAt": "2022-09-15T00:12:40.088Z",
+        "deletedAt": "2022-03-07T02:23:03.711Z",
+        "description": "string",
+        "displayName": "string",
+        "downloadUrl": "string",
+        "id": "string",
+        "OAuth2AuthorizedAs": {
+          "authEmail": "string",
+          "authorizedAt": "2023-10-11T12:40:46.277Z"
+        },
+        "ConnectorStatus": {
+          "completedAt": "2023-07-05T12:09:00.162Z",
+          "lastError": "string",
+          "startedAt": "2021-03-19T18:49:39.442Z",
+          "updatedAt": "2021-04-06T09:45:28.527Z"
+        },
+        "updatedAt": "2022-12-11T17:57:24.897Z",
+        "userIds": [
+          "string"
+        ]
+      },
+      "usersPath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+```
+</CH.Code>

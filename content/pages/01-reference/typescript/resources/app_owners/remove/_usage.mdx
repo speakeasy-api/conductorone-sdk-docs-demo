@@ -1,0 +1,33 @@
+
+<CH.Code>
+```typescript Remove.ts
+import { SDK } from "openapi";
+import { RemoveAppOwnerRequest } from "openapi/dist/models/components";
+import { C1ApiAppV1AppOwnersRemoveRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+const userId: string = "string";
+const removeAppOwnerRequest: RemoveAppOwnerRequest = {};
+
+  const res = await sdk.appOwners.remove(appId, userId, removeAppOwnerRequest);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

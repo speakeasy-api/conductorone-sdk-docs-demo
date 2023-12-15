@@ -1,0 +1,85 @@
+
+<CH.Code>
+```typescript ListEntitlementsPerCatalog.ts
+import { SDK } from "openapi";
+import {
+  C1ApiRequestcatalogV1RequestCatalogManagementServiceListEntitlementsPerCatalogRequest,
+} from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const catalogId: string = "string";
+const pageSize: number = 4375.87;
+const pageToken: string = "string";
+
+  const res = await sdk.requestCatalogManagement.listEntitlementsPerCatalog(catalogId, pageSize, pageToken);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "expanded": [
+      {}
+    ],
+    "list": [
+      {
+        "AppEntitlement": {
+          "alias": "string",
+          "appId": "string",
+          "appResourceId": "string",
+          "appResourceTypeId": "string",
+          "certifyPolicyId": "string",
+          "complianceFrameworkValueIds": [
+            "string"
+          ],
+          "createdAt": "2021-05-11T00:09:51.593Z",
+          "deletedAt": "2023-01-25T02:00:57.510Z",
+          "description": "string",
+          "displayName": "string",
+          "durationGrant": "string",
+          "durationUnset": {},
+          "emergencyGrantEnabled": false,
+          "emergencyGrantPolicyId": "string",
+          "grantCount": "string",
+          "grantPolicyId": "string",
+          "id": "string",
+          "ProvisionPolicy": {
+              "ConnectorProvision": {},
+              "DelegatedProvision": {
+                  "appId": "string",
+                  "entitlementId": "string"
+                },
+              "ManualProvision": {
+                  "instructions": "string",
+                  "userIds": [
+                    "string"
+                  ]
+                }
+            },
+          "revokePolicyId": "string",
+          "riskLevelValueId": "string",
+          "slug": "string",
+          "systemBuiltin": false,
+          "updatedAt": "2021-12-15T04:35:52.059Z"
+        },
+        "appPath": "string",
+        "appResourcePath": "string",
+        "appResourceTypePath": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

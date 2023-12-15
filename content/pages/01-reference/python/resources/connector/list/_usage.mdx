@@ -1,0 +1,66 @@
+
+<CH.Code>
+```python List.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.connector.list(app_id='string', page_size=5928.45, page_token='string')
+
+if res.connector_service_list_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ],
+    "list": [
+      {
+        "appPath": "string",
+        "Connector": {
+          "appId": "string",
+          "catalogId": "string",
+          "config": {
+            "@type": "string"
+          },
+          "createdAt": "2023-11-22T05:03:26.782Z",
+          "deletedAt": "2021-10-26T13:24:26.711Z",
+          "description": "string",
+          "displayName": "string",
+          "downloadUrl": "string",
+          "id": "string",
+          "OAuth2AuthorizedAs": {
+            "authEmail": "string",
+            "authorizedAt": "2022-02-24T20:50:35.449Z"
+          },
+          "ConnectorStatus": {
+            "completedAt": "2022-06-08T01:02:20.883Z",
+            "lastError": "string",
+            "startedAt": "2023-05-17T22:32:01.963Z",
+            "updatedAt": "2022-08-03T03:21:30.736Z"
+          },
+          "updatedAt": "2022-06-10T13:48:00.232Z",
+          "userIds": [
+            "string"
+          ]
+        },
+        "usersPath": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

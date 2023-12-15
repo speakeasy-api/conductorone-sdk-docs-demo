@@ -1,0 +1,33 @@
+
+<CH.Code>
+```typescript Add.ts
+import { SDK } from "openapi";
+import { AddAppOwnerRequest } from "openapi/dist/models/components";
+import { C1ApiAppV1AppOwnersAddRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+const userId: string = "string";
+const addAppOwnerRequest: AddAppOwnerRequest = {};
+
+  const res = await sdk.appOwners.add(appId, userId, addAppOwnerRequest);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

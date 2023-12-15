@@ -1,0 +1,89 @@
+
+<CH.Code>
+```typescript Update.ts
+import { SDK } from "openapi";
+import {
+  ConnectorExpandMask,
+  ConnectorInput,
+  ConnectorServiceUpdateRequest,
+  ConnectorStatus,
+  OAuth2AuthorizedAsInput,
+  Status,
+} from "openapi/dist/models/components";
+import { C1ApiAppV1ConnectorServiceUpdateRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+const id: string = "string";
+const connectorServiceUpdateRequest: ConnectorServiceUpdateRequest = {
+  connector: {
+    config: {
+      "key": "string",
+    },
+    oAuth2AuthorizedAs: {},
+    connectorStatus: {},
+    userIds: [
+      "string",
+    ],
+  },
+  connectorExpandMask: {
+    paths: [
+      "string",
+    ],
+  },
+};
+
+  const res = await sdk.connector.update(appId, id, connectorServiceUpdateRequest);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "ConnectorView": {
+      "appPath": "string",
+      "Connector": {
+        "appId": "string",
+        "catalogId": "string",
+        "config": {},
+        "createdAt": "2022-12-02T17:07:27.576Z",
+        "deletedAt": "2022-09-30T07:28:48.410Z",
+        "description": "string",
+        "displayName": "string",
+        "downloadUrl": "string",
+        "id": "string",
+        "OAuth2AuthorizedAs": {
+            "authEmail": "string",
+            "authorizedAt": "2021-06-06T23:19:27.634Z"
+          },
+        "ConnectorStatus": {
+            "completedAt": "2022-08-12T10:10:06.377Z",
+            "lastError": "string",
+            "startedAt": "2023-11-01T09:53:57.053Z",
+            "updatedAt": "2022-07-26T10:10:26.632Z"
+          },
+        "updatedAt": "2021-04-26T23:15:06.828Z",
+        "userIds": [
+            "string"
+          ]
+      },
+      "usersPath": "string"
+    },
+    "expanded": [
+      {}
+    ]
+  }
+```
+</CH.Code>

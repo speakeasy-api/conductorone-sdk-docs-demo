@@ -1,0 +1,119 @@
+
+<CH.Code>
+```python List.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = operations.C1APIAppV1AppResourceOwnersListRequest(
+    app_id='string',
+    resource_type_id='string',
+    resource_id='string',
+)
+
+res = s.app_resource_owners.list(req)
+
+if res.list_app_resource_owners_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "createdAt": "2023-01-09T20:29:27.704Z",
+        "delegatedUserId": "string",
+        "deletedAt": "2022-12-20T16:20:30.039Z",
+        "department": "string",
+        "departmentSources": [
+          {
+            "appId": "string",
+            "appUserId": "string",
+            "appUserProfileAttributeKey": "string",
+            "userAttributeMappingId": "string",
+            "value": "string"
+          }
+        ],
+        "directoryIds": [
+          "string"
+        ],
+        "directoryStatusSources": [
+          {
+            "appId": "string",
+            "appUserId": "string",
+            "appUserProfileAttributeKey": "string",
+            "userAttributeMappingId": "string",
+            "value": "string"
+          }
+        ],
+        "displayName": "string",
+        "email": "string",
+        "emails": [
+          "string"
+        ],
+        "employmentStatus": "string",
+        "employmentStatusSources": [
+          {
+            "appId": "string",
+            "appUserId": "string",
+            "appUserProfileAttributeKey": "string",
+            "userAttributeMappingId": "string",
+            "value": "string"
+          }
+        ],
+        "employmentType": "string",
+        "employmentTypeSources": [
+          {
+            "appId": "string",
+            "appUserId": "string",
+            "appUserProfileAttributeKey": "string",
+            "userAttributeMappingId": "string",
+            "value": "string"
+          }
+        ],
+        "id": "string",
+        "jobTitle": "string",
+        "jobTitleSources": [
+          {
+            "appId": "string",
+            "appUserId": "string",
+            "appUserProfileAttributeKey": "string",
+            "userAttributeMappingId": "string",
+            "value": "string"
+          }
+        ],
+        "managerIds": [
+          "string"
+        ],
+        "managerSources": [
+          {
+            "appId": "string",
+            "appUserId": "string",
+            "appUserProfileAttributeKey": "string",
+            "userAttributeMappingId": "string",
+            "value": "string"
+          }
+        ],
+        "profile": {},
+        "roleIds": [
+            "string"
+          ],
+        "updatedAt": "2023-05-03T06:55:09.335Z",
+        "username": "string",
+        "usernames": [
+            "string"
+          ]
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

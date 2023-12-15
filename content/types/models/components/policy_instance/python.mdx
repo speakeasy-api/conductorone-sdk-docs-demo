@@ -2,12 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `policy` *{`Optional[components.Policy]`}*
-A policy describes the behavior of the ConductorOne system when processing a task. You can describe the type, approvers, fallback behavior, and escalation processes.
-<Collapsible content={() => import('/content/types/models/components/policy/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `policy_step_instance` *{`Optional[components.PolicyStepInstance]`}*
 The policy step instance includes a reference to an instance of a policy step that tracks state and has a unique ID.
 
@@ -30,6 +24,12 @@ An array of steps that were previously processed by the ticket with their outcom
 ##### `next` *{`List[components.PolicyStep]`}*
 An array of steps that will be processed by the ticket, in order.
 <Collapsible content={() => import('/content/types/models/components/policy_step/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `policy` *{`Optional[components.Policy]`}*
+A policy describes the behavior of the ConductorOne system when processing a task. You can describe the type, approvers, fallback behavior, and escalation processes.
+<Collapsible content={() => import('/content/types/models/components/policy/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
 
 

@@ -1,0 +1,63 @@
+
+<CH.Code>
+```python Get.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.connector.get(app_id='string', id='string')
+
+if res.connector_service_get_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "ConnectorView": {
+      "appPath": "string",
+      "Connector": {
+        "appId": "string",
+        "catalogId": "string",
+        "config": {
+          "@type": "string"
+        },
+        "createdAt": "2023-05-26T01:53:13.408Z",
+        "deletedAt": "2023-05-27T23:56:04.473Z",
+        "description": "string",
+        "displayName": "string",
+        "downloadUrl": "string",
+        "id": "string",
+        "OAuth2AuthorizedAs": {
+          "authEmail": "string",
+          "authorizedAt": "2022-05-21T07:40:39.556Z"
+        },
+        "ConnectorStatus": {
+          "completedAt": "2022-07-24T22:08:53.474Z",
+          "lastError": "string",
+          "startedAt": "2023-05-05T16:18:24.250Z",
+          "updatedAt": "2021-05-10T12:15:06.683Z"
+        },
+        "updatedAt": "2023-03-01T02:13:33.902Z",
+        "userIds": [
+          "string"
+        ]
+      },
+      "usersPath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+```
+</CH.Code>

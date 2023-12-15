@@ -1,0 +1,26 @@
+
+<CH.Code>
+```python Delete.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.policies.delete(id='string', delete_policy_request=components.DeletePolicyRequest())
+
+if res.delete_policy_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

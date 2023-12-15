@@ -2,12 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `requestCatalog?`: *{`components.RequestCatalog`}*
-The RequestCatalog is used for managing which entitlements are requestable, and who can request them.
-<Collapsible content={() => import('/content/types/models/components/request_catalog/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `accessEntitlementsPath?`: *{`string`}*
 JSONPATH expression indicating the location of the access entitlement objects, that the request catalog allows users to request, in the array.
 
@@ -18,5 +12,11 @@ JSONPATH expression indicating the location of the App object in the array.
 ---
 ##### `createdByUserPath?`: *{`string`}*
 JSONPATH expression indicating the location of the User object, that created the request catalog, in the array.
+
+---
+##### `requestCatalog?`: *{`components.RequestCatalog`}*
+The RequestCatalog is used for managing which entitlements are requestable, and who can request them.
+<Collapsible content={() => import('/content/types/models/components/request_catalog/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 

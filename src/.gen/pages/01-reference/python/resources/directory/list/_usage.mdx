@@ -1,0 +1,44 @@
+
+<CH.Code>
+```python List.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.directory.list(page_size=8917.73, page_token='string')
+
+if res.directory_service_list_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ],
+    "list": [
+      {
+        "appPath": "string",
+        "Directory": {
+          "appId": "string",
+          "createdAt": "2022-09-23T15:52:26.015Z",
+          "deletedAt": "2021-04-02T00:11:46.135Z",
+          "updatedAt": "2023-10-15T13:54:14.685Z"
+        }
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

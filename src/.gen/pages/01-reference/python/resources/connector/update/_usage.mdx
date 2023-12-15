@@ -1,0 +1,82 @@
+
+<CH.Code>
+```python Update.py
+import dateutil.parser
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.connector.update(app_id='string', id='string', connector_service_update_request=components.ConnectorServiceUpdateRequest(
+    connector=components.ConnectorInput(
+        config=components.Config(
+            additional_properties={
+                'key': 'string',
+            },
+        ),
+        o_auth2_authorized_as=components.OAuth2AuthorizedAsInput(),
+        connector_status=components.ConnectorStatus(),
+        user_ids=[
+            'string',
+        ],
+    ),
+    connector_expand_mask=components.ConnectorExpandMask(
+        paths=[
+            'string',
+        ],
+    ),
+))
+
+if res.connector_service_update_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "ConnectorView": {
+      "appPath": "string",
+      "Connector": {
+        "appId": "string",
+        "catalogId": "string",
+        "config": {
+          "@type": "string"
+        },
+        "createdAt": "2022-12-02T17:07:27.576Z",
+        "deletedAt": "2022-09-30T07:28:48.410Z",
+        "description": "string",
+        "displayName": "string",
+        "downloadUrl": "string",
+        "id": "string",
+        "OAuth2AuthorizedAs": {
+          "authEmail": "string",
+          "authorizedAt": "2021-06-06T23:19:27.634Z"
+        },
+        "ConnectorStatus": {
+          "completedAt": "2022-08-12T10:10:06.377Z",
+          "lastError": "string",
+          "startedAt": "2023-11-01T09:53:57.053Z",
+          "updatedAt": "2022-07-26T10:10:26.632Z"
+        },
+        "updatedAt": "2021-04-26T23:15:06.828Z",
+        "userIds": [
+          "string"
+        ]
+      },
+      "usersPath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+```
+</CH.Code>

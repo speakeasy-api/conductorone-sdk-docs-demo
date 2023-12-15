@@ -1,0 +1,14 @@
+{
+  "list": {
+    "title": "List"
+  },
+  "add": {
+    "title": "Add"
+  },
+  "set": {
+    "title": "Set"
+  },
+  "remove": {
+    "title": "Remove"
+  }
+}

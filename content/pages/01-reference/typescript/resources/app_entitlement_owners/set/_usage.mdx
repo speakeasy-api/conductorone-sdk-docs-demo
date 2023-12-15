@@ -1,0 +1,37 @@
+
+<CH.Code>
+```typescript Set.ts
+import { SDK } from "openapi";
+import { SetAppEntitlementOwnersRequest } from "openapi/dist/models/components";
+import { C1ApiAppV1AppEntitlementOwnersSetRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+const entitlementId: string = "string";
+const setAppEntitlementOwnersRequest: SetAppEntitlementOwnersRequest = {
+  userIds: [
+    "string",
+  ],
+};
+
+  const res = await sdk.appEntitlementOwners.set(appId, entitlementId, setAppEntitlementOwnersRequest);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

@@ -2,18 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `connectorStatus?`: *{`components.ConnectorStatus`}*
-The status field on the connector is used to track the status of the connectors sync, and when syncing last started, completed, or caused the connector to update.
-<Collapsible content={() => import('/content/types/models/components/connector_status/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `oAuth2AuthorizedAs?`: *{`components.OAuth2AuthorizedAs`}*
-OAuth2AuthorizedAs tracks the user that OAuthed with the connector.
-<Collapsible content={() => import('/content/types/models/components/o_auth2_authorized_as/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `appId?`: *{`string`}*
 The id of the app the connector is associated with.
 
@@ -46,6 +34,18 @@ The downloadUrl for a spreadsheet if the connector was created from uploading a 
 ---
 ##### `id?`: *{`string`}*
 The id of the connector.
+
+---
+##### `oAuth2AuthorizedAs?`: *{`components.OAuth2AuthorizedAs`}*
+OAuth2AuthorizedAs tracks the user that OAuthed with the connector.
+<Collapsible content={() => import('/content/types/models/components/o_auth2_authorized_as/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `connectorStatus?`: *{`components.ConnectorStatus`}*
+The status field on the connector is used to track the status of the connectors sync, and when syncing last started, completed, or caused the connector to update.
+<Collapsible content={() => import('/content/types/models/components/connector_status/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
 ##### `updatedAt?`: [*{ `Date` }*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)

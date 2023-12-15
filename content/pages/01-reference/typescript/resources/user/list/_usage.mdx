@@ -1,0 +1,128 @@
+
+<CH.Code>
+```typescript List.ts
+import { SDK } from "openapi";
+import { C1ApiUserV1UserServiceListRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const pageSize: number = 7917.25;
+const pageToken: string = "string";
+
+  const res = await sdk.user.list(pageSize, pageToken);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "expanded": [
+      {}
+    ],
+    "list": [
+      {
+        "delegatedUserPath": "string",
+        "directoriesPath": "string",
+        "managersPath": "string",
+        "rolesPath": "string",
+        "User": {
+          "createdAt": "2023-06-28T09:56:48.932Z",
+          "delegatedUserId": "string",
+          "deletedAt": "2023-08-01T07:17:05.231Z",
+          "department": "string",
+          "departmentSources": [
+            {
+              "appId": "string",
+              "appUserId": "string",
+              "appUserProfileAttributeKey": "string",
+              "userAttributeMappingId": "string",
+              "value": "string"
+            }
+          ],
+          "directoryIds": [
+            "string"
+          ],
+          "directoryStatusSources": [
+            {
+              "appId": "string",
+              "appUserId": "string",
+              "appUserProfileAttributeKey": "string",
+              "userAttributeMappingId": "string",
+              "value": "string"
+            }
+          ],
+          "displayName": "string",
+          "email": "string",
+          "emails": [
+            "string"
+          ],
+          "employmentStatus": "string",
+          "employmentStatusSources": [
+            {
+              "appId": "string",
+              "appUserId": "string",
+              "appUserProfileAttributeKey": "string",
+              "userAttributeMappingId": "string",
+              "value": "string"
+            }
+          ],
+          "employmentType": "string",
+          "employmentTypeSources": [
+            {
+              "appId": "string",
+              "appUserId": "string",
+              "appUserProfileAttributeKey": "string",
+              "userAttributeMappingId": "string",
+              "value": "string"
+            }
+          ],
+          "id": "string",
+          "jobTitle": "string",
+          "jobTitleSources": [
+            {
+              "appId": "string",
+              "appUserId": "string",
+              "appUserProfileAttributeKey": "string",
+              "userAttributeMappingId": "string",
+              "value": "string"
+            }
+          ],
+          "managerIds": [
+            "string"
+          ],
+          "managerSources": [
+            {
+              "appId": "string",
+              "appUserId": "string",
+              "appUserProfileAttributeKey": "string",
+              "userAttributeMappingId": "string",
+              "value": "string"
+            }
+          ],
+          "profile": {},
+          "roleIds": [
+              "string"
+            ],
+          "updatedAt": "2021-04-16T17:19:25.912Z",
+          "username": "string",
+          "usernames": [
+              "string"
+            ]
+        }
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

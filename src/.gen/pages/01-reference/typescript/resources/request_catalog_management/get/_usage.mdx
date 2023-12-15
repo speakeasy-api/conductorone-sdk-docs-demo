@@ -1,0 +1,94 @@
+
+<CH.Code>
+```typescript Get.ts
+import { SDK } from "openapi";
+import { C1ApiRequestcatalogV1RequestCatalogManagementServiceGetRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const id: string = "string";
+
+  const res = await sdk.requestCatalogManagement.get(id);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "expanded": [
+      {}
+    ],
+    "RequestCatalogView": {
+      "accessEntitlementsPath": "string",
+      "appPaths": "string",
+      "createdByUserPath": "string",
+      "RequestCatalog": {
+        "accessEntitlements": [
+          {
+            "alias": "string",
+            "appId": "string",
+            "appResourceId": "string",
+            "appResourceTypeId": "string",
+            "certifyPolicyId": "string",
+            "complianceFrameworkValueIds": [
+              "string"
+            ],
+            "createdAt": "2021-03-12T05:47:46.776Z",
+            "deletedAt": "2021-08-26T10:05:08.374Z",
+            "description": "string",
+            "displayName": "string",
+            "durationGrant": "string",
+            "durationUnset": {},
+            "emergencyGrantEnabled": false,
+            "emergencyGrantPolicyId": "string",
+            "grantCount": "string",
+            "grantPolicyId": "string",
+            "id": "string",
+            "ProvisionPolicy": {
+                "ConnectorProvision": {},
+                "DelegatedProvision": {
+                    "appId": "string",
+                    "entitlementId": "string"
+                  },
+                "ManualProvision": {
+                    "instructions": "string",
+                    "userIds": [
+                      "string"
+                    ]
+                  }
+              },
+            "revokePolicyId": "string",
+            "riskLevelValueId": "string",
+            "slug": "string",
+            "systemBuiltin": false,
+            "updatedAt": "2023-01-29T06:10:02.268Z"
+          }
+        ],
+        "appIds": [
+          "string"
+        ],
+        "createdAt": "2022-09-11T21:09:48.201Z",
+        "createdByUserId": "string",
+        "deletedAt": "2022-09-13T10:17:09.836Z",
+        "description": "string",
+        "displayName": "string",
+        "id": "string",
+        "published": false,
+        "updatedAt": "2023-08-06T06:53:43.374Z",
+        "visibleToEveryone": false
+      }
+    }
+  }
+```
+</CH.Code>

@@ -2,18 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `provisionPolicy?`: *{`components.ProvisionPolicy`}*
-ProvisionPolicy is a oneOf that indicates how a provision step should be processed.
-
-This message contains a oneof named typ. Only a single field of the following list may be set at a time:
-  \- connector
-  \- manual
-  \- delegated
-
-<Collapsible content={() => import('/content/types/models/components/provision_policy/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `appId?`: *{`string`}*
 The ID of the app that is associated with the app entitlement.
 
@@ -60,6 +48,18 @@ The ID of the policy that will be used for emergency access grant tasks.
 ---
 ##### `grantPolicyId?`: *{`string`}*
 The ID of the policy that will be used for grant tickets related to the app entitlement.
+
+---
+##### `provisionPolicy?`: *{`components.ProvisionPolicy`}*
+ProvisionPolicy is a oneOf that indicates how a provision step should be processed.
+
+This message contains a oneof named typ. Only a single field of the following list may be set at a time:
+  \- connector
+  \- manual
+  \- delegated
+
+<Collapsible content={() => import('/content/types/models/components/provision_policy/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
 ##### `revokePolicyId?`: *{`string`}*

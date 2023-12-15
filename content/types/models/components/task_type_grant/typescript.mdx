@@ -2,12 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `taskGrantSource?`: *{`components.TaskGrantSource`}*
-The TaskGrantSource message tracks which external URL was the source of the specificed grant ticket.
-<Collapsible content={() => import('/content/types/models/components/task_grant_source/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `appEntitlementId?`: *{`string`}*
 The ID of the app entitlement.
 
@@ -34,5 +28,11 @@ The outcome of the grant.
 
 ---
 ##### `outcomeTime?`: [*{ `Date` }*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+
+---
+##### `taskGrantSource?`: *{`components.TaskGrantSource`}*
+The TaskGrantSource message tracks which external URL was the source of the specificed grant ticket.
+<Collapsible content={() => import('/content/types/models/components/task_grant_source/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 

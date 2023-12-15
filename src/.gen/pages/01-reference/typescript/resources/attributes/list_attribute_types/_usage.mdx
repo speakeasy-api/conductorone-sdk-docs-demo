@@ -1,0 +1,39 @@
+
+<CH.Code>
+```typescript ListAttributeTypes.ts
+import { SDK } from "openapi";
+import { C1ApiAttributeV1AttributesListAttributeTypesRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const pageSize: number = 6458.94;
+const pageToken: string = "string";
+
+  const res = await sdk.attributes.listAttributeTypes(pageSize, pageToken);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "id": "string",
+        "name": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

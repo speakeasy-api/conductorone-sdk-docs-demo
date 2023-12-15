@@ -1,0 +1,26 @@
+
+<CH.Code>
+```python Remove.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.app_entitlement_owners.remove(app_id='string', entitlement_id='string', user_id='string', remove_app_entitlement_owner_request=components.RemoveAppEntitlementOwnerRequest())
+
+if res.remove_app_entitlement_owner_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

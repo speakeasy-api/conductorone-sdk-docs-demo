@@ -1,0 +1,45 @@
+
+<CH.Code>
+```typescript GetCredentials.ts
+import { SDK } from "openapi";
+import { C1ApiAppV1ConnectorServiceGetCredentialsRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+const connectorId: string = "string";
+const id: string = "string";
+
+  const res = await sdk.connector.getCredentials(appId, connectorId, id);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "ConnectorCredential": {
+      "appId": "string",
+      "clientId": "string",
+      "connectorId": "string",
+      "createdAt": "2021-06-03T16:25:06.350Z",
+      "deletedAt": "2023-08-11T15:55:09.039Z",
+      "displayName": "string",
+      "expiresTime": "2023-08-11T17:53:34.649Z",
+      "id": "string",
+      "lastUsedAt": "2023-12-08T14:05:24.185Z",
+      "updatedAt": "2022-06-03T14:25:09.450Z"
+    }
+  }
+```
+</CH.Code>

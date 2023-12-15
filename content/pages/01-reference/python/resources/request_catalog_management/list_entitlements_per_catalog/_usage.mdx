@@ -1,0 +1,79 @@
+
+<CH.Code>
+```python ListEntitlementsPerCatalog.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.request_catalog_management.list_entitlements_per_catalog(catalog_id='string', page_size=4375.87, page_token='string')
+
+if res.request_catalog_management_service_list_entitlements_per_catalog_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ],
+    "list": [
+      {
+        "AppEntitlement": {
+          "alias": "string",
+          "appId": "string",
+          "appResourceId": "string",
+          "appResourceTypeId": "string",
+          "certifyPolicyId": "string",
+          "complianceFrameworkValueIds": [
+            "string"
+          ],
+          "createdAt": "2021-05-11T00:09:51.593Z",
+          "deletedAt": "2023-01-25T02:00:57.510Z",
+          "description": "string",
+          "displayName": "string",
+          "durationGrant": "string",
+          "durationUnset": {},
+          "emergencyGrantEnabled": false,
+          "emergencyGrantPolicyId": "string",
+          "grantCount": "string",
+          "grantPolicyId": "string",
+          "id": "string",
+          "ProvisionPolicy": {
+              "ConnectorProvision": {},
+              "DelegatedProvision": {
+                  "appId": "string",
+                  "entitlementId": "string"
+                },
+              "ManualProvision": {
+                  "instructions": "string",
+                  "userIds": [
+                    "string"
+                  ]
+                }
+            },
+          "revokePolicyId": "string",
+          "riskLevelValueId": "string",
+          "slug": "string",
+          "systemBuiltin": false,
+          "updatedAt": "2021-12-15T04:35:52.059Z"
+        },
+        "appPath": "string",
+        "appResourcePath": "string",
+        "appResourceTypePath": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

@@ -1,0 +1,65 @@
+
+<CH.Code>
+```python ListUsers.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.app_entitlements.list_users(app_id='string', app_entitlement_id='string', page_size=8442.66, page_token='string')
+
+if res.list_app_entitlement_users_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ],
+    "list": [
+      {
+        "appEntitlementUserBindingCreatedAt": "2023-09-16T08:17:16.181Z",
+        "appEntitlementUserBindingDeprovisionAt": "2023-01-17T14:14:14.739Z",
+        "AppUserView": {
+          "appPath": "string",
+          "AppUser": {
+            "appId": "string",
+            "createdAt": "2022-01-29T15:52:03.598Z",
+            "deletedAt": "2022-11-03T07:18:27.998Z",
+            "displayName": "string",
+            "email": "string",
+            "emails": [
+              "string"
+            ],
+            "id": "string",
+            "identityUserId": "string",
+            "profile": {},
+            "AppUserStatus": {
+                "details": "string"
+              },
+            "updatedAt": "2023-09-16T01:43:14.288Z",
+            "username": "string",
+            "usernames": [
+                "string"
+              ]
+          },
+          "identityUserPath": "string",
+          "lastUsagePath": "string"
+        }
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

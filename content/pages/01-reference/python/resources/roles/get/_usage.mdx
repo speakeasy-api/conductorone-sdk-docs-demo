@@ -1,0 +1,42 @@
+
+<CH.Code>
+```python Get.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.roles.get(role_id='string')
+
+if res.get_roles_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "Role": {
+      "createdAt": "2022-08-29T08:08:54.974Z",
+      "deletedAt": "2021-01-23T00:25:35.142Z",
+      "displayName": "string",
+      "id": "string",
+      "name": "string",
+      "permissions": [
+        "string"
+      ],
+      "serviceRoles": [
+        "string"
+      ],
+      "systemBuiltin": false,
+      "updatedAt": "2021-06-30T14:38:07.095Z"
+    }
+  }
+```
+</CH.Code>

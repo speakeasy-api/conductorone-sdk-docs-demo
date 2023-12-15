@@ -1,0 +1,39 @@
+
+<CH.Code>
+```python GetCredentials.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.connector.get_credentials(app_id='string', connector_id='string', id='string')
+
+if res.connector_service_get_credentials_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "ConnectorCredential": {
+      "appId": "string",
+      "clientId": "string",
+      "connectorId": "string",
+      "createdAt": "2021-06-03T16:25:06.350Z",
+      "deletedAt": "2023-08-11T15:55:09.039Z",
+      "displayName": "string",
+      "expiresTime": "2023-08-11T17:53:34.649Z",
+      "id": "string",
+      "lastUsedAt": "2023-12-08T14:05:24.185Z",
+      "updatedAt": "2022-06-03T14:25:09.450Z"
+    }
+  }
+```
+</CH.Code>

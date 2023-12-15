@@ -1,0 +1,122 @@
+
+<CH.Code>
+```python Get.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.user.get(id='string')
+
+if res.user_service_get_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ],
+    "UserView": {
+      "delegatedUserPath": "string",
+      "directoriesPath": "string",
+      "managersPath": "string",
+      "rolesPath": "string",
+      "User": {
+        "createdAt": "2021-10-24T00:13:02.300Z",
+        "delegatedUserId": "string",
+        "deletedAt": "2021-10-08T11:20:53.664Z",
+        "department": "string",
+        "departmentSources": [
+          {
+            "appId": "string",
+            "appUserId": "string",
+            "appUserProfileAttributeKey": "string",
+            "userAttributeMappingId": "string",
+            "value": "string"
+          }
+        ],
+        "directoryIds": [
+          "string"
+        ],
+        "directoryStatusSources": [
+          {
+            "appId": "string",
+            "appUserId": "string",
+            "appUserProfileAttributeKey": "string",
+            "userAttributeMappingId": "string",
+            "value": "string"
+          }
+        ],
+        "displayName": "string",
+        "email": "string",
+        "emails": [
+          "string"
+        ],
+        "employmentStatus": "string",
+        "employmentStatusSources": [
+          {
+            "appId": "string",
+            "appUserId": "string",
+            "appUserProfileAttributeKey": "string",
+            "userAttributeMappingId": "string",
+            "value": "string"
+          }
+        ],
+        "employmentType": "string",
+        "employmentTypeSources": [
+          {
+            "appId": "string",
+            "appUserId": "string",
+            "appUserProfileAttributeKey": "string",
+            "userAttributeMappingId": "string",
+            "value": "string"
+          }
+        ],
+        "id": "string",
+        "jobTitle": "string",
+        "jobTitleSources": [
+          {
+            "appId": "string",
+            "appUserId": "string",
+            "appUserProfileAttributeKey": "string",
+            "userAttributeMappingId": "string",
+            "value": "string"
+          }
+        ],
+        "managerIds": [
+          "string"
+        ],
+        "managerSources": [
+          {
+            "appId": "string",
+            "appUserId": "string",
+            "appUserProfileAttributeKey": "string",
+            "userAttributeMappingId": "string",
+            "value": "string"
+          }
+        ],
+        "profile": {},
+        "roleIds": [
+            "string"
+          ],
+        "updatedAt": "2021-03-02T15:14:13.370Z",
+        "username": "string",
+        "usernames": [
+            "string"
+          ]
+      }
+    }
+  }
+```
+</CH.Code>

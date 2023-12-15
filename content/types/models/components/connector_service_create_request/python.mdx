@@ -2,12 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `connector_expand_mask` *{`Optional[components.ConnectorExpandMask]`}*
-The ConnectorExpandMask is used to expand related objects on a connector.
-<Collapsible content={() => import('/content/types/models/components/connector_expand_mask/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `catalog_id` *{`Optional[str]`}*
 The catalogId field.
 
@@ -20,6 +14,12 @@ Contains an arbitrary serialized message along with a \@type that describes the 
 ---
 ##### `description` *{`Optional[str]`}*
 The description field.
+
+---
+##### `connector_expand_mask` *{`Optional[components.ConnectorExpandMask]`}*
+The ConnectorExpandMask is used to expand related objects on a connector.
+<Collapsible content={() => import('/content/types/models/components/connector_expand_mask/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
 ##### `user_ids` *{`List[*str*]`}*

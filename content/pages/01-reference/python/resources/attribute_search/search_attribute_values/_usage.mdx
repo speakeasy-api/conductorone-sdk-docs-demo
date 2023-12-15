@@ -1,0 +1,49 @@
+
+<CH.Code>
+```python SearchAttributeValues.py
+import sdk
+from sdk.models import components
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = components.SearchAttributeValuesRequest(
+    attribute_type_ids=[
+        'string',
+    ],
+    exclude_ids=[
+        'string',
+    ],
+    ids=[
+        'string',
+    ],
+)
+
+res = s.attribute_search.search_attribute_values(req)
+
+if res.search_attribute_values_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "attributeTypeId": "string",
+        "createdAt": "2023-07-16T19:37:11.084Z",
+        "deletedAt": "2023-12-08T12:50:37.970Z",
+        "id": "string",
+        "updatedAt": "2023-02-05T22:18:55.484Z",
+        "value": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

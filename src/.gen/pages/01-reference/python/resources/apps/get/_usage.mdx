@@ -1,0 +1,46 @@
+
+<CH.Code>
+```python Get.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.apps.get(id='string')
+
+if res.get_app_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "App": {
+      "appAccountId": "string",
+      "appAccountName": "string",
+      "certifyPolicyId": "string",
+      "createdAt": "2022-04-09T21:38:53.014Z",
+      "deletedAt": "2022-11-14T19:15:14.189Z",
+      "description": "string",
+      "displayName": "string",
+      "fieldMask": "string",
+      "grantPolicyId": "string",
+      "iconUrl": "string",
+      "id": "string",
+      "logoUri": "string",
+      "monthlyCostUsd": 6458.94,
+      "parentAppId": "string",
+      "revokePolicyId": "string",
+      "updatedAt": "2022-02-25T21:33:04.651Z",
+      "userCount": "string"
+    }
+  }
+```
+</CH.Code>

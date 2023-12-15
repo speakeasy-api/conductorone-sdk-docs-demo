@@ -1,0 +1,82 @@
+
+<CH.Code>
+```python UpdateDelegated.py
+import dateutil.parser
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.connector.update_delegated(connector_app_id='string', connector_id='string', connector_service_update_delegated_request=components.ConnectorServiceUpdateDelegatedRequest(
+    connector=components.ConnectorInput(
+        config=components.Config(
+            additional_properties={
+                'key': 'string',
+            },
+        ),
+        o_auth2_authorized_as=components.OAuth2AuthorizedAsInput(),
+        connector_status=components.ConnectorStatus(),
+        user_ids=[
+            'string',
+        ],
+    ),
+    connector_expand_mask=components.ConnectorExpandMask(
+        paths=[
+            'string',
+        ],
+    ),
+))
+
+if res.connector_service_update_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "ConnectorView": {
+      "appPath": "string",
+      "Connector": {
+        "appId": "string",
+        "catalogId": "string",
+        "config": {
+          "@type": "string"
+        },
+        "createdAt": "2022-09-15T10:26:38.983Z",
+        "deletedAt": "2021-05-29T01:32:00.936Z",
+        "description": "string",
+        "displayName": "string",
+        "downloadUrl": "string",
+        "id": "string",
+        "OAuth2AuthorizedAs": {
+          "authEmail": "string",
+          "authorizedAt": "2021-01-21T13:47:45.211Z"
+        },
+        "ConnectorStatus": {
+          "completedAt": "2021-12-21T22:25:32.118Z",
+          "lastError": "string",
+          "startedAt": "2022-11-08T07:27:39.465Z",
+          "updatedAt": "2022-11-02T05:52:32.111Z"
+        },
+        "updatedAt": "2021-09-01T10:36:21.641Z",
+        "userIds": [
+          "string"
+        ]
+      },
+      "usersPath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+```
+</CH.Code>

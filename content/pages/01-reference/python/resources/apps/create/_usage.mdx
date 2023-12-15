@@ -1,0 +1,51 @@
+
+<CH.Code>
+```python Create.py
+import sdk
+from sdk.models import components
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = components.CreateAppRequest(
+    owners=[
+        'string',
+    ],
+)
+
+res = s.apps.create(req)
+
+if res.create_app_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "App": {
+      "appAccountId": "string",
+      "appAccountName": "string",
+      "certifyPolicyId": "string",
+      "createdAt": "2022-10-23T00:37:16.945Z",
+      "deletedAt": "2023-07-29T10:48:39.203Z",
+      "description": "string",
+      "displayName": "string",
+      "fieldMask": "string",
+      "grantPolicyId": "string",
+      "iconUrl": "string",
+      "id": "string",
+      "logoUri": "string",
+      "monthlyCostUsd": 5448.83,
+      "parentAppId": "string",
+      "revokePolicyId": "string",
+      "updatedAt": "2023-07-17T17:46:32.359Z",
+      "userCount": "string"
+    }
+  }
+```
+</CH.Code>

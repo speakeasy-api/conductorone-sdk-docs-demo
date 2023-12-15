@@ -1,0 +1,41 @@
+
+<CH.Code>
+```typescript RemoveAccessEntitlements.ts
+import { SDK } from "openapi";
+import {
+  AppEntitlementRef,
+  RequestCatalogManagementServiceRemoveAccessEntitlementsRequest,
+} from "openapi/dist/models/components";
+import {
+  C1ApiRequestcatalogV1RequestCatalogManagementServiceRemoveAccessEntitlementsRequest,
+} from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const catalogId: string = "string";
+const requestCatalogManagementServiceRemoveAccessEntitlementsRequest: RequestCatalogManagementServiceRemoveAccessEntitlementsRequest = {
+  accessEntitlements: [
+    {},
+  ],
+};
+
+  const res = await sdk.requestCatalogManagement.removeAccessEntitlements(catalogId, requestCatalogManagementServiceRemoveAccessEntitlementsRequest);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

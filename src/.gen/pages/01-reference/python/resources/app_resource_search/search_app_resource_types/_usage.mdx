@@ -1,0 +1,55 @@
+
+<CH.Code>
+```python SearchAppResourceTypes.py
+import sdk
+from sdk.models import components
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+req = components.SearchAppResourceTypesRequest(
+    app_ids=[
+        'string',
+    ],
+    exclude_resource_type_ids=[
+        'string',
+    ],
+    exclude_resource_type_trait_ids=[
+        'string',
+    ],
+    resource_type_ids=[
+        'string',
+    ],
+    resource_type_trait_ids=[
+        'string',
+    ],
+)
+
+res = s.app_resource_search.search_app_resource_types(req)
+
+if res.search_app_resource_types_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "appId": "string",
+        "createdAt": "2022-12-01T14:50:45.552Z",
+        "deletedAt": "2021-09-02T06:35:06.913Z",
+        "displayName": "string",
+        "id": "string",
+        "updatedAt": "2023-09-04T06:03:01.592Z"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

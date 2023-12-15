@@ -1,0 +1,74 @@
+
+<CH.Code>
+```typescript CreateDelegated.ts
+import { SDK } from "openapi";
+import { ConnectorExpandMask, ConnectorServiceCreateDelegatedRequest } from "openapi/dist/models/components";
+import { C1ApiAppV1ConnectorServiceCreateDelegatedRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+const connectorServiceCreateDelegatedRequest: ConnectorServiceCreateDelegatedRequest = {
+  connectorExpandMask: {
+    paths: [
+      "string",
+    ],
+  },
+  userIds: [
+    "string",
+  ],
+};
+
+  const res = await sdk.connector.createDelegated(appId, connectorServiceCreateDelegatedRequest);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "ConnectorView": {
+      "appPath": "string",
+      "Connector": {
+        "appId": "string",
+        "catalogId": "string",
+        "config": {},
+        "createdAt": "2022-09-15T00:12:40.088Z",
+        "deletedAt": "2022-03-07T02:23:03.711Z",
+        "description": "string",
+        "displayName": "string",
+        "downloadUrl": "string",
+        "id": "string",
+        "OAuth2AuthorizedAs": {
+            "authEmail": "string",
+            "authorizedAt": "2023-10-11T12:40:46.277Z"
+          },
+        "ConnectorStatus": {
+            "completedAt": "2023-07-05T12:09:00.162Z",
+            "lastError": "string",
+            "startedAt": "2021-03-19T18:49:39.442Z",
+            "updatedAt": "2021-04-06T09:45:28.527Z"
+          },
+        "updatedAt": "2022-12-11T17:57:24.897Z",
+        "userIds": [
+            "string"
+          ]
+      },
+      "usersPath": "string"
+    },
+    "expanded": [
+      {}
+    ]
+  }
+```
+</CH.Code>

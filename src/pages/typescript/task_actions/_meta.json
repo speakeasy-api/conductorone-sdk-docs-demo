@@ -1,0 +1,14 @@
+{
+  "approve": {
+    "title": "Approve"
+  },
+  "comment": {
+    "title": "Comment"
+  },
+  "deny": {
+    "title": "Deny"
+  },
+  "escalate_to_emergency_access": {
+    "title": "Escalate To Emergency Access"
+  }
+}

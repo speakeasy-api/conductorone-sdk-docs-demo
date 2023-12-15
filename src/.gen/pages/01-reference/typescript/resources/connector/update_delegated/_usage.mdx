@@ -1,0 +1,89 @@
+
+<CH.Code>
+```typescript UpdateDelegated.ts
+import { SDK } from "openapi";
+import {
+  ConnectorExpandMask,
+  ConnectorInput,
+  ConnectorServiceUpdateDelegatedRequest,
+  ConnectorStatus,
+  OAuth2AuthorizedAsInput,
+  Status,
+} from "openapi/dist/models/components";
+import { C1ApiAppV1ConnectorServiceUpdateDelegatedRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const connectorAppId: string = "string";
+const connectorId: string = "string";
+const connectorServiceUpdateDelegatedRequest: ConnectorServiceUpdateDelegatedRequest = {
+  connector: {
+    config: {
+      "key": "string",
+    },
+    oAuth2AuthorizedAs: {},
+    connectorStatus: {},
+    userIds: [
+      "string",
+    ],
+  },
+  connectorExpandMask: {
+    paths: [
+      "string",
+    ],
+  },
+};
+
+  const res = await sdk.connector.updateDelegated(connectorAppId, connectorId, connectorServiceUpdateDelegatedRequest);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "ConnectorView": {
+      "appPath": "string",
+      "Connector": {
+        "appId": "string",
+        "catalogId": "string",
+        "config": {},
+        "createdAt": "2022-09-15T10:26:38.983Z",
+        "deletedAt": "2021-05-29T01:32:00.936Z",
+        "description": "string",
+        "displayName": "string",
+        "downloadUrl": "string",
+        "id": "string",
+        "OAuth2AuthorizedAs": {
+            "authEmail": "string",
+            "authorizedAt": "2021-01-21T13:47:45.211Z"
+          },
+        "ConnectorStatus": {
+            "completedAt": "2021-12-21T22:25:32.118Z",
+            "lastError": "string",
+            "startedAt": "2022-11-08T07:27:39.465Z",
+            "updatedAt": "2022-11-02T05:52:32.111Z"
+          },
+        "updatedAt": "2021-09-01T10:36:21.641Z",
+        "userIds": [
+            "string"
+          ]
+      },
+      "usersPath": "string"
+    },
+    "expanded": [
+      {}
+    ]
+  }
+```
+</CH.Code>

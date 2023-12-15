@@ -1,0 +1,137 @@
+
+<CH.Code>
+```typescript Search.ts
+import { SDK } from "openapi";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.appEntitlementSearch.search({
+    appIds: [
+      "string",
+    ],
+    appUserIds: [
+      "string",
+    ],
+    complianceFrameworkIds: [
+      "string",
+    ],
+    excludeAppIds: [
+      "string",
+    ],
+    excludeAppUserIds: [
+      "string",
+    ],
+    appEntitlementExpandMask: {
+      paths: [
+        "string",
+      ],
+    },
+    resourceTypeIds: [
+      "string",
+    ],
+    riskLevelIds: [
+      "string",
+    ],
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "expanded": [
+      {}
+    ],
+    "Facets": {
+      "count": "string",
+      "facets": [
+        {
+          "displayName": "string",
+          "iconUrl": "string",
+          "param": "string",
+          "FacetRangeItem": {
+            "ranges": [
+              {
+                "count": "string",
+                "displayName": "string",
+                "from": "string",
+                "iconUrl": "string",
+                "to": "string"
+              }
+            ]
+          },
+          "FacetValueItem": {
+            "values": [
+              {
+                "count": "string",
+                "displayName": "string",
+                "iconUrl": "string",
+                "value": "string"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "list": [
+      {
+        "AppEntitlement": {
+          "alias": "string",
+          "appId": "string",
+          "appResourceId": "string",
+          "appResourceTypeId": "string",
+          "certifyPolicyId": "string",
+          "complianceFrameworkValueIds": [
+            "string"
+          ],
+          "createdAt": "2021-05-08T05:47:10.297Z",
+          "deletedAt": "2021-11-22T16:38:35.122Z",
+          "description": "string",
+          "displayName": "string",
+          "durationGrant": "string",
+          "durationUnset": {},
+          "emergencyGrantEnabled": false,
+          "emergencyGrantPolicyId": "string",
+          "grantCount": "string",
+          "grantPolicyId": "string",
+          "id": "string",
+          "ProvisionPolicy": {
+              "ConnectorProvision": {},
+              "DelegatedProvision": {
+                  "appId": "string",
+                  "entitlementId": "string"
+                },
+              "ManualProvision": {
+                  "instructions": "string",
+                  "userIds": [
+                    "string"
+                  ]
+                }
+            },
+          "revokePolicyId": "string",
+          "riskLevelValueId": "string",
+          "slug": "string",
+          "systemBuiltin": false,
+          "updatedAt": "2023-04-20T21:22:58.458Z"
+        },
+        "appPath": "string",
+        "appResourcePath": "string",
+        "appResourceTypePath": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

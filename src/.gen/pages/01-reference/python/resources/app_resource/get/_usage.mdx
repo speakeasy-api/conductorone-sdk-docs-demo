@@ -1,0 +1,48 @@
+
+<CH.Code>
+```python Get.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.app_resource.get(app_id='string', app_resource_type_id='string', id='string')
+
+if res.app_resource_service_get_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "AppResourceView": {
+      "appPath": "string",
+      "AppResource": {
+        "appId": "string",
+        "appResourceTypeId": "string",
+        "createdAt": "2021-06-24T01:43:14.638Z",
+        "customDescription": "string",
+        "deletedAt": "2022-01-06T02:50:24.677Z",
+        "description": "string",
+        "displayName": "string",
+        "grantCount": "string",
+        "id": "string",
+        "updatedAt": "2021-05-01T20:39:31.166Z"
+      },
+      "resourceTypePath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+```
+</CH.Code>

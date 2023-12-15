@@ -21,6 +21,7 @@ features:
     nameOverrides: 0.1.0
 docs:
   version: 0.6.0
+  maintainTagBasedOrdering: true
   imports:
     option: openapi
     paths:

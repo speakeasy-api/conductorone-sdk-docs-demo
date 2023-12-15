@@ -1,0 +1,51 @@
+
+<CH.Code>
+```python List.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.app_resource.list(app_id='string', app_resource_type_id='string', page_size=6235.64, page_token='string')
+
+if res.app_resource_service_list_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ],
+    "list": [
+      {
+        "appPath": "string",
+        "AppResource": {
+          "appId": "string",
+          "appResourceTypeId": "string",
+          "createdAt": "2022-06-04T19:03:01.565Z",
+          "customDescription": "string",
+          "deletedAt": "2021-09-25T15:30:16.034Z",
+          "description": "string",
+          "displayName": "string",
+          "grantCount": "string",
+          "id": "string",
+          "updatedAt": "2022-11-14T17:50:44.109Z"
+        },
+        "resourceTypePath": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

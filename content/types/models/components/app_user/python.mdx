@@ -2,12 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `app_user_status` *{`Optional[components.AppUserStatus]`}*
-The satus of the applicaiton user.
-<Collapsible content={() => import('/content/types/models/components/app_user_status/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `app_id` *{`Optional[str]`}*
 The ID of the application.
 
@@ -46,6 +40,12 @@ The conductor one user ID of the account owner.
 ---
 ##### `profile` *{`Dict[str, Union[str, float, components.Three, List[Any], bool]]`}*
 <Collapsible content={() => import('/content/types/models/components/profile/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `app_user_status` *{`Optional[components.AppUserStatus]`}*
+The satus of the applicaiton user.
+<Collapsible content={() => import('/content/types/models/components/app_user_status/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
 
 ---

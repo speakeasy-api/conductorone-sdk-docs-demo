@@ -2,12 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `connectorServiceCreateResponse?`: *{`components.ConnectorServiceCreateResponse`}*
-The ConnectorServiceCreateResponse is the response returned from creating a connector.
-<Collapsible content={() => import('/content/types/models/components/connector_service_create_response/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `contentType`: *{`string`}*
 HTTP response content type for this operation
 
@@ -18,5 +12,11 @@ HTTP response status code for this operation
 ---
 ##### `rawResponse`: [*{ `AxiosResponse` }*](https://axios-http.com/docs/res_schema)
 Raw HTTP response; suitable for custom response parsing
+
+---
+##### `connectorServiceCreateResponse?`: *{`components.ConnectorServiceCreateResponse`}*
+The ConnectorServiceCreateResponse is the response returned from creating a connector.
+<Collapsible content={() => import('/content/types/models/components/connector_service_create_response/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 

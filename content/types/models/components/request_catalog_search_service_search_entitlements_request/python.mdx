@@ -2,18 +2,18 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `app_entitlement_expand_mask` *{`Optional[components.AppEntitlementExpandMask]`}*
-The app entitlement expand mask allows the user to get additional information when getting responses containing app entitlement views.
-<Collapsible content={() => import('/content/types/models/components/app_entitlement_expand_mask/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `app_display_name` *{`Optional[str]`}*
 Search entitlements that belong to this app name (exact match).
 
 ---
 ##### `entitlement_alias` *{`Optional[str]`}*
 Search for entitlements with this alias (exact match).
+
+---
+##### `app_entitlement_expand_mask` *{`Optional[components.AppEntitlementExpandMask]`}*
+The app entitlement expand mask allows the user to get additional information when getting responses containing app entitlement views.
+<Collapsible content={() => import('/content/types/models/components/app_entitlement_expand_mask/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
 ##### `granted_status` *{`Optional[components.GrantedStatus]`}*

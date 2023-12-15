@@ -1,0 +1,43 @@
+
+<CH.Code>
+```typescript Get.ts
+import { SDK } from "openapi";
+import { C1ApiDirectoryV1DirectoryServiceGetRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+
+  const res = await sdk.directory.get(appId);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "DirectoryView": {
+      "appPath": "string",
+      "Directory": {
+        "appId": "string",
+        "createdAt": "2023-01-01T19:32:40.876Z",
+        "deletedAt": "2023-07-12T08:44:59.425Z",
+        "updatedAt": "2021-05-25T07:38:52.128Z"
+      }
+    },
+    "expanded": [
+      {}
+    ]
+  }
+```
+</CH.Code>

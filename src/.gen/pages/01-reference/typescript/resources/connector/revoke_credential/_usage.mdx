@@ -1,0 +1,34 @@
+
+<CH.Code>
+```typescript RevokeCredential.ts
+import { SDK } from "openapi";
+import { ConnectorServiceRevokeCredentialRequest } from "openapi/dist/models/components";
+import { C1ApiAppV1ConnectorServiceRevokeCredentialRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+const connectorId: string = "string";
+const id: string = "string";
+const connectorServiceRevokeCredentialRequest: ConnectorServiceRevokeCredentialRequest = {};
+
+  const res = await sdk.connector.revokeCredential(appId, connectorId, id, connectorServiceRevokeCredentialRequest);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

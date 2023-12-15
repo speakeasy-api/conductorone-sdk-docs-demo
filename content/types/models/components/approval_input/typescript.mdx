@@ -2,12 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `appGroupApproval?`: *{`components.AppGroupApprovalInput`}*
-The AppGroupApproval object provides the configuration for setting a group as the approvers of an approval policy step.
-<Collapsible content={() => import('/content/types/models/components/app_group_approval_input/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `appOwnerApproval?`: *{`components.AppOwnerApprovalInput`}*
 App owner approval provides the configuration for an approval step when the app owner is the target.
 <Collapsible content={() => import('/content/types/models/components/app_owner_approval_input/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
@@ -23,6 +17,12 @@ The entitlement owner approval allows configuration of the approval step when th
 ##### `expressionApproval?`: *{`components.ExpressionApprovalInput`}*
 The ExpressionApproval message.
 <Collapsible content={() => import('/content/types/models/components/expression_approval_input/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `appGroupApproval?`: *{`components.AppGroupApprovalInput`}*
+The AppGroupApproval object provides the configuration for setting a group as the approvers of an approval policy step.
+<Collapsible content={() => import('/content/types/models/components/app_group_approval_input/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
 
 ---

@@ -2,19 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `task_revoke_source` *{`Optional[components.TaskRevokeSource]`}*
-The TaskRevokeSource message indicates the source of the revoke task is one of expired, nonUsage, request, or review.
-
-This message contains a oneof named origin. Only a single field of the following list may be set at a time:
-  \- review
-  \- request
-  \- expired
-  \- nonUsage
-
-<Collapsible content={() => import('/content/types/models/components/task_revoke_source/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `app_entitlement_id` *{`Optional[str]`}*
 The ID of the app entitlement.
 
@@ -38,5 +25,18 @@ The outcome of the revoke.
 
 ---
 ##### `outcome_time` [*{ `date` }*](https://docs.python.org/3/library/datetime.html#date-objects)
+
+---
+##### `task_revoke_source` *{`Optional[components.TaskRevokeSource]`}*
+The TaskRevokeSource message indicates the source of the revoke task is one of expired, nonUsage, request, or review.
+
+This message contains a oneof named origin. Only a single field of the following list may be set at a time:
+  \- review
+  \- request
+  \- expired
+  \- nonUsage
+
+<Collapsible content={() => import('/content/types/models/components/task_revoke_source/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 

@@ -1,0 +1,30 @@
+
+<CH.Code>
+```python Set.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.app_entitlement_owners.set(app_id='string', entitlement_id='string', set_app_entitlement_owners_request=components.SetAppEntitlementOwnersRequest(
+    user_ids=[
+        'string',
+    ],
+))
+
+if res.set_app_entitlement_owners_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

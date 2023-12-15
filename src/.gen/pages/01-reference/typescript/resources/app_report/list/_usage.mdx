@@ -1,0 +1,43 @@
+
+<CH.Code>
+```typescript List.ts
+import { SDK } from "openapi";
+import { C1ApiAppV1AppReportServiceListRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+const pageSize: number = 8472.52;
+const pageToken: string = "string";
+
+  const res = await sdk.appReport.list(appId, pageSize, pageToken);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "appId": "string",
+        "createdAt": "2022-11-27T09:20:50.241Z",
+        "downloadUrl": "string",
+        "hashes": {},
+        "id": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

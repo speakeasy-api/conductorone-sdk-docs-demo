@@ -1,0 +1,45 @@
+
+<CH.Code>
+```typescript ListAppUsersForIdentityWithGrant.ts
+import { SDK } from "openapi";
+import {
+  C1ApiAppV1AppEntitlementUserBindingServiceListAppUsersForIdentityWithGrantRequest,
+} from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+const appEntitlementId: string = "string";
+const identityUserId: string = "string";
+
+  const res = await sdk.appEntitlementUserBinding.listAppUsersForIdentityWithGrant(appId, appEntitlementId, identityUserId);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "bindings": [
+      {
+        "appEntitlementId": "string",
+        "appId": "string",
+        "appUserId": "string",
+        "createdAt": "2021-12-12T09:27:25.304Z",
+        "deletedAt": "2022-10-28T13:47:23.716Z",
+        "deprovisionAt": "2022-02-03T06:19:08.851Z"
+      }
+    ]
+  }
+```
+</CH.Code>

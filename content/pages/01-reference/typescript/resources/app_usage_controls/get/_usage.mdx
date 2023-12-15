@@ -1,0 +1,39 @@
+
+<CH.Code>
+```typescript Get.ts
+import { SDK } from "openapi";
+import { C1ApiAppV1AppUsageControlsServiceGetRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+
+  const res = await sdk.appUsageControls.get(appId);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "AppUsageControls": {
+      "appId": "string",
+      "notify": false,
+      "notifyAfterDays": 1965.82,
+      "revoke": false,
+      "revokeAfterDays": 9495.72
+    },
+    "hasUsageData": false
+  }
+```
+</CH.Code>

@@ -1,0 +1,32 @@
+
+<CH.Code>
+```typescript Delete.ts
+import { SDK } from "openapi";
+import { DeleteAppRequest } from "openapi/dist/models/components";
+import { C1ApiAppV1AppsDeleteRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const id: string = "string";
+const deleteAppRequest: DeleteAppRequest = {};
+
+  const res = await sdk.apps.delete(id, deleteAppRequest);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

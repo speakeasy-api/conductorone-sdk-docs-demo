@@ -1,0 +1,32 @@
+
+<CH.Code>
+```typescript DeleteAttributeValue.ts
+import { SDK } from "openapi";
+import { DeleteAttributeValueRequest } from "openapi/dist/models/components";
+import { C1ApiAttributeV1AttributesDeleteAttributeValueRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const id: string = "string";
+const deleteAttributeValueRequest: DeleteAttributeValueRequest = {};
+
+  const res = await sdk.attributes.deleteAttributeValue(id, deleteAttributeValueRequest);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

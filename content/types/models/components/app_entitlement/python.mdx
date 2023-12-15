@@ -2,18 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `provision_policy` *{`Optional[components.ProvisionPolicy]`}*
-ProvisionPolicy is a oneOf that indicates how a provision step should be processed.
-
-This message contains a oneof named typ. Only a single field of the following list may be set at a time:
-  \- connector
-  \- manual
-  \- delegated
-
-<Collapsible content={() => import('/content/types/models/components/provision_policy/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `alias` *{`Optional[str]`}*
 The alias of the app entitlement used by Cone. Also exact\-match queryable.
 
@@ -78,6 +66,18 @@ The ID of the policy that will be used for grant tickets related to the app enti
 ---
 ##### `id` *{`Optional[str]`}*
 The unique ID for the App Entitlement.
+
+---
+##### `provision_policy` *{`Optional[components.ProvisionPolicy]`}*
+ProvisionPolicy is a oneOf that indicates how a provision step should be processed.
+
+This message contains a oneof named typ. Only a single field of the following list may be set at a time:
+  \- connector
+  \- manual
+  \- delegated
+
+<Collapsible content={() => import('/content/types/models/components/provision_policy/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
 ##### `revoke_policy_id` *{`Optional[str]`}*

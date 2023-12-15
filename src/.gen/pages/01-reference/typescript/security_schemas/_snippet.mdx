@@ -1,0 +1,28 @@
+### Per-Client Security Schemes
+
+Custom Security Option Writing.
+
+```typescript
+import { SDK } from "openapi";
+import { C1ApiAppV1AppsListRequest } from "openapi/dist/models/operations";
+
+async function run() {
+    const sdk = new SDK({
+        security: {
+            bearerAuth: "",
+            oauth: "",
+        },
+    });
+    const pageSize: number = 6488.05;
+    const pageToken: string = "string";
+
+    const res = await sdk.apps.list(pageSize, pageToken);
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+}
+
+run();
+
+```

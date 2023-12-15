@@ -2,12 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `task_grant_source` *{`Optional[components.TaskGrantSource]`}*
-The TaskGrantSource message tracks which external URL was the source of the specificed grant ticket.
-<Collapsible content={() => import('/content/types/models/components/task_grant_source/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `app_entitlement_id` *{`Optional[str]`}*
 The ID of the app entitlement.
 
@@ -34,5 +28,11 @@ The outcome of the grant.
 
 ---
 ##### `outcome_time` [*{ `date` }*](https://docs.python.org/3/library/datetime.html#date-objects)
+
+---
+##### `task_grant_source` *{`Optional[components.TaskGrantSource]`}*
+The TaskGrantSource message tracks which external URL was the source of the specificed grant ticket.
+<Collapsible content={() => import('/content/types/models/components/task_grant_source/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 

@@ -1,0 +1,52 @@
+
+<CH.Code>
+```typescript Get.ts
+import { SDK } from "openapi";
+import { C1ApiAppV1AppResourceServiceGetRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+const appResourceTypeId: string = "string";
+const id: string = "string";
+
+  const res = await sdk.appResource.get(appId, appResourceTypeId, id);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "AppResourceView": {
+      "appPath": "string",
+      "AppResource": {
+        "appId": "string",
+        "appResourceTypeId": "string",
+        "createdAt": "2021-06-24T01:43:14.638Z",
+        "customDescription": "string",
+        "deletedAt": "2022-01-06T02:50:24.677Z",
+        "description": "string",
+        "displayName": "string",
+        "grantCount": "string",
+        "id": "string",
+        "updatedAt": "2021-05-01T20:39:31.166Z"
+      },
+      "resourceTypePath": "string"
+    },
+    "expanded": [
+      {}
+    ]
+  }
+```
+</CH.Code>

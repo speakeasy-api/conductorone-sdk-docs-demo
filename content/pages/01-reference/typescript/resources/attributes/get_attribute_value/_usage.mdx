@@ -1,0 +1,39 @@
+
+<CH.Code>
+```typescript GetAttributeValue.ts
+import { SDK } from "openapi";
+import { C1ApiAttributeV1AttributesGetAttributeValueRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const id: string = "string";
+
+  const res = await sdk.attributes.getAttributeValue(id);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "AttributeValue": {
+      "attributeTypeId": "string",
+      "createdAt": "2023-12-06T05:21:17.086Z",
+      "deletedAt": "2023-08-20T14:55:27.673Z",
+      "id": "string",
+      "updatedAt": "2022-05-29T04:09:12.570Z",
+      "value": "string"
+    }
+  }
+```
+</CH.Code>

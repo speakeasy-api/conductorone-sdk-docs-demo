@@ -1,0 +1,32 @@
+
+<CH.Code>
+```typescript GenerateReport.ts
+import { SDK } from "openapi";
+import { AppActionsServiceGenerateReportRequest } from "openapi/dist/models/components";
+import { C1ApiAppV1AppReportActionServiceGenerateReportRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+const appActionsServiceGenerateReportRequest: AppActionsServiceGenerateReportRequest = {};
+
+  const res = await sdk.appReportAction.generateReport(appId, appActionsServiceGenerateReportRequest);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

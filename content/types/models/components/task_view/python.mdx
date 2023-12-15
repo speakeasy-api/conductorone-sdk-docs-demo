@@ -2,12 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `task` *{`Optional[components.Task]`}*
-A fully\-fleged task object. Includes its policy, references to external apps, its type, its processing history, and more.
-<Collapsible content={() => import('/content/types/models/components/task/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `access_review_path` *{`Optional[str]`}*
 JSONPATH expression indicating the location of the AccessReview object in the expanded array
 
@@ -34,6 +28,12 @@ JSONPATH expression indicating the location of the User object of the User that 
 ---
 ##### `step_approvers_path` *{`Optional[str]`}*
 JSONPATH expression indicating the location of the StepApproverUsers objects in the expanded array
+
+---
+##### `task` *{`Optional[components.Task]`}*
+A fully\-fleged task object. Includes its policy, references to external apps, its type, its processing history, and more.
+<Collapsible content={() => import('/content/types/models/components/task/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
 ##### `user_path` *{`Optional[str]`}*

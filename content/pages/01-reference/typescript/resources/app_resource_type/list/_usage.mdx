@@ -1,0 +1,50 @@
+
+<CH.Code>
+```typescript List.ts
+import { SDK } from "openapi";
+import { C1ApiAppV1AppResourceTypeServiceListRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+const pageSize: number = 4236.55;
+const pageToken: string = "string";
+
+  const res = await sdk.appResourceType.list(appId, pageSize, pageToken);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "expanded": [
+      {}
+    ],
+    "list": [
+      {
+        "appPath": "string",
+        "AppResourceType": {
+          "appId": "string",
+          "createdAt": "2023-12-26T20:28:21.303Z",
+          "deletedAt": "2022-12-17T03:41:12.134Z",
+          "displayName": "string",
+          "id": "string",
+          "updatedAt": "2022-09-30T03:01:36.230Z"
+        }
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

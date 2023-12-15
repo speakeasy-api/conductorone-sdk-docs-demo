@@ -1,0 +1,57 @@
+
+<CH.Code>
+```typescript List.ts
+import { SDK } from "openapi";
+import { C1ApiPolicyV1PoliciesListRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const pageSize: number = 9636.63;
+const pageToken: string = "string";
+
+  const res = await sdk.policies.list(pageSize, pageToken);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "createdAt": "2021-06-10T08:29:22.339Z",
+        "deletedAt": "2023-01-13T05:01:07.151Z",
+        "description": "string",
+        "displayName": "string",
+        "id": "string",
+        "policySteps": {},
+        "postActions": [
+            {
+              "certifyRemediateImmediately": false
+            }
+          ],
+        "reassignTasksToDelegates": false,
+        "rules": [
+            {
+              "condition": "string",
+              "policyKey": "string"
+            }
+          ],
+        "systemBuiltin": false,
+        "updatedAt": "2021-10-23T15:48:33.898Z"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

@@ -2,12 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `connector_service_delete_response` *{`Optional[components.ConnectorServiceDeleteResponse]`}*
-Empty response body. Status code indicates success.
-<Collapsible content={() => import('/content/types/models/components/connector_service_delete_response/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `content_type` *{`str`}*
 HTTP response content type for this operation
 
@@ -18,5 +12,11 @@ HTTP response status code for this operation
 ---
 ##### `raw_response` [*{ `requests.Response` }*](https://requests.readthedocs.io/en/latest/api/#requests.Response)
 Raw HTTP response; suitable for custom response parsing
+
+---
+##### `connector_service_delete_response` *{`Optional[components.ConnectorServiceDeleteResponse]`}*
+Empty response body. Status code indicates success.
+<Collapsible content={() => import('/content/types/models/components/connector_service_delete_response/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 

@@ -1,0 +1,34 @@
+
+<CH.Code>
+```python ListAttributeTypes.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.attributes.list_attribute_types(page_size=6458.94, page_token='string')
+
+if res.list_attribute_types_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "id": "string",
+        "name": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

@@ -1,0 +1,40 @@
+
+<CH.Code>
+```typescript Introspect.ts
+import { SDK } from "openapi";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.auth.introspect();
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "features": [
+      "string"
+    ],
+    "permissions": [
+      "string"
+    ],
+    "principleId": "string",
+    "roles": [
+      "string"
+    ],
+    "userId": "string"
+  }
+```
+</CH.Code>

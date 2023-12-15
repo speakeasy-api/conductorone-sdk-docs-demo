@@ -1,0 +1,34 @@
+
+<CH.Code>
+```typescript Remove.ts
+import { SDK } from "openapi";
+import { RemoveAppEntitlementOwnerRequest } from "openapi/dist/models/components";
+import { C1ApiAppV1AppEntitlementOwnersRemoveRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+const entitlementId: string = "string";
+const userId: string = "string";
+const removeAppEntitlementOwnerRequest: RemoveAppEntitlementOwnerRequest = {};
+
+  const res = await sdk.appEntitlementOwners.remove(appId, entitlementId, userId, removeAppEntitlementOwnerRequest);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

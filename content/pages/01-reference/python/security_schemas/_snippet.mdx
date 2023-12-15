@@ -1,0 +1,27 @@
+{/* Start Python Security Schemas */}
+### Per-Client Security Schemes
+
+This SDK supports the following security schemes globally:
+
+
+
+You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. The selected scheme will be used by default to authenticate with the API for all operations that support it. For example:
+```python
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.apps.list(page_size=6488.05, page_token='string')
+
+if res.list_apps_response is not None:
+    # handle response
+    pass
+```
+{/* End Python Security Schemas */}

@@ -1,0 +1,36 @@
+
+<CH.Code>
+```python Update.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.app_usage_controls.update(app_id='string', update_app_usage_controls_request=components.UpdateAppUsageControlsRequest(
+    app_usage_controls=components.AppUsageControls(),
+))
+
+if res.update_app_usage_controls_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "AppUsageControls": {
+      "appId": "string",
+      "notify": false,
+      "notifyAfterDays": 3687.25,
+      "revoke": false,
+      "revokeAfterDays": 6625.27
+    }
+  }
+```
+</CH.Code>

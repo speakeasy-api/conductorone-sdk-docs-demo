@@ -1,0 +1,26 @@
+
+<CH.Code>
+```python Delete.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.request_catalog_management.delete(id='string', request_catalog_management_service_delete_request=components.RequestCatalogManagementServiceDeleteRequest())
+
+if res.request_catalog_management_service_delete_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

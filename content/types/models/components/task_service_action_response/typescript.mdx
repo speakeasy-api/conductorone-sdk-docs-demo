@@ -2,14 +2,14 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
+##### `expanded?`: *{`Record<string, *any*>[]`}*
+The expanded field.
+
+---
 ##### `taskView?`: *{`components.TaskView`}*
 Contains a task and JSONPATH expressions that describe where in the expanded array related objects are located. This view can be used to display a fully\-detailed dashboard of task information.
 <Collapsible content={() => import('/content/types/models/components/task_view/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
-
----
-##### `expanded?`: *{`Record<string, *any*>[]`}*
-The expanded field.
 
 ---
 ##### `ticketActionId?`: *{`string`}*

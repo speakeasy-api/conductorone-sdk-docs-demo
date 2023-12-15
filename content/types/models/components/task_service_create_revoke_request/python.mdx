@@ -2,12 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `task_expand_mask` *{`Optional[components.TaskExpandMask]`}*
-The task expand mask is an array of strings that specifes the related objects the requester wishes to have returned when making a request where the expand mask is part of the input. Use '\*' to view all possible responses.
-<Collapsible content={() => import('/content/types/models/components/task_expand_mask/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `app_entitlement_id` *{`str`}*
 The ID of the app entitlement to revoke access to.
 
@@ -22,6 +16,12 @@ The ID of the app user to revoke access from. This field and identityUserId cann
 ---
 ##### `description` *{`Optional[str]`}*
 The description of the request.
+
+---
+##### `task_expand_mask` *{`Optional[components.TaskExpandMask]`}*
+The task expand mask is an array of strings that specifes the related objects the requester wishes to have returned when making a request where the expand mask is part of the input. Use '\*' to view all possible responses.
+<Collapsible content={() => import('/content/types/models/components/task_expand_mask/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
 ##### `identity_user_id` *{`Optional[str]`}*

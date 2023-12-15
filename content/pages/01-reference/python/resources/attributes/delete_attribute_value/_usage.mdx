@@ -1,0 +1,26 @@
+
+<CH.Code>
+```python DeleteAttributeValue.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.attributes.delete_attribute_value(id='string', delete_attribute_value_request=components.DeleteAttributeValueRequest())
+
+if res.delete_attribute_value_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

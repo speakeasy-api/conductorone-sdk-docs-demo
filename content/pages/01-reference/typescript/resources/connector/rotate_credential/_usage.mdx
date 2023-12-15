@@ -1,0 +1,47 @@
+
+<CH.Code>
+```typescript RotateCredential.ts
+import { SDK } from "openapi";
+import { ConnectorServiceRotateCredentialRequest } from "openapi/dist/models/components";
+import { C1ApiAppV1ConnectorServiceRotateCredentialRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+const connectorId: string = "string";
+const connectorServiceRotateCredentialRequest: ConnectorServiceRotateCredentialRequest = {};
+
+  const res = await sdk.connector.rotateCredential(appId, connectorId, connectorServiceRotateCredentialRequest);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "clientSecret": "string",
+    "ConnectorCredential": {
+      "appId": "string",
+      "clientId": "string",
+      "connectorId": "string",
+      "createdAt": "2021-01-23T03:20:22.304Z",
+      "deletedAt": "2022-02-08T05:23:15.367Z",
+      "displayName": "string",
+      "expiresTime": "2023-07-01T17:14:58.092Z",
+      "id": "string",
+      "lastUsedAt": "2023-11-15T02:02:14.840Z",
+      "updatedAt": "2023-05-03T01:57:34.456Z"
+    }
+  }
+```
+</CH.Code>

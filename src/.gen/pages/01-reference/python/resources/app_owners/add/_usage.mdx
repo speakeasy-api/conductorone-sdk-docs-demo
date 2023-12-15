@@ -1,0 +1,26 @@
+
+<CH.Code>
+```python Add.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.app_owners.add(app_id='string', user_id='string', add_app_owner_request=components.AddAppOwnerRequest())
+
+if res.add_app_owner_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

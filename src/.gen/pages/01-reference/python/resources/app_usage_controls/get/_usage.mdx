@@ -1,0 +1,35 @@
+
+<CH.Code>
+```python Get.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.app_usage_controls.get(app_id='string')
+
+if res.get_app_usage_controls_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "AppUsageControls": {
+      "appId": "string",
+      "notify": false,
+      "notifyAfterDays": 1965.82,
+      "revoke": false,
+      "revokeAfterDays": 9495.72
+    },
+    "hasUsageData": false
+  }
+```
+</CH.Code>

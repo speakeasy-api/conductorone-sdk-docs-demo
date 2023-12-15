@@ -1,0 +1,37 @@
+
+<CH.Code>
+```python ListAppUsersForIdentityWithGrant.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.app_entitlement_user_binding.list_app_users_for_identity_with_grant(app_id='string', app_entitlement_id='string', identity_user_id='string')
+
+if res.list_app_users_for_identity_with_grant_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "bindings": [
+      {
+        "appEntitlementId": "string",
+        "appId": "string",
+        "appUserId": "string",
+        "createdAt": "2021-12-12T09:27:25.304Z",
+        "deletedAt": "2022-10-28T13:47:23.716Z",
+        "deprovisionAt": "2022-02-03T06:19:08.851Z"
+      }
+    ]
+  }
+```
+</CH.Code>

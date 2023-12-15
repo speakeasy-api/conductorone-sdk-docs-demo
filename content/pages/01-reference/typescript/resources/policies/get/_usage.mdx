@@ -1,0 +1,53 @@
+
+<CH.Code>
+```typescript Get.ts
+import { SDK } from "openapi";
+import { C1ApiPolicyV1PoliciesGetRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const id: string = "string";
+
+  const res = await sdk.policies.get(id);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "Policy": {
+      "createdAt": "2022-04-20T10:48:37.145Z",
+      "deletedAt": "2021-09-30T09:13:57.045Z",
+      "description": "string",
+      "displayName": "string",
+      "id": "string",
+      "policySteps": {},
+      "postActions": [
+          {
+            "certifyRemediateImmediately": false
+          }
+        ],
+      "reassignTasksToDelegates": false,
+      "rules": [
+          {
+            "condition": "string",
+            "policyKey": "string"
+          }
+        ],
+      "systemBuiltin": false,
+      "updatedAt": "2022-09-23T21:24:53.234Z"
+    }
+  }
+```
+</CH.Code>

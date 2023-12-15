@@ -20,6 +20,10 @@ The outcome of a provision instance that has errored.
 </Collapsible>
 
 ---
+##### `notification_id` *{`Optional[str]`}*
+This indicates the notification id for this step.
+
+---
 ##### `provision` *{`Optional[components.Provision]`}*
 The provision step references a provision policy for this step.
 <Collapsible content={() => import('/content/types/models/components/provision/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
@@ -30,10 +34,6 @@ The provision step references a provision policy for this step.
 The ReassignedByErrorAction object describes the outcome of a policy step that has been reassigned because it had an error provisioning.
 <Collapsible content={() => import('/content/types/models/components/reassigned_by_error_action/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
-
----
-##### `notification_id` *{`Optional[str]`}*
-This indicates the notification id for this step.
 
 ---
 ##### `state` *{`Optional[components.ProvisionInstanceState]`}*

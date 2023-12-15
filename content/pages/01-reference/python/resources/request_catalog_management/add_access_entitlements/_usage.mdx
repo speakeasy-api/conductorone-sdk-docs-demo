@@ -1,0 +1,30 @@
+
+<CH.Code>
+```python AddAccessEntitlements.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.request_catalog_management.add_access_entitlements(catalog_id='string', request_catalog_management_service_add_access_entitlements_request=components.RequestCatalogManagementServiceAddAccessEntitlementsRequest(
+    access_entitlements=[
+        components.AppEntitlementRef(),
+    ],
+))
+
+if res.request_catalog_management_service_add_access_entitlements_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

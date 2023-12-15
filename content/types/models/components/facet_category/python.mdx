@@ -2,18 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `facet_range_item` *{`Optional[components.FacetRangeItem]`}*
-The FacetRangeItem message.
-<Collapsible content={() => import('/content/types/models/components/facet_range_item/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `facet_value_item` *{`Optional[components.FacetValueItem]`}*
-The FacetValueItem message.
-<Collapsible content={() => import('/content/types/models/components/facet_value_item/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `display_name` *{`Optional[str]`}*
 The display name of the category.
 
@@ -24,5 +12,17 @@ An icon for the category.
 ---
 ##### `param` *{`Optional[str]`}*
 The param that is being set when checking a facet in this category.
+
+---
+##### `facet_range_item` *{`Optional[components.FacetRangeItem]`}*
+The FacetRangeItem message.
+<Collapsible content={() => import('/content/types/models/components/facet_range_item/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `facet_value_item` *{`Optional[components.FacetValueItem]`}*
+The FacetValueItem message.
+<Collapsible content={() => import('/content/types/models/components/facet_value_item/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 

@@ -1,0 +1,77 @@
+
+<CH.Code>
+```typescript Create.ts
+import { SDK } from "openapi";
+import { ConnectorExpandMask, ConnectorServiceCreateRequest } from "openapi/dist/models/components";
+import { C1ApiAppV1ConnectorServiceCreateRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+const connectorServiceCreateRequest: ConnectorServiceCreateRequest = {
+  config: {
+    "key": "string",
+  },
+  connectorExpandMask: {
+    paths: [
+      "string",
+    ],
+  },
+  userIds: [
+    "string",
+  ],
+};
+
+  const res = await sdk.connector.create(appId, connectorServiceCreateRequest);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "ConnectorView": {
+      "appPath": "string",
+      "Connector": {
+        "appId": "string",
+        "catalogId": "string",
+        "config": {},
+        "createdAt": "2022-03-31T01:18:56.925Z",
+        "deletedAt": "2022-06-03T14:13:08.794Z",
+        "description": "string",
+        "displayName": "string",
+        "downloadUrl": "string",
+        "id": "string",
+        "OAuth2AuthorizedAs": {
+            "authEmail": "string",
+            "authorizedAt": "2021-10-17T16:31:17.284Z"
+          },
+        "ConnectorStatus": {
+            "completedAt": "2021-07-24T00:48:50.452Z",
+            "lastError": "string",
+            "startedAt": "2023-04-28T18:51:40.613Z",
+            "updatedAt": "2022-05-15T11:37:50.984Z"
+          },
+        "updatedAt": "2021-08-26T02:56:36.147Z",
+        "userIds": [
+            "string"
+          ]
+      },
+      "usersPath": "string"
+    },
+    "expanded": [
+      {}
+    ]
+  }
+```
+</CH.Code>

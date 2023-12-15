@@ -1,0 +1,20 @@
+{
+  "list": {
+    "title": "List"
+  },
+  "list_users": {
+    "title": "List Users"
+  },
+  "get": {
+    "title": "Get"
+  },
+  "update": {
+    "title": "Update"
+  },
+  "list_for_app_resource": {
+    "title": "List For App Resource"
+  },
+  "list_for_app_user": {
+    "title": "List For App User"
+  }
+}

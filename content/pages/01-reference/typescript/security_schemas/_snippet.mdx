@@ -1,0 +1,33 @@
+{/* Start Typescript Security Schemas */}
+### Per-Client Security Schemes
+
+This SDK supports the following security schemes globally:
+
+
+
+You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. The selected scheme will be used by default to authenticate with the API for all operations that support it. For example:
+```typescript
+import { SDK } from "openapi";
+import { C1ApiAppV1AppsListRequest } from "openapi/dist/models/operations";
+
+async function run() {
+    const sdk = new SDK({
+        security: {
+            bearerAuth: "",
+            oauth: "",
+        },
+    });
+    const pageSize: number = 6488.05;
+    const pageToken: string = "string";
+
+    const res = await sdk.apps.list(pageSize, pageToken);
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+}
+
+run();
+
+```
+{/* End Typescript Security Schemas */}

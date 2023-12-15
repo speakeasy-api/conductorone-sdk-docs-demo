@@ -1,0 +1,56 @@
+
+<CH.Code>
+```typescript SearchAppResourceTypes.ts
+import { SDK } from "openapi";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.appResourceSearch.searchAppResourceTypes({
+    appIds: [
+      "string",
+    ],
+    excludeResourceTypeIds: [
+      "string",
+    ],
+    excludeResourceTypeTraitIds: [
+      "string",
+    ],
+    resourceTypeIds: [
+      "string",
+    ],
+    resourceTypeTraitIds: [
+      "string",
+    ],
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "appId": "string",
+        "createdAt": "2022-12-01T14:50:45.552Z",
+        "deletedAt": "2021-09-02T06:35:06.913Z",
+        "displayName": "string",
+        "id": "string",
+        "updatedAt": "2023-09-04T06:03:01.592Z"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

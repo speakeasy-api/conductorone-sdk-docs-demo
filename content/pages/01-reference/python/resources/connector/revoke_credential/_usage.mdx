@@ -1,0 +1,26 @@
+
+<CH.Code>
+```python RevokeCredential.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.connector.revoke_credential(app_id='string', connector_id='string', id='string', connector_service_revoke_credential_request=components.ConnectorServiceRevokeCredentialRequest())
+
+if res.connector_service_revoke_credential_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

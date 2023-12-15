@@ -2,12 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `taskExpandMask?`: *{`components.TaskExpandMask`}*
-The task expand mask is an array of strings that specifes the related objects the requester wishes to have returned when making a request where the expand mask is part of the input. Use '\*' to view all possible responses.
-<Collapsible content={() => import('/content/types/models/components/task_expand_mask/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `accessReviewIds?`: *{`*string*[]`}*
 Search tasks that belong to any of the access reviews included in this list.
 
@@ -68,6 +62,12 @@ Search tasks that do not have any of these app entitlement IDs.
 ---
 ##### `excludeIds?`: *{`*string*[]`}*
 Exclude Specific TaskIDs from this serach result.
+
+---
+##### `taskExpandMask?`: *{`components.TaskExpandMask`}*
+The task expand mask is an array of strings that specifes the related objects the requester wishes to have returned when making a request where the expand mask is part of the input. Use '\*' to view all possible responses.
+<Collapsible content={() => import('/content/types/models/components/task_expand_mask/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
 ##### `includeDeleted?`: *{`boolean`}*

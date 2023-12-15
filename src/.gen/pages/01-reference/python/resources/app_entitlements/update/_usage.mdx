@@ -1,0 +1,97 @@
+
+<CH.Code>
+```python Update.py
+import sdk
+from sdk.models import components, operations
+
+s = sdk.SDK(
+    security=components.Security(
+        bearer_auth="",
+        oauth="",
+    ),
+)
+
+
+res = s.app_entitlements.update(app_id='string', id='string', update_app_entitlement_request=components.UpdateAppEntitlementRequest(
+    app_entitlement=components.AppEntitlementInput(
+        compliance_framework_value_ids=[
+            'string',
+        ],
+        duration_unset=components.DurationUnset(),
+        provision_policy=components.ProvisionPolicy(
+            connector_provision=components.ConnectorProvision(),
+            delegated_provision=components.DelegatedProvision(),
+            manual_provision=components.ManualProvision(
+                user_ids=[
+                    'string',
+                ],
+            ),
+        ),
+    ),
+    app_entitlement_expand_mask=components.AppEntitlementExpandMask(
+        paths=[
+            'string',
+        ],
+    ),
+))
+
+if res.update_app_entitlement_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "AppEntitlementView": {
+      "AppEntitlement": {
+        "alias": "string",
+        "appId": "string",
+        "appResourceId": "string",
+        "appResourceTypeId": "string",
+        "certifyPolicyId": "string",
+        "complianceFrameworkValueIds": [
+          "string"
+        ],
+        "createdAt": "2023-11-28T22:34:56.363Z",
+        "deletedAt": "2023-01-01T02:37:45.021Z",
+        "description": "string",
+        "displayName": "string",
+        "durationGrant": "string",
+        "durationUnset": {},
+        "emergencyGrantEnabled": false,
+        "emergencyGrantPolicyId": "string",
+        "grantCount": "string",
+        "grantPolicyId": "string",
+        "id": "string",
+        "ProvisionPolicy": {
+            "ConnectorProvision": {},
+            "DelegatedProvision": {
+                "appId": "string",
+                "entitlementId": "string"
+              },
+            "ManualProvision": {
+                "instructions": "string",
+                "userIds": [
+                  "string"
+                ]
+              }
+          },
+        "revokePolicyId": "string",
+        "riskLevelValueId": "string",
+        "slug": "string",
+        "systemBuiltin": false,
+        "updatedAt": "2022-12-17T04:31:12.166Z"
+      },
+      "appPath": "string",
+      "appResourcePath": "string",
+      "appResourceTypePath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+```
+</CH.Code>

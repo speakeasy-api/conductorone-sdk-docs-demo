@@ -1,0 +1,46 @@
+
+<CH.Code>
+```typescript Get.ts
+import { SDK } from "openapi";
+import { C1ApiIamV1RolesGetRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const roleId: string = "string";
+
+  const res = await sdk.roles.get(roleId);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "Role": {
+      "createdAt": "2022-08-29T08:08:54.974Z",
+      "deletedAt": "2021-01-23T00:25:35.142Z",
+      "displayName": "string",
+      "id": "string",
+      "name": "string",
+      "permissions": [
+        "string"
+      ],
+      "serviceRoles": [
+        "string"
+      ],
+      "systemBuiltin": false,
+      "updatedAt": "2021-06-30T14:38:07.095Z"
+    }
+  }
+```
+</CH.Code>

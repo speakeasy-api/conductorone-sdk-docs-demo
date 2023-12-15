@@ -6,17 +6,17 @@ import Labels from "/src/lib/labels";
 HTTP response content type for this operation
 
 ---
-##### `introspectResponse?`: *{`components.IntrospectResponse`}*
-IntrospectResponse contains information about the current user who is authenticated.
-<Collapsible content={() => import('/content/types/models/components/introspect_response/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `statusCode`: *{`number`}*
 HTTP response status code for this operation
 
 ---
 ##### `rawResponse`: [*{ `AxiosResponse` }*](https://axios-http.com/docs/res_schema)
 Raw HTTP response; suitable for custom response parsing
+
+---
+##### `introspectResponse?`: *{`components.IntrospectResponse`}*
+IntrospectResponse contains information about the current user who is authenticated.
+<Collapsible content={() => import('/content/types/models/components/introspect_response/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 

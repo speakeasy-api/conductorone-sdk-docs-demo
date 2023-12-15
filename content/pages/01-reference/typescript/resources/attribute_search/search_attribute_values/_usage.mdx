@@ -1,0 +1,50 @@
+
+<CH.Code>
+```typescript SearchAttributeValues.ts
+import { SDK } from "openapi";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+
+  const res = await sdk.attributeSearch.searchAttributeValues({
+    attributeTypeIds: [
+      "string",
+    ],
+    excludeIds: [
+      "string",
+    ],
+    ids: [
+      "string",
+    ],
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "attributeTypeId": "string",
+        "createdAt": "2023-07-16T19:37:11.084Z",
+        "deletedAt": "2023-12-08T12:50:37.970Z",
+        "id": "string",
+        "updatedAt": "2023-02-05T22:18:55.484Z",
+        "value": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

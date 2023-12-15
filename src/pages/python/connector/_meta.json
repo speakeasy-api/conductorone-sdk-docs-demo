@@ -1,0 +1,32 @@
+{
+  "list": {
+    "title": "List"
+  },
+  "create_delegated": {
+    "title": "Create Delegated"
+  },
+  "rotate_credential": {
+    "title": "Rotate Credential"
+  },
+  "get_credentials": {
+    "title": "Get Credentials"
+  },
+  "revoke_credential": {
+    "title": "Revoke Credential"
+  },
+  "delete": {
+    "title": "Delete"
+  },
+  "get": {
+    "title": "Get"
+  },
+  "update": {
+    "title": "Update"
+  },
+  "create": {
+    "title": "Create"
+  },
+  "update_delegated": {
+    "title": "Update Delegated"
+  }
+}

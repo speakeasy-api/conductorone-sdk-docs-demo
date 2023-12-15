@@ -1,0 +1,11 @@
+{
+  "list": {
+    "title": "List"
+  },
+  "get": {
+    "title": "Get"
+  },
+  "update": {
+    "title": "Update"
+  }
+}

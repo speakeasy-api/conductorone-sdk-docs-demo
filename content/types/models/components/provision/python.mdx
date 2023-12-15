@@ -2,6 +2,10 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
+##### `assigned` *{`Optional[bool]`}*
+A field indicating whether this step is assigned.
+
+---
 ##### `provision_policy` *{`Optional[components.ProvisionPolicy]`}*
 ProvisionPolicy is a oneOf that indicates how a provision step should be processed.
 
@@ -18,9 +22,5 @@ This message contains a oneof named typ. Only a single field of the following li
 ProvisionTarget indicates the specific app, app entitlement, and if known, the app user and grant duration of this provision step
 <Collapsible content={() => import('/content/types/models/components/provision_target/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
-
----
-##### `assigned` *{`Optional[bool]`}*
-A field indicating whether this step is assigned.
 
 

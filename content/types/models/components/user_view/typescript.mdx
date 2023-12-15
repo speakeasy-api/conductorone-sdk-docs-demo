@@ -2,12 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `user?`: *{`components.User`}*
-The User object provides all of the details for an user, as well as some configuration.
-<Collapsible content={() => import('/content/types/models/components/user/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `delegatedUserPath?`: *{`string`}*
 JSONPATH expression indicating the location of the user objects of delegates of the current user in the expanded array.
 
@@ -22,5 +16,11 @@ JSONPATH expression indicating the location of the user objects that managed the
 ---
 ##### `rolesPath?`: *{`string`}*
 JSONPATH expression indicating the location of the roles of the current user in the expanded array.
+
+---
+##### `user?`: *{`components.User`}*
+The User object provides all of the details for an user, as well as some configuration.
+<Collapsible content={() => import('/content/types/models/components/user/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 

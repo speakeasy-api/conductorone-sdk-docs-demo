@@ -1,0 +1,42 @@
+
+<CH.Code>
+```typescript Update.ts
+import { SDK } from "openapi";
+import { AppUsageControls, UpdateAppUsageControlsRequest } from "openapi/dist/models/components";
+import { C1ApiAppV1AppUsageControlsServiceUpdateRequest } from "openapi/dist/models/operations";
+
+async function run() {
+  const sdk = new SDK({
+    security: {
+      bearerAuth: "",
+      oauth: "",
+    },
+  });
+const appId: string = "string";
+const updateAppUsageControlsRequest: UpdateAppUsageControlsRequest = {
+  appUsageControls: {},
+};
+
+  const res = await sdk.appUsageControls.update(appId, updateAppUsageControlsRequest);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "AppUsageControls": {
+      "appId": "string",
+      "notify": false,
+      "notifyAfterDays": 3687.25,
+      "revoke": false,
+      "revokeAfterDays": 6625.27
+    }
+  }
+```
+</CH.Code>
