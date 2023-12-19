@@ -5,7 +5,7 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   <CH.Code>
   ```typescript SearchEntitlements.ts
   import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
-import { GrantedStatus } from "conductorone-sdk-typescript/dist/models/components";
+import { GrantedStatus } from "conductorone-sdk-typescript/models/components";
 
 async function run() {
   const sdk = new ConductoroneSDKTypescript({
@@ -23,9 +23,11 @@ async function run() {
     },
   });
 
-  if (res.statusCode == 200) {
-    // handle response
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
   }
+  
+  // handle response
 }
 
 run();

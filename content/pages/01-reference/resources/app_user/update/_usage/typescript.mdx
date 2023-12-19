@@ -5,7 +5,7 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   <CH.Code>
   ```typescript Update.ts
   import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
-import { AppUserType } from "conductorone-sdk-typescript/dist/models/components";
+import { AppUserType } from "conductorone-sdk-typescript/models/components";
 
 async function run() {
   const sdk = new ConductoroneSDKTypescript({
@@ -30,9 +30,11 @@ async function run() {
     appUserId: "string",
   });
 
-  if (res.statusCode == 200) {
-    // handle response
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
   }
+  
+  // handle response
 }
 
 run();
