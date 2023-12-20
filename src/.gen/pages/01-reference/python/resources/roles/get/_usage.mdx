@@ -1,0 +1,45 @@
+
+<CH.Code>
+```python Get.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=components.Security(
+        bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
+        oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    ),
+)
+
+req = operations.C1APIIamV1RolesGetRequest(
+    role_id='string',
+)
+
+res = s.roles.get(req)
+
+if res.get_roles_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "Role": {
+      "createdAt": "2021-07-20T14:16:08.515Z",
+      "deletedAt": "2022-03-12T14:43:45.672Z",
+      "displayName": "string",
+      "id": "string",
+      "name": "string",
+      "permissions": [
+        "string"
+      ],
+      "serviceRoles": [
+        "string"
+      ],
+      "systemBuiltin": false,
+      "updatedAt": "2022-10-05T05:33:35.567Z"
+    }
+  }
+```
+</CH.Code>

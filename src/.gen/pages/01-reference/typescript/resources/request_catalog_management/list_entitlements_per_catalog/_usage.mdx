@@ -1,0 +1,83 @@
+
+<CH.Code>
+```typescript ListEntitlementsPerCatalog.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+async function run() {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+      oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    },
+  });
+
+  const res = await sdk.requestCatalogManagement.listEntitlementsPerCatalog({
+    catalogId: "string",
+  });
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "expanded": [
+      {}
+    ],
+    "list": [
+      {
+        "AppEntitlement": {
+          "ProvisionPolicy": {
+            "ConnectorProvision": {},
+            "DelegatedProvision": {
+                "appId": "string",
+                "entitlementId": "string"
+              },
+            "ManualProvision": {
+                "instructions": "string",
+                "userIds": [
+                  "string"
+                ]
+              }
+          },
+          "alias": "string",
+          "appId": "string",
+          "appResourceId": "string",
+          "appResourceTypeId": "string",
+          "certifyPolicyId": "string",
+          "complianceFrameworkValueIds": [
+            "string"
+          ],
+          "createdAt": "2022-09-11T21:09:48.201Z",
+          "deletedAt": "2022-09-13T10:17:09.836Z",
+          "description": "string",
+          "displayName": "string",
+          "durationGrant": "string",
+          "durationUnset": {},
+          "emergencyGrantEnabled": false,
+          "emergencyGrantPolicyId": "string",
+          "grantCount": "string",
+          "grantPolicyId": "string",
+          "id": "string",
+          "revokePolicyId": "string",
+          "riskLevelValueId": "string",
+          "slug": "string",
+          "systemBuiltin": false,
+          "updatedAt": "2023-08-06T06:53:43.374Z"
+        },
+        "appPath": "string",
+        "appResourcePath": "string",
+        "appResourceTypePath": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

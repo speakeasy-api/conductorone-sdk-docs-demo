@@ -1,0 +1,100 @@
+
+<CH.Code>
+```typescript Create.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+async function run() {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+      oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    },
+  });
+
+  const res = await sdk.requestCatalogManagement.create({
+    requestCatalogExpandMask: {
+      paths: [
+        "string",
+      ],
+    },
+  });
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "RequestCatalogView": {
+      "RequestCatalog": {
+        "accessEntitlements": [
+          {
+            "ProvisionPolicy": {
+              "ConnectorProvision": {},
+              "DelegatedProvision": {
+                  "appId": "string",
+                  "entitlementId": "string"
+                },
+              "ManualProvision": {
+                  "instructions": "string",
+                  "userIds": [
+                    "string"
+                  ]
+                }
+            },
+            "alias": "string",
+            "appId": "string",
+            "appResourceId": "string",
+            "appResourceTypeId": "string",
+            "certifyPolicyId": "string",
+            "complianceFrameworkValueIds": [
+              "string"
+            ],
+            "createdAt": "2022-10-25T07:20:24.768Z",
+            "deletedAt": "2022-05-10T00:27:50.909Z",
+            "description": "string",
+            "displayName": "string",
+            "durationGrant": "string",
+            "durationUnset": {},
+            "emergencyGrantEnabled": false,
+            "emergencyGrantPolicyId": "string",
+            "grantCount": "string",
+            "grantPolicyId": "string",
+            "id": "string",
+            "revokePolicyId": "string",
+            "riskLevelValueId": "string",
+            "slug": "string",
+            "systemBuiltin": false,
+            "updatedAt": "2023-03-21T11:50:48.904Z"
+          }
+        ],
+        "appIds": [
+          "string"
+        ],
+        "createdAt": "2021-01-22T21:16:33.704Z",
+        "createdByUserId": "string",
+        "deletedAt": "2021-02-12T21:51:18.338Z",
+        "description": "string",
+        "displayName": "string",
+        "id": "string",
+        "published": false,
+        "updatedAt": "2022-04-29T16:09:46.858Z",
+        "visibleToEveryone": false
+      },
+      "accessEntitlementsPath": "string",
+      "appPaths": "string",
+      "createdByUserPath": "string"
+    },
+    "expanded": [
+      {}
+    ]
+  }
+```
+</CH.Code>

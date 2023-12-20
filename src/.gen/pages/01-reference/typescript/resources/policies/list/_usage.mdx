@@ -1,0 +1,56 @@
+
+<CH.Code>
+```typescript List.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+async function run() {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+      oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    },
+  });
+
+  const res = await sdk.policies.list({});
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "createdAt": "2022-04-20T10:48:37.145Z",
+        "deletedAt": "2021-09-30T09:13:57.045Z",
+        "description": "string",
+        "displayName": "string",
+        "id": "string",
+        "policySteps": {},
+        "postActions": [
+            {
+              "certifyRemediateImmediately": false
+            }
+          ],
+        "reassignTasksToDelegates": false,
+        "rules": [
+            {
+              "condition": "string",
+              "policyKey": "string"
+            }
+          ],
+        "systemBuiltin": false,
+        "updatedAt": "2022-09-23T21:24:53.234Z"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

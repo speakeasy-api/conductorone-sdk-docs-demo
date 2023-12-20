@@ -1,0 +1,8 @@
+{
+  "get": "Get",
+  "list": "List",
+  "list_for_app_resource": "List For App Resource",
+  "list_for_app_user": "List For App User",
+  "list_users": "List Users",
+  "update": "Update"
+}

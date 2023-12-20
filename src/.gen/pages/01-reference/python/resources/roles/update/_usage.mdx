@@ -1,0 +1,55 @@
+
+<CH.Code>
+```python Update.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=components.Security(
+        bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
+        oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    ),
+)
+
+req = operations.C1APIIamV1RolesUpdateRequest(
+    update_role_request=components.UpdateRoleRequest(
+        role=components.RoleInput(
+            permissions=[
+                'string',
+            ],
+            service_roles=[
+                'string',
+            ],
+        ),
+    ),
+    role_id='string',
+)
+
+res = s.roles.update(req)
+
+if res.update_roles_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "Role": {
+      "createdAt": "2023-06-27T16:32:38.200Z",
+      "deletedAt": "2022-02-09T22:33:24.322Z",
+      "displayName": "string",
+      "id": "string",
+      "name": "string",
+      "permissions": [
+        "string"
+      ],
+      "serviceRoles": [
+        "string"
+      ],
+      "systemBuiltin": false,
+      "updatedAt": "2021-01-06T03:23:50.169Z"
+    }
+  }
+```
+</CH.Code>

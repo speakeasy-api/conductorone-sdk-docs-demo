@@ -1,0 +1,41 @@
+
+<CH.Code>
+```typescript GetAttributeValue.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+async function run() {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+      oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    },
+  });
+
+  const res = await sdk.attributes.getAttributeValue({
+    id: "<ID>",
+  });
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "AttributeValue": {
+      "attributeTypeId": "string",
+      "createdAt": "2023-12-06T05:21:17.086Z",
+      "deletedAt": "2023-08-20T14:55:27.673Z",
+      "id": "string",
+      "updatedAt": "2022-05-29T04:09:12.570Z",
+      "value": "string"
+    }
+  }
+```
+</CH.Code>

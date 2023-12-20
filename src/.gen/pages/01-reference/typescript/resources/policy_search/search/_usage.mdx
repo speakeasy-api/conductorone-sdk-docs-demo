@@ -1,0 +1,64 @@
+
+<CH.Code>
+```typescript Search.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+import {  } from "conductorone-sdk-typescript/models";
+
+async function run() {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+      oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    },
+  });
+
+  const res = await sdk.policySearch.search({
+    policyTypes: [
+      PolicyTypes.PolicyTypeCertify,
+    ],
+    refs: [
+      {},
+    ],
+  });
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "createdAt": "2023-06-11T02:36:24.123Z",
+        "deletedAt": "2022-03-27T22:37:59.978Z",
+        "description": "string",
+        "displayName": "string",
+        "id": "string",
+        "policySteps": {},
+        "postActions": [
+            {
+              "certifyRemediateImmediately": false
+            }
+          ],
+        "reassignTasksToDelegates": false,
+        "rules": [
+            {
+              "condition": "string",
+              "policyKey": "string"
+            }
+          ],
+        "systemBuiltin": false,
+        "updatedAt": "2023-01-10T14:32:20.216Z"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

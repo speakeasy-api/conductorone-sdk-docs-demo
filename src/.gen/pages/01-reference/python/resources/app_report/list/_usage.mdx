@@ -1,0 +1,40 @@
+
+<CH.Code>
+```python List.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=components.Security(
+        bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
+        oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    ),
+)
+
+req = operations.C1APIAppV1AppReportServiceListRequest(
+    app_id='string',
+)
+
+res = s.app_report.list(req)
+
+if res.app_report_service_list_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "appId": "string",
+        "createdAt": "2022-11-27T09:20:50.241Z",
+        "downloadUrl": "string",
+        "hashes": {},
+        "id": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

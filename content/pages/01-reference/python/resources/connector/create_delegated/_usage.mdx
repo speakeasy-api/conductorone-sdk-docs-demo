@@ -1,0 +1,76 @@
+
+<CH.Code>
+```python CreateDelegated.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=components.Security(
+        bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
+        oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    ),
+)
+
+req = operations.C1APIAppV1ConnectorServiceCreateDelegatedRequest(
+    connector_service_create_delegated_request=components.ConnectorServiceCreateDelegatedRequest(
+        connector_expand_mask=components.ConnectorExpandMask(
+            paths=[
+                'string',
+            ],
+        ),
+        user_ids=[
+            'string',
+        ],
+    ),
+    app_id='string',
+)
+
+res = s.connector.create_delegated(req)
+
+if res.connector_service_create_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "ConnectorView": {
+      "Connector": {
+        "ConnectorStatus": {
+          "completedAt": "2022-09-15T00:12:40.088Z",
+          "lastError": "string",
+          "startedAt": "2022-03-07T02:23:03.711Z",
+          "updatedAt": "2023-07-05T12:09:00.162Z"
+        },
+        "OAuth2AuthorizedAs": {
+          "authEmail": "string",
+          "authorizedAt": "2021-03-19T18:49:39.442Z"
+        },
+        "appId": "string",
+        "catalogId": "string",
+        "config": {
+          "@type": "string"
+        },
+        "createdAt": "2022-01-05T10:46:16.059Z",
+        "deletedAt": "2021-04-06T09:45:28.527Z",
+        "description": "string",
+        "displayName": "string",
+        "downloadUrl": "string",
+        "id": "string",
+        "updatedAt": "2022-12-11T17:57:24.897Z",
+        "userIds": [
+          "string"
+        ]
+      },
+      "appPath": "string",
+      "usersPath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+```
+</CH.Code>

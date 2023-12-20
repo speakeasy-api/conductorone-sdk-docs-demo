@@ -1,0 +1,7 @@
+{
+  "create_attribute_value": "Create Attribute Value",
+  "delete_attribute_value": "Delete Attribute Value",
+  "get_attribute_value": "Get Attribute Value",
+  "list_attribute_types": "List Attribute Types",
+  "list_attribute_values": "List Attribute Values"
+}

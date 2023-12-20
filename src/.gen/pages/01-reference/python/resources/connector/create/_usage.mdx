@@ -1,0 +1,81 @@
+
+<CH.Code>
+```python Create.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=components.Security(
+        bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
+        oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    ),
+)
+
+req = operations.C1APIAppV1ConnectorServiceCreateRequest(
+    connector_service_create_request=components.ConnectorServiceCreateRequest(
+        connector_expand_mask=components.ConnectorExpandMask(
+            paths=[
+                'string',
+            ],
+        ),
+        config=components.ConnectorServiceCreateRequestConfig(
+            additional_properties={
+                'key': 'string',
+            },
+        ),
+        user_ids=[
+            'string',
+        ],
+    ),
+    app_id='string',
+)
+
+res = s.connector.create(req)
+
+if res.connector_service_create_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "ConnectorView": {
+      "Connector": {
+        "ConnectorStatus": {
+          "completedAt": "2023-11-22T05:03:26.782Z",
+          "lastError": "string",
+          "startedAt": "2021-10-26T13:24:26.711Z",
+          "updatedAt": "2022-06-08T01:02:20.883Z"
+        },
+        "OAuth2AuthorizedAs": {
+          "authEmail": "string",
+          "authorizedAt": "2023-05-17T22:32:01.963Z"
+        },
+        "appId": "string",
+        "catalogId": "string",
+        "config": {
+          "@type": "string"
+        },
+        "createdAt": "2023-06-09T07:47:38.874Z",
+        "deletedAt": "2022-08-03T03:21:30.736Z",
+        "description": "string",
+        "displayName": "string",
+        "downloadUrl": "string",
+        "id": "string",
+        "updatedAt": "2022-06-10T13:48:00.232Z",
+        "userIds": [
+          "string"
+        ]
+      },
+      "appPath": "string",
+      "usersPath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+```
+</CH.Code>

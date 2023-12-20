@@ -1,0 +1,32 @@
+
+<CH.Code>
+```python Remove.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=components.Security(
+        bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
+        oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    ),
+)
+
+req = operations.C1APIAppV1AppEntitlementOwnersRemoveRequest(
+    remove_app_entitlement_owner_request=components.RemoveAppEntitlementOwnerRequest(),
+    app_id='string',
+    entitlement_id='string',
+    user_id='string',
+)
+
+res = s.app_entitlement_owners.remove(req)
+
+if res.remove_app_entitlement_owner_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

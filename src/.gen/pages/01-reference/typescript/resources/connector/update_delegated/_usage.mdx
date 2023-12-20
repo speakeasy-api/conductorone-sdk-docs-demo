@@ -1,0 +1,84 @@
+
+<CH.Code>
+```typescript UpdateDelegated.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+import { ConnectorStatusStatus } from "conductorone-sdk-typescript/models/components";
+
+async function run() {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+      oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    },
+  });
+
+  const res = await sdk.connector.updateDelegated({
+    connectorServiceUpdateDelegatedRequest: {
+      connector: {
+        connectorStatus: {},
+        oAuth2AuthorizedAs: {},
+        config: {
+          "key": "string",
+        },
+        userIds: [
+          "string",
+        ],
+      },
+      connectorExpandMask: {
+        paths: [
+          "string",
+        ],
+      },
+    },
+    connectorAppId: "string",
+    connectorId: "string",
+  });
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "ConnectorView": {
+      "Connector": {
+        "ConnectorStatus": {
+          "completedAt": "2022-09-15T10:26:38.983Z",
+          "lastError": "string",
+          "startedAt": "2021-05-29T01:32:00.936Z",
+          "updatedAt": "2021-12-21T22:25:32.118Z"
+        },
+        "OAuth2AuthorizedAs": {
+          "authEmail": "string",
+          "authorizedAt": "2022-11-08T07:27:39.465Z"
+        },
+        "appId": "string",
+        "catalogId": "string",
+        "config": {},
+        "createdAt": "2021-06-13T21:27:19.513Z",
+        "deletedAt": "2022-11-02T05:52:32.111Z",
+        "description": "string",
+        "displayName": "string",
+        "downloadUrl": "string",
+        "id": "string",
+        "updatedAt": "2021-09-01T10:36:21.641Z",
+        "userIds": [
+            "string"
+          ]
+      },
+      "appPath": "string",
+      "usersPath": "string"
+    },
+    "expanded": [
+      {}
+    ]
+  }
+```
+</CH.Code>

@@ -1,0 +1,37 @@
+
+<CH.Code>
+```bash Example Request
+curl https://example.conductor.one/api/v1/policies/string \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'Authorization: YOUR_BEARER_TOKEN_HERE'
+```
+---
+
+```json Example Response
+  {
+    "Policy": {
+      "createdAt": "2022-03-11T04:10:14.940Z",
+      "deletedAt": "2023-01-10T14:32:20.216Z",
+      "description": "string",
+      "displayName": "string",
+      "id": "string",
+      "policySteps": {},
+      "postActions": [
+          {
+            "certifyRemediateImmediately": false
+          }
+        ],
+      "reassignTasksToDelegates": false,
+      "rules": [
+          {
+            "condition": "string",
+            "policyKey": "string"
+          }
+        ],
+      "systemBuiltin": false,
+      "updatedAt": "2021-10-01T12:38:45.990Z"
+    }
+  }
+```
+</CH.Code>

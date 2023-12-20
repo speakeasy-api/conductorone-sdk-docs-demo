@@ -1,0 +1,50 @@
+
+<CH.Code>
+```bash Example Request
+curl https://example.conductor.one/api/v1/apps/string/connectors/string \
+--header 'Accept: application/json' \
+--header 'Authorization: YOUR_BEARER_TOKEN_HERE'
+```
+---
+
+```json Example Response
+  {
+    "ConnectorView": {
+      "Connector": {
+        "ConnectorStatus": {
+          "completedAt": "2022-02-08T05:23:15.367Z",
+          "lastError": "string",
+          "startedAt": "2023-07-01T17:14:58.092Z",
+          "updatedAt": "2023-05-03T01:57:34.456Z"
+        },
+        "OAuth2AuthorizedAs": {
+          "authEmail": "string",
+          "authorizedAt": "2021-06-03T16:25:06.350Z"
+        },
+        "appId": "string",
+        "catalogId": "string",
+        "config": {
+          "@type": "string"
+        },
+        "createdAt": "2023-08-11T15:55:09.039Z",
+        "deletedAt": "2023-08-11T17:53:34.649Z",
+        "description": "string",
+        "displayName": "string",
+        "downloadUrl": "string",
+        "id": "string",
+        "updatedAt": "2023-12-08T14:05:24.185Z",
+        "userIds": [
+          "string"
+        ]
+      },
+      "appPath": "string",
+      "usersPath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+```
+</CH.Code>

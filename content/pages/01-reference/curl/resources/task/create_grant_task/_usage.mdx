@@ -1,0 +1,533 @@
+
+<CH.Code>
+```bash Example Request
+curl https://example.conductor.one/api/v1/task/grant \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'Authorization: YOUR_BEARER_TOKEN_HERE'
+```
+---
+
+```json Example Response
+  {
+    "TaskView": {
+      "Task": {
+        "PolicyInstance": {
+          "Policy": {
+            "createdAt": "2023-08-06T02:26:48.970Z",
+            "deletedAt": "2023-06-04T00:20:32.198Z",
+            "description": "string",
+            "displayName": "string",
+            "id": "string",
+            "policySteps": {},
+            "postActions": [
+                {
+                  "certifyRemediateImmediately": false
+                }
+              ],
+            "reassignTasksToDelegates": false,
+            "rules": [
+                {
+                  "condition": "string",
+                  "policyKey": "string"
+                }
+              ],
+            "systemBuiltin": false,
+            "updatedAt": "2022-09-16T03:58:03.219Z"
+          },
+          "PolicyStepInstance": {
+            "AcceptInstance": {},
+            "ApprovalInstance": {
+                "Approval": {
+                  "AppGroupApproval": {
+                    "allowSelfApproval": false,
+                    "appGroupId": "string",
+                    "appId": "string",
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "string"
+                    ]
+                  },
+                  "AppOwnerApproval": {
+                    "allowSelfApproval": false
+                  },
+                  "EntitlementOwnerApproval": {
+                    "allowSelfApproval": false,
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "string"
+                    ]
+                  },
+                  "ExpressionApproval": {
+                    "allowSelfApproval": false,
+                    "assignedUserIds": [
+                      "string"
+                    ],
+                    "expressions": [
+                      "string"
+                    ],
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "string"
+                    ]
+                  },
+                  "ManagerApproval": {
+                    "allowSelfApproval": false,
+                    "assignedUserIds": [
+                      "string"
+                    ],
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "string"
+                    ]
+                  },
+                  "SelfApproval": {
+                    "assignedUserIds": [
+                      "string"
+                    ],
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "string"
+                    ]
+                  },
+                  "UserApproval": {
+                    "allowSelfApproval": false,
+                    "userIds": [
+                      "string"
+                    ]
+                  },
+                  "allowReassignment": false,
+                  "assigned": false,
+                  "requireApprovalReason": false,
+                  "requireReassignmentReason": false
+                },
+                "ApprovedAction": {
+                  "approvedAt": "2021-06-03T06:28:46.147Z",
+                  "entitlements": [
+                    {
+                      "appEntitlementId": "string",
+                      "appId": "string"
+                    }
+                  ],
+                  "userId": "string"
+                },
+                "DeniedAction": {
+                  "deniedAt": "2022-03-22T20:46:37.427Z",
+                  "userId": "string"
+                },
+                "ReassignedAction": {
+                  "newPolicyStepId": "string",
+                  "reassignedAt": "2021-02-06T09:05:03.530Z",
+                  "userId": "string"
+                },
+                "ReassignedByErrorAction": {
+                  "description": "string",
+                  "errorCode": "string",
+                  "errorUserId": "string",
+                  "erroredAt": "2021-03-17T17:42:30.611Z",
+                  "newPolicyStepId": "string",
+                  "reassignedAt": "2023-12-12T22:04:11.506Z"
+                },
+                "RestartAction": {
+                  "oldPolicyStepId": "string",
+                  "restartedAt": "2023-02-03T16:25:41.305Z",
+                  "userId": "string"
+                }
+              },
+            "ProvisionInstance": {
+                "CancelledAction": {
+                  "cancelledAt": "2022-05-12T15:06:05.893Z",
+                  "cancelledByUserId": "string"
+                },
+                "CompletedAction": {
+                  "completedAt": "2022-04-05T23:34:50.384Z",
+                  "entitlements": [
+                    {
+                      "appEntitlementId": "string",
+                      "appId": "string"
+                    }
+                  ],
+                  "userId": "string"
+                },
+                "ErroredAction": {
+                  "description": "string",
+                  "errorCode": "string",
+                  "erroredAt": "2023-03-02T15:37:16.692Z"
+                },
+                "Provision": {
+                  "ProvisionPolicy": {
+                    "ConnectorProvision": {},
+                    "DelegatedProvision": {
+                        "appId": "string",
+                        "entitlementId": "string"
+                      },
+                    "ManualProvision": {
+                        "instructions": "string",
+                        "userIds": [
+                          "string"
+                        ]
+                      }
+                  },
+                  "ProvisionTarget": {
+                    "appEntitlementId": "string",
+                    "appId": "string",
+                    "appUserId": "string",
+                    "grantDuration": "string"
+                  },
+                  "assigned": false
+                },
+                "ReassignedByErrorAction": {
+                  "description": "string",
+                  "errorCode": "string",
+                  "errorUserId": "string",
+                  "erroredAt": "2021-02-25T09:27:20.174Z",
+                  "newPolicyStepId": "string",
+                  "reassignedAt": "2023-08-07T16:31:39.099Z"
+                },
+                "notificationId": "string"
+              },
+            "RejectInstance": {},
+            "id": "string",
+            "policyGenerationId": "string"
+          },
+          "history": [
+            {
+              "AcceptInstance": {},
+              "ApprovalInstance": {
+                  "Approval": {
+                    "AppGroupApproval": {
+                      "allowSelfApproval": false,
+                      "appGroupId": "string",
+                      "appId": "string",
+                      "fallback": false,
+                      "fallbackUserIds": [
+                        "string"
+                      ]
+                    },
+                    "AppOwnerApproval": {
+                      "allowSelfApproval": false
+                    },
+                    "EntitlementOwnerApproval": {
+                      "allowSelfApproval": false,
+                      "fallback": false,
+                      "fallbackUserIds": [
+                        "string"
+                      ]
+                    },
+                    "ExpressionApproval": {
+                      "allowSelfApproval": false,
+                      "assignedUserIds": [
+                        "string"
+                      ],
+                      "expressions": [
+                        "string"
+                      ],
+                      "fallback": false,
+                      "fallbackUserIds": [
+                        "string"
+                      ]
+                    },
+                    "ManagerApproval": {
+                      "allowSelfApproval": false,
+                      "assignedUserIds": [
+                        "string"
+                      ],
+                      "fallback": false,
+                      "fallbackUserIds": [
+                        "string"
+                      ]
+                    },
+                    "SelfApproval": {
+                      "assignedUserIds": [
+                        "string"
+                      ],
+                      "fallback": false,
+                      "fallbackUserIds": [
+                        "string"
+                      ]
+                    },
+                    "UserApproval": {
+                      "allowSelfApproval": false,
+                      "userIds": [
+                        "string"
+                      ]
+                    },
+                    "allowReassignment": false,
+                    "assigned": false,
+                    "requireApprovalReason": false,
+                    "requireReassignmentReason": false
+                  },
+                  "ApprovedAction": {
+                    "approvedAt": "2021-01-19T04:58:58.934Z",
+                    "entitlements": [
+                      {
+                        "appEntitlementId": "string",
+                        "appId": "string"
+                      }
+                    ],
+                    "userId": "string"
+                  },
+                  "DeniedAction": {
+                    "deniedAt": "2023-07-27T02:30:42.675Z",
+                    "userId": "string"
+                  },
+                  "ReassignedAction": {
+                    "newPolicyStepId": "string",
+                    "reassignedAt": "2021-09-10T15:54:31.454Z",
+                    "userId": "string"
+                  },
+                  "ReassignedByErrorAction": {
+                    "description": "string",
+                    "errorCode": "string",
+                    "errorUserId": "string",
+                    "erroredAt": "2021-01-13T19:50:45.823Z",
+                    "newPolicyStepId": "string",
+                    "reassignedAt": "2023-04-18T13:52:45.919Z"
+                  },
+                  "RestartAction": {
+                    "oldPolicyStepId": "string",
+                    "restartedAt": "2022-01-30T04:13:24.213Z",
+                    "userId": "string"
+                  }
+                },
+              "ProvisionInstance": {
+                  "CancelledAction": {
+                    "cancelledAt": "2023-03-11T08:09:07.064Z",
+                    "cancelledByUserId": "string"
+                  },
+                  "CompletedAction": {
+                    "completedAt": "2023-04-02T05:58:48.829Z",
+                    "entitlements": [
+                      {
+                        "appEntitlementId": "string",
+                        "appId": "string"
+                      }
+                    ],
+                    "userId": "string"
+                  },
+                  "ErroredAction": {
+                    "description": "string",
+                    "errorCode": "string",
+                    "erroredAt": "2021-07-07T22:25:40.531Z"
+                  },
+                  "Provision": {
+                    "ProvisionPolicy": {
+                      "ConnectorProvision": {},
+                      "DelegatedProvision": {
+                          "appId": "string",
+                          "entitlementId": "string"
+                        },
+                      "ManualProvision": {
+                          "instructions": "string",
+                          "userIds": [
+                            "string"
+                          ]
+                        }
+                    },
+                    "ProvisionTarget": {
+                      "appEntitlementId": "string",
+                      "appId": "string",
+                      "appUserId": "string",
+                      "grantDuration": "string"
+                    },
+                    "assigned": false
+                  },
+                  "ReassignedByErrorAction": {
+                    "description": "string",
+                    "errorCode": "string",
+                    "errorUserId": "string",
+                    "erroredAt": "2022-01-07T15:31:56.227Z",
+                    "newPolicyStepId": "string",
+                    "reassignedAt": "2022-07-25T12:50:30.939Z"
+                  },
+                  "notificationId": "string"
+                },
+              "RejectInstance": {},
+              "id": "string",
+              "policyGenerationId": "string"
+            }
+          ],
+          "next": [
+            {
+              "Accept": {},
+              "Approval": {
+                  "AppGroupApproval": {
+                    "allowSelfApproval": false,
+                    "appGroupId": "string",
+                    "appId": "string",
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "string"
+                    ]
+                  },
+                  "AppOwnerApproval": {
+                    "allowSelfApproval": false
+                  },
+                  "EntitlementOwnerApproval": {
+                    "allowSelfApproval": false,
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "string"
+                    ]
+                  },
+                  "ExpressionApproval": {
+                    "allowSelfApproval": false,
+                    "assignedUserIds": [
+                      "string"
+                    ],
+                    "expressions": [
+                      "string"
+                    ],
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "string"
+                    ]
+                  },
+                  "ManagerApproval": {
+                    "allowSelfApproval": false,
+                    "assignedUserIds": [
+                      "string"
+                    ],
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "string"
+                    ]
+                  },
+                  "SelfApproval": {
+                    "assignedUserIds": [
+                      "string"
+                    ],
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "string"
+                    ]
+                  },
+                  "UserApproval": {
+                    "allowSelfApproval": false,
+                    "userIds": [
+                      "string"
+                    ]
+                  },
+                  "allowReassignment": false,
+                  "assigned": false,
+                  "requireApprovalReason": false,
+                  "requireReassignmentReason": false
+                },
+              "Provision": {
+                  "ProvisionPolicy": {
+                    "ConnectorProvision": {},
+                    "DelegatedProvision": {
+                        "appId": "string",
+                        "entitlementId": "string"
+                      },
+                    "ManualProvision": {
+                        "instructions": "string",
+                        "userIds": [
+                          "string"
+                        ]
+                      }
+                  },
+                  "ProvisionTarget": {
+                    "appEntitlementId": "string",
+                    "appId": "string",
+                    "appUserId": "string",
+                    "grantDuration": "string"
+                  },
+                  "assigned": false
+                },
+              "Reject": {}
+            }
+          ]
+        },
+        "TaskType": {
+          "TaskTypeCertify": {
+            "accessReviewId": "string",
+            "accessReviewSelection": "string",
+            "appEntitlementId": "string",
+            "appId": "string",
+            "appUserId": "string",
+            "identityUserId": "string",
+            "outcomeTime": "2021-08-07T23:54:31.277Z"
+          },
+          "TaskTypeGrant": {
+            "TaskGrantSource": {
+              "externalUrl": "string",
+              "integrationId": "string"
+            },
+            "appEntitlementId": "string",
+            "appId": "string",
+            "appUserId": "string",
+            "grantDuration": "string",
+            "identityUserId": "string",
+            "outcomeTime": "2021-01-21T06:45:09.897Z"
+          },
+          "TaskTypeRevoke": {
+            "TaskRevokeSource": {
+              "TaskRevokeSourceExpired": {
+                "expiredAt": "2021-07-07T05:31:39.568Z"
+              },
+              "TaskRevokeSourceNonUsage": {
+                "expiresAt": "2023-05-20T02:22:32.235Z",
+                "lastLogin": "2022-05-23T11:29:29.955Z"
+              },
+              "TaskRevokeSourceRequest": {
+                "requestUserId": "string"
+              },
+              "TaskRevokeSourceReview": {
+                "accessReviewId": "string",
+                "certTicketId": "string"
+              }
+            },
+            "appEntitlementId": "string",
+            "appId": "string",
+            "appUserId": "string",
+            "identityUserId": "string",
+            "outcomeTime": "2023-08-16T15:46:38.795Z"
+          }
+        },
+        "actions": [],
+        "analysisId": "string",
+        "annotations": [
+            {
+              "@type": "string"
+            }
+          ],
+        "commentCount": 9441.2,
+        "createdAt": "2023-10-14T05:58:34.936Z",
+        "createdByUserId": "string",
+        "deletedAt": "2022-10-29T00:53:07.297Z",
+        "description": "string",
+        "displayName": "string",
+        "emergencyAccess": false,
+        "externalRefs": [
+            {
+              "name": "string",
+              "url": "string"
+            }
+          ],
+        "id": "string",
+        "numericId": "string",
+        "policyGenerationId": "string",
+        "stepApproverIds": [
+            "string"
+          ],
+        "updatedAt": "2023-05-09T02:10:15.018Z",
+        "userId": "string"
+      },
+      "accessReviewPath": "string",
+      "appPath": "string",
+      "appUserPath": "string",
+      "createdByUserPath": "string",
+      "entitlementsPath": "string",
+      "identityUserPath": "string",
+      "stepApproversPath": "string",
+      "userPath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+```
+</CH.Code>

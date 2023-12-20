@@ -1,0 +1,30 @@
+
+<CH.Code>
+```python GenerateReport.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=components.Security(
+        bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
+        oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    ),
+)
+
+req = operations.C1APIAppV1AppReportActionServiceGenerateReportRequest(
+    app_actions_service_generate_report_request=components.AppActionsServiceGenerateReportRequest(),
+    app_id='string',
+)
+
+res = s.app_report_action.generate_report(req)
+
+if res.app_actions_service_generate_report_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

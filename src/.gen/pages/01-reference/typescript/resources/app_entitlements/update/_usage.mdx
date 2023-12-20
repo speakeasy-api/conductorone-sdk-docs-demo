@@ -1,0 +1,103 @@
+
+<CH.Code>
+```typescript Update.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+async function run() {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+      oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    },
+  });
+
+  const res = await sdk.appEntitlements.update({
+    updateAppEntitlementRequest: {
+      appEntitlement: {
+        provisionPolicy: {
+          connectorProvision: {},
+          delegatedProvision: {},
+          manualProvision: {
+            userIds: [
+              "string",
+            ],
+          },
+        },
+        complianceFrameworkValueIds: [
+          "string",
+        ],
+        durationUnset: {},
+      },
+      appEntitlementExpandMask: {
+        paths: [
+          "string",
+        ],
+      },
+    },
+    appId: "string",
+    id: "<ID>",
+  });
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "AppEntitlementView": {
+      "AppEntitlement": {
+        "ProvisionPolicy": {
+          "ConnectorProvision": {},
+          "DelegatedProvision": {
+              "appId": "string",
+              "entitlementId": "string"
+            },
+          "ManualProvision": {
+              "instructions": "string",
+              "userIds": [
+                "string"
+              ]
+            }
+        },
+        "alias": "string",
+        "appId": "string",
+        "appResourceId": "string",
+        "appResourceTypeId": "string",
+        "certifyPolicyId": "string",
+        "complianceFrameworkValueIds": [
+          "string"
+        ],
+        "createdAt": "2022-01-28T04:14:20.518Z",
+        "deletedAt": "2021-05-22T04:10:59.234Z",
+        "description": "string",
+        "displayName": "string",
+        "durationGrant": "string",
+        "durationUnset": {},
+        "emergencyGrantEnabled": false,
+        "emergencyGrantPolicyId": "string",
+        "grantCount": "string",
+        "grantPolicyId": "string",
+        "id": "string",
+        "revokePolicyId": "string",
+        "riskLevelValueId": "string",
+        "slug": "string",
+        "systemBuiltin": false,
+        "updatedAt": "2023-04-03T00:01:54.226Z"
+      },
+      "appPath": "string",
+      "appResourcePath": "string",
+      "appResourceTypePath": "string"
+    },
+    "expanded": [
+      {}
+    ]
+  }
+```
+</CH.Code>

@@ -1,0 +1,72 @@
+
+<CH.Code>
+```python Update.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components, operations
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=components.Security(
+        bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
+        oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    ),
+)
+
+req = operations.C1APIAppV1AppUserServiceUpdateRequest(
+    app_user_service_update_request=components.AppUserServiceUpdateRequest(
+        app_user=components.AppUserInput(
+            app_user_status=components.AppUserStatusInput(),
+        ),
+        app_user_expand_mask=components.AppUserExpandMask(
+            paths=[
+                'string',
+            ],
+        ),
+    ),
+    app_user_app_id='string',
+    app_user_id='string',
+)
+
+res = s.app_user.update(req)
+
+if res.app_user_service_update_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "AppUserView": {
+      "AppUser": {
+        "AppUserStatus": {
+          "details": "string"
+        },
+        "appId": "string",
+        "createdAt": "2021-04-17T07:49:17.061Z",
+        "deletedAt": "2022-11-14T00:23:43.191Z",
+        "displayName": "string",
+        "email": "string",
+        "emails": [
+          "string"
+        ],
+        "id": "string",
+        "identityUserId": "string",
+        "profile": {},
+        "updatedAt": "2023-07-07T13:11:31.731Z",
+        "username": "string",
+        "usernames": [
+            "string"
+          ]
+      },
+      "appPath": "string",
+      "identityUserPath": "string",
+      "lastUsagePath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+```
+</CH.Code>

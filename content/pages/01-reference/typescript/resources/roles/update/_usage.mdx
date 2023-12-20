@@ -1,0 +1,58 @@
+
+<CH.Code>
+```typescript Update.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+async function run() {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+      oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    },
+  });
+
+  const res = await sdk.roles.update({
+    updateRoleRequest: {
+      role: {
+        permissions: [
+          "string",
+        ],
+        serviceRoles: [
+          "string",
+        ],
+      },
+    },
+    roleId: "string",
+  });
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "Role": {
+      "createdAt": "2023-06-27T16:32:38.200Z",
+      "deletedAt": "2022-02-09T22:33:24.322Z",
+      "displayName": "string",
+      "id": "string",
+      "name": "string",
+      "permissions": [
+        "string"
+      ],
+      "serviceRoles": [
+        "string"
+      ],
+      "systemBuiltin": false,
+      "updatedAt": "2021-01-06T03:23:50.169Z"
+    }
+  }
+```
+</CH.Code>
