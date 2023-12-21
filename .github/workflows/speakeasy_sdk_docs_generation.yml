@@ -21,9 +21,9 @@ jobs:
       languages: |
         - docs
       docs_languages: |
+        - go
         - typescript
         - python
-        - curl
       mode: direct
       openapi_docs: |
         - ./openapi.yaml

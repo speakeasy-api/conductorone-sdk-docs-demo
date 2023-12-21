@@ -16,9 +16,9 @@ import { LinkableContext } from '@/src/utils/contexts/linkableContext';
 import { usePathname } from 'next/navigation';
 import { useSetPage } from '@/src/components/scrollManager';
 
-export const Languages = ["typescript", "python", "curl"];
+export const Languages = ["go", "typescript", "python"];
 export type Language = (typeof Languages)[number];
-export const DefaultLanguage = 'typescript';
+export const DefaultLanguage = 'go';
 
 export const LanguageProvider = (props: { children: ReactNode }) => {
   const slug = usePathname();
