@@ -1,0 +1,13 @@
+{
+  "add_access_entitlements": "Add Access Entitlements",
+  "add_app_entitlements": "Add App Entitlements",
+  "create": "Create",
+  "delete": "Delete",
+  "get": "Get",
+  "list": "List",
+  "list_entitlements_for_access": "List Entitlements For Access",
+  "list_entitlements_per_catalog": "List Entitlements Per Catalog",
+  "remove_access_entitlements": "Remove Access Entitlements",
+  "remove_app_entitlements": "Remove App Entitlements",
+  "update": "Update"
+}

@@ -1,0 +1,65 @@
+
+<CH.Code>
+```go SearchAppResourceTypes.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go/v2"
+	"context"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.AppResourceSearch.SearchAppResourceTypes(ctx, &shared.SearchAppResourceTypesRequest{
+        AppIds: []string{
+            "string",
+        },
+        ExcludeResourceTypeIds: []string{
+            "string",
+        },
+        ExcludeResourceTypeTraitIds: []string{
+            "string",
+        },
+        ResourceTypeIds: []string{
+            "string",
+        },
+        ResourceTypeTraitIds: []string{
+            "string",
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.SearchAppResourceTypesResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "appId": "string",
+        "createdAt": "2022-12-01T14:50:45.552Z",
+        "deletedAt": "2021-09-02T06:35:06.913Z",
+        "displayName": "string",
+        "id": "string",
+        "updatedAt": "2023-09-04T06:03:01.592Z"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

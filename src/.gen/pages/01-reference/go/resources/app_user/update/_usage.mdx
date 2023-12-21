@@ -1,0 +1,83 @@
+
+<CH.Code>
+```go Update.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go/v2"
+	"context"
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.AppUser.Update(ctx, operations.C1APIAppV1AppUserServiceUpdateRequest{
+        AppUserServiceUpdateRequest: &shared.AppUserServiceUpdateRequest{
+            AppUser: &shared.AppUserInput{
+                AppUserStatus: &shared.AppUserStatusInput{},
+            },
+            AppUserExpandMask: &shared.AppUserExpandMask{
+                Paths: []string{
+                    "string",
+                },
+            },
+        },
+        AppUserAppID: "string",
+        AppUserID: "string",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AppUserServiceUpdateResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "AppUserView": {
+      "AppUser": {
+        "AppUserStatus": {
+          "details": "string"
+        },
+        "appId": "string",
+        "createdAt": "2021-04-17T07:49:17.061Z",
+        "deletedAt": "2022-11-14T00:23:43.191Z",
+        "displayName": "string",
+        "email": "string",
+        "emails": [
+          "string"
+        ],
+        "id": "string",
+        "identityUserId": "string",
+        "profile": {},
+        "updatedAt": "2023-07-07T13:11:31.731Z",
+        "username": "string",
+        "usernames": [
+            "string"
+          ]
+      },
+      "appPath": "string",
+      "identityUserPath": "string",
+      "lastUsagePath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+```
+</CH.Code>

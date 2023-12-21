@@ -1,0 +1,95 @@
+
+<CH.Code>
+```go Create.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go/v2"
+	"context"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.Policies.Create(ctx, &shared.CreatePolicyRequest{
+        PolicySteps: map[string]shared.PolicyStepsInput{
+            "key": shared.PolicyStepsInput{
+                Steps: []shared.PolicyStepInput{
+                    shared.PolicyStepInput{
+                        Accept: &shared.Accept{},
+                        Approval: &shared.ApprovalInput{
+                            AppGroupApproval: &shared.AppGroupApprovalInput{},
+                            AppOwnerApproval: &shared.AppOwnerApprovalInput{},
+                            EntitlementOwnerApproval: &shared.EntitlementOwnerApprovalInput{},
+                            ExpressionApproval: &shared.ExpressionApprovalInput{},
+                            ManagerApproval: &shared.ManagerApprovalInput{},
+                            SelfApproval: &shared.SelfApprovalInput{},
+                            UserApproval: &shared.UserApprovalInput{},
+                        },
+                        Provision: &shared.Provision{
+                            ProvisionPolicy: &shared.ProvisionPolicy{
+                                ConnectorProvision: &shared.ConnectorProvision{},
+                                DelegatedProvision: &shared.DelegatedProvision{},
+                                ManualProvision: &shared.ManualProvision{
+                                    UserIds: []string{
+                                        "string",
+                                    },
+                                },
+                            },
+                            ProvisionTarget: &shared.ProvisionTarget{},
+                        },
+                        Reject: &shared.Reject{},
+                    },
+                },
+            },
+        },
+        PostActions: []shared.PolicyPostActions{
+            shared.PolicyPostActions{},
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.CreatePolicyResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "Policy": {
+      "createdAt": "2021-06-10T08:29:22.339Z",
+      "deletedAt": "2023-01-13T05:01:07.151Z",
+      "description": "string",
+      "displayName": "string",
+      "id": "string",
+      "policySteps": {},
+      "postActions": [
+          {
+            "certifyRemediateImmediately": false
+          }
+        ],
+      "reassignTasksToDelegates": false,
+      "rules": [
+          {
+            "condition": "string",
+            "policyKey": "string"
+          }
+        ],
+      "systemBuiltin": false,
+      "updatedAt": "2021-10-23T15:48:33.898Z"
+    }
+  }
+```
+</CH.Code>

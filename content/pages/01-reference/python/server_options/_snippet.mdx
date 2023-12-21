@@ -1,0 +1,68 @@
+{/* Start Python Server Options */}
+
+### Select Server by Index
+
+You can override the default server globally by passing a server index to the `server_idx: int` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+
+
+#### Example
+
+```python
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    server_idx=0,
+    security=components.Security(
+        bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
+        oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    ),
+)
+
+req = components.CreateAppRequest(
+    owners=[
+        'string',
+    ],
+)
+
+res = s.apps.create(req)
+
+if res.create_app_response is not None:
+    # handle response
+    pass
+```
+
+#### Variables
+
+Some of the server options above contain variables. If you want to set the values of those variables, the following optional parameters are available when initializing the SDK client instance:
+ * `tenant_domain: str`
+
+### Override Server URL Per-Client
+
+The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
+```python
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    server_url="https://{tenantDomain}.conductor.one",
+    security=components.Security(
+        bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
+        oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    ),
+)
+
+req = components.CreateAppRequest(
+    owners=[
+        'string',
+    ],
+)
+
+res = s.apps.create(req)
+
+if res.create_app_response is not None:
+    # handle response
+    pass
+```
+{/* End Python Server Options */}

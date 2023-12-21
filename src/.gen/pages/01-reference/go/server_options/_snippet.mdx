@@ -1,0 +1,90 @@
+{/* Start Go Server Options */}
+
+### Select Server by Index
+
+You can override the default server globally using the `WithServerIndex` option when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+
+
+#### Example
+
+```go
+package main
+
+import (
+	"context"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go/v2"
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/shared"
+	"log"
+)
+
+func main() {
+	s := conductoronesdkgo.New(
+		conductoronesdkgo.WithServerIndex(0),
+		conductoronesdkgo.WithSecurity(shared.Security{
+			BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+			Oauth:      "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+		}),
+	)
+
+	ctx := context.Background()
+	res, err := s.Apps.Create(ctx, &shared.CreateAppRequest{
+		Owners: []string{
+			"string",
+		},
+	})
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if res.CreateAppResponse != nil {
+		// handle response
+	}
+}
+
+```
+
+#### Variables
+
+Some of the server options above contain variables. If you want to set the values of those variables, the following options are provided for doing so:
+ * `WithTenantDomain string`
+
+### Override Server URL Per-Client
+
+The default server can also be overridden globally using the `WithServerURL` option when initializing the SDK client instance. For example:
+```go
+package main
+
+import (
+	"context"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go/v2"
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/shared"
+	"log"
+)
+
+func main() {
+	s := conductoronesdkgo.New(
+		conductoronesdkgo.WithServerURL("https://{tenantDomain}.conductor.one"),
+		conductoronesdkgo.WithSecurity(shared.Security{
+			BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+			Oauth:      "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+		}),
+	)
+
+	ctx := context.Background()
+	res, err := s.Apps.Create(ctx, &shared.CreateAppRequest{
+		Owners: []string{
+			"string",
+		},
+	})
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if res.CreateAppResponse != nil {
+		// handle response
+	}
+}
+
+```
+{/* End Go Server Options */}

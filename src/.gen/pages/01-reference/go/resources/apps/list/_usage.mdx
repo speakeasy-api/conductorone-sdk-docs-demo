@@ -1,0 +1,61 @@
+
+<CH.Code>
+```go List.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go/v2"
+	"context"
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.Apps.List(ctx, operations.C1APIAppV1AppsListRequest{})
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.ListAppsResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "appAccountId": "string",
+        "appAccountName": "string",
+        "certifyPolicyId": "string",
+        "createdAt": "2022-04-09T21:38:53.014Z",
+        "deletedAt": "2022-11-14T19:15:14.189Z",
+        "description": "string",
+        "displayName": "string",
+        "fieldMask": "string",
+        "grantPolicyId": "string",
+        "iconUrl": "string",
+        "id": "string",
+        "logoUri": "string",
+        "monthlyCostUsd": 6458.94,
+        "parentAppId": "string",
+        "revokePolicyId": "string",
+        "updatedAt": "2022-02-25T21:33:04.651Z",
+        "userCount": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

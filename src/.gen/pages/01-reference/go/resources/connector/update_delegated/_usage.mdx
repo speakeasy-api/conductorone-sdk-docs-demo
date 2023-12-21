@@ -1,0 +1,97 @@
+
+<CH.Code>
+```go UpdateDelegated.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go/v2"
+	"context"
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.Connector.UpdateDelegated(ctx, operations.C1APIAppV1ConnectorServiceUpdateDelegatedRequest{
+        ConnectorServiceUpdateDelegatedRequest: &shared.ConnectorServiceUpdateDelegatedRequest{
+            Connector: &shared.ConnectorInput{
+                ConnectorStatus: &shared.ConnectorStatus{},
+                OAuth2AuthorizedAs: &shared.OAuth2AuthorizedAsInput{},
+                Config: &shared.Config{
+                    AdditionalProperties: map[string]interface{}{
+                        "key": "string",
+                    },
+                },
+                UserIds: []string{
+                    "string",
+                },
+            },
+            ConnectorExpandMask: &shared.ConnectorExpandMask{
+                Paths: []string{
+                    "string",
+                },
+            },
+        },
+        ConnectorAppID: "string",
+        ConnectorID: "string",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.ConnectorServiceUpdateResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "ConnectorView": {
+      "Connector": {
+        "ConnectorStatus": {
+          "completedAt": "2022-09-15T10:26:38.983Z",
+          "lastError": "string",
+          "startedAt": "2021-05-29T01:32:00.936Z",
+          "updatedAt": "2021-12-21T22:25:32.118Z"
+        },
+        "OAuth2AuthorizedAs": {
+          "authEmail": "string",
+          "authorizedAt": "2022-11-08T07:27:39.465Z"
+        },
+        "appId": "string",
+        "catalogId": "string",
+        "config": {
+          "@type": "string"
+        },
+        "createdAt": "2021-06-13T21:27:19.513Z",
+        "deletedAt": "2022-11-02T05:52:32.111Z",
+        "description": "string",
+        "displayName": "string",
+        "downloadUrl": "string",
+        "id": "string",
+        "updatedAt": "2021-09-01T10:36:21.641Z",
+        "userIds": [
+          "string"
+        ]
+      },
+      "appPath": "string",
+      "usersPath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+```
+</CH.Code>

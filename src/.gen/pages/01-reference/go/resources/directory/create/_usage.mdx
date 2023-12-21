@@ -1,0 +1,58 @@
+
+<CH.Code>
+```go Create.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go/v2"
+	"context"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.Directory.Create(ctx, &shared.DirectoryServiceCreateRequest{
+        DirectoryExpandMask: &shared.DirectoryExpandMask{
+            Paths: []string{
+                "string",
+            },
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.DirectoryServiceCreateResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "DirectoryView": {
+      "Directory": {
+        "appId": "string",
+        "createdAt": "2022-09-23T15:52:26.015Z",
+        "deletedAt": "2021-04-02T00:11:46.135Z",
+        "updatedAt": "2023-10-15T13:54:14.685Z"
+      },
+      "appPath": "string"
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ]
+  }
+```
+</CH.Code>

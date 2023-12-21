@@ -1,0 +1,64 @@
+
+<CH.Code>
+```go List.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go/v2"
+	"context"
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.Policies.List(ctx, operations.C1APIPolicyV1PoliciesListRequest{})
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.ListPolicyResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "createdAt": "2022-04-20T10:48:37.145Z",
+        "deletedAt": "2021-09-30T09:13:57.045Z",
+        "description": "string",
+        "displayName": "string",
+        "id": "string",
+        "policySteps": {},
+        "postActions": [
+            {
+              "certifyRemediateImmediately": false
+            }
+          ],
+        "reassignTasksToDelegates": false,
+        "rules": [
+            {
+              "condition": "string",
+              "policyKey": "string"
+            }
+          ],
+        "systemBuiltin": false,
+        "updatedAt": "2022-09-23T21:24:53.234Z"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>
