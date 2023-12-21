@@ -1,0 +1,80 @@
+
+<CH.Code>
+```go ListUsers.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go/v2"
+	"context"
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.AppEntitlements.ListUsers(ctx, operations.C1APIAppV1AppEntitlementsListUsersRequest{
+        AppEntitlementID: "string",
+        AppID: "string",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.ListAppEntitlementUsersResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ],
+    "list": [
+      {
+        "AppUserView": {
+          "AppUser": {
+            "AppUserStatus": {
+              "details": "string"
+            },
+            "appId": "string",
+            "createdAt": "2023-01-01T02:37:45.021Z",
+            "deletedAt": "2022-12-17T04:31:12.166Z",
+            "displayName": "string",
+            "email": "string",
+            "emails": [
+              "string"
+            ],
+            "id": "string",
+            "identityUserId": "string",
+            "profile": {},
+            "updatedAt": "2023-01-05T08:21:47.955Z",
+            "username": "string",
+            "usernames": [
+                "string"
+              ]
+          },
+          "appPath": "string",
+          "identityUserPath": "string",
+          "lastUsagePath": "string"
+        },
+        "appEntitlementUserBindingCreatedAt": "2021-07-07T03:30:14.124Z",
+        "appEntitlementUserBindingDeprovisionAt": "2021-08-19T08:51:13.394Z"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

@@ -1,0 +1,52 @@
+
+<CH.Code>
+```go ListAttributeValues.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go/v2"
+	"context"
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.Attributes.ListAttributeValues(ctx, operations.C1APIAttributeV1AttributesListAttributeValuesRequest{
+        AttributeTypeID: "string",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.ListAttributeValuesResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "attributeTypeId": "string",
+        "createdAt": "2022-07-13T00:55:42.564Z",
+        "deletedAt": "2023-12-06T13:16:53.279Z",
+        "id": "string",
+        "updatedAt": "2021-03-03T00:10:55.667Z",
+        "value": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

@@ -1,0 +1,37 @@
+{/* Start Python Errors */}
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or raise an error.  If Error objects are specified in your OpenAPI Spec, the SDK will raise the appropriate Error type.
+
+
+
+### Example
+
+```python
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import components
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=components.Security(
+        bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
+        oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    ),
+)
+
+req = components.CreateAppRequest(
+    owners=[
+        'string',
+    ],
+)
+
+res = None
+try:
+    res = s.apps.create(req)
+except errors.SDKError as e:
+    print(e)  # handle exception
+    raise(e)
+
+if res.create_app_response is not None:
+    # handle response
+    pass
+```
+
+{/* End Python Errors */}

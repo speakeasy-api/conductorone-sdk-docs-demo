@@ -1,0 +1,130 @@
+
+<CH.Code>
+```go List.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go/v2"
+	"context"
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.AppResourceOwners.List(ctx, operations.C1APIAppV1AppResourceOwnersListRequest{
+        AppID: "string",
+        ResourceID: "string",
+        ResourceTypeID: "string",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.ListAppResourceOwnersResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "createdAt": "2023-01-09T20:29:27.704Z",
+        "delegatedUserId": "string",
+        "deletedAt": "2022-12-20T16:20:30.039Z",
+        "department": "string",
+        "departmentSources": [
+          {
+            "appId": "string",
+            "appUserId": "string",
+            "appUserProfileAttributeKey": "string",
+            "userAttributeMappingId": "string",
+            "value": "string"
+          }
+        ],
+        "directoryIds": [
+          "string"
+        ],
+        "directoryStatusSources": [
+          {
+            "appId": "string",
+            "appUserId": "string",
+            "appUserProfileAttributeKey": "string",
+            "userAttributeMappingId": "string",
+            "value": "string"
+          }
+        ],
+        "displayName": "string",
+        "email": "string",
+        "emails": [
+          "string"
+        ],
+        "employmentStatus": "string",
+        "employmentStatusSources": [
+          {
+            "appId": "string",
+            "appUserId": "string",
+            "appUserProfileAttributeKey": "string",
+            "userAttributeMappingId": "string",
+            "value": "string"
+          }
+        ],
+        "employmentType": "string",
+        "employmentTypeSources": [
+          {
+            "appId": "string",
+            "appUserId": "string",
+            "appUserProfileAttributeKey": "string",
+            "userAttributeMappingId": "string",
+            "value": "string"
+          }
+        ],
+        "id": "string",
+        "jobTitle": "string",
+        "jobTitleSources": [
+          {
+            "appId": "string",
+            "appUserId": "string",
+            "appUserProfileAttributeKey": "string",
+            "userAttributeMappingId": "string",
+            "value": "string"
+          }
+        ],
+        "managerIds": [
+          "string"
+        ],
+        "managerSources": [
+          {
+            "appId": "string",
+            "appUserId": "string",
+            "appUserProfileAttributeKey": "string",
+            "userAttributeMappingId": "string",
+            "value": "string"
+          }
+        ],
+        "profile": {},
+        "roleIds": [
+            "string"
+          ],
+        "updatedAt": "2023-05-03T06:55:09.335Z",
+        "username": "string",
+        "usernames": [
+            "string"
+          ]
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

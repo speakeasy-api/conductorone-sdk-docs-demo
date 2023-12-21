@@ -1,0 +1,38 @@
+{/* Start Typescript Errors */}
+All SDK methods return a response object or throw an error. If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+
+
+
+Example
+
+```typescript
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+import * as errors from "conductorone-sdk-typescript/models/errors";
+
+async function run() {
+    const sdk = new ConductoroneSDKTypescript({
+        security: {
+            bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        },
+    });
+
+    const res = await sdk.apps
+        .create({
+            owners: ["string"],
+        })
+        .catch((err) => {
+            throw err;
+        });
+
+    if (res?.statusCode !== 200) {
+        throw new Error("Unexpected status code: " + res?.statusCode || "-");
+    }
+
+    // handle response
+}
+
+run();
+
+```
+{/* End Typescript Errors */}

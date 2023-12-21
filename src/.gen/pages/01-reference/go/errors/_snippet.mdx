@@ -1,0 +1,45 @@
+{/* Start Go Errors */}
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or an error, they will never return both.  When specified by the OpenAPI spec document, the SDK will return the appropriate subclass.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"errors"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go/v2"
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/sdkerrors"
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/shared"
+	"log"
+)
+
+func main() {
+	s := conductoronesdkgo.New(
+		conductoronesdkgo.WithSecurity(shared.Security{
+			BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+			Oauth:      "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+		}),
+	)
+
+	ctx := context.Background()
+	res, err := s.Apps.Create(ctx, &shared.CreateAppRequest{
+		Owners: []string{
+			"string",
+		},
+	})
+	if err != nil {
+
+		var e *sdkerrors.SDKError
+		if errors.As(err, &e) {
+			// handle error
+			log.Fatal(e.Error())
+		}
+	}
+}
+
+```
+{/* End Go Errors */}

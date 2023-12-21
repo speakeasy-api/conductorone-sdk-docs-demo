@@ -1,0 +1,57 @@
+
+<CH.Code>
+```go List.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go/v2"
+	"context"
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.Roles.List(ctx, operations.C1APIIamV1RolesListRequest{})
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.ListRolesResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "createdAt": "2022-08-29T08:08:54.974Z",
+        "deletedAt": "2021-01-23T00:25:35.142Z",
+        "displayName": "string",
+        "id": "string",
+        "name": "string",
+        "permissions": [
+          "string"
+        ],
+        "serviceRoles": [
+          "string"
+        ],
+        "systemBuiltin": false,
+        "updatedAt": "2021-06-30T14:38:07.095Z"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

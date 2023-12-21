@@ -1,0 +1,45 @@
+
+<CH.Code>
+```go RemoveAccessEntitlements.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go/v2"
+	"context"
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.RequestCatalogManagement.RemoveAccessEntitlements(ctx, operations.C1APIRequestcatalogV1RequestCatalogManagementServiceRemoveAccessEntitlementsRequest{
+        RequestCatalogManagementServiceRemoveAccessEntitlementsRequest: &shared.RequestCatalogManagementServiceRemoveAccessEntitlementsRequest{
+            AccessEntitlements: []shared.AppEntitlementRef{
+                shared.AppEntitlementRef{},
+            },
+        },
+        CatalogID: "string",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.RequestCatalogManagementServiceRemoveAccessEntitlementsResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

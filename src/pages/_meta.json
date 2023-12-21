@@ -1,9 +1,14 @@
 {
-  "*": {
+  "go": {
     "type": "page",
     "display": "hidden"
   },
-  "typescript": "typescript",
-  "python": "python",
-  "curl": "curl"
+  "typescript": {
+    "type": "page",
+    "display": "hidden"
+  },
+  "python": {
+    "type": "page",
+    "display": "hidden"
+  }
 }

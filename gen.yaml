@@ -9,13 +9,13 @@ generation:
   sdkClassName: conductorone-sdk-typescript
   usageSnippets:
     optionalPropertyRendering: withExample
-  baseServerURL: ""
   fixes:
     nameResolutionDec2023: false
+  baseServerURL: ""
 features:
   docs:
     additionalProperties: 0.1.1
-    core: 1.19.0
+    core: 1.21.0
     globalSecurity: 0.1.1
     globalServerURLs: 0.1.1
     groups: 0.1.1
@@ -33,6 +33,26 @@ docs:
       webhooks: webhooks
   inputModelSuffix: input
   outputModelSuffix: output
+  static: true
+go:
+  version: 2.1.8
+  clientServerStatusCodesAsErrors: true
+  flattenGlobalSecurity: true
+  imports:
+    option: openapi
+    paths:
+      callbacks: pkg/models/callbacks
+      errors: pkg/models/sdkerrors
+      operations: pkg/models/operations
+      shared: pkg/models/shared
+      webhooks: pkg/models/webhooks
+  inputModelSuffix: input
+  installationURL: https://github.com/ConductorOne/conductorone-sdk-go
+  maxMethodParams: 0
+  outputModelSuffix: output
+  packageName: github.com/conductorone/conductorone-sdk-go
+  published: true
+  repoSubDirectory: .
 python:
   version: 0.5.2
   author: Speakeasy

@@ -1,0 +1,56 @@
+
+<CH.Code>
+```go RotateCredential.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go/v2"
+	"context"
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.Connector.RotateCredential(ctx, operations.C1APIAppV1ConnectorServiceRotateCredentialRequest{
+        ConnectorServiceRotateCredentialRequest: &shared.ConnectorServiceRotateCredentialRequest{},
+        AppID: "string",
+        ConnectorID: "string",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.ConnectorServiceRotateCredentialResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "ConnectorCredential": {
+      "appId": "string",
+      "clientId": "string",
+      "connectorId": "string",
+      "createdAt": "2022-08-12T10:10:06.377Z",
+      "deletedAt": "2023-11-01T09:53:57.053Z",
+      "displayName": "string",
+      "expiresTime": "2023-04-11T16:25:06.618Z",
+      "id": "string",
+      "lastUsedAt": "2022-07-26T10:10:26.632Z",
+      "updatedAt": "2021-04-26T23:15:06.828Z"
+    },
+    "clientSecret": "string"
+  }
+```
+</CH.Code>

@@ -1,0 +1,66 @@
+
+<CH.Code>
+```go List.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go/v2"
+	"context"
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.AppResource.List(ctx, operations.C1APIAppV1AppResourceServiceListRequest{
+        AppID: "string",
+        AppResourceTypeID: "string",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AppResourceServiceListResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ],
+    "list": [
+      {
+        "AppResource": {
+          "appId": "string",
+          "appResourceTypeId": "string",
+          "createdAt": "2021-06-24T01:43:14.638Z",
+          "customDescription": "string",
+          "deletedAt": "2022-01-06T02:50:24.677Z",
+          "description": "string",
+          "displayName": "string",
+          "grantCount": "string",
+          "id": "string",
+          "updatedAt": "2021-05-01T20:39:31.166Z"
+        },
+        "appPath": "string",
+        "resourceTypePath": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

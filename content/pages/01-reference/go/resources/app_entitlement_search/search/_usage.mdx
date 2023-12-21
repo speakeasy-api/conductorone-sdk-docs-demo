@@ -1,0 +1,148 @@
+
+<CH.Code>
+```go Search.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go/v2"
+	"context"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.AppEntitlementSearch.Search(ctx, &shared.AppEntitlementSearchServiceSearchRequest{
+        AppEntitlementExpandMask: &shared.AppEntitlementExpandMask{
+            Paths: []string{
+                "string",
+            },
+        },
+        AppIds: []string{
+            "string",
+        },
+        AppUserIds: []string{
+            "string",
+        },
+        ComplianceFrameworkIds: []string{
+            "string",
+        },
+        ExcludeAppIds: []string{
+            "string",
+        },
+        ExcludeAppUserIds: []string{
+            "string",
+        },
+        ResourceTypeIds: []string{
+            "string",
+        },
+        RiskLevelIds: []string{
+            "string",
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AppEntitlementSearchServiceSearchResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "Facets": {
+      "count": "string",
+      "facets": [
+        {
+          "FacetRangeItem": {
+            "ranges": [
+              {
+                "count": "string",
+                "displayName": "string",
+                "from": "string",
+                "iconUrl": "string",
+                "to": "string"
+              }
+            ]
+          },
+          "FacetValueItem": {
+            "values": [
+              {
+                "count": "string",
+                "displayName": "string",
+                "iconUrl": "string",
+                "value": "string"
+              }
+            ]
+          },
+          "displayName": "string",
+          "iconUrl": "string",
+          "param": "string"
+        }
+      ]
+    },
+    "expanded": [
+      {
+        "@type": "string"
+      }
+    ],
+    "list": [
+      {
+        "AppEntitlement": {
+          "ProvisionPolicy": {
+            "ConnectorProvision": {},
+            "DelegatedProvision": {
+                "appId": "string",
+                "entitlementId": "string"
+              },
+            "ManualProvision": {
+                "instructions": "string",
+                "userIds": [
+                  "string"
+                ]
+              }
+          },
+          "alias": "string",
+          "appId": "string",
+          "appResourceId": "string",
+          "appResourceTypeId": "string",
+          "certifyPolicyId": "string",
+          "complianceFrameworkValueIds": [
+            "string"
+          ],
+          "createdAt": "2021-05-08T05:47:10.297Z",
+          "deletedAt": "2021-11-22T16:38:35.122Z",
+          "description": "string",
+          "displayName": "string",
+          "durationGrant": "string",
+          "durationUnset": {},
+          "emergencyGrantEnabled": false,
+          "emergencyGrantPolicyId": "string",
+          "grantCount": "string",
+          "grantPolicyId": "string",
+          "id": "string",
+          "revokePolicyId": "string",
+          "riskLevelValueId": "string",
+          "slug": "string",
+          "systemBuiltin": false,
+          "updatedAt": "2023-04-20T21:22:58.458Z"
+        },
+        "appPath": "string",
+        "appResourcePath": "string",
+        "appResourceTypePath": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>

@@ -1,0 +1,59 @@
+
+<CH.Code>
+```go SearchAttributeValues.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/v2/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go/v2"
+	"context"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.AttributeSearch.SearchAttributeValues(ctx, &shared.SearchAttributeValuesRequest{
+        AttributeTypeIds: []string{
+            "string",
+        },
+        ExcludeIds: []string{
+            "string",
+        },
+        Ids: []string{
+            "string",
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.SearchAttributeValuesResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "attributeTypeId": "string",
+        "createdAt": "2023-07-16T19:37:11.084Z",
+        "deletedAt": "2023-12-08T12:50:37.970Z",
+        "id": "string",
+        "updatedAt": "2023-02-05T22:18:55.484Z",
+        "value": "string"
+      }
+    ],
+    "nextPageToken": "string"
+  }
+```
+</CH.Code>
