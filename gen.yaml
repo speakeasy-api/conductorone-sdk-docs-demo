@@ -1,26 +1,11 @@
-configVersion: 1.0.0
-management:
-  docChecksum: 62ce67261ac2cb50833d44d274d1cd96
-  docVersion: 0.1.0-alpha
-  speakeasyVersion: 1.128.0
-  generationVersion: 2.221.0
+configVersion: 2.0.0
 generation:
-  comments: {}
   sdkClassName: conductorone-sdk-typescript
   usageSnippets:
     optionalPropertyRendering: withExample
   fixes:
     nameResolutionDec2023: false
   baseServerURL: ""
-features:
-  docs:
-    additionalProperties: 0.1.1
-    core: 1.21.0
-    globalSecurity: 0.1.1
-    globalServerURLs: 0.1.1
-    groups: 0.1.1
-    inputOutputModels: 0.3.0
-    nameOverrides: 0.1.0
 docs:
   version: 0.8.0
   imports:
@@ -32,6 +17,7 @@ docs:
       shared: shared
       webhooks: webhooks
   inputModelSuffix: input
+  maxMethodParams: 4
   outputModelSuffix: output
   static: true
 go:
@@ -47,12 +33,9 @@ go:
       shared: pkg/models/shared
       webhooks: pkg/models/webhooks
   inputModelSuffix: input
-  installationURL: https://github.com/ConductorOne/conductorone-sdk-go
   maxMethodParams: 0
   outputModelSuffix: output
   packageName: github.com/conductorone/conductorone-sdk-go
-  published: true
-  repoSubDirectory: .
 python:
   version: 0.5.2
   author: Speakeasy
@@ -68,11 +51,9 @@ python:
       shared: models/components
       webhooks: models/webhooks
   inputModelSuffix: input
-  installationURL: conductorone-sdk-python
   maxMethodParams: 0
   outputModelSuffix: output
   packageName: conductorone-sdk-python
-  published: true
   sdkClassName: conductorone-sdk-python
 typescript:
   version: 1.1.0
@@ -88,7 +69,6 @@ typescript:
       shared: models/components
       webhooks: models/webhooks
   inputModelSuffix: input
-  installationURL: https://github.com/ConductorOne/conductorone-sdk-typescript
   maxMethodParams: 0
   outputModelSuffix: output
   packageName: conductorone-sdk-typescript
