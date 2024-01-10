@@ -31,3 +31,9 @@ fonts:
   code:
     name: IBM Plex Mono
     url: https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap
+
+navLinks:
+  docs:
+    title: Docs
+    href: https://www.conductorone.com/docs/
+    new_window: true
