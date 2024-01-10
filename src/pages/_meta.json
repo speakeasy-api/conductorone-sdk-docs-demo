@@ -1,4 +1,10 @@
 {
+  "docs": {
+    "title": "Docs",
+    "type": "page",
+    "href": "https://www.conductorone.com/docs/",
+    "newWindow": true
+  },
   "go": {
     "type": "page",
     "display": "hidden"
