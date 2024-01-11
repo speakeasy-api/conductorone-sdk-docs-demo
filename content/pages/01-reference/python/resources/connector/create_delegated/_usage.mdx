@@ -2,18 +2,18 @@
 <CH.Code>
 ```python CreateDelegated.py
 import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import components, operations
+from conductorone_sdk_typescript.models import operations, shared
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=components.Security(
+    security=shared.Security(
         bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
         oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
     ),
 )
 
 req = operations.C1APIAppV1ConnectorServiceCreateDelegatedRequest(
-    connector_service_create_delegated_request=components.ConnectorServiceCreateDelegatedRequest(
-        connector_expand_mask=components.ConnectorExpandMask(
+    connector_service_create_delegated_request=shared.ConnectorServiceCreateDelegatedRequest(
+        connector_expand_mask=shared.ConnectorExpandMask(
             paths=[
                 'string',
             ],

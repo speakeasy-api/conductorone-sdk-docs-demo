@@ -2,16 +2,16 @@
 <CH.Code>
 ```python Search.py
 import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import components
+from conductorone_sdk_typescript.models import shared
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=components.Security(
+    security=shared.Security(
         bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
         oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
     ),
 )
 
-req = components.SearchAppsRequest(
+req = shared.SearchAppsRequest(
     app_ids=[
         'string',
     ],

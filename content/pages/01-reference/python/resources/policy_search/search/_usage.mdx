@@ -2,21 +2,21 @@
 <CH.Code>
 ```python Search.py
 import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import components
+from conductorone_sdk_typescript.models import shared
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=components.Security(
+    security=shared.Security(
         bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
         oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
     ),
 )
 
-req = components.SearchPoliciesRequest(
+req = shared.SearchPoliciesRequest(
     policy_types=[
-        components.PolicyTypes.POLICY_TYPE_CERTIFY,
+        shared.PolicyTypes.POLICY_TYPE_CERTIFY,
     ],
     refs=[
-        components.PolicyRef(),
+        shared.PolicyRef(),
     ],
 )
 

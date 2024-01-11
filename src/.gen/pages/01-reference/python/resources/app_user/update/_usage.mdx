@@ -2,21 +2,21 @@
 <CH.Code>
 ```python Update.py
 import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import components, operations
+from conductorone_sdk_typescript.models import operations, shared
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=components.Security(
+    security=shared.Security(
         bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
         oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
     ),
 )
 
 req = operations.C1APIAppV1AppUserServiceUpdateRequest(
-    app_user_service_update_request=components.AppUserServiceUpdateRequest(
-        app_user=components.AppUserInput(
-            app_user_status=components.AppUserStatusInput(),
+    app_user_service_update_request=shared.AppUserServiceUpdateRequest(
+        app_user=shared.AppUserInput(
+            app_user_status=shared.AppUserStatusInput(),
         ),
-        app_user_expand_mask=components.AppUserExpandMask(
+        app_user_expand_mask=shared.AppUserExpandMask(
             paths=[
                 'string',
             ],

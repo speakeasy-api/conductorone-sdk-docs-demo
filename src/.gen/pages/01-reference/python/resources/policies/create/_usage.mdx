@@ -2,49 +2,49 @@
 <CH.Code>
 ```python Create.py
 import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import components
+from conductorone_sdk_typescript.models import shared
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=components.Security(
+    security=shared.Security(
         bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
         oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
     ),
 )
 
-req = components.CreatePolicyRequest(
+req = shared.CreatePolicyRequest(
     policy_steps={
-        'key': components.PolicyStepsInput(
+        'key': shared.PolicyStepsInput(
             steps=[
-                components.PolicyStepInput(
-                    accept=components.Accept(),
-                    approval=components.ApprovalInput(
-                        app_group_approval=components.AppGroupApprovalInput(),
-                        app_owner_approval=components.AppOwnerApprovalInput(),
-                        entitlement_owner_approval=components.EntitlementOwnerApprovalInput(),
-                        expression_approval=components.ExpressionApprovalInput(),
-                        manager_approval=components.ManagerApprovalInput(),
-                        self_approval=components.SelfApprovalInput(),
-                        user_approval=components.UserApprovalInput(),
+                shared.PolicyStepInput(
+                    accept=shared.Accept(),
+                    approval=shared.ApprovalInput(
+                        app_group_approval=shared.AppGroupApprovalInput(),
+                        app_owner_approval=shared.AppOwnerApprovalInput(),
+                        entitlement_owner_approval=shared.EntitlementOwnerApprovalInput(),
+                        expression_approval=shared.ExpressionApprovalInput(),
+                        manager_approval=shared.ManagerApprovalInput(),
+                        self_approval=shared.SelfApprovalInput(),
+                        user_approval=shared.UserApprovalInput(),
                     ),
-                    provision=components.Provision(
-                        provision_policy=components.ProvisionPolicy(
-                            connector_provision=components.ConnectorProvision(),
-                            delegated_provision=components.DelegatedProvision(),
-                            manual_provision=components.ManualProvision(
+                    provision=shared.Provision(
+                        provision_policy=shared.ProvisionPolicy(
+                            connector_provision=shared.ConnectorProvision(),
+                            delegated_provision=shared.DelegatedProvision(),
+                            manual_provision=shared.ManualProvision(
                                 user_ids=[
                                     'string',
                                 ],
                             ),
                         ),
-                        provision_target=components.ProvisionTarget(),
+                        provision_target=shared.ProvisionTarget(),
                     ),
-                    reject=components.Reject(),
+                    reject=shared.Reject(),
                 ),
             ],
         ),
     },
     post_actions=[
-        components.PolicyPostActions(),
+        shared.PolicyPostActions(),
     ],
 )
 

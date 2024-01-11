@@ -2,19 +2,19 @@
 <CH.Code>
 ```python AddAppEntitlements.py
 import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import components, operations
+from conductorone_sdk_typescript.models import operations, shared
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=components.Security(
+    security=shared.Security(
         bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
         oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
     ),
 )
 
 req = operations.C1APIRequestcatalogV1RequestCatalogManagementServiceAddAppEntitlementsRequest(
-    request_catalog_management_service_add_app_entitlements_request=components.RequestCatalogManagementServiceAddAppEntitlementsRequest(
+    request_catalog_management_service_add_app_entitlements_request=shared.RequestCatalogManagementServiceAddAppEntitlementsRequest(
         app_entitlements=[
-            components.AppEntitlementRef(),
+            shared.AppEntitlementRef(),
         ],
     ),
     catalog_id='string',

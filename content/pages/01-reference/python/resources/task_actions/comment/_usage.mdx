@@ -2,18 +2,18 @@
 <CH.Code>
 ```python Comment.py
 import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import components, operations
+from conductorone_sdk_typescript.models import operations, shared
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=components.Security(
+    security=shared.Security(
         bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
         oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
     ),
 )
 
 req = operations.C1APITaskV1TaskActionsServiceCommentRequest(
-    task_actions_service_comment_request=components.TaskActionsServiceCommentRequest(
-        task_expand_mask=components.TaskExpandMask(
+    task_actions_service_comment_request=shared.TaskActionsServiceCommentRequest(
+        task_expand_mask=shared.TaskExpandMask(
             paths=[
                 'string',
             ],

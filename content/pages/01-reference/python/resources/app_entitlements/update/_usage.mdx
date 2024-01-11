@@ -2,22 +2,22 @@
 <CH.Code>
 ```python Update.py
 import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import components, operations
+from conductorone_sdk_typescript.models import operations, shared
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=components.Security(
+    security=shared.Security(
         bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
         oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
     ),
 )
 
 req = operations.C1APIAppV1AppEntitlementsUpdateRequest(
-    update_app_entitlement_request=components.UpdateAppEntitlementRequest(
-        app_entitlement=components.AppEntitlementInput(
-            provision_policy=components.ProvisionPolicy(
-                connector_provision=components.ConnectorProvision(),
-                delegated_provision=components.DelegatedProvision(),
-                manual_provision=components.ManualProvision(
+    update_app_entitlement_request=shared.UpdateAppEntitlementRequest(
+        app_entitlement=shared.AppEntitlementInput(
+            provision_policy=shared.ProvisionPolicy(
+                connector_provision=shared.ConnectorProvision(),
+                delegated_provision=shared.DelegatedProvision(),
+                manual_provision=shared.ManualProvision(
                     user_ids=[
                         'string',
                     ],
@@ -26,9 +26,9 @@ req = operations.C1APIAppV1AppEntitlementsUpdateRequest(
             compliance_framework_value_ids=[
                 'string',
             ],
-            duration_unset=components.DurationUnset(),
+            duration_unset=shared.DurationUnset(),
         ),
-        app_entitlement_expand_mask=components.AppEntitlementExpandMask(
+        app_entitlement_expand_mask=shared.AppEntitlementExpandMask(
             paths=[
                 'string',
             ],

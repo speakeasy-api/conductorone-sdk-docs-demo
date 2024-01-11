@@ -5,8 +5,8 @@ management:
   docVersion: 0.1.0-alpha
   speakeasyVersion: internal
   generationVersion: 2.230.3
-  releaseVersion: 0.9.1
-  configChecksum: abea2cbcae2d2dcc37da9c5412633190
+  releaseVersion: 0.10.0
+  configChecksum: 703d9db784185df9f0622d1689c74bf3
   repoSubDirectory: .
   installationURL: conductorone-sdk-python
   published: true
@@ -1426,595 +1426,280 @@ generatedFiles:
   - content/pages/01-reference/typescript/resources/user_search/user_search.mdx
   - content/pages/01-reference/typescript/security_options/security_options.mdx
   - content/pages/01-reference/typescript/server_options/server_options.mdx
-  - content/types/models/components/accept/python.mdx
   - content/types/models/components/accept/typescript.mdx
-  - content/types/models/components/accept_instance/python.mdx
   - content/types/models/components/accept_instance/typescript.mdx
-  - content/types/models/components/actions/python.mdx
   - content/types/models/components/actions/typescript.mdx
-  - content/types/models/components/add_app_entitlement_owner_request/python.mdx
   - content/types/models/components/add_app_entitlement_owner_request/typescript.mdx
-  - content/types/models/components/add_app_entitlement_owner_response/python.mdx
   - content/types/models/components/add_app_entitlement_owner_response/typescript.mdx
-  - content/types/models/components/add_app_owner_request/python.mdx
   - content/types/models/components/add_app_owner_request/typescript.mdx
-  - content/types/models/components/add_app_owner_response/python.mdx
   - content/types/models/components/add_app_owner_response/typescript.mdx
-  - content/types/models/components/annotations/python.mdx
-  - content/types/models/components/app/python.mdx
   - content/types/models/components/app/typescript.mdx
-  - content/types/models/components/app_actions_service_generate_report_request/python.mdx
   - content/types/models/components/app_actions_service_generate_report_request/typescript.mdx
-  - content/types/models/components/app_actions_service_generate_report_response/python.mdx
   - content/types/models/components/app_actions_service_generate_report_response/typescript.mdx
-  - content/types/models/components/app_entitlement/python.mdx
   - content/types/models/components/app_entitlement/typescript.mdx
-  - content/types/models/components/app_entitlement_expand_mask/python.mdx
   - content/types/models/components/app_entitlement_expand_mask/typescript.mdx
-  - content/types/models/components/app_entitlement_input/python.mdx
   - content/types/models/components/app_entitlement_input/typescript.mdx
-  - content/types/models/components/app_entitlement_ref/python.mdx
   - content/types/models/components/app_entitlement_ref/typescript.mdx
-  - content/types/models/components/app_entitlement_reference/python.mdx
   - content/types/models/components/app_entitlement_reference/typescript.mdx
-  - content/types/models/components/app_entitlement_search_service_search_request/python.mdx
   - content/types/models/components/app_entitlement_search_service_search_request/typescript.mdx
-  - content/types/models/components/app_entitlement_search_service_search_response/python.mdx
   - content/types/models/components/app_entitlement_search_service_search_response/typescript.mdx
-  - content/types/models/components/app_entitlement_user_binding/python.mdx
   - content/types/models/components/app_entitlement_user_binding/typescript.mdx
-  - content/types/models/components/app_entitlement_user_view/python.mdx
   - content/types/models/components/app_entitlement_user_view/typescript.mdx
-  - content/types/models/components/app_entitlement_view/python.mdx
   - content/types/models/components/app_entitlement_view/typescript.mdx
-  - content/types/models/components/app_entitlement_with_user_bindings/python.mdx
   - content/types/models/components/app_entitlement_with_user_bindings/typescript.mdx
-  - content/types/models/components/app_group_approval/python.mdx
   - content/types/models/components/app_group_approval/typescript.mdx
-  - content/types/models/components/app_group_approval_input/python.mdx
   - content/types/models/components/app_group_approval_input/typescript.mdx
-  - content/types/models/components/app_input/python.mdx
   - content/types/models/components/app_input/typescript.mdx
-  - content/types/models/components/app_owner_approval/python.mdx
   - content/types/models/components/app_owner_approval/typescript.mdx
-  - content/types/models/components/app_owner_approval_input/python.mdx
   - content/types/models/components/app_owner_approval_input/typescript.mdx
-  - content/types/models/components/app_population_report/python.mdx
   - content/types/models/components/app_population_report/typescript.mdx
-  - content/types/models/components/app_report_service_list_response/python.mdx
   - content/types/models/components/app_report_service_list_response/typescript.mdx
-  - content/types/models/components/app_resource/python.mdx
   - content/types/models/components/app_resource/typescript.mdx
-  - content/types/models/components/app_resource_service_get_response/python.mdx
   - content/types/models/components/app_resource_service_get_response/typescript.mdx
-  - content/types/models/components/app_resource_service_get_response_expanded/python.mdx
-  - content/types/models/components/app_resource_service_list_response/python.mdx
   - content/types/models/components/app_resource_service_list_response/typescript.mdx
-  - content/types/models/components/app_resource_service_list_response_expanded/python.mdx
-  - content/types/models/components/app_resource_type/python.mdx
   - content/types/models/components/app_resource_type/typescript.mdx
-  - content/types/models/components/app_resource_type_service_get_response/python.mdx
   - content/types/models/components/app_resource_type_service_get_response/typescript.mdx
-  - content/types/models/components/app_resource_type_service_get_response_expanded/python.mdx
-  - content/types/models/components/app_resource_type_service_list_response/python.mdx
   - content/types/models/components/app_resource_type_service_list_response/typescript.mdx
-  - content/types/models/components/app_resource_type_service_list_response_expanded/python.mdx
-  - content/types/models/components/app_resource_type_view/python.mdx
   - content/types/models/components/app_resource_type_view/typescript.mdx
-  - content/types/models/components/app_resource_view/python.mdx
   - content/types/models/components/app_resource_view/typescript.mdx
-  - content/types/models/components/app_usage_controls/python.mdx
   - content/types/models/components/app_usage_controls/typescript.mdx
-  - content/types/models/components/app_user/python.mdx
   - content/types/models/components/app_user/typescript.mdx
-  - content/types/models/components/app_user_expand_mask/python.mdx
   - content/types/models/components/app_user_expand_mask/typescript.mdx
-  - content/types/models/components/app_user_input/python.mdx
   - content/types/models/components/app_user_input/typescript.mdx
-  - content/types/models/components/app_user_service_update_request/python.mdx
   - content/types/models/components/app_user_service_update_request/typescript.mdx
-  - content/types/models/components/app_user_service_update_response/python.mdx
   - content/types/models/components/app_user_service_update_response/typescript.mdx
-  - content/types/models/components/app_user_service_update_response_expanded/python.mdx
-  - content/types/models/components/app_user_status/python.mdx
   - content/types/models/components/app_user_status/typescript.mdx
-  - content/types/models/components/app_user_status_input/python.mdx
   - content/types/models/components/app_user_status_input/typescript.mdx
-  - content/types/models/components/app_user_type/python.mdx
   - content/types/models/components/app_user_type/typescript.mdx
-  - content/types/models/components/app_user_view/python.mdx
   - content/types/models/components/app_user_view/typescript.mdx
-  - content/types/models/components/approval/python.mdx
   - content/types/models/components/approval/typescript.mdx
-  - content/types/models/components/approval_input/python.mdx
   - content/types/models/components/approval_input/typescript.mdx
-  - content/types/models/components/approval_instance/python.mdx
   - content/types/models/components/approval_instance/typescript.mdx
-  - content/types/models/components/approval_instance_state/python.mdx
   - content/types/models/components/approval_instance_state/typescript.mdx
-  - content/types/models/components/approved_action/python.mdx
   - content/types/models/components/approved_action/typescript.mdx
-  - content/types/models/components/attribute_type/python.mdx
   - content/types/models/components/attribute_type/typescript.mdx
-  - content/types/models/components/attribute_value/python.mdx
   - content/types/models/components/attribute_value/typescript.mdx
-  - content/types/models/components/cancelled_action/python.mdx
   - content/types/models/components/cancelled_action/typescript.mdx
-  - content/types/models/components/completed_action/python.mdx
   - content/types/models/components/completed_action/typescript.mdx
-  - content/types/models/components/config/python.mdx
-  - content/types/models/components/connector/python.mdx
   - content/types/models/components/connector/typescript.mdx
-  - content/types/models/components/connector_credential/python.mdx
   - content/types/models/components/connector_credential/typescript.mdx
-  - content/types/models/components/connector_expand_mask/python.mdx
   - content/types/models/components/connector_expand_mask/typescript.mdx
-  - content/types/models/components/connector_input/python.mdx
   - content/types/models/components/connector_input/typescript.mdx
-  - content/types/models/components/connector_provision/python.mdx
   - content/types/models/components/connector_provision/typescript.mdx
-  - content/types/models/components/connector_service_create_delegated_request/python.mdx
   - content/types/models/components/connector_service_create_delegated_request/typescript.mdx
-  - content/types/models/components/connector_service_create_request/python.mdx
   - content/types/models/components/connector_service_create_request/typescript.mdx
-  - content/types/models/components/connector_service_create_request_config/python.mdx
-  - content/types/models/components/connector_service_create_response/python.mdx
   - content/types/models/components/connector_service_create_response/typescript.mdx
-  - content/types/models/components/connector_service_create_response_expanded/python.mdx
-  - content/types/models/components/connector_service_delete_request/python.mdx
   - content/types/models/components/connector_service_delete_request/typescript.mdx
-  - content/types/models/components/connector_service_delete_response/python.mdx
   - content/types/models/components/connector_service_delete_response/typescript.mdx
-  - content/types/models/components/connector_service_get_credentials_response/python.mdx
   - content/types/models/components/connector_service_get_credentials_response/typescript.mdx
-  - content/types/models/components/connector_service_get_response/python.mdx
   - content/types/models/components/connector_service_get_response/typescript.mdx
-  - content/types/models/components/connector_service_get_response_expanded/python.mdx
-  - content/types/models/components/connector_service_list_response/python.mdx
   - content/types/models/components/connector_service_list_response/typescript.mdx
-  - content/types/models/components/connector_service_list_response_expanded/python.mdx
-  - content/types/models/components/connector_service_revoke_credential_request/python.mdx
   - content/types/models/components/connector_service_revoke_credential_request/typescript.mdx
-  - content/types/models/components/connector_service_revoke_credential_response/python.mdx
   - content/types/models/components/connector_service_revoke_credential_response/typescript.mdx
-  - content/types/models/components/connector_service_rotate_credential_request/python.mdx
   - content/types/models/components/connector_service_rotate_credential_request/typescript.mdx
-  - content/types/models/components/connector_service_rotate_credential_response/python.mdx
   - content/types/models/components/connector_service_rotate_credential_response/typescript.mdx
-  - content/types/models/components/connector_service_update_delegated_request/python.mdx
   - content/types/models/components/connector_service_update_delegated_request/typescript.mdx
-  - content/types/models/components/connector_service_update_request/python.mdx
   - content/types/models/components/connector_service_update_request/typescript.mdx
-  - content/types/models/components/connector_service_update_response/python.mdx
   - content/types/models/components/connector_service_update_response/typescript.mdx
-  - content/types/models/components/connector_service_update_response_expanded/python.mdx
-  - content/types/models/components/connector_status/python.mdx
   - content/types/models/components/connector_status/typescript.mdx
-  - content/types/models/components/connector_status_status/python.mdx
   - content/types/models/components/connector_status_status/typescript.mdx
-  - content/types/models/components/connector_view/python.mdx
   - content/types/models/components/connector_view/typescript.mdx
-  - content/types/models/components/create_app_request/python.mdx
   - content/types/models/components/create_app_request/typescript.mdx
-  - content/types/models/components/create_app_response/python.mdx
   - content/types/models/components/create_app_response/typescript.mdx
-  - content/types/models/components/create_attribute_value_request/python.mdx
   - content/types/models/components/create_attribute_value_request/typescript.mdx
-  - content/types/models/components/create_attribute_value_response/python.mdx
   - content/types/models/components/create_attribute_value_response/typescript.mdx
-  - content/types/models/components/create_policy_request/python.mdx
   - content/types/models/components/create_policy_request/typescript.mdx
-  - content/types/models/components/create_policy_response/python.mdx
   - content/types/models/components/create_policy_response/typescript.mdx
-  - content/types/models/components/current_step/python.mdx
   - content/types/models/components/current_step/typescript.mdx
-  - content/types/models/components/delegated_provision/python.mdx
   - content/types/models/components/delegated_provision/typescript.mdx
-  - content/types/models/components/delete_app_request/python.mdx
   - content/types/models/components/delete_app_request/typescript.mdx
-  - content/types/models/components/delete_app_response/python.mdx
   - content/types/models/components/delete_app_response/typescript.mdx
-  - content/types/models/components/delete_attribute_value_request/python.mdx
   - content/types/models/components/delete_attribute_value_request/typescript.mdx
-  - content/types/models/components/delete_attribute_value_response/python.mdx
   - content/types/models/components/delete_attribute_value_response/typescript.mdx
-  - content/types/models/components/delete_policy_request/python.mdx
   - content/types/models/components/delete_policy_request/typescript.mdx
-  - content/types/models/components/delete_policy_response/python.mdx
   - content/types/models/components/delete_policy_response/typescript.mdx
-  - content/types/models/components/denied_action/python.mdx
   - content/types/models/components/denied_action/typescript.mdx
-  - content/types/models/components/directory/python.mdx
   - content/types/models/components/directory/typescript.mdx
-  - content/types/models/components/directory_expand_mask/python.mdx
   - content/types/models/components/directory_expand_mask/typescript.mdx
-  - content/types/models/components/directory_service_create_request/python.mdx
   - content/types/models/components/directory_service_create_request/typescript.mdx
-  - content/types/models/components/directory_service_create_response/python.mdx
   - content/types/models/components/directory_service_create_response/typescript.mdx
-  - content/types/models/components/directory_service_create_response_expanded/python.mdx
-  - content/types/models/components/directory_service_delete_request/python.mdx
   - content/types/models/components/directory_service_delete_request/typescript.mdx
-  - content/types/models/components/directory_service_delete_response/python.mdx
   - content/types/models/components/directory_service_delete_response/typescript.mdx
-  - content/types/models/components/directory_service_get_response/python.mdx
   - content/types/models/components/directory_service_get_response/typescript.mdx
-  - content/types/models/components/directory_service_get_response_expanded/python.mdx
-  - content/types/models/components/directory_service_list_response/python.mdx
   - content/types/models/components/directory_service_list_response/typescript.mdx
-  - content/types/models/components/directory_service_list_response_expanded/python.mdx
-  - content/types/models/components/directory_status/python.mdx
   - content/types/models/components/directory_status/typescript.mdx
-  - content/types/models/components/directory_view/python.mdx
   - content/types/models/components/directory_view/typescript.mdx
-  - content/types/models/components/duration_unset/python.mdx
   - content/types/models/components/duration_unset/typescript.mdx
-  - content/types/models/components/emergency_status/python.mdx
   - content/types/models/components/emergency_status/typescript.mdx
-  - content/types/models/components/entitlement_owner_approval/python.mdx
   - content/types/models/components/entitlement_owner_approval/typescript.mdx
-  - content/types/models/components/entitlement_owner_approval_input/python.mdx
   - content/types/models/components/entitlement_owner_approval_input/typescript.mdx
-  - content/types/models/components/errored_action/python.mdx
   - content/types/models/components/errored_action/typescript.mdx
-  - content/types/models/components/expanded/python.mdx
-  - content/types/models/components/expression_approval/python.mdx
   - content/types/models/components/expression_approval/typescript.mdx
-  - content/types/models/components/expression_approval_input/python.mdx
   - content/types/models/components/expression_approval_input/typescript.mdx
-  - content/types/models/components/external_ref/python.mdx
   - content/types/models/components/external_ref/typescript.mdx
-  - content/types/models/components/external_ref_source/python.mdx
   - content/types/models/components/external_ref_source/typescript.mdx
-  - content/types/models/components/facet_category/python.mdx
   - content/types/models/components/facet_category/typescript.mdx
-  - content/types/models/components/facet_range/python.mdx
   - content/types/models/components/facet_range/typescript.mdx
-  - content/types/models/components/facet_range_item/python.mdx
   - content/types/models/components/facet_range_item/typescript.mdx
-  - content/types/models/components/facet_value/python.mdx
   - content/types/models/components/facet_value/typescript.mdx
-  - content/types/models/components/facet_value_item/python.mdx
   - content/types/models/components/facet_value_item/typescript.mdx
-  - content/types/models/components/facets/python.mdx
   - content/types/models/components/facets/typescript.mdx
-  - content/types/models/components/get_app_entitlement_response/python.mdx
   - content/types/models/components/get_app_entitlement_response/typescript.mdx
-  - content/types/models/components/get_app_entitlement_response_expanded/python.mdx
-  - content/types/models/components/get_app_response/python.mdx
   - content/types/models/components/get_app_response/typescript.mdx
-  - content/types/models/components/get_app_usage_controls_response/python.mdx
   - content/types/models/components/get_app_usage_controls_response/typescript.mdx
-  - content/types/models/components/get_attribute_value_response/python.mdx
   - content/types/models/components/get_attribute_value_response/typescript.mdx
-  - content/types/models/components/get_policy_response/python.mdx
   - content/types/models/components/get_policy_response/typescript.mdx
-  - content/types/models/components/get_roles_response/python.mdx
   - content/types/models/components/get_roles_response/typescript.mdx
-  - content/types/models/components/granted_status/python.mdx
   - content/types/models/components/granted_status/typescript.mdx
-  - content/types/models/components/introspect_response/python.mdx
   - content/types/models/components/introspect_response/typescript.mdx
-  - content/types/models/components/list_app_entitlement_owners_response/python.mdx
   - content/types/models/components/list_app_entitlement_owners_response/typescript.mdx
-  - content/types/models/components/list_app_entitlement_users_response/python.mdx
   - content/types/models/components/list_app_entitlement_users_response/typescript.mdx
-  - content/types/models/components/list_app_entitlement_users_response_expanded/python.mdx
-  - content/types/models/components/list_app_entitlements_response/python.mdx
   - content/types/models/components/list_app_entitlements_response/typescript.mdx
-  - content/types/models/components/list_app_entitlements_response_expanded/python.mdx
-  - content/types/models/components/list_app_owners_response/python.mdx
   - content/types/models/components/list_app_owners_response/typescript.mdx
-  - content/types/models/components/list_app_resource_owners_response/python.mdx
   - content/types/models/components/list_app_resource_owners_response/typescript.mdx
-  - content/types/models/components/list_app_users_for_identity_with_grant_response/python.mdx
   - content/types/models/components/list_app_users_for_identity_with_grant_response/typescript.mdx
-  - content/types/models/components/list_apps_response/python.mdx
   - content/types/models/components/list_apps_response/typescript.mdx
-  - content/types/models/components/list_attribute_types_response/python.mdx
   - content/types/models/components/list_attribute_types_response/typescript.mdx
-  - content/types/models/components/list_attribute_values_response/python.mdx
   - content/types/models/components/list_attribute_values_response/typescript.mdx
-  - content/types/models/components/list_policy_response/python.mdx
   - content/types/models/components/list_policy_response/typescript.mdx
-  - content/types/models/components/list_roles_response/python.mdx
   - content/types/models/components/list_roles_response/typescript.mdx
-  - content/types/models/components/manager_approval/python.mdx
   - content/types/models/components/manager_approval/typescript.mdx
-  - content/types/models/components/manager_approval_input/python.mdx
   - content/types/models/components/manager_approval_input/typescript.mdx
-  - content/types/models/components/manual_provision/python.mdx
   - content/types/models/components/manual_provision/typescript.mdx
-  - content/types/models/components/o_auth2_authorized_as/python.mdx
   - content/types/models/components/o_auth2_authorized_as/typescript.mdx
-  - content/types/models/components/o_auth2_authorized_as_input/python.mdx
   - content/types/models/components/o_auth2_authorized_as_input/typescript.mdx
-  - content/types/models/components/outcome/python.mdx
   - content/types/models/components/outcome/typescript.mdx
-  - content/types/models/components/personal_client/python.mdx
   - content/types/models/components/personal_client/typescript.mdx
-  - content/types/models/components/personal_client_service_create_request/python.mdx
   - content/types/models/components/personal_client_service_create_request/typescript.mdx
-  - content/types/models/components/personal_client_service_create_response/python.mdx
   - content/types/models/components/personal_client_service_create_response/typescript.mdx
-  - content/types/models/components/policy/python.mdx
   - content/types/models/components/policy/typescript.mdx
-  - content/types/models/components/policy_input/python.mdx
   - content/types/models/components/policy_input/typescript.mdx
-  - content/types/models/components/policy_instance/python.mdx
   - content/types/models/components/policy_instance/typescript.mdx
-  - content/types/models/components/policy_policy_type/python.mdx
   - content/types/models/components/policy_policy_type/typescript.mdx
-  - content/types/models/components/policy_post_actions/python.mdx
   - content/types/models/components/policy_post_actions/typescript.mdx
-  - content/types/models/components/policy_ref/python.mdx
   - content/types/models/components/policy_ref/typescript.mdx
-  - content/types/models/components/policy_step/python.mdx
   - content/types/models/components/policy_step/typescript.mdx
-  - content/types/models/components/policy_step_input/python.mdx
   - content/types/models/components/policy_step_input/typescript.mdx
-  - content/types/models/components/policy_step_instance/python.mdx
   - content/types/models/components/policy_step_instance/typescript.mdx
-  - content/types/models/components/policy_step_instance_state/python.mdx
   - content/types/models/components/policy_step_instance_state/typescript.mdx
-  - content/types/models/components/policy_steps/python.mdx
   - content/types/models/components/policy_steps/typescript.mdx
-  - content/types/models/components/policy_steps_input/python.mdx
   - content/types/models/components/policy_steps_input/typescript.mdx
-  - content/types/models/components/policy_type/python.mdx
   - content/types/models/components/policy_type/typescript.mdx
-  - content/types/models/components/policy_types/python.mdx
   - content/types/models/components/policy_types/typescript.mdx
-  - content/types/models/components/processing/python.mdx
   - content/types/models/components/processing/typescript.mdx
-  - content/types/models/components/profile/python.mdx
-  - content/types/models/components/provision/python.mdx
   - content/types/models/components/provision/typescript.mdx
-  - content/types/models/components/provision_instance/python.mdx
   - content/types/models/components/provision_instance/typescript.mdx
-  - content/types/models/components/provision_instance_state/python.mdx
   - content/types/models/components/provision_instance_state/typescript.mdx
-  - content/types/models/components/provision_policy/python.mdx
   - content/types/models/components/provision_policy/typescript.mdx
-  - content/types/models/components/provision_target/python.mdx
   - content/types/models/components/provision_target/typescript.mdx
-  - content/types/models/components/reassigned_action/python.mdx
   - content/types/models/components/reassigned_action/typescript.mdx
-  - content/types/models/components/reassigned_by_error_action/python.mdx
   - content/types/models/components/reassigned_by_error_action/typescript.mdx
-  - content/types/models/components/reject/python.mdx
   - content/types/models/components/reject/typescript.mdx
-  - content/types/models/components/reject_instance/python.mdx
   - content/types/models/components/reject_instance/typescript.mdx
-  - content/types/models/components/remove_app_entitlement_owner_request/python.mdx
   - content/types/models/components/remove_app_entitlement_owner_request/typescript.mdx
-  - content/types/models/components/remove_app_entitlement_owner_response/python.mdx
   - content/types/models/components/remove_app_entitlement_owner_response/typescript.mdx
-  - content/types/models/components/remove_app_owner_request/python.mdx
   - content/types/models/components/remove_app_owner_request/typescript.mdx
-  - content/types/models/components/remove_app_owner_response/python.mdx
   - content/types/models/components/remove_app_owner_response/typescript.mdx
-  - content/types/models/components/request_catalog/python.mdx
   - content/types/models/components/request_catalog/typescript.mdx
-  - content/types/models/components/request_catalog_expand_mask/python.mdx
   - content/types/models/components/request_catalog_expand_mask/typescript.mdx
-  - content/types/models/components/request_catalog_input/python.mdx
   - content/types/models/components/request_catalog_input/typescript.mdx
-  - content/types/models/components/request_catalog_management_service_add_access_entitlements_request/python.mdx
   - content/types/models/components/request_catalog_management_service_add_access_entitlements_request/typescript.mdx
-  - content/types/models/components/request_catalog_management_service_add_access_entitlements_response/python.mdx
   - content/types/models/components/request_catalog_management_service_add_access_entitlements_response/typescript.mdx
-  - content/types/models/components/request_catalog_management_service_add_app_entitlements_request/python.mdx
   - content/types/models/components/request_catalog_management_service_add_app_entitlements_request/typescript.mdx
-  - content/types/models/components/request_catalog_management_service_add_app_entitlements_response/python.mdx
   - content/types/models/components/request_catalog_management_service_add_app_entitlements_response/typescript.mdx
-  - content/types/models/components/request_catalog_management_service_create_request/python.mdx
   - content/types/models/components/request_catalog_management_service_create_request/typescript.mdx
-  - content/types/models/components/request_catalog_management_service_delete_request/python.mdx
   - content/types/models/components/request_catalog_management_service_delete_request/typescript.mdx
-  - content/types/models/components/request_catalog_management_service_delete_response/python.mdx
   - content/types/models/components/request_catalog_management_service_delete_response/typescript.mdx
-  - content/types/models/components/request_catalog_management_service_get_response/python.mdx
   - content/types/models/components/request_catalog_management_service_get_response/typescript.mdx
-  - content/types/models/components/request_catalog_management_service_get_response_expanded/python.mdx
-  - content/types/models/components/request_catalog_management_service_list_entitlements_for_access_response/python.mdx
   - content/types/models/components/request_catalog_management_service_list_entitlements_for_access_response/typescript.mdx
-  - content/types/models/components/request_catalog_management_service_list_entitlements_for_access_response_expanded/python.mdx
-  - content/types/models/components/request_catalog_management_service_list_entitlements_per_catalog_response/python.mdx
   - content/types/models/components/request_catalog_management_service_list_entitlements_per_catalog_response/typescript.mdx
-  - content/types/models/components/request_catalog_management_service_list_entitlements_per_catalog_response_expanded/python.mdx
-  - content/types/models/components/request_catalog_management_service_list_response/python.mdx
   - content/types/models/components/request_catalog_management_service_list_response/typescript.mdx
-  - content/types/models/components/request_catalog_management_service_list_response_expanded/python.mdx
-  - content/types/models/components/request_catalog_management_service_remove_access_entitlements_request/python.mdx
   - content/types/models/components/request_catalog_management_service_remove_access_entitlements_request/typescript.mdx
-  - content/types/models/components/request_catalog_management_service_remove_access_entitlements_response/python.mdx
   - content/types/models/components/request_catalog_management_service_remove_access_entitlements_response/typescript.mdx
-  - content/types/models/components/request_catalog_management_service_remove_app_entitlements_request/python.mdx
   - content/types/models/components/request_catalog_management_service_remove_app_entitlements_request/typescript.mdx
-  - content/types/models/components/request_catalog_management_service_remove_app_entitlements_response/python.mdx
   - content/types/models/components/request_catalog_management_service_remove_app_entitlements_response/typescript.mdx
-  - content/types/models/components/request_catalog_management_service_update_request/python.mdx
   - content/types/models/components/request_catalog_management_service_update_request/typescript.mdx
-  - content/types/models/components/request_catalog_search_service_search_entitlements_request/python.mdx
   - content/types/models/components/request_catalog_search_service_search_entitlements_request/typescript.mdx
-  - content/types/models/components/request_catalog_search_service_search_entitlements_response/python.mdx
   - content/types/models/components/request_catalog_search_service_search_entitlements_response/typescript.mdx
-  - content/types/models/components/request_catalog_search_service_search_entitlements_response_expanded/python.mdx
-  - content/types/models/components/request_catalog_view/python.mdx
   - content/types/models/components/request_catalog_view/typescript.mdx
-  - content/types/models/components/restart_action/python.mdx
   - content/types/models/components/restart_action/typescript.mdx
-  - content/types/models/components/role/python.mdx
   - content/types/models/components/role/typescript.mdx
-  - content/types/models/components/role_input/python.mdx
   - content/types/models/components/role_input/typescript.mdx
-  - content/types/models/components/rule/python.mdx
   - content/types/models/components/rule/typescript.mdx
-  - content/types/models/components/search_app_resource_types_request/python.mdx
   - content/types/models/components/search_app_resource_types_request/typescript.mdx
-  - content/types/models/components/search_app_resource_types_response/python.mdx
   - content/types/models/components/search_app_resource_types_response/typescript.mdx
-  - content/types/models/components/search_apps_request/python.mdx
   - content/types/models/components/search_apps_request/typescript.mdx
-  - content/types/models/components/search_apps_response/python.mdx
   - content/types/models/components/search_apps_response/typescript.mdx
-  - content/types/models/components/search_attribute_values_request/python.mdx
   - content/types/models/components/search_attribute_values_request/typescript.mdx
-  - content/types/models/components/search_attribute_values_response/python.mdx
   - content/types/models/components/search_attribute_values_response/typescript.mdx
-  - content/types/models/components/search_policies_request/python.mdx
   - content/types/models/components/search_policies_request/typescript.mdx
-  - content/types/models/components/search_users_request/python.mdx
   - content/types/models/components/search_users_request/typescript.mdx
-  - content/types/models/components/search_users_response/python.mdx
   - content/types/models/components/search_users_response/typescript.mdx
-  - content/types/models/components/search_users_response_expanded/python.mdx
-  - content/types/models/components/security/python.mdx
   - content/types/models/components/security/typescript.mdx
-  - content/types/models/components/self_approval/python.mdx
   - content/types/models/components/self_approval/typescript.mdx
-  - content/types/models/components/self_approval_input/python.mdx
   - content/types/models/components/self_approval_input/typescript.mdx
-  - content/types/models/components/set_app_entitlement_owners_request/python.mdx
   - content/types/models/components/set_app_entitlement_owners_request/typescript.mdx
-  - content/types/models/components/set_app_entitlement_owners_response/python.mdx
   - content/types/models/components/set_app_entitlement_owners_response/typescript.mdx
-  - content/types/models/components/sort_by/python.mdx
   - content/types/models/components/sort_by/typescript.mdx
-  - content/types/models/components/state/python.mdx
   - content/types/models/components/state/typescript.mdx
-  - content/types/models/components/status/python.mdx
   - content/types/models/components/status/typescript.mdx
-  - content/types/models/components/task/python.mdx
   - content/types/models/components/task/typescript.mdx
-  - content/types/models/components/task_actions_service_approve_request/python.mdx
   - content/types/models/components/task_actions_service_approve_request/typescript.mdx
-  - content/types/models/components/task_actions_service_approve_response/python.mdx
   - content/types/models/components/task_actions_service_approve_response/typescript.mdx
-  - content/types/models/components/task_actions_service_approve_response_expanded/python.mdx
-  - content/types/models/components/task_actions_service_comment_request/python.mdx
   - content/types/models/components/task_actions_service_comment_request/typescript.mdx
-  - content/types/models/components/task_actions_service_comment_response/python.mdx
   - content/types/models/components/task_actions_service_comment_response/typescript.mdx
-  - content/types/models/components/task_actions_service_comment_response_expanded/python.mdx
-  - content/types/models/components/task_actions_service_deny_request/python.mdx
   - content/types/models/components/task_actions_service_deny_request/typescript.mdx
-  - content/types/models/components/task_actions_service_deny_response/python.mdx
   - content/types/models/components/task_actions_service_deny_response/typescript.mdx
-  - content/types/models/components/task_actions_service_deny_response_expanded/python.mdx
-  - content/types/models/components/task_actions_service_escalate_to_emergency_access_request/python.mdx
   - content/types/models/components/task_actions_service_escalate_to_emergency_access_request/typescript.mdx
-  - content/types/models/components/task_expand_mask/python.mdx
   - content/types/models/components/task_expand_mask/typescript.mdx
-  - content/types/models/components/task_grant_source/python.mdx
   - content/types/models/components/task_grant_source/typescript.mdx
-  - content/types/models/components/task_ref/python.mdx
   - content/types/models/components/task_ref/typescript.mdx
-  - content/types/models/components/task_revoke_source/python.mdx
   - content/types/models/components/task_revoke_source/typescript.mdx
-  - content/types/models/components/task_revoke_source_expired/python.mdx
   - content/types/models/components/task_revoke_source_expired/typescript.mdx
-  - content/types/models/components/task_revoke_source_non_usage/python.mdx
   - content/types/models/components/task_revoke_source_non_usage/typescript.mdx
-  - content/types/models/components/task_revoke_source_request/python.mdx
   - content/types/models/components/task_revoke_source_request/typescript.mdx
-  - content/types/models/components/task_revoke_source_review/python.mdx
   - content/types/models/components/task_revoke_source_review/typescript.mdx
-  - content/types/models/components/task_search_request/python.mdx
   - content/types/models/components/task_search_request/typescript.mdx
-  - content/types/models/components/task_search_response/python.mdx
   - content/types/models/components/task_search_response/typescript.mdx
-  - content/types/models/components/task_search_response_expanded/python.mdx
-  - content/types/models/components/task_service_action_response/python.mdx
   - content/types/models/components/task_service_action_response/typescript.mdx
-  - content/types/models/components/task_service_action_response_expanded/python.mdx
-  - content/types/models/components/task_service_create_grant_request/python.mdx
   - content/types/models/components/task_service_create_grant_request/typescript.mdx
-  - content/types/models/components/task_service_create_grant_response/python.mdx
   - content/types/models/components/task_service_create_grant_response/typescript.mdx
-  - content/types/models/components/task_service_create_grant_response_expanded/python.mdx
-  - content/types/models/components/task_service_create_revoke_request/python.mdx
   - content/types/models/components/task_service_create_revoke_request/typescript.mdx
-  - content/types/models/components/task_service_create_revoke_response/python.mdx
   - content/types/models/components/task_service_create_revoke_response/typescript.mdx
-  - content/types/models/components/task_service_create_revoke_response_expanded/python.mdx
-  - content/types/models/components/task_service_get_response/python.mdx
   - content/types/models/components/task_service_get_response/typescript.mdx
-  - content/types/models/components/task_service_get_response_expanded/python.mdx
-  - content/types/models/components/task_state/python.mdx
   - content/types/models/components/task_state/typescript.mdx
-  - content/types/models/components/task_states/python.mdx
   - content/types/models/components/task_states/typescript.mdx
-  - content/types/models/components/task_type/python.mdx
   - content/types/models/components/task_type/typescript.mdx
-  - content/types/models/components/task_type_certify/python.mdx
   - content/types/models/components/task_type_certify/typescript.mdx
-  - content/types/models/components/task_type_certify_input/python.mdx
   - content/types/models/components/task_type_certify_input/typescript.mdx
-  - content/types/models/components/task_type_grant/python.mdx
   - content/types/models/components/task_type_grant/typescript.mdx
-  - content/types/models/components/task_type_grant_input/python.mdx
   - content/types/models/components/task_type_grant_input/typescript.mdx
-  - content/types/models/components/task_type_grant_outcome/python.mdx
   - content/types/models/components/task_type_grant_outcome/typescript.mdx
-  - content/types/models/components/task_type_input/python.mdx
   - content/types/models/components/task_type_input/typescript.mdx
-  - content/types/models/components/task_type_revoke/python.mdx
   - content/types/models/components/task_type_revoke/typescript.mdx
-  - content/types/models/components/task_type_revoke_input/python.mdx
   - content/types/models/components/task_type_revoke_input/typescript.mdx
-  - content/types/models/components/task_type_revoke_outcome/python.mdx
   - content/types/models/components/task_type_revoke_outcome/typescript.mdx
-  - content/types/models/components/task_view/python.mdx
   - content/types/models/components/task_view/typescript.mdx
-  - content/types/models/components/three/python.mdx
-  - content/types/models/components/update_app_entitlement_request/python.mdx
   - content/types/models/components/update_app_entitlement_request/typescript.mdx
-  - content/types/models/components/update_app_entitlement_response/python.mdx
   - content/types/models/components/update_app_entitlement_response/typescript.mdx
-  - content/types/models/components/update_app_entitlement_response_expanded/python.mdx
-  - content/types/models/components/update_app_request/python.mdx
   - content/types/models/components/update_app_request/typescript.mdx
-  - content/types/models/components/update_app_response/python.mdx
   - content/types/models/components/update_app_response/typescript.mdx
-  - content/types/models/components/update_app_usage_controls_request/python.mdx
   - content/types/models/components/update_app_usage_controls_request/typescript.mdx
-  - content/types/models/components/update_app_usage_controls_response/python.mdx
   - content/types/models/components/update_app_usage_controls_response/typescript.mdx
-  - content/types/models/components/update_policy_request/python.mdx
   - content/types/models/components/update_policy_request/typescript.mdx
-  - content/types/models/components/update_policy_response/python.mdx
   - content/types/models/components/update_policy_response/typescript.mdx
-  - content/types/models/components/update_role_request/python.mdx
   - content/types/models/components/update_role_request/typescript.mdx
-  - content/types/models/components/update_roles_response/python.mdx
   - content/types/models/components/update_roles_response/typescript.mdx
-  - content/types/models/components/user/python.mdx
   - content/types/models/components/user/typescript.mdx
-  - content/types/models/components/user3/python.mdx
-  - content/types/models/components/user_approval/python.mdx
   - content/types/models/components/user_approval/typescript.mdx
-  - content/types/models/components/user_approval_input/python.mdx
   - content/types/models/components/user_approval_input/typescript.mdx
-  - content/types/models/components/user_attribute_mapping_source/python.mdx
   - content/types/models/components/user_attribute_mapping_source/typescript.mdx
-  - content/types/models/components/user_expand_mask/python.mdx
   - content/types/models/components/user_expand_mask/typescript.mdx
-  - content/types/models/components/user_profile/python.mdx
-  - content/types/models/components/user_ref/python.mdx
   - content/types/models/components/user_ref/typescript.mdx
-  - content/types/models/components/user_service_get_response/python.mdx
   - content/types/models/components/user_service_get_response/typescript.mdx
-  - content/types/models/components/user_service_get_response_expanded/python.mdx
-  - content/types/models/components/user_service_list_response/python.mdx
   - content/types/models/components/user_service_list_response/typescript.mdx
-  - content/types/models/components/user_service_list_response_expanded/python.mdx
-  - content/types/models/components/user_status/python.mdx
   - content/types/models/components/user_status/typescript.mdx
-  - content/types/models/components/user_statuses/python.mdx
   - content/types/models/components/user_statuses/typescript.mdx
-  - content/types/models/components/user_view/python.mdx
   - content/types/models/components/user_view/typescript.mdx
   - content/types/models/operations/c1_api_app_v1_app_entitlement_owners_add_request/python.mdx
   - content/types/models/operations/c1_api_app_v1_app_entitlement_owners_add_request/typescript.mdx
@@ -2324,6 +2009,321 @@ generatedFiles:
   - content/types/models/operations/c1_api_user_v1_user_service_list_request/typescript.mdx
   - content/types/models/operations/c1_api_user_v1_user_service_list_response/python.mdx
   - content/types/models/operations/c1_api_user_v1_user_service_list_response/typescript.mdx
+  - content/types/models/shared/accept/python.mdx
+  - content/types/models/shared/accept_instance/python.mdx
+  - content/types/models/shared/actions/python.mdx
+  - content/types/models/shared/add_app_entitlement_owner_request/python.mdx
+  - content/types/models/shared/add_app_entitlement_owner_response/python.mdx
+  - content/types/models/shared/add_app_owner_request/python.mdx
+  - content/types/models/shared/add_app_owner_response/python.mdx
+  - content/types/models/shared/annotations/python.mdx
+  - content/types/models/shared/app/python.mdx
+  - content/types/models/shared/app_actions_service_generate_report_request/python.mdx
+  - content/types/models/shared/app_actions_service_generate_report_response/python.mdx
+  - content/types/models/shared/app_entitlement/python.mdx
+  - content/types/models/shared/app_entitlement_expand_mask/python.mdx
+  - content/types/models/shared/app_entitlement_input/python.mdx
+  - content/types/models/shared/app_entitlement_ref/python.mdx
+  - content/types/models/shared/app_entitlement_reference/python.mdx
+  - content/types/models/shared/app_entitlement_search_service_search_request/python.mdx
+  - content/types/models/shared/app_entitlement_search_service_search_response/python.mdx
+  - content/types/models/shared/app_entitlement_user_binding/python.mdx
+  - content/types/models/shared/app_entitlement_user_view/python.mdx
+  - content/types/models/shared/app_entitlement_view/python.mdx
+  - content/types/models/shared/app_entitlement_with_user_bindings/python.mdx
+  - content/types/models/shared/app_group_approval/python.mdx
+  - content/types/models/shared/app_group_approval_input/python.mdx
+  - content/types/models/shared/app_input/python.mdx
+  - content/types/models/shared/app_owner_approval/python.mdx
+  - content/types/models/shared/app_owner_approval_input/python.mdx
+  - content/types/models/shared/app_population_report/python.mdx
+  - content/types/models/shared/app_report_service_list_response/python.mdx
+  - content/types/models/shared/app_resource/python.mdx
+  - content/types/models/shared/app_resource_service_get_response/python.mdx
+  - content/types/models/shared/app_resource_service_get_response_expanded/python.mdx
+  - content/types/models/shared/app_resource_service_list_response/python.mdx
+  - content/types/models/shared/app_resource_service_list_response_expanded/python.mdx
+  - content/types/models/shared/app_resource_type/python.mdx
+  - content/types/models/shared/app_resource_type_service_get_response/python.mdx
+  - content/types/models/shared/app_resource_type_service_get_response_expanded/python.mdx
+  - content/types/models/shared/app_resource_type_service_list_response/python.mdx
+  - content/types/models/shared/app_resource_type_service_list_response_expanded/python.mdx
+  - content/types/models/shared/app_resource_type_view/python.mdx
+  - content/types/models/shared/app_resource_view/python.mdx
+  - content/types/models/shared/app_usage_controls/python.mdx
+  - content/types/models/shared/app_user/python.mdx
+  - content/types/models/shared/app_user_expand_mask/python.mdx
+  - content/types/models/shared/app_user_input/python.mdx
+  - content/types/models/shared/app_user_service_update_request/python.mdx
+  - content/types/models/shared/app_user_service_update_response/python.mdx
+  - content/types/models/shared/app_user_service_update_response_expanded/python.mdx
+  - content/types/models/shared/app_user_status/python.mdx
+  - content/types/models/shared/app_user_status_input/python.mdx
+  - content/types/models/shared/app_user_type/python.mdx
+  - content/types/models/shared/app_user_view/python.mdx
+  - content/types/models/shared/approval/python.mdx
+  - content/types/models/shared/approval_input/python.mdx
+  - content/types/models/shared/approval_instance/python.mdx
+  - content/types/models/shared/approval_instance_state/python.mdx
+  - content/types/models/shared/approved_action/python.mdx
+  - content/types/models/shared/attribute_type/python.mdx
+  - content/types/models/shared/attribute_value/python.mdx
+  - content/types/models/shared/cancelled_action/python.mdx
+  - content/types/models/shared/completed_action/python.mdx
+  - content/types/models/shared/config/python.mdx
+  - content/types/models/shared/connector/python.mdx
+  - content/types/models/shared/connector_credential/python.mdx
+  - content/types/models/shared/connector_expand_mask/python.mdx
+  - content/types/models/shared/connector_input/python.mdx
+  - content/types/models/shared/connector_provision/python.mdx
+  - content/types/models/shared/connector_service_create_delegated_request/python.mdx
+  - content/types/models/shared/connector_service_create_request/python.mdx
+  - content/types/models/shared/connector_service_create_request_config/python.mdx
+  - content/types/models/shared/connector_service_create_response/python.mdx
+  - content/types/models/shared/connector_service_create_response_expanded/python.mdx
+  - content/types/models/shared/connector_service_delete_request/python.mdx
+  - content/types/models/shared/connector_service_delete_response/python.mdx
+  - content/types/models/shared/connector_service_get_credentials_response/python.mdx
+  - content/types/models/shared/connector_service_get_response/python.mdx
+  - content/types/models/shared/connector_service_get_response_expanded/python.mdx
+  - content/types/models/shared/connector_service_list_response/python.mdx
+  - content/types/models/shared/connector_service_list_response_expanded/python.mdx
+  - content/types/models/shared/connector_service_revoke_credential_request/python.mdx
+  - content/types/models/shared/connector_service_revoke_credential_response/python.mdx
+  - content/types/models/shared/connector_service_rotate_credential_request/python.mdx
+  - content/types/models/shared/connector_service_rotate_credential_response/python.mdx
+  - content/types/models/shared/connector_service_update_delegated_request/python.mdx
+  - content/types/models/shared/connector_service_update_request/python.mdx
+  - content/types/models/shared/connector_service_update_response/python.mdx
+  - content/types/models/shared/connector_service_update_response_expanded/python.mdx
+  - content/types/models/shared/connector_status/python.mdx
+  - content/types/models/shared/connector_status_status/python.mdx
+  - content/types/models/shared/connector_view/python.mdx
+  - content/types/models/shared/create_app_request/python.mdx
+  - content/types/models/shared/create_app_response/python.mdx
+  - content/types/models/shared/create_attribute_value_request/python.mdx
+  - content/types/models/shared/create_attribute_value_response/python.mdx
+  - content/types/models/shared/create_policy_request/python.mdx
+  - content/types/models/shared/create_policy_response/python.mdx
+  - content/types/models/shared/current_step/python.mdx
+  - content/types/models/shared/delegated_provision/python.mdx
+  - content/types/models/shared/delete_app_request/python.mdx
+  - content/types/models/shared/delete_app_response/python.mdx
+  - content/types/models/shared/delete_attribute_value_request/python.mdx
+  - content/types/models/shared/delete_attribute_value_response/python.mdx
+  - content/types/models/shared/delete_policy_request/python.mdx
+  - content/types/models/shared/delete_policy_response/python.mdx
+  - content/types/models/shared/denied_action/python.mdx
+  - content/types/models/shared/directory/python.mdx
+  - content/types/models/shared/directory_expand_mask/python.mdx
+  - content/types/models/shared/directory_service_create_request/python.mdx
+  - content/types/models/shared/directory_service_create_response/python.mdx
+  - content/types/models/shared/directory_service_create_response_expanded/python.mdx
+  - content/types/models/shared/directory_service_delete_request/python.mdx
+  - content/types/models/shared/directory_service_delete_response/python.mdx
+  - content/types/models/shared/directory_service_get_response/python.mdx
+  - content/types/models/shared/directory_service_get_response_expanded/python.mdx
+  - content/types/models/shared/directory_service_list_response/python.mdx
+  - content/types/models/shared/directory_service_list_response_expanded/python.mdx
+  - content/types/models/shared/directory_status/python.mdx
+  - content/types/models/shared/directory_view/python.mdx
+  - content/types/models/shared/duration_unset/python.mdx
+  - content/types/models/shared/emergency_status/python.mdx
+  - content/types/models/shared/entitlement_owner_approval/python.mdx
+  - content/types/models/shared/entitlement_owner_approval_input/python.mdx
+  - content/types/models/shared/errored_action/python.mdx
+  - content/types/models/shared/expanded/python.mdx
+  - content/types/models/shared/expression_approval/python.mdx
+  - content/types/models/shared/expression_approval_input/python.mdx
+  - content/types/models/shared/external_ref/python.mdx
+  - content/types/models/shared/external_ref_source/python.mdx
+  - content/types/models/shared/facet_category/python.mdx
+  - content/types/models/shared/facet_range/python.mdx
+  - content/types/models/shared/facet_range_item/python.mdx
+  - content/types/models/shared/facet_value/python.mdx
+  - content/types/models/shared/facet_value_item/python.mdx
+  - content/types/models/shared/facets/python.mdx
+  - content/types/models/shared/get_app_entitlement_response/python.mdx
+  - content/types/models/shared/get_app_entitlement_response_expanded/python.mdx
+  - content/types/models/shared/get_app_response/python.mdx
+  - content/types/models/shared/get_app_usage_controls_response/python.mdx
+  - content/types/models/shared/get_attribute_value_response/python.mdx
+  - content/types/models/shared/get_policy_response/python.mdx
+  - content/types/models/shared/get_roles_response/python.mdx
+  - content/types/models/shared/granted_status/python.mdx
+  - content/types/models/shared/introspect_response/python.mdx
+  - content/types/models/shared/list_app_entitlement_owners_response/python.mdx
+  - content/types/models/shared/list_app_entitlement_users_response/python.mdx
+  - content/types/models/shared/list_app_entitlement_users_response_expanded/python.mdx
+  - content/types/models/shared/list_app_entitlements_response/python.mdx
+  - content/types/models/shared/list_app_entitlements_response_expanded/python.mdx
+  - content/types/models/shared/list_app_owners_response/python.mdx
+  - content/types/models/shared/list_app_resource_owners_response/python.mdx
+  - content/types/models/shared/list_app_users_for_identity_with_grant_response/python.mdx
+  - content/types/models/shared/list_apps_response/python.mdx
+  - content/types/models/shared/list_attribute_types_response/python.mdx
+  - content/types/models/shared/list_attribute_values_response/python.mdx
+  - content/types/models/shared/list_policy_response/python.mdx
+  - content/types/models/shared/list_roles_response/python.mdx
+  - content/types/models/shared/manager_approval/python.mdx
+  - content/types/models/shared/manager_approval_input/python.mdx
+  - content/types/models/shared/manual_provision/python.mdx
+  - content/types/models/shared/o_auth2_authorized_as/python.mdx
+  - content/types/models/shared/o_auth2_authorized_as_input/python.mdx
+  - content/types/models/shared/outcome/python.mdx
+  - content/types/models/shared/personal_client/python.mdx
+  - content/types/models/shared/personal_client_service_create_request/python.mdx
+  - content/types/models/shared/personal_client_service_create_response/python.mdx
+  - content/types/models/shared/policy/python.mdx
+  - content/types/models/shared/policy_input/python.mdx
+  - content/types/models/shared/policy_instance/python.mdx
+  - content/types/models/shared/policy_policy_type/python.mdx
+  - content/types/models/shared/policy_post_actions/python.mdx
+  - content/types/models/shared/policy_ref/python.mdx
+  - content/types/models/shared/policy_step/python.mdx
+  - content/types/models/shared/policy_step_input/python.mdx
+  - content/types/models/shared/policy_step_instance/python.mdx
+  - content/types/models/shared/policy_step_instance_state/python.mdx
+  - content/types/models/shared/policy_steps/python.mdx
+  - content/types/models/shared/policy_steps_input/python.mdx
+  - content/types/models/shared/policy_type/python.mdx
+  - content/types/models/shared/policy_types/python.mdx
+  - content/types/models/shared/processing/python.mdx
+  - content/types/models/shared/profile/python.mdx
+  - content/types/models/shared/provision/python.mdx
+  - content/types/models/shared/provision_instance/python.mdx
+  - content/types/models/shared/provision_instance_state/python.mdx
+  - content/types/models/shared/provision_policy/python.mdx
+  - content/types/models/shared/provision_target/python.mdx
+  - content/types/models/shared/reassigned_action/python.mdx
+  - content/types/models/shared/reassigned_by_error_action/python.mdx
+  - content/types/models/shared/reject/python.mdx
+  - content/types/models/shared/reject_instance/python.mdx
+  - content/types/models/shared/remove_app_entitlement_owner_request/python.mdx
+  - content/types/models/shared/remove_app_entitlement_owner_response/python.mdx
+  - content/types/models/shared/remove_app_owner_request/python.mdx
+  - content/types/models/shared/remove_app_owner_response/python.mdx
+  - content/types/models/shared/request_catalog/python.mdx
+  - content/types/models/shared/request_catalog_expand_mask/python.mdx
+  - content/types/models/shared/request_catalog_input/python.mdx
+  - content/types/models/shared/request_catalog_management_service_add_access_entitlements_request/python.mdx
+  - content/types/models/shared/request_catalog_management_service_add_access_entitlements_response/python.mdx
+  - content/types/models/shared/request_catalog_management_service_add_app_entitlements_request/python.mdx
+  - content/types/models/shared/request_catalog_management_service_add_app_entitlements_response/python.mdx
+  - content/types/models/shared/request_catalog_management_service_create_request/python.mdx
+  - content/types/models/shared/request_catalog_management_service_delete_request/python.mdx
+  - content/types/models/shared/request_catalog_management_service_delete_response/python.mdx
+  - content/types/models/shared/request_catalog_management_service_get_response/python.mdx
+  - content/types/models/shared/request_catalog_management_service_get_response_expanded/python.mdx
+  - content/types/models/shared/request_catalog_management_service_list_entitlements_for_access_response/python.mdx
+  - content/types/models/shared/request_catalog_management_service_list_entitlements_for_access_response_expanded/python.mdx
+  - content/types/models/shared/request_catalog_management_service_list_entitlements_per_catalog_response/python.mdx
+  - content/types/models/shared/request_catalog_management_service_list_entitlements_per_catalog_response_expanded/python.mdx
+  - content/types/models/shared/request_catalog_management_service_list_response/python.mdx
+  - content/types/models/shared/request_catalog_management_service_list_response_expanded/python.mdx
+  - content/types/models/shared/request_catalog_management_service_remove_access_entitlements_request/python.mdx
+  - content/types/models/shared/request_catalog_management_service_remove_access_entitlements_response/python.mdx
+  - content/types/models/shared/request_catalog_management_service_remove_app_entitlements_request/python.mdx
+  - content/types/models/shared/request_catalog_management_service_remove_app_entitlements_response/python.mdx
+  - content/types/models/shared/request_catalog_management_service_update_request/python.mdx
+  - content/types/models/shared/request_catalog_search_service_search_entitlements_request/python.mdx
+  - content/types/models/shared/request_catalog_search_service_search_entitlements_response/python.mdx
+  - content/types/models/shared/request_catalog_search_service_search_entitlements_response_expanded/python.mdx
+  - content/types/models/shared/request_catalog_view/python.mdx
+  - content/types/models/shared/restart_action/python.mdx
+  - content/types/models/shared/role/python.mdx
+  - content/types/models/shared/role_input/python.mdx
+  - content/types/models/shared/rule/python.mdx
+  - content/types/models/shared/search_app_resource_types_request/python.mdx
+  - content/types/models/shared/search_app_resource_types_response/python.mdx
+  - content/types/models/shared/search_apps_request/python.mdx
+  - content/types/models/shared/search_apps_response/python.mdx
+  - content/types/models/shared/search_attribute_values_request/python.mdx
+  - content/types/models/shared/search_attribute_values_response/python.mdx
+  - content/types/models/shared/search_policies_request/python.mdx
+  - content/types/models/shared/search_users_request/python.mdx
+  - content/types/models/shared/search_users_response/python.mdx
+  - content/types/models/shared/search_users_response_expanded/python.mdx
+  - content/types/models/shared/security/python.mdx
+  - content/types/models/shared/self_approval/python.mdx
+  - content/types/models/shared/self_approval_input/python.mdx
+  - content/types/models/shared/set_app_entitlement_owners_request/python.mdx
+  - content/types/models/shared/set_app_entitlement_owners_response/python.mdx
+  - content/types/models/shared/sort_by/python.mdx
+  - content/types/models/shared/state/python.mdx
+  - content/types/models/shared/status/python.mdx
+  - content/types/models/shared/task/python.mdx
+  - content/types/models/shared/task_actions_service_approve_request/python.mdx
+  - content/types/models/shared/task_actions_service_approve_response/python.mdx
+  - content/types/models/shared/task_actions_service_approve_response_expanded/python.mdx
+  - content/types/models/shared/task_actions_service_comment_request/python.mdx
+  - content/types/models/shared/task_actions_service_comment_response/python.mdx
+  - content/types/models/shared/task_actions_service_comment_response_expanded/python.mdx
+  - content/types/models/shared/task_actions_service_deny_request/python.mdx
+  - content/types/models/shared/task_actions_service_deny_response/python.mdx
+  - content/types/models/shared/task_actions_service_deny_response_expanded/python.mdx
+  - content/types/models/shared/task_actions_service_escalate_to_emergency_access_request/python.mdx
+  - content/types/models/shared/task_expand_mask/python.mdx
+  - content/types/models/shared/task_grant_source/python.mdx
+  - content/types/models/shared/task_ref/python.mdx
+  - content/types/models/shared/task_revoke_source/python.mdx
+  - content/types/models/shared/task_revoke_source_expired/python.mdx
+  - content/types/models/shared/task_revoke_source_non_usage/python.mdx
+  - content/types/models/shared/task_revoke_source_request/python.mdx
+  - content/types/models/shared/task_revoke_source_review/python.mdx
+  - content/types/models/shared/task_search_request/python.mdx
+  - content/types/models/shared/task_search_response/python.mdx
+  - content/types/models/shared/task_search_response_expanded/python.mdx
+  - content/types/models/shared/task_service_action_response/python.mdx
+  - content/types/models/shared/task_service_action_response_expanded/python.mdx
+  - content/types/models/shared/task_service_create_grant_request/python.mdx
+  - content/types/models/shared/task_service_create_grant_response/python.mdx
+  - content/types/models/shared/task_service_create_grant_response_expanded/python.mdx
+  - content/types/models/shared/task_service_create_revoke_request/python.mdx
+  - content/types/models/shared/task_service_create_revoke_response/python.mdx
+  - content/types/models/shared/task_service_create_revoke_response_expanded/python.mdx
+  - content/types/models/shared/task_service_get_response/python.mdx
+  - content/types/models/shared/task_service_get_response_expanded/python.mdx
+  - content/types/models/shared/task_state/python.mdx
+  - content/types/models/shared/task_states/python.mdx
+  - content/types/models/shared/task_type/python.mdx
+  - content/types/models/shared/task_type_certify/python.mdx
+  - content/types/models/shared/task_type_certify_input/python.mdx
+  - content/types/models/shared/task_type_grant/python.mdx
+  - content/types/models/shared/task_type_grant_input/python.mdx
+  - content/types/models/shared/task_type_grant_outcome/python.mdx
+  - content/types/models/shared/task_type_input/python.mdx
+  - content/types/models/shared/task_type_revoke/python.mdx
+  - content/types/models/shared/task_type_revoke_input/python.mdx
+  - content/types/models/shared/task_type_revoke_outcome/python.mdx
+  - content/types/models/shared/task_view/python.mdx
+  - content/types/models/shared/three/python.mdx
+  - content/types/models/shared/update_app_entitlement_request/python.mdx
+  - content/types/models/shared/update_app_entitlement_response/python.mdx
+  - content/types/models/shared/update_app_entitlement_response_expanded/python.mdx
+  - content/types/models/shared/update_app_request/python.mdx
+  - content/types/models/shared/update_app_response/python.mdx
+  - content/types/models/shared/update_app_usage_controls_request/python.mdx
+  - content/types/models/shared/update_app_usage_controls_response/python.mdx
+  - content/types/models/shared/update_policy_request/python.mdx
+  - content/types/models/shared/update_policy_response/python.mdx
+  - content/types/models/shared/update_role_request/python.mdx
+  - content/types/models/shared/update_roles_response/python.mdx
+  - content/types/models/shared/user/python.mdx
+  - content/types/models/shared/user3/python.mdx
+  - content/types/models/shared/user_approval/python.mdx
+  - content/types/models/shared/user_approval_input/python.mdx
+  - content/types/models/shared/user_attribute_mapping_source/python.mdx
+  - content/types/models/shared/user_expand_mask/python.mdx
+  - content/types/models/shared/user_profile/python.mdx
+  - content/types/models/shared/user_ref/python.mdx
+  - content/types/models/shared/user_service_get_response/python.mdx
+  - content/types/models/shared/user_service_get_response_expanded/python.mdx
+  - content/types/models/shared/user_service_list_response/python.mdx
+  - content/types/models/shared/user_service_list_response_expanded/python.mdx
+  - content/types/models/shared/user_status/python.mdx
+  - content/types/models/shared/user_statuses/python.mdx
+  - content/types/models/shared/user_view/python.mdx
   - content/types/pkg/models/operations/c1_api_app_v1_app_entitlement_owners_add_request/go.mdx
   - content/types/pkg/models/operations/c1_api_app_v1_app_entitlement_owners_add_response/go.mdx
   - content/types/pkg/models/operations/c1_api_app_v1_app_entitlement_owners_list_request/go.mdx

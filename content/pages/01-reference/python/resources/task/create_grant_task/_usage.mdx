@@ -2,22 +2,22 @@
 <CH.Code>
 ```python CreateGrantTask.py
 import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import components
+from conductorone_sdk_typescript.models import shared
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=components.Security(
+    security=shared.Security(
         bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
         oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
     ),
 )
 
-req = components.TaskServiceCreateGrantRequest(
-    task_expand_mask=components.TaskExpandMask(
+req = shared.TaskServiceCreateGrantRequest(
+    task_expand_mask=shared.TaskExpandMask(
         paths=[
             'string',
         ],
     ),
-    task_grant_source=components.TaskGrantSource(),
+    task_grant_source=shared.TaskGrantSource(),
     app_entitlement_id='string',
     app_id='string',
 )

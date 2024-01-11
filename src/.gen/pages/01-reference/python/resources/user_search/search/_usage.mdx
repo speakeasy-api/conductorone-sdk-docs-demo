@@ -2,17 +2,17 @@
 <CH.Code>
 ```python Search.py
 import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import components
+from conductorone_sdk_typescript.models import shared
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
-    security=components.Security(
+    security=shared.Security(
         bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
         oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
     ),
 )
 
-req = components.SearchUsersRequest(
-    user_expand_mask=components.UserExpandMask(
+req = shared.SearchUsersRequest(
+    user_expand_mask=shared.UserExpandMask(
         paths=[
             'string',
         ],
@@ -24,13 +24,13 @@ req = components.SearchUsersRequest(
         'string',
     ],
     refs=[
-        components.UserRef(),
+        shared.UserRef(),
     ],
     role_ids=[
         'string',
     ],
     user_statuses=[
-        components.UserStatuses.DISABLED,
+        shared.UserStatuses.DISABLED,
     ],
 )
 
