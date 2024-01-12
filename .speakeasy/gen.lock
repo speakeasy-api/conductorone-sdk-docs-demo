@@ -4,7 +4,7 @@ management:
   docChecksum: 62ce67261ac2cb50833d44d274d1cd96
   docVersion: 0.1.0-alpha
   speakeasyVersion: internal
-  generationVersion: 2.230.3
+  generationVersion: 2.231.0
   releaseVersion: 0.10.0
   configChecksum: 703d9db784185df9f0622d1689c74bf3
   repoSubDirectory: .
