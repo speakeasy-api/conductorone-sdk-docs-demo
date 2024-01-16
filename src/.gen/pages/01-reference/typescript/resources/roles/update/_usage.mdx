@@ -11,7 +11,7 @@ async function run() {
     },
   });
 
-  const res = await sdk.roles.update({
+  const result = await sdk.roles.update({
     updateRoleRequest: {
       role: {
         permissions: [
@@ -25,11 +25,8 @@ async function run() {
     roleId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();

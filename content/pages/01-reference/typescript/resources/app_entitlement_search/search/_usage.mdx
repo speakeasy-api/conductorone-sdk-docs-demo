@@ -11,7 +11,7 @@ async function run() {
     },
   });
 
-  const res = await sdk.appEntitlementSearch.search({
+  const result = await sdk.appEntitlementSearch.search({
     appEntitlementExpandMask: {
       paths: [
         "string",
@@ -40,11 +40,8 @@ async function run() {
     ],
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -85,7 +82,9 @@ run();
       ]
     },
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ],
     "list": [
       {

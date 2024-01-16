@@ -11,7 +11,7 @@ async function run() {
     },
   });
 
-  const res = await sdk.requestCatalogManagement.update({
+  const result = await sdk.requestCatalogManagement.update({
     requestCatalogManagementServiceUpdateRequest: {
       requestCatalog: {
         accessEntitlements: [
@@ -44,11 +44,8 @@ async function run() {
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -118,7 +115,9 @@ run();
       "createdByUserPath": "string"
     },
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ]
   }
 ```

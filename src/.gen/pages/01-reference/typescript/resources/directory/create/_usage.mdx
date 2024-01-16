@@ -11,7 +11,7 @@ async function run() {
     },
   });
 
-  const res = await sdk.directory.create({
+  const result = await sdk.directory.create({
     directoryExpandMask: {
       paths: [
         "string",
@@ -19,11 +19,8 @@ async function run() {
     },
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -42,7 +39,9 @@ run();
       "appPath": "string"
     },
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ]
   }
 ```

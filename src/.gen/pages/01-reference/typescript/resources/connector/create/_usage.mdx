@@ -11,7 +11,7 @@ async function run() {
     },
   });
 
-  const res = await sdk.connector.create({
+  const result = await sdk.connector.create({
     connectorServiceCreateRequest: {
       connectorExpandMask: {
         paths: [
@@ -19,7 +19,9 @@ async function run() {
         ],
       },
       config: {
-        "key": "string",
+        additionalProperties: {
+          "key": "string",
+        },
       },
       userIds: [
         "string",
@@ -28,11 +30,8 @@ async function run() {
     appId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -55,7 +54,9 @@ run();
         },
         "appId": "string",
         "catalogId": "string",
-        "config": {},
+        "config": {
+          "@type": "string"
+        },
         "createdAt": "2024-06-09T03:17:10.252Z",
         "deletedAt": "2023-08-03T16:03:07.258Z",
         "description": "string",
@@ -64,14 +65,16 @@ run();
         "id": "string",
         "updatedAt": "2023-06-11T01:19:10.260Z",
         "userIds": [
-            "string"
-          ]
+          "string"
+        ]
       },
       "appPath": "string",
       "usersPath": "string"
     },
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ]
   }
 ```

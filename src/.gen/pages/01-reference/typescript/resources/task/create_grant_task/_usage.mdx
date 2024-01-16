@@ -11,7 +11,7 @@ async function run() {
     },
   });
 
-  const res = await sdk.task.createGrantTask({
+  const result = await sdk.task.createGrantTask({
     taskExpandMask: {
       paths: [
         "string",
@@ -22,11 +22,8 @@ async function run() {
     appId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -513,7 +510,9 @@ run();
         "actions": [],
         "analysisId": "string",
         "annotations": [
-            {}
+            {
+              "@type": "string"
+            }
           ],
         "commentCount": 3599.78,
         "createdAt": "2024-10-31T18:13:30.324Z",
@@ -547,7 +546,9 @@ run();
       "userPath": "string"
     },
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ]
   }
 ```

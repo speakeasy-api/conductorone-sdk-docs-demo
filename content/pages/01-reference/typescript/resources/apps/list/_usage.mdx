@@ -11,13 +11,10 @@ async function run() {
     },
   });
 
-  const res = await sdk.apps.list({});
+  const result = await sdk.apps.list({});
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();

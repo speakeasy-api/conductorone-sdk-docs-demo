@@ -11,16 +11,13 @@ async function run() {
     },
   });
 
-  const res = await sdk.appEntitlements.get({
+  const result = await sdk.appEntitlements.get({
     appId: "string",
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -74,7 +71,9 @@ run();
       "appResourceTypePath": "string"
     },
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ]
   }
 ```

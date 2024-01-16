@@ -11,15 +11,12 @@ async function run() {
     },
   });
 
-  const res = await sdk.roles.get({
+  const result = await sdk.roles.get({
     roleId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();

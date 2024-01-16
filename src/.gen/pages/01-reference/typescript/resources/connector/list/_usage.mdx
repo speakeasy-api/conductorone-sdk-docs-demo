@@ -11,15 +11,12 @@ async function run() {
     },
   });
 
-  const res = await sdk.connector.list({
+  const result = await sdk.connector.list({
     appId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -29,7 +26,9 @@ run();
 ```json Example Response
   {
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ],
     "list": [
       {
@@ -46,7 +45,9 @@ run();
           },
           "appId": "string",
           "catalogId": "string",
-          "config": {},
+          "config": {
+            "@type": "string"
+          },
           "createdAt": "2023-12-03T08:28:56.752Z",
           "deletedAt": "2023-09-30T21:26:54.920Z",
           "description": "string",
@@ -55,8 +56,8 @@ run();
           "id": "string",
           "updatedAt": "2022-06-07T02:45:53.358Z",
           "userIds": [
-              "string"
-            ]
+            "string"
+          ]
         },
         "appPath": "string",
         "usersPath": "string"

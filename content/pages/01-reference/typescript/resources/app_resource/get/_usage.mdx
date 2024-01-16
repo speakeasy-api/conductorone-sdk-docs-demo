@@ -11,17 +11,14 @@ async function run() {
     },
   });
 
-  const res = await sdk.appResource.get({
+  const result = await sdk.appResource.get({
     appId: "string",
     appResourceTypeId: "string",
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -47,7 +44,9 @@ run();
       "resourceTypePath": "string"
     },
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ]
   }
 ```

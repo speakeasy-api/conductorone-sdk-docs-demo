@@ -11,7 +11,7 @@ async function run() {
     },
   });
 
-  const res = await sdk.taskActions.escalateToEmergencyAccess({
+  const result = await sdk.taskActions.escalateToEmergencyAccess({
     taskActionsServiceEscalateToEmergencyAccessRequest: {
       taskExpandMask: {
         paths: [
@@ -22,11 +22,8 @@ async function run() {
     taskId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -513,7 +510,9 @@ run();
         "actions": [],
         "analysisId": "string",
         "annotations": [
-            {}
+            {
+              "@type": "string"
+            }
           ],
         "commentCount": 6720.48,
         "createdAt": "2024-06-07T05:23:43.424Z",
@@ -547,7 +546,9 @@ run();
       "userPath": "string"
     },
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ],
     "ticketActionId": "string"
   }

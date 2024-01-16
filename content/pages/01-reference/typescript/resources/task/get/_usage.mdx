@@ -11,15 +11,12 @@ async function run() {
     },
   });
 
-  const res = await sdk.task.get({
+  const result = await sdk.task.get({
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -506,7 +503,9 @@ run();
         "actions": [],
         "analysisId": "string",
         "annotations": [
-            {}
+            {
+              "@type": "string"
+            }
           ],
         "commentCount": 3200.17,
         "createdAt": "2024-09-18T05:59:40.567Z",
@@ -540,7 +539,9 @@ run();
       "userPath": "string"
     },
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ]
   }
 ```

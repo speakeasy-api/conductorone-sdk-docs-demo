@@ -11,16 +11,13 @@ async function run() {
     },
   });
 
-  const res = await sdk.connector.get({
+  const result = await sdk.connector.get({
     appId: "string",
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -43,7 +40,9 @@ run();
         },
         "appId": "string",
         "catalogId": "string",
-        "config": {},
+        "config": {
+          "@type": "string"
+        },
         "createdAt": "2022-06-03T19:47:12.657Z",
         "deletedAt": "2024-08-11T12:47:58.088Z",
         "description": "string",
@@ -52,14 +51,16 @@ run();
         "id": "string",
         "updatedAt": "2024-08-11T14:46:30.188Z",
         "userIds": [
-            "string"
-          ]
+          "string"
+        ]
       },
       "appPath": "string",
       "usersPath": "string"
     },
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ]
   }
 ```

@@ -30,8 +30,10 @@ The actions that can be performed on the task by the current user.
 The ID of the analysis object associated with this task created by an analysis workflow if the analysis feature is enabled for your tenant.
 
 ---
-##### `annotations?`: *{`Record<string, *any*>[]`}*
+##### `annotations?`: *{`components.Annotations[]`}*
 An array of `google.protobuf.Any` annotations with various base64\-encoded data.
+<Collapsible content={() => import('/content/types/models/components/annotations/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
 ##### `commentCount?`: *{`number`}*

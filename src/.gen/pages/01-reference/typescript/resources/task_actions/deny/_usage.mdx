@@ -11,7 +11,7 @@ async function run() {
     },
   });
 
-  const res = await sdk.taskActions.deny({
+  const result = await sdk.taskActions.deny({
     taskActionsServiceDenyRequest: {
       taskExpandMask: {
         paths: [
@@ -22,11 +22,8 @@ async function run() {
     taskId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -513,7 +510,9 @@ run();
         "actions": [],
         "analysisId": "string",
         "annotations": [
-            {}
+            {
+              "@type": "string"
+            }
           ],
         "commentCount": 2694.79,
         "createdAt": "2023-02-08T23:14:57.837Z",
@@ -547,7 +546,9 @@ run();
       "userPath": "string"
     },
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ],
     "ticketActionId": "string"
   }

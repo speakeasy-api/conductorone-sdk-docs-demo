@@ -11,7 +11,7 @@ async function run() {
     },
   });
 
-  const res = await sdk.task.createRevokeTask({
+  const result = await sdk.task.createRevokeTask({
     taskExpandMask: {
       paths: [
         "string",
@@ -21,11 +21,8 @@ async function run() {
     appId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -512,7 +509,9 @@ run();
         "actions": [],
         "analysisId": "string",
         "annotations": [
-            {}
+            {
+              "@type": "string"
+            }
           ],
         "commentCount": 2224.43,
         "createdAt": "2022-07-24T01:37:14.932Z",
@@ -546,7 +545,9 @@ run();
       "userPath": "string"
     },
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ]
   }
 ```

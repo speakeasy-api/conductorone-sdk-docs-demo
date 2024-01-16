@@ -13,7 +13,7 @@ async function run() {
     },
   });
 
-  const res = await sdk.taskSearch.search({
+  const result = await sdk.taskSearch.search({
     taskExpandMask: {
       paths: [
         "string",
@@ -85,11 +85,8 @@ async function run() {
     ],
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -99,7 +96,9 @@ run();
 ```json Example Response
   {
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ],
     "list": [
       {
@@ -580,7 +579,9 @@ run();
           "actions": [],
           "analysisId": "string",
           "annotations": [
-              {}
+              {
+                "@type": "string"
+              }
             ],
           "commentCount": 8965.47,
           "createdAt": "2022-06-04T19:48:20.525Z",

@@ -11,7 +11,7 @@ async function run() {
     },
   });
 
-  const res = await sdk.taskActions.comment({
+  const result = await sdk.taskActions.comment({
     taskActionsServiceCommentRequest: {
       taskExpandMask: {
         paths: [
@@ -22,11 +22,8 @@ async function run() {
     taskId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -513,7 +510,9 @@ run();
         "actions": [],
         "analysisId": "string",
         "annotations": [
-            {}
+            {
+              "@type": "string"
+            }
           ],
         "commentCount": 7851.53,
         "createdAt": "2024-12-14T19:48:05.144Z",
@@ -547,7 +546,9 @@ run();
       "userPath": "string"
     },
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ]
   }
 ```

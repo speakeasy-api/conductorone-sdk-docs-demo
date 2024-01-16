@@ -12,7 +12,7 @@ async function run() {
     },
   });
 
-  const res = await sdk.appUser.update({
+  const result = await sdk.appUser.update({
     appUserServiceUpdateRequest: {
       appUser: {
         appUserStatus: {},
@@ -27,11 +27,8 @@ async function run() {
     appUserId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -67,7 +64,9 @@ run();
       "lastUsagePath": "string"
     },
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ]
   }
 ```

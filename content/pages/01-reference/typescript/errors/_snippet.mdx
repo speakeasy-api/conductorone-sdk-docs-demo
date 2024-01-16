@@ -7,7 +7,6 @@ Example
 
 ```typescript
 import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
-import * as errors from "conductorone-sdk-typescript/models/errors";
 
 async function run() {
     const sdk = new ConductoroneSDKTypescript({
@@ -17,19 +16,18 @@ async function run() {
         },
     });
 
-    const res = await sdk.apps
-        .create({
+    let result;
+    try {
+        result = await sdk.apps.create({
             owners: ["string"],
-        })
-        .catch((err) => {
-            throw err;
         });
-
-    if (res?.statusCode !== 200) {
-        throw new Error("Unexpected status code: " + res?.statusCode || "-");
+    } catch (err) {
+        // Handle errors here
+        throw err;
     }
 
-    // handle response
+    // Handle the result
+    console.log(result);
 }
 
 run();

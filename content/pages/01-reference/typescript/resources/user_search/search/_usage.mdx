@@ -12,7 +12,7 @@ async function run() {
     },
   });
 
-  const res = await sdk.userSearch.search({
+  const result = await sdk.userSearch.search({
     userExpandMask: {
       paths: [
         "string",
@@ -35,11 +35,8 @@ async function run() {
     ],
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -49,7 +46,9 @@ run();
 ```json Example Response
   {
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ],
     "list": [
       {

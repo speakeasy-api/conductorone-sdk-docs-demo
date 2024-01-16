@@ -12,13 +12,15 @@ async function run() {
     },
   });
 
-  const res = await sdk.connector.updateDelegated({
+  const result = await sdk.connector.updateDelegated({
     connectorServiceUpdateDelegatedRequest: {
       connector: {
         connectorStatus: {},
         oAuth2AuthorizedAs: {},
         config: {
-          "key": "string",
+          additionalProperties: {
+            "key": "string",
+          },
         },
         userIds: [
           "string",
@@ -34,11 +36,8 @@ async function run() {
     connectorId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -61,7 +60,9 @@ run();
         },
         "appId": "string",
         "catalogId": "string",
-        "config": {},
+        "config": {
+          "@type": "string"
+        },
         "createdAt": "2022-06-14T01:02:51.421Z",
         "deletedAt": "2023-11-02T20:33:57.181Z",
         "description": "string",
@@ -70,14 +71,16 @@ run();
         "id": "string",
         "updatedAt": "2022-09-01T15:56:30.208Z",
         "userIds": [
-            "string"
-          ]
+          "string"
+        ]
       },
       "appPath": "string",
       "usersPath": "string"
     },
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ]
   }
 ```

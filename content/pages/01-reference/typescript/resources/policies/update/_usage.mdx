@@ -12,7 +12,7 @@ async function run() {
     },
   });
 
-  const res = await sdk.policies.update({
+  const result = await sdk.policies.update({
     updatePolicyRequest: {
       policy: {
         policySteps: {
@@ -57,11 +57,8 @@ async function run() {
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();

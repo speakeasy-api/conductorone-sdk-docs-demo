@@ -11,7 +11,7 @@ async function run() {
     },
   });
 
-  const res = await sdk.taskActions.approve({
+  const result = await sdk.taskActions.approve({
     taskActionsServiceApproveRequest: {
       taskExpandMask: {
         paths: [
@@ -23,11 +23,8 @@ async function run() {
     taskId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -514,7 +511,9 @@ run();
         "actions": [],
         "analysisId": "string",
         "annotations": [
-            {}
+            {
+              "@type": "string"
+            }
           ],
         "commentCount": 7470.8,
         "createdAt": "2022-05-09T19:33:28.722Z",
@@ -548,7 +547,9 @@ run();
       "userPath": "string"
     },
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ],
     "ticketActionId": "string"
   }

@@ -11,15 +11,12 @@ async function run() {
     },
   });
 
-  const res = await sdk.user.get({
+  const result = await sdk.user.get({
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -119,7 +116,9 @@ run();
       "rolesPath": "string"
     },
     "expanded": [
-      {}
+      {
+        "@type": "string"
+      }
     ]
   }
 ```

@@ -11,17 +11,14 @@ async function run() {
     },
   });
 
-  const res = await sdk.appResourceOwners.list({
+  const result = await sdk.appResourceOwners.list({
     appId: "string",
     resourceId: "string",
     resourceTypeId: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
