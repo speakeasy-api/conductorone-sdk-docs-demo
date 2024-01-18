@@ -7,7 +7,7 @@ generation:
     nameResolutionDec2023: false
   baseServerURL: ""
 docs:
-  version: 0.11.0
+  version: 0.11.1
   imports:
     option: openapi
     paths:
