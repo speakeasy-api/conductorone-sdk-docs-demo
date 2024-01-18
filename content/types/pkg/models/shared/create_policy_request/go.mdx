@@ -12,20 +12,23 @@ The display name of the new policy.
 ---
 ##### `PolicySteps` *{`map[string]shared.PolicyStepsInput`}*
 The map of policy type to policy steps. The key is the stringified version of the enum. See other policies for examples.
-<Collapsible content={() => import('/content/types/pkg/models/shared/policy_steps_input/go.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/pkg/models/shared/policy_steps_input/go.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `PolicyType` *{`*shared.PolicyType`}*
 The enum of the policy type.
-<Collapsible content={() => import('/content/types/pkg/models/shared/policy_type/go.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/pkg/models/shared/policy_type/go.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `PostActions` *{`[]shared.PolicyPostActions`}*
 Actions to occur after a policy finishes. As of now this is only valid on a certify policy to remediate a denied certification immediately.
-<Collapsible content={() => import('/content/types/pkg/models/shared/policy_post_actions/go.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/pkg/models/shared/policy_post_actions/go.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `ReassignTasksToDelegates` *{`*bool`}*

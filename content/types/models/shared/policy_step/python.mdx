@@ -4,8 +4,9 @@ import Labels from "/src/lib/labels";
 
 ##### `accept` *{`Optional[shared.Accept]`}*
 This policy step indicates that a ticket should have an approved outcome. This is a terminal approval state and is used to explicitly define the end of approval steps.
-<Collapsible content={() => import('/content/types/models/shared/accept/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/shared/accept/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `approval` *{`Optional[shared.Approval]`}*
@@ -20,19 +21,22 @@ This message contains a oneof named typ. Only a single field of the following li
   \- entitlementOwners
   \- expression
 
-<Collapsible content={() => import('/content/types/models/shared/approval/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/shared/approval/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `provision` *{`Optional[shared.Provision]`}*
 The provision step references a provision policy for this step.
-<Collapsible content={() => import('/content/types/models/shared/provision/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/shared/provision/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `reject` *{`Optional[shared.Reject]`}*
 This policy step indicates that a ticket should have a denied outcome. This is a terminal approval state and is used to explicitly define the end of approval steps.
-<Collapsible content={() => import('/content/types/models/shared/reject/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/shared/reject/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 

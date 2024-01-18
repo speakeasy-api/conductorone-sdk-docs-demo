@@ -4,8 +4,9 @@ import Labels from "/src/lib/labels";
 
 ##### `policy?`: *{`components.Policy`}*
 A policy describes the behavior of the ConductorOne system when processing a task. You can describe the type, approvers, fallback behavior, and escalation processes.
-<Collapsible content={() => import('/content/types/models/components/policy/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/policy/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `policyStepInstance?`: *{`components.PolicyStepInstance`}*
@@ -17,19 +18,22 @@ This message contains a oneof named instance. Only a single field of the followi
   \- accept
   \- reject
 
-<Collapsible content={() => import('/content/types/models/components/policy_step_instance/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/policy_step_instance/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `history?`: *{`components.PolicyStepInstance[]`}*
 An array of steps that were previously processed by the ticket with their outcomes set, in order.
-<Collapsible content={() => import('/content/types/models/components/policy_step_instance/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/policy_step_instance/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `next?`: *{`components.PolicyStep[]`}*
 An array of steps that will be processed by the ticket, in order.
-<Collapsible content={() => import('/content/types/models/components/policy_step/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/policy_step/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 

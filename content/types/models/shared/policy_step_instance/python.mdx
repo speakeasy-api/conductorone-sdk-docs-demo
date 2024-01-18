@@ -5,8 +5,9 @@ import Labels from "/src/lib/labels";
 ##### `accept_instance` *{`Optional[shared.AcceptInstance]`}*
 This policy step indicates that a ticket should have an approved outcome. This is a terminal approval state and is used to explicitly define the end of approval steps.
  The instance is just a marker for it being copied into an active policy.
-<Collapsible content={() => import('/content/types/models/shared/accept_instance/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/shared/accept_instance/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `approval_instance` *{`Optional[shared.ApprovalInstance]`}*
@@ -19,8 +20,9 @@ This message contains a oneof named outcome. Only a single field of the followin
   \- restarted
   \- reassignedByError
 
-<Collapsible content={() => import('/content/types/models/shared/approval_instance/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/shared/approval_instance/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `provision_instance` *{`Optional[shared.ProvisionInstance]`}*
@@ -32,15 +34,17 @@ This message contains a oneof named outcome. Only a single field of the followin
   \- errored
   \- reassignedByError
 
-<Collapsible content={() => import('/content/types/models/shared/provision_instance/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/shared/provision_instance/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `reject_instance` *{`Optional[shared.RejectInstance]`}*
 This policy step indicates that a ticket should have a denied outcome. This is a terminal approval state and is used to explicitly define the end of approval steps.
  The instance is just a marker for it being copied into an active policy.
-<Collapsible content={() => import('/content/types/models/shared/reject_instance/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/shared/reject_instance/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `id` *{`Optional[str]`}*
@@ -53,7 +57,8 @@ The policy generation id refers to the version of the policy that this step was 
 ---
 ##### `state` *{`Optional[shared.PolicyStepInstanceState]`}*
 The state of the step, which is either active or done.
-<Collapsible content={() => import('/content/types/models/shared/policy_step_instance_state/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/shared/policy_step_instance_state/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 

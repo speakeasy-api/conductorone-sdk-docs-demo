@@ -5,8 +5,9 @@ import Labels from "/src/lib/labels";
 ##### `UserExpandMask` *{`*shared.UserExpandMask`}*
 The user expand mask is used to indicate which related objects should be expanded in the response.
  The supported paths are 'role_ids', 'manager_ids', 'delegated_user_id', 'directory_ids', and '\*'.
-<Collapsible content={() => import('/content/types/pkg/models/shared/user_expand_mask/go.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/pkg/models/shared/user_expand_mask/go.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `Email` *{`*string`}*
@@ -35,8 +36,9 @@ Query the apps with a fuzzy search on display name and emails.
 ---
 ##### `Refs` *{`[]shared.UserRef`}*
 An array of user refs to restrict the return values to by ID.
-<Collapsible content={() => import('/content/types/pkg/models/shared/user_ref/go.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/pkg/models/shared/user_ref/go.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `RoleIds` *{`[]*string*`}*
@@ -45,7 +47,8 @@ Search for users that have any of the role IDs on this list.
 ---
 ##### `UserStatuses` *{`[]shared.UserStatuses`}*
 Search for users that have any of the statuses on this list. This can only be ENABLED, DISABLED, and DELETED
-<Collapsible content={() => import('/content/types/pkg/models/shared/user_statuses/go.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/pkg/models/shared/user_statuses/go.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 

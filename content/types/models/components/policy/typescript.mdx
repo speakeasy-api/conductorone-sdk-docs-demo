@@ -22,20 +22,23 @@ The ID of the Policy.
 ---
 ##### `policySteps?`: *{`Record<string, components.PolicySteps>`}*
 A map of string(policy type) to steps in a policy. This structure is leftover from a previous design, and should only ever have one key\-\>value set.
-<Collapsible content={() => import('/content/types/models/components/policy_steps/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/policy_steps/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `policyType?`: *{`components.PolicyPolicyType`}*
 Indicates the type of this policy. Can also be used to get the value from policySteps.
-<Collapsible content={() => import('/content/types/models/components/policy_policy_type/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/policy_policy_type/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `postActions?`: *{`components.PolicyPostActions[]`}*
 An array of actions (ordered) to take place after a policy completes processing.
-<Collapsible content={() => import('/content/types/models/components/policy_post_actions/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/policy_post_actions/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `reassignTasksToDelegates?`: *{`boolean`}*
@@ -44,8 +47,9 @@ A policy configuration option that allows for reassinging tasks to delgated user
 ---
 ##### `rules?`: *{`components.Rule[]`}*
 The rules field.
-<Collapsible content={() => import('/content/types/models/components/rule/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/rule/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `systemBuiltin?`: *{`boolean`}*

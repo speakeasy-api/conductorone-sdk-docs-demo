@@ -4,8 +4,9 @@ import Labels from "/src/lib/labels";
 
 ##### `policy` *{`Optional[shared.Policy]`}*
 A policy describes the behavior of the ConductorOne system when processing a task. You can describe the type, approvers, fallback behavior, and escalation processes.
-<Collapsible content={() => import('/content/types/models/shared/policy/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/shared/policy/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `policy_step_instance` *{`Optional[shared.PolicyStepInstance]`}*
@@ -17,19 +18,22 @@ This message contains a oneof named instance. Only a single field of the followi
   \- accept
   \- reject
 
-<Collapsible content={() => import('/content/types/models/shared/policy_step_instance/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/shared/policy_step_instance/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `history` *{`List[shared.PolicyStepInstance]`}*
 An array of steps that were previously processed by the ticket with their outcomes set, in order.
-<Collapsible content={() => import('/content/types/models/shared/policy_step_instance/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/shared/policy_step_instance/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `next` *{`List[shared.PolicyStep]`}*
 An array of steps that will be processed by the ticket, in order.
-<Collapsible content={() => import('/content/types/models/shared/policy_step/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/shared/policy_step/python.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 

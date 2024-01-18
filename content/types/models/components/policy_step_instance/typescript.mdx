@@ -5,8 +5,9 @@ import Labels from "/src/lib/labels";
 ##### `acceptInstance?`: *{`components.AcceptInstance`}*
 This policy step indicates that a ticket should have an approved outcome. This is a terminal approval state and is used to explicitly define the end of approval steps.
  The instance is just a marker for it being copied into an active policy.
-<Collapsible content={() => import('/content/types/models/components/accept_instance/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/accept_instance/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `approvalInstance?`: *{`components.ApprovalInstance`}*
@@ -19,8 +20,9 @@ This message contains a oneof named outcome. Only a single field of the followin
   \- restarted
   \- reassignedByError
 
-<Collapsible content={() => import('/content/types/models/components/approval_instance/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/approval_instance/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `provisionInstance?`: *{`components.ProvisionInstance`}*
@@ -32,15 +34,17 @@ This message contains a oneof named outcome. Only a single field of the followin
   \- errored
   \- reassignedByError
 
-<Collapsible content={() => import('/content/types/models/components/provision_instance/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/provision_instance/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `rejectInstance?`: *{`components.RejectInstance`}*
 This policy step indicates that a ticket should have a denied outcome. This is a terminal approval state and is used to explicitly define the end of approval steps.
  The instance is just a marker for it being copied into an active policy.
-<Collapsible content={() => import('/content/types/models/components/reject_instance/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/reject_instance/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `id?`: *{`string`}*
@@ -53,7 +57,8 @@ The policy generation id refers to the version of the policy that this step was 
 ---
 ##### `state?`: *{`components.PolicyStepInstanceState`}*
 The state of the step, which is either active or done.
-<Collapsible content={() => import('/content/types/models/components/policy_step_instance_state/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/policy_step_instance_state/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 
