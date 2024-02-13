@@ -21,7 +21,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.AppOwners.Add(ctx, operations.C1APIAppV1AppOwnersAddRequest{
-        AddAppOwnerRequest: &shared.AddAppOwnerRequest{},
         AppID: "string",
         UserID: "string",
     })

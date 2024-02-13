@@ -12,12 +12,6 @@ s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
 )
 
 req = shared.TaskServiceCreateGrantRequest(
-    task_expand_mask=shared.TaskExpandMask(
-        paths=[
-            'string',
-        ],
-    ),
-    task_grant_source=shared.TaskGrantSource(),
     app_entitlement_id='string',
     app_id='string',
 )
@@ -36,11 +30,11 @@ if res.task_service_create_grant_response is not None:
       "Task": {
         "PolicyInstance": {
           "Policy": {
-            "createdAt": "2022-04-20T20:22:04.887Z",
-            "deletedAt": "2022-04-20T03:03:54.745Z",
-            "description": "string",
-            "displayName": "string",
-            "id": "string",
+            "createdAt": "None",
+            "deletedAt": "None",
+            "description": "None",
+            "displayName": "None",
+            "id": "None",
             "policySteps": {},
             "postActions": [
                 {
@@ -50,12 +44,12 @@ if res.task_service_create_grant_response is not None:
             "reassignTasksToDelegates": false,
             "rules": [
                 {
-                  "condition": "string",
-                  "policyKey": "string"
+                  "condition": "None",
+                  "policyKey": "None"
                 }
               ],
             "systemBuiltin": false,
-            "updatedAt": "2023-01-22T03:12:21.307Z"
+            "updatedAt": "None"
           },
           "PolicyStepInstance": {
             "AcceptInstance": {},
@@ -63,11 +57,11 @@ if res.task_service_create_grant_response is not None:
                 "Approval": {
                   "AppGroupApproval": {
                     "allowSelfApproval": false,
-                    "appGroupId": "string",
-                    "appId": "string",
+                    "appGroupId": "None",
+                    "appId": "None",
                     "fallback": false,
                     "fallbackUserIds": [
-                      "string"
+                      "None"
                     ]
                   },
                   "AppOwnerApproval": {
@@ -77,45 +71,45 @@ if res.task_service_create_grant_response is not None:
                     "allowSelfApproval": false,
                     "fallback": false,
                     "fallbackUserIds": [
-                      "string"
+                      "None"
                     ]
                   },
                   "ExpressionApproval": {
                     "allowSelfApproval": false,
                     "assignedUserIds": [
-                      "string"
+                      "None"
                     ],
                     "expressions": [
-                      "string"
+                      "None"
                     ],
                     "fallback": false,
                     "fallbackUserIds": [
-                      "string"
+                      "None"
                     ]
                   },
                   "ManagerApproval": {
                     "allowSelfApproval": false,
                     "assignedUserIds": [
-                      "string"
+                      "None"
                     ],
                     "fallback": false,
                     "fallbackUserIds": [
-                      "string"
+                      "None"
                     ]
                   },
                   "SelfApproval": {
                     "assignedUserIds": [
-                      "string"
+                      "None"
                     ],
                     "fallback": false,
                     "fallbackUserIds": [
-                      "string"
+                      "None"
                     ]
                   },
                   "UserApproval": {
                     "allowSelfApproval": false,
                     "userIds": [
-                      "string"
+                      "None"
                     ]
                   },
                   "allowReassignment": false,
@@ -124,93 +118,93 @@ if res.task_service_create_grant_response is not None:
                   "requireReassignmentReason": false
                 },
                 "ApprovedAction": {
-                  "approvedAt": "2024-02-22T19:24:11.206Z",
+                  "approvedAt": "None",
                   "entitlements": [
                     {
-                      "appEntitlementId": "string",
-                      "appId": "string"
+                      "appEntitlementId": "None",
+                      "appId": "None"
                     }
                   ],
-                  "userId": "string"
+                  "userId": "None"
                 },
                 "DeniedAction": {
-                  "deniedAt": "2023-05-30T07:07:48.762Z",
-                  "userId": "string"
+                  "deniedAt": "None",
+                  "userId": "None"
                 },
                 "ReassignedAction": {
-                  "newPolicyStepId": "string",
-                  "reassignedAt": "2024-12-30T17:40:17.628Z",
-                  "userId": "string"
+                  "newPolicyStepId": "None",
+                  "reassignedAt": "None",
+                  "userId": "None"
                 },
                 "ReassignedByErrorAction": {
-                  "description": "string",
-                  "errorCode": "string",
-                  "errorUserId": "string",
-                  "erroredAt": "2024-07-10T21:20:59.911Z",
-                  "newPolicyStepId": "string",
-                  "reassignedAt": "2022-06-13T19:05:17.541Z"
+                  "description": "None",
+                  "errorCode": "None",
+                  "errorUserId": "None",
+                  "erroredAt": "None",
+                  "newPolicyStepId": "None",
+                  "reassignedAt": "None"
                 },
                 "RestartAction": {
-                  "oldPolicyStepId": "string",
-                  "restartedAt": "2024-09-18T11:51:15.355Z",
-                  "userId": "string"
+                  "oldPolicyStepId": "None",
+                  "restartedAt": "None",
+                  "userId": "None"
                 }
               },
             "ProvisionInstance": {
                 "CancelledAction": {
-                  "cancelledAt": "2022-02-11T03:57:43.377Z",
-                  "cancelledByUserId": "string"
+                  "cancelledAt": "None",
+                  "cancelledByUserId": "None"
                 },
                 "CompletedAction": {
-                  "completedAt": "2022-06-28T02:12:50.639Z",
+                  "completedAt": "None",
                   "entitlements": [
                     {
-                      "appEntitlementId": "string",
-                      "appId": "string"
+                      "appEntitlementId": "None",
+                      "appId": "None"
                     }
                   ],
-                  "userId": "string"
+                  "userId": "None"
                 },
                 "ErroredAction": {
-                  "description": "string",
-                  "errorCode": "string",
-                  "erroredAt": "2023-07-12T02:43:46.575Z"
+                  "description": "None",
+                  "errorCode": "None",
+                  "erroredAt": "None"
                 },
                 "Provision": {
                   "ProvisionPolicy": {
                     "ConnectorProvision": {},
                     "DelegatedProvision": {
-                        "appId": "string",
-                        "entitlementId": "string"
+                        "appId": "None",
+                        "entitlementId": "None"
                       },
                     "ManualProvision": {
-                        "instructions": "string",
+                        "instructions": "None",
                         "userIds": [
-                          "string"
+                          "None"
                         ]
                       }
                   },
                   "ProvisionTarget": {
-                    "appEntitlementId": "string",
-                    "appId": "string",
-                    "appUserId": "string",
-                    "grantDuration": "string"
+                    "appEntitlementId": "None",
+                    "appId": "None",
+                    "appUserId": "None",
+                    "grantDuration": "None"
                   },
                   "assigned": false
                 },
                 "ReassignedByErrorAction": {
-                  "description": "string",
-                  "errorCode": "string",
-                  "errorUserId": "string",
-                  "erroredAt": "2023-11-06T15:40:43.905Z",
-                  "newPolicyStepId": "string",
-                  "reassignedAt": "2022-07-02T20:45:25.603Z"
+                  "description": "None",
+                  "errorCode": "None",
+                  "errorUserId": "None",
+                  "erroredAt": "None",
+                  "newPolicyStepId": "None",
+                  "reassignedAt": "None"
                 },
-                "notificationId": "string"
+                "notificationId": "None"
               },
             "RejectInstance": {},
-            "id": "string",
-            "policyGenerationId": "string"
+            "id": "None",
+            "policyGenerationId": "None"
           },
           "history": [
             {
@@ -219,11 +213,11 @@ if res.task_service_create_grant_response is not None:
                   "Approval": {
                     "AppGroupApproval": {
                       "allowSelfApproval": false,
-                      "appGroupId": "string",
-                      "appId": "string",
+                      "appGroupId": "None",
+                      "appId": "None",
                       "fallback": false,
                       "fallbackUserIds": [
-                        "string"
+                        "None"
                       ]
                     },
                     "AppOwnerApproval": {
@@ -233,45 +227,45 @@ if res.task_service_create_grant_response is not None:
                       "allowSelfApproval": false,
                       "fallback": false,
                       "fallbackUserIds": [
-                        "string"
+                        "None"
                       ]
                     },
                     "ExpressionApproval": {
                       "allowSelfApproval": false,
                       "assignedUserIds": [
-                        "string"
+                        "None"
                       ],
                       "expressions": [
-                        "string"
+                        "None"
                       ],
                       "fallback": false,
                       "fallbackUserIds": [
-                        "string"
+                        "None"
                       ]
                     },
                     "ManagerApproval": {
                       "allowSelfApproval": false,
                       "assignedUserIds": [
-                        "string"
+                        "None"
                       ],
                       "fallback": false,
                       "fallbackUserIds": [
-                        "string"
+                        "None"
                       ]
                     },
                     "SelfApproval": {
                       "assignedUserIds": [
-                        "string"
+                        "None"
                       ],
                       "fallback": false,
                       "fallbackUserIds": [
-                        "string"
+                        "None"
                       ]
                     },
                     "UserApproval": {
                       "allowSelfApproval": false,
                       "userIds": [
-                        "string"
+                        "None"
                       ]
                     },
                     "allowReassignment": false,
@@ -280,93 +274,93 @@ if res.task_service_create_grant_response is not None:
                     "requireReassignmentReason": false
                   },
                   "ApprovedAction": {
-                    "approvedAt": "2024-07-18T10:00:30.280Z",
+                    "approvedAt": "None",
                     "entitlements": [
                       {
-                        "appEntitlementId": "string",
-                        "appId": "string"
+                        "appEntitlementId": "None",
+                        "appId": "None"
                       }
                     ],
-                    "userId": "string"
+                    "userId": "None"
                   },
                   "DeniedAction": {
-                    "deniedAt": "2024-08-05T23:12:19.207Z",
-                    "userId": "string"
+                    "deniedAt": "None",
+                    "userId": "None"
                   },
                   "ReassignedAction": {
-                    "newPolicyStepId": "string",
-                    "reassignedAt": "2024-06-03T19:43:04.556Z",
-                    "userId": "string"
+                    "newPolicyStepId": "None",
+                    "reassignedAt": "None",
+                    "userId": "None"
                   },
                   "ReassignedByErrorAction": {
-                    "description": "string",
-                    "errorCode": "string",
-                    "errorUserId": "string",
-                    "erroredAt": "2023-03-27T21:22:45.979Z",
-                    "newPolicyStepId": "string",
-                    "reassignedAt": "2023-09-16T17:37:33.523Z"
+                    "description": "None",
+                    "errorCode": "None",
+                    "errorUserId": "None",
+                    "erroredAt": "None",
+                    "newPolicyStepId": "None",
+                    "reassignedAt": "None"
                   },
                   "RestartAction": {
-                    "oldPolicyStepId": "string",
-                    "restartedAt": "2022-06-03T09:50:19.778Z",
-                    "userId": "string"
+                    "oldPolicyStepId": "None",
+                    "restartedAt": "None",
+                    "userId": "None"
                   }
                 },
               "ProvisionInstance": {
                   "CancelledAction": {
-                    "cancelledAt": "2022-02-06T09:52:53.944Z",
-                    "cancelledByUserId": "string"
+                    "cancelledAt": "None",
+                    "cancelledByUserId": "None"
                   },
                   "CompletedAction": {
-                    "completedAt": "2022-03-17T19:22:06.639Z",
+                    "completedAt": "None",
                     "entitlements": [
                       {
-                        "appEntitlementId": "string",
-                        "appId": "string"
+                        "appEntitlementId": "None",
+                        "appId": "None"
                       }
                     ],
-                    "userId": "string"
+                    "userId": "None"
                   },
                   "ErroredAction": {
-                    "description": "string",
-                    "errorCode": "string",
-                    "erroredAt": "2024-12-12T21:39:05.983Z"
+                    "description": "None",
+                    "errorCode": "None",
+                    "erroredAt": "None"
                   },
                   "Provision": {
                     "ProvisionPolicy": {
                       "ConnectorProvision": {},
                       "DelegatedProvision": {
-                          "appId": "string",
-                          "entitlementId": "string"
+                          "appId": "None",
+                          "entitlementId": "None"
                         },
                       "ManualProvision": {
-                          "instructions": "string",
+                          "instructions": "None",
                           "userIds": [
-                            "string"
+                            "None"
                           ]
                         }
                     },
                     "ProvisionTarget": {
-                      "appEntitlementId": "string",
-                      "appId": "string",
-                      "appUserId": "string",
-                      "grantDuration": "string"
+                      "appEntitlementId": "None",
+                      "appId": "None",
+                      "appUserId": "None",
+                      "grantDuration": "None"
                     },
                     "assigned": false
                   },
                   "ReassignedByErrorAction": {
-                    "description": "string",
-                    "errorCode": "string",
-                    "errorUserId": "string",
-                    "erroredAt": "2024-02-04T09:09:59.151Z",
-                    "newPolicyStepId": "string",
-                    "reassignedAt": "2023-02-14T03:02:23.858Z"
+                    "description": "None",
+                    "errorCode": "None",
+                    "errorUserId": "None",
+                    "erroredAt": "None",
+                    "newPolicyStepId": "None",
+                    "reassignedAt": "None"
                   },
-                  "notificationId": "string"
+                  "notificationId": "None"
                 },
               "RejectInstance": {},
-              "id": "string",
-              "policyGenerationId": "string"
+              "id": "None",
+              "policyGenerationId": "None"
             }
           ],
           "next": [
@@ -375,11 +369,11 @@ if res.task_service_create_grant_response is not None:
               "Approval": {
                   "AppGroupApproval": {
                     "allowSelfApproval": false,
-                    "appGroupId": "string",
-                    "appId": "string",
+                    "appGroupId": "None",
+                    "appId": "None",
                     "fallback": false,
                     "fallbackUserIds": [
-                      "string"
+                      "None"
                     ]
                   },
                   "AppOwnerApproval": {
@@ -389,45 +383,45 @@ if res.task_service_create_grant_response is not None:
                     "allowSelfApproval": false,
                     "fallback": false,
                     "fallbackUserIds": [
-                      "string"
+                      "None"
                     ]
                   },
                   "ExpressionApproval": {
                     "allowSelfApproval": false,
                     "assignedUserIds": [
-                      "string"
+                      "None"
                     ],
                     "expressions": [
-                      "string"
+                      "None"
                     ],
                     "fallback": false,
                     "fallbackUserIds": [
-                      "string"
+                      "None"
                     ]
                   },
                   "ManagerApproval": {
                     "allowSelfApproval": false,
                     "assignedUserIds": [
-                      "string"
+                      "None"
                     ],
                     "fallback": false,
                     "fallbackUserIds": [
-                      "string"
+                      "None"
                     ]
                   },
                   "SelfApproval": {
                     "assignedUserIds": [
-                      "string"
+                      "None"
                     ],
                     "fallback": false,
                     "fallbackUserIds": [
-                      "string"
+                      "None"
                     ]
                   },
                   "UserApproval": {
                     "allowSelfApproval": false,
                     "userIds": [
-                      "string"
+                      "None"
                     ]
                   },
                   "allowReassignment": false,
@@ -439,21 +433,21 @@ if res.task_service_create_grant_response is not None:
                   "ProvisionPolicy": {
                     "ConnectorProvision": {},
                     "DelegatedProvision": {
-                        "appId": "string",
-                        "entitlementId": "string"
+                        "appId": "None",
+                        "entitlementId": "None"
                       },
                     "ManualProvision": {
-                        "instructions": "string",
+                        "instructions": "None",
                         "userIds": [
-                          "string"
+                          "None"
                         ]
                       }
                   },
                   "ProvisionTarget": {
-                    "appEntitlementId": "string",
-                    "appId": "string",
-                    "appUserId": "string",
-                    "grantDuration": "string"
+                    "appEntitlementId": "None",
+                    "appId": "None",
+                    "appUserId": "None",
+                    "grantDuration": "None"
                   },
                   "assigned": false
                 },
@@ -463,91 +457,91 @@ if res.task_service_create_grant_response is not None:
         },
         "TaskType": {
           "TaskTypeCertify": {
-            "accessReviewId": "string",
-            "accessReviewSelection": "string",
-            "appEntitlementId": "string",
-            "appId": "string",
-            "appUserId": "string",
-            "identityUserId": "string",
-            "outcomeTime": "2022-02-25T10:40:10.987Z"
+            "accessReviewId": "None",
+            "accessReviewSelection": "None",
+            "appEntitlementId": "None",
+            "appId": "None",
+            "appUserId": "None",
+            "identityUserId": "None",
+            "outcomeTime": "None"
           },
           "TaskTypeGrant": {
             "TaskGrantSource": {
-              "externalUrl": "string",
-              "integrationId": "string"
+              "externalUrl": "None",
+              "integrationId": "None"
             },
-            "appEntitlementId": "string",
-            "appId": "string",
-            "appUserId": "string",
-            "grantDuration": "string",
-            "identityUserId": "string",
-            "outcomeTime": "2023-02-05T14:00:33.863Z"
+            "appEntitlementId": "None",
+            "appId": "None",
+            "appUserId": "None",
+            "grantDuration": "None",
+            "identityUserId": "None",
+            "outcomeTime": "None"
           },
           "TaskTypeRevoke": {
             "TaskRevokeSource": {
               "TaskRevokeSourceExpired": {
-                "expiredAt": "2024-12-05T04:07:04.276Z"
+                "expiredAt": "None"
               },
               "TaskRevokeSourceNonUsage": {
-                "expiresAt": "2022-01-19T05:22:55.590Z",
-                "lastLogin": "2024-07-26T23:03:04.084Z"
+                "expiresAt": "None",
+                "lastLogin": "None"
               },
               "TaskRevokeSourceRequest": {
-                "requestUserId": "string"
+                "requestUserId": "None"
               },
               "TaskRevokeSourceReview": {
-                "accessReviewId": "string",
-                "certTicketId": "string"
+                "accessReviewId": "None",
+                "certTicketId": "None"
               }
             },
-            "appEntitlementId": "string",
-            "appId": "string",
-            "appUserId": "string",
-            "identityUserId": "string",
-            "outcomeTime": "2022-01-13T20:07:37.920Z"
+            "appEntitlementId": "None",
+            "appId": "None",
+            "appUserId": "None",
+            "identityUserId": "None",
+            "outcomeTime": "None"
           }
         },
         "actions": [],
-        "analysisId": "string",
+        "analysisId": "None",
         "annotations": [
             {
-              "@type": "string"
+              "@type": "None"
             }
           ],
-        "commentCount": 3599.78,
-        "createdAt": "2024-10-31T18:13:30.324Z",
-        "createdByUserId": "string",
-        "deletedAt": "2024-03-11T01:40:18.248Z",
-        "description": "string",
-        "displayName": "string",
+        "commentCount": 0,
+        "createdAt": "None",
+        "createdByUserId": "None",
+        "deletedAt": "None",
+        "description": "None",
+        "displayName": "None",
         "emergencyAccess": false,
         "externalRefs": [
             {
-              "name": "string",
-              "url": "string"
+              "name": "None",
+              "url": "None"
             }
           ],
-        "id": "string",
-        "numericId": "string",
-        "policyGenerationId": "string",
+        "id": "None",
+        "numericId": "None",
+        "policyGenerationId": "None",
         "stepApproverIds": [
-            "string"
+            "None"
           ],
-        "updatedAt": "2023-07-26T01:20:48.501Z",
-        "userId": "string"
+        "updatedAt": "None",
+        "userId": "None"
       },
-      "accessReviewPath": "string",
-      "appPath": "string",
-      "appUserPath": "string",
-      "createdByUserPath": "string",
-      "entitlementsPath": "string",
-      "identityUserPath": "string",
-      "stepApproversPath": "string",
-      "userPath": "string"
+      "accessReviewPath": "None",
+      "appPath": "None",
+      "appUserPath": "None",
+      "createdByUserPath": "None",
+      "entitlementsPath": "None",
+      "identityUserPath": "None",
+      "stepApproversPath": "None",
+      "userPath": "None"
     },
     "expanded": [
       {
-        "@type": "string"
+        "@type": "None"
       }
     ]
   }

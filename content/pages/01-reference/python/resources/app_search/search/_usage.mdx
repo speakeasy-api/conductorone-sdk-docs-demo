@@ -11,14 +11,7 @@ s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
     ),
 )
 
-req = shared.SearchAppsRequest(
-    app_ids=[
-        'string',
-    ],
-    exclude_app_ids=[
-        'string',
-    ],
-)
+req = shared.SearchAppsRequest()
 
 res = s.app_search.search(req)
 
@@ -32,26 +25,26 @@ if res.search_apps_response is not None:
   {
     "list": [
       {
-        "appAccountId": "string",
-        "appAccountName": "string",
-        "certifyPolicyId": "string",
-        "createdAt": "2024-11-10T05:06:35.781Z",
-        "deletedAt": "2024-01-16T08:10:54.441Z",
-        "description": "string",
-        "displayName": "string",
-        "fieldMask": "string",
-        "grantPolicyId": "string",
-        "iconUrl": "string",
-        "id": "string",
-        "logoUri": "string",
-        "monthlyCostUsd": 4471.25,
-        "parentAppId": "string",
-        "revokePolicyId": "string",
-        "updatedAt": "2023-05-08T07:41:49.705Z",
-        "userCount": "string"
+        "appAccountId": "None",
+        "appAccountName": "None",
+        "certifyPolicyId": "None",
+        "createdAt": "None",
+        "deletedAt": "None",
+        "description": "None",
+        "displayName": "None",
+        "fieldMask": "None",
+        "grantPolicyId": "None",
+        "iconUrl": "None",
+        "id": "None",
+        "logoUri": "None",
+        "monthlyCostUsd": 0,
+        "parentAppId": "None",
+        "revokePolicyId": "None",
+        "updatedAt": "None",
+        "userCount": "None"
       }
     ],
-    "nextPageToken": "string"
+    "nextPageToken": "None"
   }
 ```
 </CH.Code>

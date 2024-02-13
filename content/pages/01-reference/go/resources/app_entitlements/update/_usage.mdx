@@ -21,28 +21,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.AppEntitlements.Update(ctx, operations.C1APIAppV1AppEntitlementsUpdateRequest{
-        UpdateAppEntitlementRequest: &shared.UpdateAppEntitlementRequest{
-            AppEntitlement: &shared.AppEntitlementInput{
-                ProvisionPolicy: &shared.ProvisionPolicy{
-                    ConnectorProvision: &shared.ConnectorProvision{},
-                    DelegatedProvision: &shared.DelegatedProvision{},
-                    ManualProvision: &shared.ManualProvision{
-                        UserIds: []string{
-                            "string",
-                        },
-                    },
-                },
-                ComplianceFrameworkValueIds: []string{
-                    "string",
-                },
-                DurationUnset: &shared.DurationUnset{},
-            },
-            AppEntitlementExpandMask: &shared.AppEntitlementExpandMask{
-                Paths: []string{
-                    "string",
-                },
-            },
-        },
         AppID: "string",
         ID: "<ID>",
     })
@@ -64,48 +42,48 @@ func main() {
         "ProvisionPolicy": {
           "ConnectorProvision": {},
           "DelegatedProvision": {
-              "appId": "string",
-              "entitlementId": "string"
+              "appId": "None",
+              "entitlementId": "None"
             },
           "ManualProvision": {
-              "instructions": "string",
+              "instructions": "None",
               "userIds": [
-                "string"
+                "None"
               ]
             }
         },
-        "alias": "string",
-        "appId": "string",
-        "appResourceId": "string",
-        "appResourceTypeId": "string",
-        "certifyPolicyId": "string",
+        "alias": "None",
+        "appId": "None",
+        "appResourceId": "None",
+        "appResourceTypeId": "None",
+        "certifyPolicyId": "None",
         "complianceFrameworkValueIds": [
-          "string"
+          "None"
         ],
-        "createdAt": "2023-01-28T12:50:04.866Z",
-        "deletedAt": "2022-05-22T07:16:38.466Z",
-        "description": "string",
-        "displayName": "string",
-        "durationGrant": "string",
+        "createdAt": "None",
+        "deletedAt": "None",
+        "description": "None",
+        "displayName": "None",
+        "durationGrant": "None",
         "durationUnset": {},
         "emergencyGrantEnabled": false,
-        "emergencyGrantPolicyId": "string",
-        "grantCount": "string",
-        "grantPolicyId": "string",
-        "id": "string",
-        "revokePolicyId": "string",
-        "riskLevelValueId": "string",
-        "slug": "string",
+        "emergencyGrantPolicyId": "None",
+        "grantCount": "None",
+        "grantPolicyId": "None",
+        "id": "None",
+        "revokePolicyId": "None",
+        "riskLevelValueId": "None",
+        "slug": "None",
         "systemBuiltin": false,
-        "updatedAt": "2024-04-02T18:02:53.509Z"
+        "updatedAt": "None"
       },
-      "appPath": "string",
-      "appResourcePath": "string",
-      "appResourceTypePath": "string"
+      "appPath": "None",
+      "appResourcePath": "None",
+      "appResourceTypePath": "None"
     },
     "expanded": [
       {
-        "@type": "string"
+        "@type": "None"
       }
     ]
   }

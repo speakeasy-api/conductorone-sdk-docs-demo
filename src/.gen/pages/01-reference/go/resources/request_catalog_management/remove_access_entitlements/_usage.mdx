@@ -21,11 +21,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.RequestCatalogManagement.RemoveAccessEntitlements(ctx, operations.C1APIRequestcatalogV1RequestCatalogManagementServiceRemoveAccessEntitlementsRequest{
-        RequestCatalogManagementServiceRemoveAccessEntitlementsRequest: &shared.RequestCatalogManagementServiceRemoveAccessEntitlementsRequest{
-            AccessEntitlements: []shared.AppEntitlementRef{
-                shared.AppEntitlementRef{},
-            },
-        },
         CatalogID: "string",
     })
     if err != nil {

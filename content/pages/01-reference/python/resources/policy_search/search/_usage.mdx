@@ -11,14 +11,7 @@ s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
     ),
 )
 
-req = shared.SearchPoliciesRequest(
-    policy_types=[
-        shared.PolicyTypes.POLICY_TYPE_CERTIFY,
-    ],
-    refs=[
-        shared.PolicyRef(),
-    ],
-)
+req = shared.SearchPoliciesRequest()
 
 res = s.policy_search.search(req)
 
@@ -32,11 +25,11 @@ if res.list_policy_response is not None:
   {
     "list": [
       {
-        "createdAt": "2024-06-10T22:08:16.254Z",
-        "deletedAt": "2023-03-28T08:31:01.239Z",
-        "description": "string",
-        "displayName": "string",
-        "id": "string",
+        "createdAt": "None",
+        "deletedAt": "None",
+        "description": "None",
+        "displayName": "None",
+        "id": "None",
         "policySteps": {},
         "postActions": [
             {
@@ -46,15 +39,15 @@ if res.list_policy_response is not None:
         "reassignTasksToDelegates": false,
         "rules": [
             {
-              "condition": "string",
-              "policyKey": "string"
+              "condition": "None",
+              "policyKey": "None"
             }
           ],
         "systemBuiltin": false,
-        "updatedAt": "2024-01-11T06:44:58.152Z"
+        "updatedAt": "None"
       }
     ],
-    "nextPageToken": "string"
+    "nextPageToken": "None"
   }
 ```
 </CH.Code>

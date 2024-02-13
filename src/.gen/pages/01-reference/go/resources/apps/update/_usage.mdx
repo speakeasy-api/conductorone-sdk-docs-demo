@@ -21,9 +21,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Apps.Update(ctx, operations.C1APIAppV1AppsUpdateRequest{
-        UpdateAppRequest: &shared.UpdateAppRequest{
-            App: &shared.AppInput{},
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -40,23 +37,23 @@ func main() {
 ```json Example Response
   {
     "App": {
-      "appAccountId": "string",
-      "appAccountName": "string",
-      "certifyPolicyId": "string",
-      "createdAt": "2023-04-25T14:17:38.296Z",
-      "deletedAt": "2022-11-23T02:21:00.924Z",
-      "description": "string",
-      "displayName": "string",
-      "fieldMask": "string",
-      "grantPolicyId": "string",
-      "iconUrl": "string",
-      "id": "string",
-      "logoUri": "string",
-      "monthlyCostUsd": 8917.73,
-      "parentAppId": "string",
-      "revokePolicyId": "string",
-      "updatedAt": "2022-03-04T03:46:41.208Z",
-      "userCount": "string"
+      "appAccountId": "None",
+      "appAccountName": "None",
+      "certifyPolicyId": "None",
+      "createdAt": "None",
+      "deletedAt": "None",
+      "description": "None",
+      "displayName": "None",
+      "fieldMask": "None",
+      "grantPolicyId": "None",
+      "iconUrl": "None",
+      "id": "None",
+      "logoUri": "None",
+      "monthlyCostUsd": 0,
+      "parentAppId": "None",
+      "revokePolicyId": "None",
+      "updatedAt": "None",
+      "userCount": "None"
     }
   }
 ```

@@ -21,25 +21,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Connector.UpdateDelegated(ctx, operations.C1APIAppV1ConnectorServiceUpdateDelegatedRequest{
-        ConnectorServiceUpdateDelegatedRequest: &shared.ConnectorServiceUpdateDelegatedRequest{
-            Connector: &shared.ConnectorInput{
-                ConnectorStatus: &shared.ConnectorStatus{},
-                OAuth2AuthorizedAs: &shared.OAuth2AuthorizedAsInput{},
-                Config: &shared.Config{
-                    AdditionalProperties: map[string]interface{}{
-                        "key": "string",
-                    },
-                },
-                UserIds: []string{
-                    "string",
-                },
-            },
-            ConnectorExpandMask: &shared.ConnectorExpandMask{
-                Paths: []string{
-                    "string",
-                },
-            },
-        },
         ConnectorAppID: "string",
         ConnectorID: "string",
     })
@@ -59,37 +40,37 @@ func main() {
     "ConnectorView": {
       "Connector": {
         "ConnectorStatus": {
-          "completedAt": "2023-09-16T00:05:11.677Z",
-          "lastError": "string",
-          "startedAt": "2022-05-29T04:46:43.786Z",
-          "updatedAt": "2022-12-22T06:12:17.901Z"
+          "completedAt": "None",
+          "lastError": "None",
+          "startedAt": "None",
+          "updatedAt": "None"
         },
         "OAuth2AuthorizedAs": {
-          "authEmail": "string",
-          "authorizedAt": "2023-11-08T22:17:03.172Z"
+          "authEmail": "None",
+          "authorizedAt": "None"
         },
-        "appId": "string",
-        "catalogId": "string",
+        "appId": "None",
+        "catalogId": "None",
         "config": {
-          "@type": "string"
+          "@type": "None"
         },
-        "createdAt": "2022-06-14T01:02:51.421Z",
-        "deletedAt": "2023-11-02T20:33:57.181Z",
-        "description": "string",
-        "displayName": "string",
-        "downloadUrl": "string",
-        "id": "string",
-        "updatedAt": "2022-09-01T15:56:30.208Z",
+        "createdAt": "None",
+        "deletedAt": "None",
+        "description": "None",
+        "displayName": "None",
+        "downloadUrl": "None",
+        "id": "None",
+        "updatedAt": "None",
         "userIds": [
-          "string"
+          "None"
         ]
       },
-      "appPath": "string",
-      "usersPath": "string"
+      "appPath": "None",
+      "usersPath": "None"
     },
     "expanded": [
       {
-        "@type": "string"
+        "@type": "None"
       }
     ]
   }

@@ -7,7 +7,7 @@ Handling errors in this SDK should largely match your expectations.  All operati
 
 ```python
 import conductorone_sdk_typescript
-from conductorone_sdk_typescript.models import shared
+from conductorone_sdk_typescript.models import errors, shared
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
     security=shared.Security(
@@ -16,17 +16,13 @@ s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
     ),
 )
 
-req = shared.CreateAppRequest(
-    owners=[
-        'string',
-    ],
-)
+req = shared.CreateAppRequest()
 
 res = None
 try:
     res = s.apps.create(req)
 except errors.SDKError as e:
-    print(e)  # handle exception
+    # handle exception
     raise(e)
 
 if res.create_app_response is not None:

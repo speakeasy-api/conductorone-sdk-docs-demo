@@ -21,7 +21,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.AppEntitlementOwners.Remove(ctx, operations.C1APIAppV1AppEntitlementOwnersRemoveRequest{
-        RemoveAppEntitlementOwnerRequest: &shared.RemoveAppEntitlementOwnerRequest{},
         AppID: "string",
         EntitlementID: "string",
         UserID: "string",

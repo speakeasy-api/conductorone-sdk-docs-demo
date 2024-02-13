@@ -11,42 +11,7 @@ s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
     ),
 )
 
-req = shared.CreatePolicyRequest(
-    policy_steps={
-        'key': shared.PolicyStepsInput(
-            steps=[
-                shared.PolicyStepInput(
-                    accept=shared.Accept(),
-                    approval=shared.ApprovalInput(
-                        app_group_approval=shared.AppGroupApprovalInput(),
-                        app_owner_approval=shared.AppOwnerApprovalInput(),
-                        entitlement_owner_approval=shared.EntitlementOwnerApprovalInput(),
-                        expression_approval=shared.ExpressionApprovalInput(),
-                        manager_approval=shared.ManagerApprovalInput(),
-                        self_approval=shared.SelfApprovalInput(),
-                        user_approval=shared.UserApprovalInput(),
-                    ),
-                    provision=shared.Provision(
-                        provision_policy=shared.ProvisionPolicy(
-                            connector_provision=shared.ConnectorProvision(),
-                            delegated_provision=shared.DelegatedProvision(),
-                            manual_provision=shared.ManualProvision(
-                                user_ids=[
-                                    'string',
-                                ],
-                            ),
-                        ),
-                        provision_target=shared.ProvisionTarget(),
-                    ),
-                    reject=shared.Reject(),
-                ),
-            ],
-        ),
-    },
-    post_actions=[
-        shared.PolicyPostActions(),
-    ],
-)
+req = shared.CreatePolicyRequest()
 
 res = s.policies.create(req)
 
@@ -59,11 +24,11 @@ if res.create_policy_response is not None:
 ```json Example Response
   {
     "Policy": {
-      "createdAt": "2022-06-10T12:00:14.907Z",
-      "deletedAt": "2024-01-13T21:17:10.500Z",
-      "description": "string",
-      "displayName": "string",
-      "id": "string",
+      "createdAt": "None",
+      "deletedAt": "None",
+      "description": "None",
+      "displayName": "None",
+      "id": "None",
       "policySteps": {},
       "postActions": [
           {
@@ -73,12 +38,12 @@ if res.create_policy_response is not None:
       "reassignTasksToDelegates": false,
       "rules": [
           {
-            "condition": "string",
-            "policyKey": "string"
+            "condition": "None",
+            "policyKey": "None"
           }
         ],
       "systemBuiltin": false,
-      "updatedAt": "2022-10-23T22:17:22.586Z"
+      "updatedAt": "None"
     }
   }
 ```

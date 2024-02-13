@@ -17,11 +17,7 @@ s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
     ),
 )
 
-req = shared.CreateAppRequest(
-    owners=[
-        'string',
-    ],
-)
+req = shared.CreateAppRequest()
 
 res = s.apps.create(req)
 

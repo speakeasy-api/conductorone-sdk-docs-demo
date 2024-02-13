@@ -12,16 +12,6 @@ s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
 )
 
 req = operations.C1APIIamV1RolesUpdateRequest(
-    update_role_request=shared.UpdateRoleRequest(
-        role=shared.RoleInput(
-            permissions=[
-                'string',
-            ],
-            service_roles=[
-                'string',
-            ],
-        ),
-    ),
     role_id='string',
 )
 
@@ -36,19 +26,19 @@ if res.update_roles_response is not None:
 ```json Example Response
   {
     "Role": {
-      "createdAt": "2024-06-27T12:26:18.619Z",
-      "deletedAt": "2023-02-10T07:25:55.741Z",
-      "displayName": "string",
-      "id": "string",
-      "name": "string",
+      "createdAt": "None",
+      "deletedAt": "None",
+      "displayName": "None",
+      "id": "None",
+      "name": "None",
       "permissions": [
-        "string"
+        "None"
       ],
       "serviceRoles": [
-        "string"
+        "None"
       ],
       "systemBuiltin": false,
-      "updatedAt": "2022-01-06T03:30:35.858Z"
+      "updatedAt": "None"
     }
   }
 ```

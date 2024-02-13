@@ -12,28 +12,6 @@ s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
 )
 
 req = operations.C1APIAppV1AppEntitlementsUpdateRequest(
-    update_app_entitlement_request=shared.UpdateAppEntitlementRequest(
-        app_entitlement=shared.AppEntitlementInput(
-            provision_policy=shared.ProvisionPolicy(
-                connector_provision=shared.ConnectorProvision(),
-                delegated_provision=shared.DelegatedProvision(),
-                manual_provision=shared.ManualProvision(
-                    user_ids=[
-                        'string',
-                    ],
-                ),
-            ),
-            compliance_framework_value_ids=[
-                'string',
-            ],
-            duration_unset=shared.DurationUnset(),
-        ),
-        app_entitlement_expand_mask=shared.AppEntitlementExpandMask(
-            paths=[
-                'string',
-            ],
-        ),
-    ),
     app_id='string',
     id='<ID>',
 )
@@ -53,48 +31,48 @@ if res.update_app_entitlement_response is not None:
         "ProvisionPolicy": {
           "ConnectorProvision": {},
           "DelegatedProvision": {
-              "appId": "string",
-              "entitlementId": "string"
+              "appId": "None",
+              "entitlementId": "None"
             },
           "ManualProvision": {
-              "instructions": "string",
+              "instructions": "None",
               "userIds": [
-                "string"
+                "None"
               ]
             }
         },
-        "alias": "string",
-        "appId": "string",
-        "appResourceId": "string",
-        "appResourceTypeId": "string",
-        "certifyPolicyId": "string",
+        "alias": "None",
+        "appId": "None",
+        "appResourceId": "None",
+        "appResourceTypeId": "None",
+        "certifyPolicyId": "None",
         "complianceFrameworkValueIds": [
-          "string"
+          "None"
         ],
-        "createdAt": "2023-01-28T12:50:04.866Z",
-        "deletedAt": "2022-05-22T07:16:38.466Z",
-        "description": "string",
-        "displayName": "string",
-        "durationGrant": "string",
+        "createdAt": "None",
+        "deletedAt": "None",
+        "description": "None",
+        "displayName": "None",
+        "durationGrant": "None",
         "durationUnset": {},
         "emergencyGrantEnabled": false,
-        "emergencyGrantPolicyId": "string",
-        "grantCount": "string",
-        "grantPolicyId": "string",
-        "id": "string",
-        "revokePolicyId": "string",
-        "riskLevelValueId": "string",
-        "slug": "string",
+        "emergencyGrantPolicyId": "None",
+        "grantCount": "None",
+        "grantPolicyId": "None",
+        "id": "None",
+        "revokePolicyId": "None",
+        "riskLevelValueId": "None",
+        "slug": "None",
         "systemBuiltin": false,
-        "updatedAt": "2024-04-02T18:02:53.509Z"
+        "updatedAt": "None"
       },
-      "appPath": "string",
-      "appResourcePath": "string",
-      "appResourceTypePath": "string"
+      "appPath": "None",
+      "appResourcePath": "None",
+      "appResourceTypePath": "None"
     },
     "expanded": [
       {
-        "@type": "string"
+        "@type": "None"
       }
     ]
   }

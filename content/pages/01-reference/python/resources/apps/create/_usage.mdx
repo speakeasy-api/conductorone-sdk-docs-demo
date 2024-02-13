@@ -11,11 +11,7 @@ s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
     ),
 )
 
-req = shared.CreateAppRequest(
-    owners=[
-        'string',
-    ],
-)
+req = shared.CreateAppRequest()
 
 res = s.apps.create(req)
 
@@ -28,23 +24,23 @@ if res.create_app_response is not None:
 ```json Example Response
   {
     "App": {
-      "appAccountId": "string",
-      "appAccountName": "string",
-      "certifyPolicyId": "string",
-      "createdAt": "2023-08-25T11:59:25.313Z",
-      "deletedAt": "2023-10-12T18:11:05.242Z",
-      "description": "string",
-      "displayName": "string",
-      "fieldMask": "string",
-      "grantPolicyId": "string",
-      "iconUrl": "string",
-      "id": "string",
-      "logoUri": "string",
-      "monthlyCostUsd": 7151.9,
-      "parentAppId": "string",
-      "revokePolicyId": "string",
-      "updatedAt": "2024-07-14T07:33:58.078Z",
-      "userCount": "string"
+      "appAccountId": "None",
+      "appAccountName": "None",
+      "certifyPolicyId": "None",
+      "createdAt": "None",
+      "deletedAt": "None",
+      "description": "None",
+      "displayName": "None",
+      "fieldMask": "None",
+      "grantPolicyId": "None",
+      "iconUrl": "None",
+      "id": "None",
+      "logoUri": "None",
+      "monthlyCostUsd": 0,
+      "parentAppId": "None",
+      "revokePolicyId": "None",
+      "updatedAt": "None",
+      "userCount": "None"
     }
   }
 ```

@@ -19,14 +19,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.PolicySearch.Search(ctx, &shared.SearchPoliciesRequest{
-        PolicyTypes: []shared.PolicyTypes{
-            shared.PolicyTypesPolicyTypeCertify,
-        },
-        Refs: []shared.PolicyRef{
-            shared.PolicyRef{},
-        },
-    })
+    res, err := s.PolicySearch.Search(ctx, &shared.SearchPoliciesRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -42,11 +35,11 @@ func main() {
   {
     "list": [
       {
-        "createdAt": "2024-06-10T22:08:16.254Z",
-        "deletedAt": "2023-03-28T08:31:01.239Z",
-        "description": "string",
-        "displayName": "string",
-        "id": "string",
+        "createdAt": "None",
+        "deletedAt": "None",
+        "description": "None",
+        "displayName": "None",
+        "id": "None",
         "policySteps": {},
         "postActions": [
             {
@@ -56,15 +49,15 @@ func main() {
         "reassignTasksToDelegates": false,
         "rules": [
             {
-              "condition": "string",
-              "policyKey": "string"
+              "condition": "None",
+              "policyKey": "None"
             }
           ],
         "systemBuiltin": false,
-        "updatedAt": "2024-01-11T06:44:58.152Z"
+        "updatedAt": "None"
       }
     ],
-    "nextPageToken": "string"
+    "nextPageToken": "None"
   }
 ```
 </CH.Code>

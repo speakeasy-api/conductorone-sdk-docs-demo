@@ -19,28 +19,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.UserSearch.Search(ctx, &shared.SearchUsersRequest{
-        UserExpandMask: &shared.UserExpandMask{
-            Paths: []string{
-                "string",
-            },
-        },
-        ExcludeIds: []string{
-            "string",
-        },
-        Ids: []string{
-            "string",
-        },
-        Refs: []shared.UserRef{
-            shared.UserRef{},
-        },
-        RoleIds: []string{
-            "string",
-        },
-        UserStatuses: []shared.UserStatuses{
-            shared.UserStatusesDisabled,
-        },
-    })
+    res, err := s.UserSearch.Search(ctx, &shared.SearchUsersRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -56,102 +35,102 @@ func main() {
   {
     "expanded": [
       {
-        "@type": "string"
+        "@type": "None"
       }
     ],
     "list": [
       {
         "User": {
-          "createdAt": "2022-10-13T08:00:28.026Z",
-          "delegatedUserId": "string",
-          "deletedAt": "2024-06-02T14:07:36.337Z",
-          "department": "string",
+          "createdAt": "None",
+          "delegatedUserId": "None",
+          "deletedAt": "None",
+          "department": "None",
           "departmentSources": [
             {
-              "appId": "string",
-              "appUserId": "string",
-              "appUserProfileAttributeKey": "string",
-              "userAttributeMappingId": "string",
-              "value": "string"
+              "appId": "None",
+              "appUserId": "None",
+              "appUserProfileAttributeKey": "None",
+              "userAttributeMappingId": "None",
+              "value": "None"
             }
           ],
           "directoryIds": [
-            "string"
+            "None"
           ],
           "directoryStatusSources": [
             {
-              "appId": "string",
-              "appUserId": "string",
-              "appUserProfileAttributeKey": "string",
-              "userAttributeMappingId": "string",
-              "value": "string"
+              "appId": "None",
+              "appUserId": "None",
+              "appUserProfileAttributeKey": "None",
+              "userAttributeMappingId": "None",
+              "value": "None"
             }
           ],
-          "displayName": "string",
-          "email": "string",
+          "displayName": "None",
+          "email": "None",
           "emails": [
-            "string"
+            "None"
           ],
-          "employmentStatus": "string",
+          "employmentStatus": "None",
           "employmentStatusSources": [
             {
-              "appId": "string",
-              "appUserId": "string",
-              "appUserProfileAttributeKey": "string",
-              "userAttributeMappingId": "string",
-              "value": "string"
+              "appId": "None",
+              "appUserId": "None",
+              "appUserProfileAttributeKey": "None",
+              "userAttributeMappingId": "None",
+              "value": "None"
             }
           ],
-          "employmentType": "string",
+          "employmentType": "None",
           "employmentTypeSources": [
             {
-              "appId": "string",
-              "appUserId": "string",
-              "appUserProfileAttributeKey": "string",
-              "userAttributeMappingId": "string",
-              "value": "string"
+              "appId": "None",
+              "appUserId": "None",
+              "appUserProfileAttributeKey": "None",
+              "userAttributeMappingId": "None",
+              "value": "None"
             }
           ],
-          "id": "string",
-          "jobTitle": "string",
+          "id": "None",
+          "jobTitle": "None",
           "jobTitleSources": [
             {
-              "appId": "string",
-              "appUserId": "string",
-              "appUserProfileAttributeKey": "string",
-              "userAttributeMappingId": "string",
-              "value": "string"
+              "appId": "None",
+              "appUserId": "None",
+              "appUserProfileAttributeKey": "None",
+              "userAttributeMappingId": "None",
+              "value": "None"
             }
           ],
           "managerIds": [
-            "string"
+            "None"
           ],
           "managerSources": [
             {
-              "appId": "string",
-              "appUserId": "string",
-              "appUserProfileAttributeKey": "string",
-              "userAttributeMappingId": "string",
-              "value": "string"
+              "appId": "None",
+              "appUserId": "None",
+              "appUserProfileAttributeKey": "None",
+              "userAttributeMappingId": "None",
+              "value": "None"
             }
           ],
           "profile": {},
           "roleIds": [
-              "string"
+              "None"
             ],
-          "updatedAt": "2023-05-06T22:15:00.261Z",
-          "username": "string",
+          "updatedAt": "None",
+          "username": "None",
           "usernames": [
-              "string"
+              "None"
             ]
         },
-        "delegatedUserPath": "string",
-        "directoriesPath": "string",
-        "managersPath": "string",
-        "rolesPath": "string"
+        "delegatedUserPath": "None",
+        "directoriesPath": "None",
+        "managersPath": "None",
+        "rolesPath": "None"
       }
     ],
-    "nextPageToken": "string"
+    "nextPageToken": "None"
   }
 ```
 </CH.Code>

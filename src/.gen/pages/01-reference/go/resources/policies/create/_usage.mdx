@@ -19,42 +19,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Policies.Create(ctx, &shared.CreatePolicyRequest{
-        PolicySteps: map[string]shared.PolicyStepsInput{
-            "key": shared.PolicyStepsInput{
-                Steps: []shared.PolicyStepInput{
-                    shared.PolicyStepInput{
-                        Accept: &shared.Accept{},
-                        Approval: &shared.ApprovalInput{
-                            AppGroupApproval: &shared.AppGroupApprovalInput{},
-                            AppOwnerApproval: &shared.AppOwnerApprovalInput{},
-                            EntitlementOwnerApproval: &shared.EntitlementOwnerApprovalInput{},
-                            ExpressionApproval: &shared.ExpressionApprovalInput{},
-                            ManagerApproval: &shared.ManagerApprovalInput{},
-                            SelfApproval: &shared.SelfApprovalInput{},
-                            UserApproval: &shared.UserApprovalInput{},
-                        },
-                        Provision: &shared.Provision{
-                            ProvisionPolicy: &shared.ProvisionPolicy{
-                                ConnectorProvision: &shared.ConnectorProvision{},
-                                DelegatedProvision: &shared.DelegatedProvision{},
-                                ManualProvision: &shared.ManualProvision{
-                                    UserIds: []string{
-                                        "string",
-                                    },
-                                },
-                            },
-                            ProvisionTarget: &shared.ProvisionTarget{},
-                        },
-                        Reject: &shared.Reject{},
-                    },
-                },
-            },
-        },
-        PostActions: []shared.PolicyPostActions{
-            shared.PolicyPostActions{},
-        },
-    })
+    res, err := s.Policies.Create(ctx, &shared.CreatePolicyRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -69,11 +34,11 @@ func main() {
 ```json Example Response
   {
     "Policy": {
-      "createdAt": "2022-06-10T12:00:14.907Z",
-      "deletedAt": "2024-01-13T21:17:10.500Z",
-      "description": "string",
-      "displayName": "string",
-      "id": "string",
+      "createdAt": "None",
+      "deletedAt": "None",
+      "description": "None",
+      "displayName": "None",
+      "id": "None",
       "policySteps": {},
       "postActions": [
           {
@@ -83,12 +48,12 @@ func main() {
       "reassignTasksToDelegates": false,
       "rules": [
           {
-            "condition": "string",
-            "policyKey": "string"
+            "condition": "None",
+            "policyKey": "None"
           }
         ],
       "systemBuiltin": false,
-      "updatedAt": "2022-10-23T22:17:22.586Z"
+      "updatedAt": "None"
     }
   }
 ```

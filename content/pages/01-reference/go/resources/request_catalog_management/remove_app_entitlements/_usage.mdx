@@ -21,11 +21,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.RequestCatalogManagement.RemoveAppEntitlements(ctx, operations.C1APIRequestcatalogV1RequestCatalogManagementServiceRemoveAppEntitlementsRequest{
-        RequestCatalogManagementServiceRemoveAppEntitlementsRequest: &shared.RequestCatalogManagementServiceRemoveAppEntitlementsRequest{
-            AppEntitlements: []shared.AppEntitlementRef{
-                shared.AppEntitlementRef{},
-            },
-        },
         CatalogID: "string",
     })
     if err != nil {

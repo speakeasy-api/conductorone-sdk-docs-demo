@@ -11,13 +11,7 @@ s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
     ),
 )
 
-req = shared.RequestCatalogSearchServiceSearchEntitlementsRequest(
-    app_entitlement_expand_mask=shared.AppEntitlementExpandMask(
-        paths=[
-            'string',
-        ],
-    ),
-)
+req = shared.RequestCatalogSearchServiceSearchEntitlementsRequest()
 
 res = s.request_catalog_search.search_entitlements(req)
 
@@ -31,7 +25,7 @@ if res.request_catalog_search_service_search_entitlements_response is not None:
   {
     "expanded": [
       {
-        "@type": "string"
+        "@type": "None"
       }
     ],
     "list": [
@@ -41,58 +35,58 @@ if res.request_catalog_search_service_search_entitlements_response is not None:
             "ProvisionPolicy": {
               "ConnectorProvision": {},
               "DelegatedProvision": {
-                  "appId": "string",
-                  "entitlementId": "string"
+                  "appId": "None",
+                  "entitlementId": "None"
                 },
               "ManualProvision": {
-                  "instructions": "string",
+                  "instructions": "None",
                   "userIds": [
-                    "string"
+                    "None"
                   ]
                 }
             },
-            "alias": "string",
-            "appId": "string",
-            "appResourceId": "string",
-            "appResourceTypeId": "string",
-            "certifyPolicyId": "string",
+            "alias": "None",
+            "appId": "None",
+            "appResourceId": "None",
+            "appResourceTypeId": "None",
+            "certifyPolicyId": "None",
             "complianceFrameworkValueIds": [
-              "string"
+              "None"
             ],
-            "createdAt": "2024-08-23T16:32:18.942Z",
-            "deletedAt": "2022-10-01T18:38:28.388Z",
-            "description": "string",
-            "displayName": "string",
-            "durationGrant": "string",
+            "createdAt": "None",
+            "deletedAt": "None",
+            "description": "None",
+            "displayName": "None",
+            "durationGrant": "None",
             "durationUnset": {},
             "emergencyGrantEnabled": false,
-            "emergencyGrantPolicyId": "string",
-            "grantCount": "string",
-            "grantPolicyId": "string",
-            "id": "string",
-            "revokePolicyId": "string",
-            "riskLevelValueId": "string",
-            "slug": "string",
+            "emergencyGrantPolicyId": "None",
+            "grantCount": "None",
+            "grantPolicyId": "None",
+            "id": "None",
+            "revokePolicyId": "None",
+            "riskLevelValueId": "None",
+            "slug": "None",
             "systemBuiltin": false,
-            "updatedAt": "2023-09-30T01:48:06.219Z"
+            "updatedAt": "None"
           },
-          "appPath": "string",
-          "appResourcePath": "string",
-          "appResourceTypePath": "string"
+          "appPath": "None",
+          "appResourcePath": "None",
+          "appResourceTypePath": "None"
         },
         "appEntitlementUserBindings": [
           {
-            "appEntitlementId": "string",
-            "appId": "string",
-            "appUserId": "string",
-            "createdAt": "2022-12-10T06:53:42.030Z",
-            "deletedAt": "2024-08-24T09:10:00.832Z",
-            "deprovisionAt": "2024-11-24T02:18:29.573Z"
+            "appEntitlementId": "None",
+            "appId": "None",
+            "appUserId": "None",
+            "createdAt": "None",
+            "deletedAt": "None",
+            "deprovisionAt": "None"
           }
         ]
       }
     ],
-    "nextPageToken": "string"
+    "nextPageToken": "None"
   }
 ```
 </CH.Code>

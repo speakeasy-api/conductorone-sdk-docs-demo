@@ -21,7 +21,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Connector.RevokeCredential(ctx, operations.C1APIAppV1ConnectorServiceRevokeCredentialRequest{
-        ConnectorServiceRevokeCredentialRequest: &shared.ConnectorServiceRevokeCredentialRequest{},
         AppID: "string",
         ConnectorID: "string",
         ID: "<ID>",

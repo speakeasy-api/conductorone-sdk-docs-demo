@@ -21,7 +21,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Policies.Delete(ctx, operations.C1APIPolicyV1PoliciesDeleteRequest{
-        DeletePolicyRequest: &shared.DeletePolicyRequest{},
         ID: "<ID>",
     })
     if err != nil {

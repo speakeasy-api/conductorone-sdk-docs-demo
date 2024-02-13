@@ -2,7 +2,6 @@
 <CH.Code>
 ```python Update.py
 import conductorone_sdk_typescript
-import dateutil.parser
 from conductorone_sdk_typescript.models import operations, shared
 
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
@@ -13,25 +12,6 @@ s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
 )
 
 req = operations.C1APIAppV1ConnectorServiceUpdateRequest(
-    connector_service_update_request=shared.ConnectorServiceUpdateRequest(
-        connector=shared.ConnectorInput(
-            connector_status=shared.ConnectorStatus(),
-            o_auth2_authorized_as=shared.OAuth2AuthorizedAsInput(),
-            config=shared.Config(
-                additional_properties={
-                    'key': 'string',
-                },
-            ),
-            user_ids=[
-                'string',
-            ],
-        ),
-        connector_expand_mask=shared.ConnectorExpandMask(
-            paths=[
-                'string',
-            ],
-        ),
-    ),
     app_id='string',
     id='<ID>',
 )
@@ -49,37 +29,37 @@ if res.connector_service_update_response is not None:
     "ConnectorView": {
       "Connector": {
         "ConnectorStatus": {
-          "completedAt": "2023-03-31T11:16:03.717Z",
-          "lastError": "string",
-          "startedAt": "2023-06-04T01:35:07.870Z",
-          "updatedAt": "2022-07-24T05:17:09.567Z"
+          "completedAt": "None",
+          "lastError": "None",
+          "startedAt": "None",
+          "updatedAt": "None"
         },
         "OAuth2AuthorizedAs": {
-          "authEmail": "string",
-          "authorizedAt": "2024-04-28T13:26:34.404Z"
+          "authEmail": "None",
+          "authorizedAt": "None"
         },
-        "appId": "string",
-        "catalogId": "string",
+        "appId": "None",
+        "catalogId": "None",
         "config": {
-          "@type": "string"
+          "@type": "None"
         },
-        "createdAt": "2024-03-18T15:53:44.708Z",
-        "deletedAt": "2023-05-15T22:34:42.373Z",
-        "description": "string",
-        "displayName": "string",
-        "downloadUrl": "string",
-        "id": "string",
-        "updatedAt": "2022-08-26T08:08:26.098Z",
+        "createdAt": "None",
+        "deletedAt": "None",
+        "description": "None",
+        "displayName": "None",
+        "downloadUrl": "None",
+        "id": "None",
+        "updatedAt": "None",
         "userIds": [
-          "string"
+          "None"
         ]
       },
-      "appPath": "string",
-      "usersPath": "string"
+      "appPath": "None",
+      "usersPath": "None"
     },
     "expanded": [
       {
-        "@type": "string"
+        "@type": "None"
       }
     ]
   }

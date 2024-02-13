@@ -21,7 +21,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Directory.Delete(ctx, operations.C1APIDirectoryV1DirectoryServiceDeleteRequest{
-        DirectoryServiceDeleteRequest: &shared.DirectoryServiceDeleteRequest{},
         AppID: "string",
     })
     if err != nil {

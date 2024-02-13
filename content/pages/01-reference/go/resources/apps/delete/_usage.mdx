@@ -21,7 +21,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Apps.Delete(ctx, operations.C1APIAppV1AppsDeleteRequest{
-        DeleteAppRequest: &shared.DeleteAppRequest{},
         ID: "<ID>",
     })
     if err != nil {

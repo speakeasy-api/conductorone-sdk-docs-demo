@@ -5,9 +5,13 @@ generation:
     optionalPropertyRendering: withExample
   fixes:
     nameResolutionDec2023: false
+    parameterOrderingFeb2024: false
+    requestResponseComponentNamesFeb2024: false
   baseServerURL: ""
 docs:
-  version: 0.12.0
+  version: 0.13.0
+  docsLanguages:
+    - go
   imports:
     option: openapi
     paths:

@@ -25,11 +25,7 @@ func main() {
 	)
 
 	ctx := context.Background()
-	res, err := s.Apps.Create(ctx, &shared.CreateAppRequest{
-		Owners: []string{
-			"string",
-		},
-	})
+	res, err := s.Apps.Create(ctx, &shared.CreateAppRequest{})
 	if err != nil {
 		log.Fatal(err)
 	}

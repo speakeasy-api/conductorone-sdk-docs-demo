@@ -12,9 +12,6 @@ s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
 )
 
 req = operations.C1APIAppV1AppUsageControlsServiceUpdateRequest(
-    update_app_usage_controls_request=shared.UpdateAppUsageControlsRequest(
-        app_usage_controls=shared.AppUsageControls(),
-    ),
     app_id='string',
 )
 
@@ -29,11 +26,11 @@ if res.update_app_usage_controls_response is not None:
 ```json Example Response
   {
     "AppUsageControls": {
-      "appId": "string",
+      "appId": "None",
       "notify": false,
-      "notifyAfterDays": 3687.25,
+      "notifyAfterDays": 0,
       "revoke": false,
-      "revokeAfterDays": 6625.27
+      "revokeAfterDays": 0
     }
   }
 ```

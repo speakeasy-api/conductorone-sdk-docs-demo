@@ -21,7 +21,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Connector.Delete(ctx, operations.C1APIAppV1ConnectorServiceDeleteRequest{
-        ConnectorServiceDeleteRequest: &shared.ConnectorServiceDeleteRequest{},
         AppID: "string",
         ID: "<ID>",
     })

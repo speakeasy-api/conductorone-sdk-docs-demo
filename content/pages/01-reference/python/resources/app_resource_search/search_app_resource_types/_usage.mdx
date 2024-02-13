@@ -11,23 +11,7 @@ s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
     ),
 )
 
-req = shared.SearchAppResourceTypesRequest(
-    app_ids=[
-        'string',
-    ],
-    exclude_resource_type_ids=[
-        'string',
-    ],
-    exclude_resource_type_trait_ids=[
-        'string',
-    ],
-    resource_type_ids=[
-        'string',
-    ],
-    resource_type_trait_ids=[
-        'string',
-    ],
-)
+req = shared.SearchAppResourceTypesRequest()
 
 res = s.app_resource_search.search_app_resource_types(req)
 
@@ -41,15 +25,15 @@ if res.search_app_resource_types_response is not None:
   {
     "list": [
       {
-        "appId": "string",
-        "createdAt": "2023-12-02T06:10:48.333Z",
-        "deletedAt": "2022-09-02T11:56:21.166Z",
-        "displayName": "string",
-        "id": "string",
-        "updatedAt": "2024-09-04T03:26:51.895Z"
+        "appId": "None",
+        "createdAt": "None",
+        "deletedAt": "None",
+        "displayName": "None",
+        "id": "None",
+        "updatedAt": "None"
       }
     ],
-    "nextPageToken": "string"
+    "nextPageToken": "None"
   }
 ```
 </CH.Code>

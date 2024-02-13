@@ -12,21 +12,6 @@ s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
 )
 
 req = operations.C1APIAppV1ConnectorServiceCreateRequest(
-    connector_service_create_request=shared.ConnectorServiceCreateRequest(
-        connector_expand_mask=shared.ConnectorExpandMask(
-            paths=[
-                'string',
-            ],
-        ),
-        config=shared.ConnectorServiceCreateRequestConfig(
-            additional_properties={
-                'key': 'string',
-            },
-        ),
-        user_ids=[
-            'string',
-        ],
-    ),
     app_id='string',
 )
 
@@ -43,37 +28,37 @@ if res.connector_service_create_response is not None:
     "ConnectorView": {
       "Connector": {
         "ConnectorStatus": {
-          "completedAt": "2024-11-22T04:11:07.245Z",
-          "lastError": "string",
-          "startedAt": "2022-10-26T19:57:04.215Z",
-          "updatedAt": "2023-06-08T12:30:11.149Z"
+          "completedAt": "None",
+          "lastError": "None",
+          "startedAt": "None",
+          "updatedAt": "None"
         },
         "OAuth2AuthorizedAs": {
-          "authEmail": "string",
-          "authorizedAt": "2024-05-17T17:32:07.006Z"
+          "authEmail": "None",
+          "authorizedAt": "None"
         },
-        "appId": "string",
-        "catalogId": "string",
+        "appId": "None",
+        "catalogId": "None",
         "config": {
-          "@type": "string"
+          "@type": "None"
         },
-        "createdAt": "2024-06-09T03:17:10.252Z",
-        "deletedAt": "2023-08-03T16:03:07.258Z",
-        "description": "string",
-        "displayName": "string",
-        "downloadUrl": "string",
-        "id": "string",
-        "updatedAt": "2023-06-11T01:19:10.260Z",
+        "createdAt": "None",
+        "deletedAt": "None",
+        "description": "None",
+        "displayName": "None",
+        "downloadUrl": "None",
+        "id": "None",
+        "updatedAt": "None",
         "userIds": [
-          "string"
+          "None"
         ]
       },
-      "appPath": "string",
-      "usersPath": "string"
+      "appPath": "None",
+      "usersPath": "None"
     },
     "expanded": [
       {
-        "@type": "string"
+        "@type": "None"
       }
     ]
   }

@@ -21,11 +21,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.RequestCatalogManagement.AddAppEntitlements(ctx, operations.C1APIRequestcatalogV1RequestCatalogManagementServiceAddAppEntitlementsRequest{
-        RequestCatalogManagementServiceAddAppEntitlementsRequest: &shared.RequestCatalogManagementServiceAddAppEntitlementsRequest{
-            AppEntitlements: []shared.AppEntitlementRef{
-                shared.AppEntitlementRef{},
-            },
-        },
         CatalogID: "string",
     })
     if err != nil {
