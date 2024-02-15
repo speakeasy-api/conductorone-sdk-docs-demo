@@ -21,7 +21,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.TaskActions.Deny(ctx, operations.C1APITaskV1TaskActionsServiceDenyRequest{
-        TaskID: "string",
+        TaskID: "<value>",
     })
     if err != nil {
         log.Fatal(err)

@@ -2,7 +2,6 @@
 <CH.Code>
 ```typescript SearchEntitlements.ts
 import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
-import { GrantedStatus } from "conductorone-sdk-typescript/models/components";
 
 async function run() {
   const sdk = new ConductoroneSDKTypescript({
@@ -15,7 +14,7 @@ async function run() {
   const result = await sdk.requestCatalogSearch.searchEntitlements({
     appEntitlementExpandMask: {
       paths: [
-        "string",
+        "<value>",
       ],
     },
   });

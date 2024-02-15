@@ -21,7 +21,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.TaskActions.EscalateToEmergencyAccess(ctx, operations.C1APITaskV1TaskActionsServiceEscalateToEmergencyAccessRequest{
-        TaskID: "string",
+        TaskID: "<value>",
     })
     if err != nil {
         log.Fatal(err)

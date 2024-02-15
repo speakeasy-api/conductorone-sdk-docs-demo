@@ -20,8 +20,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Task.CreateGrantTask(ctx, &shared.TaskServiceCreateGrantRequest{
-        AppEntitlementID: "string",
-        AppID: "string",
+        AppEntitlementID: "<value>",
+        AppID: "<value>",
     })
     if err != nil {
         log.Fatal(err)

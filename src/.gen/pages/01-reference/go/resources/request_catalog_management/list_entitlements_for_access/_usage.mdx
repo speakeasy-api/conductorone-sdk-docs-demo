@@ -21,7 +21,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.RequestCatalogManagement.ListEntitlementsForAccess(ctx, operations.C1APIRequestcatalogV1RequestCatalogManagementServiceListEntitlementsForAccessRequest{
-        CatalogID: "string",
+        CatalogID: "<value>",
     })
     if err != nil {
         log.Fatal(err)

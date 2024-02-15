@@ -2,7 +2,6 @@
 <CH.Code>
 ```typescript Update.ts
 import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
-import { ConnectorStatusStatus } from "conductorone-sdk-typescript/models/components";
 
 async function run() {
   const sdk = new ConductoroneSDKTypescript({
@@ -19,21 +18,21 @@ async function run() {
         oAuth2AuthorizedAs: {},
         config: {
           additionalProperties: {
-            "key": "string",
+            "key": "<value>",
           },
         },
         userIds: [
-          "string",
+          "<value>",
         ],
       },
       connectorExpandMask: {
         paths: [
-          "string",
+          "<value>",
         ],
       },
     },
-    appId: "string",
-    id: "<ID>",
+    appId: "<value>",
+    id: "<id>",
   });
 
   // Handle the result

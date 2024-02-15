@@ -21,8 +21,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.AppResource.List(ctx, operations.C1APIAppV1AppResourceServiceListRequest{
-        AppID: "string",
-        AppResourceTypeID: "string",
+        AppID: "<value>",
+        AppResourceTypeID: "<value>",
     })
     if err != nil {
         log.Fatal(err)

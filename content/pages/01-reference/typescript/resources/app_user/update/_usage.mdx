@@ -2,7 +2,6 @@
 <CH.Code>
 ```typescript Update.ts
 import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
-import { AppUserType } from "conductorone-sdk-typescript/models/components";
 
 async function run() {
   const sdk = new ConductoroneSDKTypescript({
@@ -19,12 +18,12 @@ async function run() {
       },
       appUserExpandMask: {
         paths: [
-          "string",
+          "<value>",
         ],
       },
     },
-    appUserAppId: "string",
-    appUserId: "string",
+    appUserAppId: "<value>",
+    appUserId: "<value>",
   });
 
   // Handle the result

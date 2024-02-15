@@ -14,12 +14,12 @@ async function run() {
   const result = await sdk.task.createGrantTask({
     taskExpandMask: {
       paths: [
-        "string",
+        "<value>",
       ],
     },
     taskGrantSource: {},
-    appEntitlementId: "string",
-    appId: "string",
+    appEntitlementId: "<value>",
+    appId: "<value>",
   });
 
   // Handle the result

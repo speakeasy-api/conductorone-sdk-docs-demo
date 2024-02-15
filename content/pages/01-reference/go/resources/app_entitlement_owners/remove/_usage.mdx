@@ -21,9 +21,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.AppEntitlementOwners.Remove(ctx, operations.C1APIAppV1AppEntitlementOwnersRemoveRequest{
-        AppID: "string",
-        EntitlementID: "string",
-        UserID: "string",
+        AppID: "<value>",
+        EntitlementID: "<value>",
+        UserID: "<value>",
     })
     if err != nil {
         log.Fatal(err)

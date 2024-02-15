@@ -2,8 +2,7 @@
 <CH.Code>
 ```typescript Search.ts
 import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
-import {  } from "conductorone-sdk-typescript/models";
-import { CurrentStep, EmergencyStatus, SortBy } from "conductorone-sdk-typescript/models/components";
+import { TaskStates } from "conductorone-sdk-typescript/models/components";
 
 async function run() {
   const sdk = new ConductoroneSDKTypescript({
@@ -16,53 +15,53 @@ async function run() {
   const result = await sdk.taskSearch.search({
     taskExpandMask: {
       paths: [
-        "string",
+        "<value>",
       ],
     },
     accessReviewIds: [
-      "string",
+      "<value>",
     ],
     accountOwnerIds: [
-      "string",
+      "<value>",
     ],
     appEntitlementIds: [
-      "string",
+      "<value>",
     ],
     appResourceIds: [
-      "string",
+      "<value>",
     ],
     appResourceTypeIds: [
-      "string",
+      "<value>",
     ],
     appUserSubjectIds: [
-      "string",
+      "<value>",
     ],
     applicationIds: [
-      "string",
+      "<value>",
     ],
     assigneesInIds: [
-      "string",
+      "<value>",
     ],
     excludeAppEntitlementIds: [
-      "string",
+      "<value>",
     ],
     excludeIds: [
-      "string",
+      "<value>",
     ],
     myWorkUserIds: [
-      "string",
+      "<value>",
     ],
     openerIds: [
-      "string",
+      "<value>",
     ],
     previouslyActedOnIds: [
-      "string",
+      "<value>",
     ],
     refs: [
       {},
     ],
     subjectIds: [
-      "string",
+      "<value>",
     ],
     taskStates: [
       TaskStates.TaskStateOpen,

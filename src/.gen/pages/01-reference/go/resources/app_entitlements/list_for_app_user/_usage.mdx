@@ -21,8 +21,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.AppEntitlements.ListForAppUser(ctx, operations.C1APIAppV1AppEntitlementsListForAppUserRequest{
-        AppID: "string",
-        AppUserID: "string",
+        AppID: "<value>",
+        AppUserID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
