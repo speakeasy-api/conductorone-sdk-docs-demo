@@ -4,9 +4,9 @@ management:
   docChecksum: 62ce67261ac2cb50833d44d274d1cd96
   docVersion: 0.1.0-alpha
   speakeasyVersion: internal
-  generationVersion: 2.258.0
-  releaseVersion: 0.13.1
-  configChecksum: 65712198070dbdf43297504685cebcf5
+  generationVersion: 2.269.0
+  releaseVersion: 0.13.2
+  configChecksum: 47706c97a426d78709ff20747b758068
   repoSubDirectory: .
   installationURL: conductorone-sdk-python
   published: true
@@ -1568,6 +1568,7 @@ generatedFiles:
   - content/types/models/components/get_policy_response/typescript.mdx
   - content/types/models/components/get_roles_response/typescript.mdx
   - content/types/models/components/granted_status/typescript.mdx
+  - content/types/models/components/http_metadata/typescript.mdx
   - content/types/models/components/introspect_response/typescript.mdx
   - content/types/models/components/list_app_entitlement_owners_response/typescript.mdx
   - content/types/models/components/list_app_entitlement_users_response/typescript.mdx
