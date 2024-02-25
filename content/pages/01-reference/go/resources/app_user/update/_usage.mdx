@@ -1,0 +1,73 @@
+
+<CH.Code>
+```go Update.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go"
+	"context"
+	"github.com/conductorone/conductorone-sdk-go/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.AppUser.Update(ctx, operations.C1APIAppV1AppUserServiceUpdateRequest{
+        AppUserAppID: "<value>",
+        AppUserID: "<value>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AppUserServiceUpdateResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "AppUserView": {
+      "AppUser": {
+        "AppUserStatus": {
+          "details": "None"
+        },
+        "appId": "None",
+        "createdAt": "None",
+        "deletedAt": "None",
+        "displayName": "None",
+        "email": "None",
+        "emails": [
+          "None"
+        ],
+        "id": "None",
+        "identityUserId": "None",
+        "profile": {},
+        "updatedAt": "None",
+        "username": "None",
+        "usernames": [
+            "None"
+          ]
+      },
+      "appPath": "None",
+      "identityUserPath": "None",
+      "lastUsagePath": "None"
+    },
+    "expanded": [
+      {
+        "@type": "None"
+      }
+    ]
+  }
+```
+</CH.Code>

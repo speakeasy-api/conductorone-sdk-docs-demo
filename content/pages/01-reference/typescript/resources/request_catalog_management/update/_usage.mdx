@@ -1,0 +1,124 @@
+
+<CH.Code>
+```typescript Update.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+async function run() {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+      oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    },
+  });
+
+  const result = await sdk.requestCatalogManagement.update({
+    requestCatalogManagementServiceUpdateRequest: {
+      requestCatalog: {
+        accessEntitlements: [
+          {
+            provisionPolicy: {
+              connectorProvision: {},
+              delegatedProvision: {},
+              manualProvision: {
+                userIds: [
+                  "<value>",
+                ],
+              },
+            },
+            complianceFrameworkValueIds: [
+              "<value>",
+            ],
+            durationUnset: {},
+          },
+        ],
+        appIds: [
+          "<value>",
+        ],
+      },
+      requestCatalogExpandMask: {
+        paths: [
+          "<value>",
+        ],
+      },
+    },
+    id: "<id>",
+  });
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "RequestCatalogView": {
+      "RequestCatalog": {
+        "accessEntitlements": [
+          {
+            "ProvisionPolicy": {
+              "ConnectorProvision": {},
+              "DelegatedProvision": {
+                  "appId": "None",
+                  "entitlementId": "None"
+                },
+              "ManualProvision": {
+                  "instructions": "None",
+                  "userIds": [
+                    "None"
+                  ]
+                }
+            },
+            "alias": "None",
+            "appId": "None",
+            "appResourceId": "None",
+            "appResourceTypeId": "None",
+            "certifyPolicyId": "None",
+            "complianceFrameworkValueIds": [
+              "None"
+            ],
+            "createdAt": "None",
+            "deletedAt": "None",
+            "description": "None",
+            "displayName": "None",
+            "durationGrant": "None",
+            "durationUnset": {},
+            "emergencyGrantEnabled": false,
+            "emergencyGrantPolicyId": "None",
+            "grantCount": "None",
+            "grantPolicyId": "None",
+            "id": "None",
+            "revokePolicyId": "None",
+            "riskLevelValueId": "None",
+            "slug": "None",
+            "systemBuiltin": false,
+            "updatedAt": "None"
+          }
+        ],
+        "appIds": [
+          "None"
+        ],
+        "createdAt": "None",
+        "createdByUserId": "None",
+        "deletedAt": "None",
+        "description": "None",
+        "displayName": "None",
+        "id": "None",
+        "published": false,
+        "updatedAt": "None",
+        "visibleToEveryone": false
+      },
+      "accessEntitlementsPath": "None",
+      "appPaths": "None",
+      "createdByUserPath": "None"
+    },
+    "expanded": [
+      {
+        "@type": "None"
+      }
+    ]
+  }
+```
+</CH.Code>

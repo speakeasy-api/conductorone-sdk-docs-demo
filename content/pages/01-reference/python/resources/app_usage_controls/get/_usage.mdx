@@ -1,0 +1,38 @@
+
+<CH.Code>
+```python Get.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import operations, shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
+        oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    ),
+)
+
+req = operations.C1APIAppV1AppUsageControlsServiceGetRequest(
+    app_id='<value>',
+)
+
+res = s.app_usage_controls.get(req)
+
+if res.get_app_usage_controls_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "AppUsageControls": {
+      "appId": "None",
+      "notify": false,
+      "notifyAfterDays": 0,
+      "revoke": false,
+      "revokeAfterDays": 0
+    },
+    "hasUsageData": false
+  }
+```
+</CH.Code>
