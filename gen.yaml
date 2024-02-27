@@ -11,7 +11,7 @@ generation:
     oAuth2ClientCredentialsEnabled: false
   baseServerURL: ""
 docs:
-  version: 0.13.3
+  version: 0.13.4
   docsLanguages:
     - go
   imports:
