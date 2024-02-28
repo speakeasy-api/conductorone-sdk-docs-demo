@@ -1,0 +1,30 @@
+
+<CH.Code>
+```python Delete.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import operations, shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
+        oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    ),
+)
+
+req = operations.C1APIAppV1ConnectorServiceDeleteRequest(
+    app_id='<value>',
+    id='<id>',
+)
+
+res = s.connector.delete(req)
+
+if res.connector_service_delete_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

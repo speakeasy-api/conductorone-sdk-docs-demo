@@ -1,0 +1,63 @@
+
+<CH.Code>
+```go Get.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go"
+	"context"
+	"github.com/conductorone/conductorone-sdk-go/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.Policies.Get(ctx, operations.C1APIPolicyV1PoliciesGetRequest{
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.GetPolicyResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "Policy": {
+      "createdAt": "None",
+      "deletedAt": "None",
+      "description": "None",
+      "displayName": "None",
+      "id": "None",
+      "policySteps": {},
+      "postActions": [
+          {
+            "certifyRemediateImmediately": false
+          }
+        ],
+      "reassignTasksToDelegates": false,
+      "rules": [
+          {
+            "condition": "None",
+            "policyKey": "None"
+          }
+        ],
+      "systemBuiltin": false,
+      "updatedAt": "None"
+    }
+  }
+```
+</CH.Code>

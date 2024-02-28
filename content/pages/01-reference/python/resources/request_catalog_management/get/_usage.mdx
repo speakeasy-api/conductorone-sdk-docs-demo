@@ -1,0 +1,95 @@
+
+<CH.Code>
+```python Get.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import operations, shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
+        oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    ),
+)
+
+req = operations.C1APIRequestcatalogV1RequestCatalogManagementServiceGetRequest(
+    id='<id>',
+)
+
+res = s.request_catalog_management.get(req)
+
+if res.request_catalog_management_service_get_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "RequestCatalogView": {
+      "RequestCatalog": {
+        "accessEntitlements": [
+          {
+            "ProvisionPolicy": {
+              "ConnectorProvision": {},
+              "DelegatedProvision": {
+                  "appId": "None",
+                  "entitlementId": "None"
+                },
+              "ManualProvision": {
+                  "instructions": "None",
+                  "userIds": [
+                    "None"
+                  ]
+                }
+            },
+            "alias": "None",
+            "appId": "None",
+            "appResourceId": "None",
+            "appResourceTypeId": "None",
+            "certifyPolicyId": "None",
+            "complianceFrameworkValueIds": [
+              "None"
+            ],
+            "createdAt": "None",
+            "deletedAt": "None",
+            "description": "None",
+            "displayName": "None",
+            "durationGrant": "None",
+            "durationUnset": {},
+            "emergencyGrantEnabled": false,
+            "emergencyGrantPolicyId": "None",
+            "grantCount": "None",
+            "grantPolicyId": "None",
+            "id": "None",
+            "revokePolicyId": "None",
+            "riskLevelValueId": "None",
+            "slug": "None",
+            "systemBuiltin": false,
+            "updatedAt": "None"
+          }
+        ],
+        "appIds": [
+          "None"
+        ],
+        "createdAt": "None",
+        "createdByUserId": "None",
+        "deletedAt": "None",
+        "description": "None",
+        "displayName": "None",
+        "id": "None",
+        "published": false,
+        "updatedAt": "None",
+        "visibleToEveryone": false
+      },
+      "accessEntitlementsPath": "None",
+      "appPaths": "None",
+      "createdByUserPath": "None"
+    },
+    "expanded": [
+      {
+        "@type": "None"
+      }
+    ]
+  }
+```
+</CH.Code>

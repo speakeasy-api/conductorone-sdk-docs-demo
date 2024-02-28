@@ -1,0 +1,106 @@
+
+<CH.Code>
+```go Get.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go"
+	"context"
+	"github.com/conductorone/conductorone-sdk-go/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.RequestCatalogManagement.Get(ctx, operations.C1APIRequestcatalogV1RequestCatalogManagementServiceGetRequest{
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.RequestCatalogManagementServiceGetResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "RequestCatalogView": {
+      "RequestCatalog": {
+        "accessEntitlements": [
+          {
+            "ProvisionPolicy": {
+              "ConnectorProvision": {},
+              "DelegatedProvision": {
+                  "appId": "None",
+                  "entitlementId": "None"
+                },
+              "ManualProvision": {
+                  "instructions": "None",
+                  "userIds": [
+                    "None"
+                  ]
+                }
+            },
+            "alias": "None",
+            "appId": "None",
+            "appResourceId": "None",
+            "appResourceTypeId": "None",
+            "certifyPolicyId": "None",
+            "complianceFrameworkValueIds": [
+              "None"
+            ],
+            "createdAt": "None",
+            "deletedAt": "None",
+            "description": "None",
+            "displayName": "None",
+            "durationGrant": "None",
+            "durationUnset": {},
+            "emergencyGrantEnabled": false,
+            "emergencyGrantPolicyId": "None",
+            "grantCount": "None",
+            "grantPolicyId": "None",
+            "id": "None",
+            "revokePolicyId": "None",
+            "riskLevelValueId": "None",
+            "slug": "None",
+            "systemBuiltin": false,
+            "updatedAt": "None"
+          }
+        ],
+        "appIds": [
+          "None"
+        ],
+        "createdAt": "None",
+        "createdByUserId": "None",
+        "deletedAt": "None",
+        "description": "None",
+        "displayName": "None",
+        "id": "None",
+        "published": false,
+        "updatedAt": "None",
+        "visibleToEveryone": false
+      },
+      "accessEntitlementsPath": "None",
+      "appPaths": "None",
+      "createdByUserPath": "None"
+    },
+    "expanded": [
+      {
+        "@type": "None"
+      }
+    ]
+  }
+```
+</CH.Code>

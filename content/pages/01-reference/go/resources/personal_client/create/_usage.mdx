@@ -1,0 +1,56 @@
+
+<CH.Code>
+```go Create.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go"
+	"context"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.PersonalClient.Create(ctx, &shared.PersonalClientServiceCreateRequest{})
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.PersonalClientServiceCreateResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "PersonalClient": {
+      "allowSourceCidr": [
+        "None"
+      ],
+      "clientId": "None",
+      "createdAt": "None",
+      "deletedAt": "None",
+      "displayName": "None",
+      "expiresTime": "None",
+      "id": "None",
+      "lastUsedAt": "None",
+      "scopedRoles": [
+        "None"
+      ],
+      "updatedAt": "None",
+      "userId": "None"
+    },
+    "clientSecret": "None"
+  }
+```
+</CH.Code>

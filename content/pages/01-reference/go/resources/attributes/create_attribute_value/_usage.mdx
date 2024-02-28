@@ -1,0 +1,46 @@
+
+<CH.Code>
+```go CreateAttributeValue.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go"
+	"context"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.Attributes.CreateAttributeValue(ctx, &shared.CreateAttributeValueRequest{})
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.CreateAttributeValueResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "AttributeValue": {
+      "attributeTypeId": "None",
+      "createdAt": "None",
+      "deletedAt": "None",
+      "id": "None",
+      "updatedAt": "None",
+      "value": "None"
+    }
+  }
+```
+</CH.Code>

@@ -1,0 +1,39 @@
+
+<CH.Code>
+```python SearchAppResourceTypes.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
+        oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    ),
+)
+
+req = shared.SearchAppResourceTypesRequest()
+
+res = s.app_resource_search.search_app_resource_types(req)
+
+if res.search_app_resource_types_response is not None:
+    # handle response
+    pass
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "appId": "None",
+        "createdAt": "None",
+        "deletedAt": "None",
+        "displayName": "None",
+        "id": "None",
+        "updatedAt": "None"
+      }
+    ],
+    "nextPageToken": "None"
+  }
+```
+</CH.Code>

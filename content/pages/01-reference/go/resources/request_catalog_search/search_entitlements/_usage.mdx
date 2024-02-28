@@ -1,0 +1,102 @@
+
+<CH.Code>
+```go SearchEntitlements.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go"
+	"context"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.RequestCatalogSearch.SearchEntitlements(ctx, &shared.RequestCatalogSearchServiceSearchEntitlementsRequest{})
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.RequestCatalogSearchServiceSearchEntitlementsResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "expanded": [
+      {
+        "@type": "None"
+      }
+    ],
+    "list": [
+      {
+        "AppEntitlementView": {
+          "AppEntitlement": {
+            "ProvisionPolicy": {
+              "ConnectorProvision": {},
+              "DelegatedProvision": {
+                  "appId": "None",
+                  "entitlementId": "None"
+                },
+              "ManualProvision": {
+                  "instructions": "None",
+                  "userIds": [
+                    "None"
+                  ]
+                }
+            },
+            "alias": "None",
+            "appId": "None",
+            "appResourceId": "None",
+            "appResourceTypeId": "None",
+            "certifyPolicyId": "None",
+            "complianceFrameworkValueIds": [
+              "None"
+            ],
+            "createdAt": "None",
+            "deletedAt": "None",
+            "description": "None",
+            "displayName": "None",
+            "durationGrant": "None",
+            "durationUnset": {},
+            "emergencyGrantEnabled": false,
+            "emergencyGrantPolicyId": "None",
+            "grantCount": "None",
+            "grantPolicyId": "None",
+            "id": "None",
+            "revokePolicyId": "None",
+            "riskLevelValueId": "None",
+            "slug": "None",
+            "systemBuiltin": false,
+            "updatedAt": "None"
+          },
+          "appPath": "None",
+          "appResourcePath": "None",
+          "appResourceTypePath": "None"
+        },
+        "appEntitlementUserBindings": [
+          {
+            "appEntitlementId": "None",
+            "appId": "None",
+            "appUserId": "None",
+            "createdAt": "None",
+            "deletedAt": "None",
+            "deprovisionAt": "None"
+          }
+        ]
+      }
+    ],
+    "nextPageToken": "None"
+  }
+```
+</CH.Code>
