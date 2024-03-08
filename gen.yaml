@@ -11,7 +11,7 @@ generation:
     oAuth2ClientCredentialsEnabled: false
   baseServerURL: ""
 docs:
-  version: 0.13.5
+  version: 0.13.6
   docsLanguages:
     - go
   imports:
@@ -46,6 +46,7 @@ go:
   packageName: github.com/conductorone/conductorone-sdk-go
   published: true
   repoSubDirectory: .
+  responseFormat: envelope-http
 python:
   version: 0.8.8
   additionalDependencies:
@@ -70,6 +71,7 @@ python:
   outputModelSuffix: output
   packageName: openapi
   repoSubDirectory: .
+  responseFormat: envelope-http
 typescript:
   version: 1.1.0
   additionalDependencies:

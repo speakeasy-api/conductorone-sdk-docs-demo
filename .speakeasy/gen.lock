@@ -4,9 +4,9 @@ management:
   docChecksum: 62ce67261ac2cb50833d44d274d1cd96
   docVersion: 0.1.0-alpha
   speakeasyVersion: internal
-  generationVersion: 2.275.4
-  releaseVersion: 0.13.5
-  configChecksum: 0f63b5261aefc33d7b89d6b3c8381f88
+  generationVersion: 2.279.1
+  releaseVersion: 0.13.6
+  configChecksum: 2e4a32776167b3b9fe7dadef5249da3a
   repoSubDirectory: .
   installationURL: conductorone-sdk-python
   published: true
@@ -20,7 +20,7 @@ features:
     groups: 0.1.1
     inputOutputModels: 0.3.0
     nameOverrides: 0.1.0
-    unions: 0.1.2
+    unions: 0.1.3
 generatedFiles:
   - content/pages/01-reference/go/client_sdks/_snippet.mdx
   - content/pages/01-reference/go/client_sdks/client_sdks.mdx
@@ -2192,6 +2192,7 @@ generatedFiles:
   - content/types/models/shared/get_policy_response/python.mdx
   - content/types/models/shared/get_roles_response/python.mdx
   - content/types/models/shared/granted_status/python.mdx
+  - content/types/models/shared/http_metadata/python.mdx
   - content/types/models/shared/introspect_response/python.mdx
   - content/types/models/shared/list_app_entitlement_owners_response/python.mdx
   - content/types/models/shared/list_app_entitlement_users_response/python.mdx
@@ -2661,6 +2662,7 @@ generatedFiles:
   - content/types/pkg/models/shared/get_policy_response/go.mdx
   - content/types/pkg/models/shared/get_roles_response/go.mdx
   - content/types/pkg/models/shared/granted_status/go.mdx
+  - content/types/pkg/models/shared/http_metadata/go.mdx
   - content/types/pkg/models/shared/introspect_response/go.mdx
   - content/types/pkg/models/shared/list_app_entitlement_owners_response/go.mdx
   - content/types/pkg/models/shared/list_app_entitlement_users_response/go.mdx
