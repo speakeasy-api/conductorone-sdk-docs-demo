@@ -1,0 +1,77 @@
+
+<CH.Code>
+```go UpdateDelegated.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go"
+	"context"
+	"github.com/conductorone/conductorone-sdk-go/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.Connector.UpdateDelegated(ctx, operations.C1APIAppV1ConnectorServiceUpdateDelegatedRequest{
+        ConnectorAppID: "<value>",
+        ConnectorID: "<value>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ConnectorServiceUpdateResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "ConnectorView": {
+      "Connector": {
+        "ConnectorStatus": {
+          "completedAt": "None",
+          "lastError": "None",
+          "startedAt": "None",
+          "updatedAt": "None"
+        },
+        "OAuth2AuthorizedAs": {
+          "authEmail": "None",
+          "authorizedAt": "None"
+        },
+        "appId": "None",
+        "catalogId": "None",
+        "config": {
+          "@type": "None"
+        },
+        "createdAt": "None",
+        "deletedAt": "None",
+        "description": "None",
+        "displayName": "None",
+        "downloadUrl": "None",
+        "id": "None",
+        "updatedAt": "None",
+        "userIds": [
+          "None"
+        ]
+      },
+      "appPath": "None",
+      "usersPath": "None"
+    },
+    "expanded": [
+      {
+        "@type": "None"
+      }
+    ]
+  }
+```
+</CH.Code>

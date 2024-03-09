@@ -1,0 +1,55 @@
+
+<CH.Code>
+```typescript SearchAppResourceTypes.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+async function run() {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+      oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    },
+  });
+
+  const result = await sdk.appResourceSearch.searchAppResourceTypes({
+    appIds: [
+      "<value>",
+    ],
+    excludeResourceTypeIds: [
+      "<value>",
+    ],
+    excludeResourceTypeTraitIds: [
+      "<value>",
+    ],
+    resourceTypeIds: [
+      "<value>",
+    ],
+    resourceTypeTraitIds: [
+      "<value>",
+    ],
+  });
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "appId": "None",
+        "createdAt": "None",
+        "deletedAt": "None",
+        "displayName": "None",
+        "id": "None",
+        "updatedAt": "None"
+      }
+    ],
+    "nextPageToken": "None"
+  }
+```
+</CH.Code>

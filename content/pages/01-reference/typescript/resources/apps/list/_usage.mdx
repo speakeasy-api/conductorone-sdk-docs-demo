@@ -1,0 +1,50 @@
+
+<CH.Code>
+```typescript List.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+async function run() {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+      oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    },
+  });
+
+  const result = await sdk.apps.list({});
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "appAccountId": "None",
+        "appAccountName": "None",
+        "certifyPolicyId": "None",
+        "createdAt": "None",
+        "deletedAt": "None",
+        "description": "None",
+        "displayName": "None",
+        "fieldMask": "None",
+        "grantPolicyId": "None",
+        "iconUrl": "None",
+        "id": "None",
+        "logoUri": "None",
+        "monthlyCostUsd": 0,
+        "parentAppId": "None",
+        "revokePolicyId": "None",
+        "updatedAt": "None",
+        "userCount": "None"
+      }
+    ],
+    "nextPageToken": "None"
+  }
+```
+</CH.Code>
