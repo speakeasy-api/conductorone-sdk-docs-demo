@@ -4,9 +4,9 @@ management:
   docChecksum: 62ce67261ac2cb50833d44d274d1cd96
   docVersion: 0.1.0-alpha
   speakeasyVersion: internal
-  generationVersion: 2.279.1
-  releaseVersion: 0.13.6
-  configChecksum: 2e4a32776167b3b9fe7dadef5249da3a
+  generationVersion: 2.283.1
+  releaseVersion: 0.13.7
+  configChecksum: d2a416b87442205925d79b69e10357f1
   repoSubDirectory: .
   installationURL: conductorone-sdk-python
   published: true
@@ -15,7 +15,7 @@ features:
     additionalProperties: 0.1.1
     core: 1.26.3
     flattening: 0.1.0
-    globalSecurity: 0.1.3
+    globalSecurity: 0.1.4
     globalServerURLs: 0.1.1
     groups: 0.1.1
     inputOutputModels: 0.3.0
