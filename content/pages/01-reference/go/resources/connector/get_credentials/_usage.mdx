@@ -1,0 +1,54 @@
+
+<CH.Code>
+```go GetCredentials.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go"
+	"context"
+	"github.com/conductorone/conductorone-sdk-go/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.Connector.GetCredentials(ctx, operations.C1APIAppV1ConnectorServiceGetCredentialsRequest{
+        AppID: "<value>",
+        ConnectorID: "<value>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ConnectorServiceGetCredentialsResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "ConnectorCredential": {
+      "appId": "None",
+      "clientId": "None",
+      "connectorId": "None",
+      "createdAt": "None",
+      "deletedAt": "None",
+      "displayName": "None",
+      "expiresTime": "None",
+      "id": "None",
+      "lastUsedAt": "None",
+      "updatedAt": "None"
+    }
+  }
+```
+</CH.Code>

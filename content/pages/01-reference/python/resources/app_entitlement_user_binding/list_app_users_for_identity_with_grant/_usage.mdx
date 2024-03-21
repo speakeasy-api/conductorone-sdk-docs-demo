@@ -1,0 +1,43 @@
+
+<CH.Code>
+```python ListAppUsersForIdentityWithGrant.py
+import conductorone_sdk_typescript
+from conductorone_sdk_typescript.models import operations, shared
+
+s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
+    security=shared.Security(
+        bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
+        oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    ),
+)
+
+req = operations.C1APIAppV1AppEntitlementUserBindingServiceListAppUsersForIdentityWithGrantRequest(
+    app_entitlement_id='<value>',
+    app_id='<value>',
+    identity_user_id='<value>',
+)
+
+res = s.app_entitlement_user_binding.list_app_users_for_identity_with_grant(req)
+
+if res.list_app_users_for_identity_with_grant_response is not None:
+    # handle response
+    pass
+
+```
+---
+
+```json Example Response
+  {
+    "bindings": [
+      {
+        "appEntitlementId": "None",
+        "appId": "None",
+        "appUserId": "None",
+        "createdAt": "None",
+        "deletedAt": "None",
+        "deprovisionAt": "None"
+      }
+    ]
+  }
+```
+</CH.Code>
