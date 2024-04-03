@@ -4,9 +4,9 @@ management:
   docChecksum: 62ce67261ac2cb50833d44d274d1cd96
   docVersion: 0.1.0-alpha
   speakeasyVersion: internal
-  generationVersion: 2.283.1
-  releaseVersion: 0.13.7
-  configChecksum: d2a416b87442205925d79b69e10357f1
+  generationVersion: 2.298.0
+  releaseVersion: 0.13.8
+  configChecksum: f34eaed2d0389b81c37f23a6722cf861
   repoSubDirectory: .
   installationURL: conductorone-sdk-python
   published: true
@@ -19,7 +19,7 @@ features:
     globalServerURLs: 0.1.1
     groups: 0.1.1
     inputOutputModels: 0.3.0
-    nameOverrides: 0.1.0
+    nameOverrides: 0.1.1
     unions: 0.1.3
 generatedFiles:
   - content/pages/01-reference/go/client_sdks/_snippet.mdx

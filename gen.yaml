@@ -11,7 +11,7 @@ generation:
     oAuth2ClientCredentialsEnabled: false
   baseServerURL: ""
 docs:
-  version: 0.13.7
+  version: 0.13.8
   docsLanguages:
     - go
   imports:
@@ -70,6 +70,7 @@ python:
   maxMethodParams: 0
   outputModelSuffix: output
   packageName: openapi
+  projectUrls: {}
   repoSubDirectory: .
   responseFormat: envelope-http
 typescript:
