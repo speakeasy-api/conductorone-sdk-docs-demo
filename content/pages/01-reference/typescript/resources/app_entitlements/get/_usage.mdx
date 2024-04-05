@@ -1,0 +1,80 @@
+
+<CH.Code>
+```typescript Get.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+async function run() {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+      oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    },
+  });
+
+  const result = await sdk.appEntitlements.get({
+    appId: "<value>",
+    id: "<id>",
+  });
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "AppEntitlementView": {
+      "AppEntitlement": {
+        "ProvisionPolicy": {
+          "ConnectorProvision": {},
+          "DelegatedProvision": {
+              "appId": "None",
+              "entitlementId": "None"
+            },
+          "ManualProvision": {
+              "instructions": "None",
+              "userIds": [
+                "None"
+              ]
+            }
+        },
+        "alias": "None",
+        "appId": "None",
+        "appResourceId": "None",
+        "appResourceTypeId": "None",
+        "certifyPolicyId": "None",
+        "complianceFrameworkValueIds": [
+          "None"
+        ],
+        "createdAt": "None",
+        "deletedAt": "None",
+        "description": "None",
+        "displayName": "None",
+        "durationGrant": "None",
+        "durationUnset": {},
+        "emergencyGrantEnabled": false,
+        "emergencyGrantPolicyId": "None",
+        "grantCount": "None",
+        "grantPolicyId": "None",
+        "id": "None",
+        "revokePolicyId": "None",
+        "riskLevelValueId": "None",
+        "slug": "None",
+        "systemBuiltin": false,
+        "updatedAt": "None"
+      },
+      "appPath": "None",
+      "appResourcePath": "None",
+      "appResourceTypePath": "None"
+    },
+    "expanded": [
+      {
+        "@type": "None"
+      }
+    ]
+  }
+```
+</CH.Code>

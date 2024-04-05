@@ -1,0 +1,55 @@
+
+<CH.Code>
+```typescript Update.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+async function run() {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+      oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    },
+  });
+
+  const result = await sdk.roles.update({
+    updateRoleRequest: {
+      role: {
+        permissions: [
+          "<value>",
+        ],
+        serviceRoles: [
+          "<value>",
+        ],
+      },
+    },
+    roleId: "<value>",
+  });
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "Role": {
+      "createdAt": "None",
+      "deletedAt": "None",
+      "displayName": "None",
+      "id": "None",
+      "name": "None",
+      "permissions": [
+        "None"
+      ],
+      "serviceRoles": [
+        "None"
+      ],
+      "systemBuiltin": false,
+      "updatedAt": "None"
+    }
+  }
+```
+</CH.Code>

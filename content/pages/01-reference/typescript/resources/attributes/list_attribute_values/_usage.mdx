@@ -1,0 +1,41 @@
+
+<CH.Code>
+```typescript ListAttributeValues.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+async function run() {
+  const sdk = new ConductoroneSDKTypescript({
+    security: {
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+      oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    },
+  });
+
+  const result = await sdk.attributes.listAttributeValues({
+    attributeTypeId: "<value>",
+  });
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "attributeTypeId": "None",
+        "createdAt": "None",
+        "deletedAt": "None",
+        "id": "None",
+        "updatedAt": "None",
+        "value": "None"
+      }
+    ],
+    "nextPageToken": "None"
+  }
+```
+</CH.Code>
