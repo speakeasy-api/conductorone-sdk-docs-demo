@@ -1,0 +1,93 @@
+
+<CH.Code>
+```typescript Update.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+const conductoroneSDKTypescript = new ConductoroneSDKTypescript({
+  security: {
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+    oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+  },
+});
+
+async function run() {
+  const result = await conductoroneSDKTypescript.policies.update({
+    updatePolicyRequest: {
+      policy: {
+        policySteps: {
+          "key": {
+            steps: [
+              {
+                accept: {},
+                approval: {
+                  appGroupApproval: {},
+                  appOwnerApproval: {},
+                  entitlementOwnerApproval: {},
+                  expressionApproval: {},
+                  managerApproval: {},
+                  selfApproval: {},
+                  userApproval: {},
+                },
+                provision: {
+                  provisionPolicy: {
+                    connectorProvision: {},
+                    delegatedProvision: {},
+                    manualProvision: {
+                      userIds: [
+                        "<value>",
+                      ],
+                    },
+                  },
+                  provisionTarget: {},
+                },
+                reject: {},
+              },
+            ],
+          },
+        },
+        postActions: [
+          {},
+        ],
+        rules: [
+          {},
+        ],
+      },
+    },
+    id: "<id>",
+  });
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "Policy": {
+      "createdAt": "None",
+      "deletedAt": "None",
+      "description": "None",
+      "displayName": "None",
+      "id": "None",
+      "policySteps": {},
+      "postActions": [
+          {
+            "certifyRemediateImmediately": false
+          }
+        ],
+      "reassignTasksToDelegates": false,
+      "rules": [
+          {
+            "condition": "None",
+            "policyKey": "None"
+          }
+        ],
+      "systemBuiltin": false,
+      "updatedAt": "None"
+    }
+  }
+```
+</CH.Code>

@@ -9,15 +9,15 @@ You can set the security parameters through the `security` optional parameter wh
 ```typescript
 import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
 
-async function run() {
-    const sdk = new ConductoroneSDKTypescript({
-        security: {
-            bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-            oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
-        },
-    });
+const conductoroneSDKTypescript = new ConductoroneSDKTypescript({
+    security: {
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+        oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    },
+});
 
-    const result = await sdk.apps.create({
+async function run() {
+    const result = await conductoroneSDKTypescript.apps.create({
         owners: ["<value>"],
     });
 

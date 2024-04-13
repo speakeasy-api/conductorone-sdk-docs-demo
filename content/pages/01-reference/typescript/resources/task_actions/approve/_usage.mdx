@@ -1,0 +1,557 @@
+
+<CH.Code>
+```typescript Approve.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+const conductoroneSDKTypescript = new ConductoroneSDKTypescript({
+  security: {
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+    oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+  },
+});
+
+async function run() {
+  const result = await conductoroneSDKTypescript.taskActions.approve({
+    taskActionsServiceApproveRequest: {
+      taskExpandMask: {
+        paths: [
+          "<value>",
+        ],
+      },
+      policyStepId: "<value>",
+    },
+    taskId: "<value>",
+  });
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "TaskView": {
+      "Task": {
+        "PolicyInstance": {
+          "Policy": {
+            "createdAt": "None",
+            "deletedAt": "None",
+            "description": "None",
+            "displayName": "None",
+            "id": "None",
+            "policySteps": {},
+            "postActions": [
+                {
+                  "certifyRemediateImmediately": false
+                }
+              ],
+            "reassignTasksToDelegates": false,
+            "rules": [
+                {
+                  "condition": "None",
+                  "policyKey": "None"
+                }
+              ],
+            "systemBuiltin": false,
+            "updatedAt": "None"
+          },
+          "PolicyStepInstance": {
+            "AcceptInstance": {},
+            "ApprovalInstance": {
+                "Approval": {
+                  "AppGroupApproval": {
+                    "allowSelfApproval": false,
+                    "appGroupId": "None",
+                    "appId": "None",
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "None"
+                    ]
+                  },
+                  "AppOwnerApproval": {
+                    "allowSelfApproval": false
+                  },
+                  "EntitlementOwnerApproval": {
+                    "allowSelfApproval": false,
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "None"
+                    ]
+                  },
+                  "ExpressionApproval": {
+                    "allowSelfApproval": false,
+                    "assignedUserIds": [
+                      "None"
+                    ],
+                    "expressions": [
+                      "None"
+                    ],
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "None"
+                    ]
+                  },
+                  "ManagerApproval": {
+                    "allowSelfApproval": false,
+                    "assignedUserIds": [
+                      "None"
+                    ],
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "None"
+                    ]
+                  },
+                  "SelfApproval": {
+                    "assignedUserIds": [
+                      "None"
+                    ],
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "None"
+                    ]
+                  },
+                  "UserApproval": {
+                    "allowSelfApproval": false,
+                    "userIds": [
+                      "None"
+                    ]
+                  },
+                  "allowReassignment": false,
+                  "assigned": false,
+                  "requireApprovalReason": false,
+                  "requireReassignmentReason": false
+                },
+                "ApprovedAction": {
+                  "approvedAt": "None",
+                  "entitlements": [
+                    {
+                      "appEntitlementId": "None",
+                      "appId": "None"
+                    }
+                  ],
+                  "userId": "None"
+                },
+                "DeniedAction": {
+                  "deniedAt": "None",
+                  "userId": "None"
+                },
+                "ReassignedAction": {
+                  "newPolicyStepId": "None",
+                  "reassignedAt": "None",
+                  "userId": "None"
+                },
+                "ReassignedByErrorAction": {
+                  "description": "None",
+                  "errorCode": "None",
+                  "errorUserId": "None",
+                  "erroredAt": "None",
+                  "newPolicyStepId": "None",
+                  "reassignedAt": "None"
+                },
+                "RestartAction": {
+                  "oldPolicyStepId": "None",
+                  "restartedAt": "None",
+                  "userId": "None"
+                }
+              },
+            "ProvisionInstance": {
+                "CancelledAction": {
+                  "cancelledAt": "None",
+                  "cancelledByUserId": "None"
+                },
+                "CompletedAction": {
+                  "completedAt": "None",
+                  "entitlements": [
+                    {
+                      "appEntitlementId": "None",
+                      "appId": "None"
+                    }
+                  ],
+                  "userId": "None"
+                },
+                "ErroredAction": {
+                  "description": "None",
+                  "errorCode": "None",
+                  "erroredAt": "None"
+                },
+                "Provision": {
+                  "ProvisionPolicy": {
+                    "ConnectorProvision": {},
+                    "DelegatedProvision": {
+                        "appId": "None",
+                        "entitlementId": "None"
+                      },
+                    "ManualProvision": {
+                        "instructions": "None",
+                        "userIds": [
+                          "None"
+                        ]
+                      }
+                  },
+                  "ProvisionTarget": {
+                    "appEntitlementId": "None",
+                    "appId": "None",
+                    "appUserId": "None",
+                    "grantDuration": "None"
+                  },
+                  "assigned": false
+                },
+                "ReassignedByErrorAction": {
+                  "description": "None",
+                  "errorCode": "None",
+                  "errorUserId": "None",
+                  "erroredAt": "None",
+                  "newPolicyStepId": "None",
+                  "reassignedAt": "None"
+                },
+                "notificationId": "None"
+              },
+            "RejectInstance": {},
+            "id": "None",
+            "policyGenerationId": "None"
+          },
+          "history": [
+            {
+              "AcceptInstance": {},
+              "ApprovalInstance": {
+                  "Approval": {
+                    "AppGroupApproval": {
+                      "allowSelfApproval": false,
+                      "appGroupId": "None",
+                      "appId": "None",
+                      "fallback": false,
+                      "fallbackUserIds": [
+                        "None"
+                      ]
+                    },
+                    "AppOwnerApproval": {
+                      "allowSelfApproval": false
+                    },
+                    "EntitlementOwnerApproval": {
+                      "allowSelfApproval": false,
+                      "fallback": false,
+                      "fallbackUserIds": [
+                        "None"
+                      ]
+                    },
+                    "ExpressionApproval": {
+                      "allowSelfApproval": false,
+                      "assignedUserIds": [
+                        "None"
+                      ],
+                      "expressions": [
+                        "None"
+                      ],
+                      "fallback": false,
+                      "fallbackUserIds": [
+                        "None"
+                      ]
+                    },
+                    "ManagerApproval": {
+                      "allowSelfApproval": false,
+                      "assignedUserIds": [
+                        "None"
+                      ],
+                      "fallback": false,
+                      "fallbackUserIds": [
+                        "None"
+                      ]
+                    },
+                    "SelfApproval": {
+                      "assignedUserIds": [
+                        "None"
+                      ],
+                      "fallback": false,
+                      "fallbackUserIds": [
+                        "None"
+                      ]
+                    },
+                    "UserApproval": {
+                      "allowSelfApproval": false,
+                      "userIds": [
+                        "None"
+                      ]
+                    },
+                    "allowReassignment": false,
+                    "assigned": false,
+                    "requireApprovalReason": false,
+                    "requireReassignmentReason": false
+                  },
+                  "ApprovedAction": {
+                    "approvedAt": "None",
+                    "entitlements": [
+                      {
+                        "appEntitlementId": "None",
+                        "appId": "None"
+                      }
+                    ],
+                    "userId": "None"
+                  },
+                  "DeniedAction": {
+                    "deniedAt": "None",
+                    "userId": "None"
+                  },
+                  "ReassignedAction": {
+                    "newPolicyStepId": "None",
+                    "reassignedAt": "None",
+                    "userId": "None"
+                  },
+                  "ReassignedByErrorAction": {
+                    "description": "None",
+                    "errorCode": "None",
+                    "errorUserId": "None",
+                    "erroredAt": "None",
+                    "newPolicyStepId": "None",
+                    "reassignedAt": "None"
+                  },
+                  "RestartAction": {
+                    "oldPolicyStepId": "None",
+                    "restartedAt": "None",
+                    "userId": "None"
+                  }
+                },
+              "ProvisionInstance": {
+                  "CancelledAction": {
+                    "cancelledAt": "None",
+                    "cancelledByUserId": "None"
+                  },
+                  "CompletedAction": {
+                    "completedAt": "None",
+                    "entitlements": [
+                      {
+                        "appEntitlementId": "None",
+                        "appId": "None"
+                      }
+                    ],
+                    "userId": "None"
+                  },
+                  "ErroredAction": {
+                    "description": "None",
+                    "errorCode": "None",
+                    "erroredAt": "None"
+                  },
+                  "Provision": {
+                    "ProvisionPolicy": {
+                      "ConnectorProvision": {},
+                      "DelegatedProvision": {
+                          "appId": "None",
+                          "entitlementId": "None"
+                        },
+                      "ManualProvision": {
+                          "instructions": "None",
+                          "userIds": [
+                            "None"
+                          ]
+                        }
+                    },
+                    "ProvisionTarget": {
+                      "appEntitlementId": "None",
+                      "appId": "None",
+                      "appUserId": "None",
+                      "grantDuration": "None"
+                    },
+                    "assigned": false
+                  },
+                  "ReassignedByErrorAction": {
+                    "description": "None",
+                    "errorCode": "None",
+                    "errorUserId": "None",
+                    "erroredAt": "None",
+                    "newPolicyStepId": "None",
+                    "reassignedAt": "None"
+                  },
+                  "notificationId": "None"
+                },
+              "RejectInstance": {},
+              "id": "None",
+              "policyGenerationId": "None"
+            }
+          ],
+          "next": [
+            {
+              "Accept": {},
+              "Approval": {
+                  "AppGroupApproval": {
+                    "allowSelfApproval": false,
+                    "appGroupId": "None",
+                    "appId": "None",
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "None"
+                    ]
+                  },
+                  "AppOwnerApproval": {
+                    "allowSelfApproval": false
+                  },
+                  "EntitlementOwnerApproval": {
+                    "allowSelfApproval": false,
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "None"
+                    ]
+                  },
+                  "ExpressionApproval": {
+                    "allowSelfApproval": false,
+                    "assignedUserIds": [
+                      "None"
+                    ],
+                    "expressions": [
+                      "None"
+                    ],
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "None"
+                    ]
+                  },
+                  "ManagerApproval": {
+                    "allowSelfApproval": false,
+                    "assignedUserIds": [
+                      "None"
+                    ],
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "None"
+                    ]
+                  },
+                  "SelfApproval": {
+                    "assignedUserIds": [
+                      "None"
+                    ],
+                    "fallback": false,
+                    "fallbackUserIds": [
+                      "None"
+                    ]
+                  },
+                  "UserApproval": {
+                    "allowSelfApproval": false,
+                    "userIds": [
+                      "None"
+                    ]
+                  },
+                  "allowReassignment": false,
+                  "assigned": false,
+                  "requireApprovalReason": false,
+                  "requireReassignmentReason": false
+                },
+              "Provision": {
+                  "ProvisionPolicy": {
+                    "ConnectorProvision": {},
+                    "DelegatedProvision": {
+                        "appId": "None",
+                        "entitlementId": "None"
+                      },
+                    "ManualProvision": {
+                        "instructions": "None",
+                        "userIds": [
+                          "None"
+                        ]
+                      }
+                  },
+                  "ProvisionTarget": {
+                    "appEntitlementId": "None",
+                    "appId": "None",
+                    "appUserId": "None",
+                    "grantDuration": "None"
+                  },
+                  "assigned": false
+                },
+              "Reject": {}
+            }
+          ]
+        },
+        "TaskType": {
+          "TaskTypeCertify": {
+            "accessReviewId": "None",
+            "accessReviewSelection": "None",
+            "appEntitlementId": "None",
+            "appId": "None",
+            "appUserId": "None",
+            "identityUserId": "None",
+            "outcomeTime": "None"
+          },
+          "TaskTypeGrant": {
+            "TaskGrantSource": {
+              "externalUrl": "None",
+              "integrationId": "None"
+            },
+            "appEntitlementId": "None",
+            "appId": "None",
+            "appUserId": "None",
+            "grantDuration": "None",
+            "identityUserId": "None",
+            "outcomeTime": "None"
+          },
+          "TaskTypeRevoke": {
+            "TaskRevokeSource": {
+              "TaskRevokeSourceExpired": {
+                "expiredAt": "None"
+              },
+              "TaskRevokeSourceNonUsage": {
+                "expiresAt": "None",
+                "lastLogin": "None"
+              },
+              "TaskRevokeSourceRequest": {
+                "requestUserId": "None"
+              },
+              "TaskRevokeSourceReview": {
+                "accessReviewId": "None",
+                "certTicketId": "None"
+              }
+            },
+            "appEntitlementId": "None",
+            "appId": "None",
+            "appUserId": "None",
+            "identityUserId": "None",
+            "outcomeTime": "None"
+          }
+        },
+        "actions": [],
+        "analysisId": "None",
+        "annotations": [
+            {
+              "@type": "None"
+            }
+          ],
+        "commentCount": 0,
+        "createdAt": "None",
+        "createdByUserId": "None",
+        "deletedAt": "None",
+        "description": "None",
+        "displayName": "None",
+        "emergencyAccess": false,
+        "externalRefs": [
+            {
+              "name": "None",
+              "url": "None"
+            }
+          ],
+        "id": "None",
+        "numericId": "None",
+        "policyGenerationId": "None",
+        "stepApproverIds": [
+            "None"
+          ],
+        "updatedAt": "None",
+        "userId": "None"
+      },
+      "accessReviewPath": "None",
+      "appPath": "None",
+      "appUserPath": "None",
+      "createdByUserPath": "None",
+      "entitlementsPath": "None",
+      "identityUserPath": "None",
+      "stepApproversPath": "None",
+      "userPath": "None"
+    },
+    "expanded": [
+      {
+        "@type": "None"
+      }
+    ],
+    "ticketActionId": "None"
+  }
+```
+</CH.Code>

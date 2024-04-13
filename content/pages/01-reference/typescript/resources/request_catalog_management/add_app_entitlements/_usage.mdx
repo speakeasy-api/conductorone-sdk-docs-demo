@@ -1,0 +1,34 @@
+
+<CH.Code>
+```typescript AddAppEntitlements.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+const conductoroneSDKTypescript = new ConductoroneSDKTypescript({
+  security: {
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+    oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+  },
+});
+
+async function run() {
+  const result = await conductoroneSDKTypescript.requestCatalogManagement.addAppEntitlements({
+    requestCatalogManagementServiceAddAppEntitlementsRequest: {
+      appEntitlements: [
+        {},
+      ],
+    },
+    catalogId: "<value>",
+  });
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+---
+
+```json Example Response
+  {}
+```
+</CH.Code>

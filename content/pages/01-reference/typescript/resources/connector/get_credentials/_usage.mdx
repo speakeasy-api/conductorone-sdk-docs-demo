@@ -1,0 +1,44 @@
+
+<CH.Code>
+```typescript GetCredentials.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+const conductoroneSDKTypescript = new ConductoroneSDKTypescript({
+  security: {
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+    oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+  },
+});
+
+async function run() {
+  const result = await conductoroneSDKTypescript.connector.getCredentials({
+    appId: "<value>",
+    connectorId: "<value>",
+    id: "<id>",
+  });
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "ConnectorCredential": {
+      "appId": "None",
+      "clientId": "None",
+      "connectorId": "None",
+      "createdAt": "None",
+      "deletedAt": "None",
+      "displayName": "None",
+      "expiresTime": "None",
+      "id": "None",
+      "lastUsedAt": "None",
+      "updatedAt": "None"
+    }
+  }
+```
+</CH.Code>

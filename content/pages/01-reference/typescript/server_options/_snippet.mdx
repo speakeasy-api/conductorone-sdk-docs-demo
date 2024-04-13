@@ -10,16 +10,16 @@ You can override the default server globally by passing a server index to the `s
 ```typescript
 import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
 
-async function run() {
-    const sdk = new ConductoroneSDKTypescript({
-        serverIdx: 0,
-        security: {
-            bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-            oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
-        },
-    });
+const conductoroneSDKTypescript = new ConductoroneSDKTypescript({
+    serverIdx: 0,
+    security: {
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+        oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    },
+});
 
-    const result = await sdk.apps.create({
+async function run() {
+    const result = await conductoroneSDKTypescript.apps.create({
         owners: ["<value>"],
     });
 
@@ -43,16 +43,16 @@ The default server can also be overridden globally by passing a URL to the `serv
 ```typescript
 import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
 
-async function run() {
-    const sdk = new ConductoroneSDKTypescript({
-        serverURL: "https://{tenantDomain}.conductor.one",
-        security: {
-            bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-            oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
-        },
-    });
+const conductoroneSDKTypescript = new ConductoroneSDKTypescript({
+    serverURL: "https://{tenantDomain}.conductor.one",
+    security: {
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+        oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    },
+});
 
-    const result = await sdk.apps.create({
+async function run() {
+    const result = await conductoroneSDKTypescript.apps.create({
         owners: ["<value>"],
     });
 

@@ -1,0 +1,38 @@
+
+<CH.Code>
+```typescript Get.ts
+import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
+
+const conductoroneSDKTypescript = new ConductoroneSDKTypescript({
+  security: {
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+    oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+  },
+});
+
+async function run() {
+  const result = await conductoroneSDKTypescript.appUsageControls.get({
+    appId: "<value>",
+  });
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "AppUsageControls": {
+      "appId": "None",
+      "notify": false,
+      "notifyAfterDays": 0,
+      "revoke": false,
+      "revokeAfterDays": 0
+    },
+    "hasUsageData": false
+  }
+```
+</CH.Code>

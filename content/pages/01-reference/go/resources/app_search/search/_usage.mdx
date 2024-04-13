@@ -1,0 +1,59 @@
+
+<CH.Code>
+```go Search.go
+package main
+
+import(
+	"github.com/conductorone/conductorone-sdk-go/pkg/models/shared"
+	conductoronesdkgo "github.com/conductorone/conductorone-sdk-go"
+	"context"
+	"log"
+)
+
+func main() {
+    s := conductoronesdkgo.New(
+        conductoronesdkgo.WithSecurity(shared.Security{
+            BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+            Oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.AppSearch.Search(ctx, &shared.SearchAppsRequest{})
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.SearchAppsResponse != nil {
+        // handle response
+    }
+}
+```
+---
+
+```json Example Response
+  {
+    "list": [
+      {
+        "appAccountId": "None",
+        "appAccountName": "None",
+        "certifyPolicyId": "None",
+        "createdAt": "None",
+        "deletedAt": "None",
+        "description": "None",
+        "displayName": "None",
+        "fieldMask": "None",
+        "grantPolicyId": "None",
+        "iconUrl": "None",
+        "id": "None",
+        "logoUri": "None",
+        "monthlyCostUsd": 0,
+        "parentAppId": "None",
+        "revokePolicyId": "None",
+        "updatedAt": "None",
+        "userCount": "None"
+      }
+    ],
+    "nextPageToken": "None"
+  }
+```
+</CH.Code>
