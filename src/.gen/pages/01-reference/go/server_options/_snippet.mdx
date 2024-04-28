@@ -23,7 +23,7 @@ func main() {
 		conductoronesdkgo.WithServerIndex(0),
 		conductoronesdkgo.WithSecurity(shared.Security{
 			BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-			Oauth:      "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+			Oauth:      "<YOUR_OAUTH_HERE>",
 		}),
 	)
 
@@ -62,7 +62,7 @@ func main() {
 		conductoronesdkgo.WithServerURL("https://{tenantDomain}.conductor.one"),
 		conductoronesdkgo.WithSecurity(shared.Security{
 			BearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-			Oauth:      "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+			Oauth:      "<YOUR_OAUTH_HERE>",
 		}),
 	)
 
