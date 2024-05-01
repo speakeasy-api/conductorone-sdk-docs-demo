@@ -10,17 +10,17 @@ Validation errors can also occur when either method arguments or data returned f
 import { ConductoroneSDKTypescript } from "conductorone-sdk-typescript";
 import * as errors from "conductorone-sdk-typescript/models/errors";
 
-async function run() {
-    const sdk = new ConductoroneSDKTypescript({
-        security: {
-            bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
-            oauth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
-        },
-    });
+const conductoroneSDKTypescript = new ConductoroneSDKTypescript({
+    security: {
+        bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
+        oauth: "<YOUR_OAUTH_HERE>",
+    },
+});
 
+async function run() {
     let result;
     try {
-        result = await sdk.apps.create({
+        result = await conductoroneSDKTypescript.apps.create({
             owners: ["<value>"],
         });
     } catch (err) {
