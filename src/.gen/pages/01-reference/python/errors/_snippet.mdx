@@ -12,15 +12,13 @@ from conductorone_sdk_typescript.models import errors, shared
 s = conductorone_sdk_typescript.ConductoroneSDKTypescript(
     security=shared.Security(
         bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
-        oauth="Bearer <YOUR_ACCESS_TOKEN_HERE>",
+        oauth="<YOUR_OAUTH_HERE>",
     ),
 )
 
-req = shared.CreateAppRequest()
-
 res = None
 try:
-    res = s.apps.create(req)
+    res = s.apps.create(request=shared.CreateAppRequest())
 except errors.SDKError as e:
     # handle exception
     raise(e)
