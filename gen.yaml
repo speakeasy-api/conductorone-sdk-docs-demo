@@ -11,7 +11,7 @@ generation:
     oAuth2ClientCredentialsEnabled: false
   baseServerURL: ""
 docs:
-  version: 0.13.9
+  version: 0.13.10
   docsLanguages:
     - go
   imports:
@@ -29,6 +29,7 @@ docs:
 go:
   version: 1.15.0
   additionalDependencies: {}
+  allowUnknownFieldsInWeakUnions: false
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   imports:
@@ -42,6 +43,7 @@ go:
   inputModelSuffix: input
   installationURL: https://github.com/ConductorOne/conductorone-sdk-go
   maxMethodParams: 0
+  methodArguments: require-security-and-request
   outputModelSuffix: output
   packageName: github.com/conductorone/conductorone-sdk-go
   published: true
@@ -68,6 +70,7 @@ python:
   inputModelSuffix: input
   installationURL: https://github.com/ConductorOne/conductorone-sdk-python.git
   maxMethodParams: 0
+  methodArguments: require-security-and-request
   outputModelSuffix: output
   packageName: openapi
   projectUrls: {}
@@ -79,6 +82,7 @@ typescript:
     dependencies: {}
     devDependencies: {}
     peerDependencies: {}
+  additionalPackageJSON: {}
   author: ConductorOne
   clientServerStatusCodesAsErrors: true
   enumFormat: enum
@@ -93,6 +97,7 @@ typescript:
       webhooks: models/webhooks
   inputModelSuffix: input
   maxMethodParams: 0
+  methodArguments: require-security-and-request
   outputModelSuffix: output
   packageName: conductorone-sdk-typescript
   responseFormat: envelope-http
